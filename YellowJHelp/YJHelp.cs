@@ -5,7 +5,7 @@ using System.Security.Cryptography;
 
 namespace YellowJHelp
 {
-    public class Help
+    public class YJHelp
     {
         /// <summary>
         /// 消息注明

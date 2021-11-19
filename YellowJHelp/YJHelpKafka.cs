@@ -8,7 +8,7 @@ using YellowJHelp.Entry;
 
 namespace YellowJHelp
 {
-    public class KafkaHelp
+    public class YJHelpKafka
     {
         /// <summary>
         /// 发布者（带账号密码）
@@ -49,7 +49,7 @@ namespace YellowJHelp
                 }
                 finally
                 {
-                    HelpSql.SqlApiLog(log);
+                    YJHelpSql.SqlApiLog(log);
                 }
             }
 

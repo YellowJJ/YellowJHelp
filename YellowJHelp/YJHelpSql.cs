@@ -9,7 +9,7 @@ using YellowJHelp.Entry;
 
 namespace YellowJHelp
 {
-    public class HelpSql
+    public class YJHelpSql
     {
         /// <summary>
         /// 数据库操作
