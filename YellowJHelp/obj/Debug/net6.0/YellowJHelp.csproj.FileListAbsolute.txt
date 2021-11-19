@@ -1,0 +1,13 @@
+I:\YellowJ\打包通用项目\YellowJHelp\YellowJHelp\bin\Debug\net6.0\YellowJHelp.deps.json
+I:\YellowJ\打包通用项目\YellowJHelp\YellowJHelp\bin\Debug\net6.0\YellowJHelp.dll
+I:\YellowJ\打包通用项目\YellowJHelp\YellowJHelp\bin\Debug\net6.0\ref\YellowJHelp.dll
+I:\YellowJ\打包通用项目\YellowJHelp\YellowJHelp\bin\Debug\net6.0\YellowJHelp.pdb
+I:\YellowJ\打包通用项目\YellowJHelp\YellowJHelp\obj\Debug\net6.0\YellowJHelp.GlobalUsings.g.cs
+I:\YellowJ\打包通用项目\YellowJHelp\YellowJHelp\obj\Debug\net6.0\YellowJHelp.csproj.AssemblyReference.cache
+I:\YellowJ\打包通用项目\YellowJHelp\YellowJHelp\obj\Debug\net6.0\YellowJHelp.GeneratedMSBuildEditorConfig.editorconfig
+I:\YellowJ\打包通用项目\YellowJHelp\YellowJHelp\obj\Debug\net6.0\YellowJHelp.AssemblyInfoInputs.cache
+I:\YellowJ\打包通用项目\YellowJHelp\YellowJHelp\obj\Debug\net6.0\YellowJHelp.AssemblyInfo.cs
+I:\YellowJ\打包通用项目\YellowJHelp\YellowJHelp\obj\Debug\net6.0\YellowJHelp.csproj.CoreCompileInputs.cache
+I:\YellowJ\打包通用项目\YellowJHelp\YellowJHelp\obj\Debug\net6.0\YellowJHelp.dll
+I:\YellowJ\打包通用项目\YellowJHelp\YellowJHelp\obj\Debug\net6.0\ref\YellowJHelp.dll
+I:\YellowJ\打包通用项目\YellowJHelp\YellowJHelp\obj\Debug\net6.0\YellowJHelp.pdb

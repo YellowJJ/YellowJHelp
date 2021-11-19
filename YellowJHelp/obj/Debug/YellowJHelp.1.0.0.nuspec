@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>YellowJHelp</id>
+    <version>1.0.0</version>
+    <authors>YellowJHelp</authors>
+    <description>Package Description</description>
+    <dependencies>
+      <group targetFramework="net6.0">
+        <dependency id="Microsoft.Extensions.Caching.Memory" version="6.0.0" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="I:\YellowJ\打包通用项目\YellowJHelp\YellowJHelp\bin\Debug\net6.0\YellowJHelp.dll" target="lib\net6.0\YellowJHelp.dll" />
+  </files>
+</package>
