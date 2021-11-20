@@ -12,7 +12,7 @@ using System;
 using System.Reflection;
 
 [assembly: System.Reflection.AssemblyCompanyAttribute("YellowJ")]
-[assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
+[assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyDescriptionAttribute("通用解决方案\r\n缓存，MD5加密，字段截取，集合类型差集计算\r\nKafka使用\r\nsql链接使用，集成sqlsugar\r\nwebapi调用")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.3.0")]
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.3")]

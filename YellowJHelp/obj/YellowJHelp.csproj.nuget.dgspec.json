@@ -1,23 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "I:\\YellowJ\\打包通用项目\\YellowJHelp\\yellow-jhelp\\YellowJHelp\\YellowJHelp.csproj": {}
+    "E:\\Documentation\\YellowJ\\yellow-jhelp\\YellowJHelp\\YellowJHelp.csproj": {}
   },
   "projects": {
-    "I:\\YellowJ\\打包通用项目\\YellowJHelp\\yellow-jhelp\\YellowJHelp\\YellowJHelp.csproj": {
-      "version": "1.0.2",
+    "E:\\Documentation\\YellowJ\\yellow-jhelp\\YellowJHelp\\YellowJHelp.csproj": {
+      "version": "1.0.3",
       "restore": {
-        "projectUniqueName": "I:\\YellowJ\\打包通用项目\\YellowJHelp\\yellow-jhelp\\YellowJHelp\\YellowJHelp.csproj",
+        "projectUniqueName": "E:\\Documentation\\YellowJ\\yellow-jhelp\\YellowJHelp\\YellowJHelp.csproj",
         "projectName": "YellowJHelp",
-        "projectPath": "I:\\YellowJ\\打包通用项目\\YellowJHelp\\yellow-jhelp\\YellowJHelp\\YellowJHelp.csproj",
-        "packagesPath": "C:\\Users\\hjklkl\\.nuget\\packages\\",
-        "outputPath": "I:\\YellowJ\\打包通用项目\\YellowJHelp\\yellow-jhelp\\YellowJHelp\\obj\\",
+        "projectPath": "E:\\Documentation\\YellowJ\\yellow-jhelp\\YellowJHelp\\YellowJHelp.csproj",
+        "packagesPath": "C:\\Users\\YellowJ\\.nuget\\packages\\",
+        "outputPath": "E:\\Documentation\\YellowJ\\yellow-jhelp\\YellowJHelp\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\hjklkl\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\YellowJ\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -79,7 +76,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100-rc.2.21505.57\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     }

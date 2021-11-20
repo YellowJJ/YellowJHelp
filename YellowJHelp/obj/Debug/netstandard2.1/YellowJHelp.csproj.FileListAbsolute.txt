@@ -1,0 +1,9 @@
+E:\Documentation\YellowJ\yellow-jhelp\YellowJHelp\obj\Debug\netstandard2.1\YellowJHelp.csprojAssemblyReference.cache
+E:\Documentation\YellowJ\yellow-jhelp\YellowJHelp\obj\Debug\netstandard2.1\YellowJHelp.AssemblyInfoInputs.cache
+E:\Documentation\YellowJ\yellow-jhelp\YellowJHelp\obj\Debug\netstandard2.1\YellowJHelp.AssemblyInfo.cs
+E:\Documentation\YellowJ\yellow-jhelp\YellowJHelp\obj\Debug\netstandard2.1\YellowJHelp.csproj.CoreCompileInputs.cache
+E:\Documentation\YellowJ\yellow-jhelp\YellowJHelp\bin\Debug\netstandard2.1\YellowJHelp.deps.json
+E:\Documentation\YellowJ\yellow-jhelp\YellowJHelp\bin\Debug\netstandard2.1\YellowJHelp.dll
+E:\Documentation\YellowJ\yellow-jhelp\YellowJHelp\bin\Debug\netstandard2.1\YellowJHelp.pdb
+E:\Documentation\YellowJ\yellow-jhelp\YellowJHelp\obj\Debug\netstandard2.1\YellowJHelp.dll
+E:\Documentation\YellowJ\yellow-jhelp\YellowJHelp\obj\Debug\netstandard2.1\YellowJHelp.pdb

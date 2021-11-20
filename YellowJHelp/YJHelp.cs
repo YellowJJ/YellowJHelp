@@ -1,5 +1,6 @@
 ﻿using Microsoft.Extensions.Caching.Memory;
 using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Security.Cryptography;
 
@@ -34,46 +35,51 @@ namespace YellowJHelp
             return ret.PadLeft(32, '0');
         }
 
-        #region --cache 缓存--
         /// <summary>
-        /// 定义cache
+        /// 缓存类
         /// </summary>
-        private static MemoryCache cache = new MemoryCache(new MemoryCacheOptions());
-
-        /// <summary>
-        /// 设置cache
-        /// </summary>
-        /// <param name="key">键</param>
-        /// <param name="value">值</param>
-        public static void SetCacheValue(string key, object value)
+        public partial class Cache
         {
-            if (key != null)
+            #region 缓存定义
+            //缓存容器 
+            private static Dictionary<string, object> CacheDictionary = new Dictionary<string, object>();
+            /// <summary>
+            /// 添加缓存
+            /// </summary>
+            public static void Add(string key, object value)
             {
-                cache.Set(key, value, new MemoryCacheEntryOptions
-                {
-                    //SlidingExpiration = TimeSpan.FromSeconds(10)
-                });
+                CacheDictionary.Add(key, value);
             }
-        }
 
-        /// <summary>
-        /// 获取cache
-        /// </summary>
-        /// <param name="key">键</param>
-        /// <returns></returns>
-        public static object GetCacheValue(string key)
-        {
-            object val = null;
-            if (key != null && cache.TryGetValue(key, out val))
+            /// <summary>
+            /// 获取缓存
+            /// </summary>
+            public static T Get<T>(string key)
             {
-                return val;
+                return (T)CacheDictionary[key];
             }
-            else
+
+            /// <summary>
+            /// 判断缓存是否存在
+            /// </summary>
+            /// <param name="key"></param>
+            /// <returns></returns>
+            public static bool Exsits(string key)
             {
-                return default(object);
+                return CacheDictionary.ContainsKey(key);
             }
+            /// <summary>
+            /// 删除缓存
+            /// </summary>
+            /// <param name="key"></param>
+            /// <returns></returns>
+            public static void Clear()
+            {
+                CacheDictionary.Clear();
+            }
+
+            #endregion
         }
-        #endregion
         /// <summary>
         /// 日志
         /// </summary>
@@ -101,5 +107,28 @@ namespace YellowJHelp
                 output.Close();
             }
         }
+        /// <summary>
+        /// 字段截取
+        /// </summary>
+        /// <param name="sourse">值</param>
+        /// <param name="startstr">前字符</param>
+        /// <param name="endstr">后字符</param>
+        /// <returns></returns>
+        public static string MidStrEx(string sourse, string startstr, string endstr)
+        {
+            string result = string.Empty;
+            int startindex, endindex;
+            startindex = sourse.IndexOf(startstr);
+            if (startindex == -1)
+                return result;
+            string tmpstr = sourse.Substring(startindex + startstr.Length);
+            endindex = tmpstr.IndexOf(endstr);
+            if (endindex == -1)
+                return result;
+            result = tmpstr.Remove(endindex);
+
+            return result;
+        }
+
     }
 }
