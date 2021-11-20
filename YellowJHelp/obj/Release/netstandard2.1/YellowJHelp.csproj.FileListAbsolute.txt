@@ -27,3 +27,4 @@ E:\Documentation\YellowJ\yellow-jhelp\YellowJHelp\obj\Release\netstandard2.1\Yel
 E:\Documentation\YellowJ\yellow-jhelp\YellowJHelp\obj\Release\netstandard2.1\YellowJHelp.csproj.CoreCompileInputs.cache
 E:\Documentation\YellowJ\yellow-jhelp\YellowJHelp\obj\Release\netstandard2.1\YellowJHelp.dll
 E:\Documentation\YellowJ\yellow-jhelp\YellowJHelp\obj\Release\netstandard2.1\YellowJHelp.pdb
+E:\Documentation\YellowJ\yellow-jhelp\YellowJHelp\obj\Release\netstandard2.1\YellowJHelp.csprojAssemblyReference.cache
