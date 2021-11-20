@@ -13,7 +13,7 @@ namespace YellowJHelp
         /// </summary>
         /// <param name="url">地址</param>
         /// <returns></returns>
-        public string HttpGet(string url)
+        public static string HttpGet(string url)
         {
 
             Encoding encoding = Encoding.UTF8;
@@ -36,7 +36,7 @@ namespace YellowJHelp
         /// <param name="url">地址</param>
         /// <param name="Jsoncontent">参数</param>
         /// <returns></returns>
-        public string HttPost(string url, string Jsoncontent)
+        public static string HttPost(string url, string Jsoncontent)
         {
 
             //定义request并设置request的路径
@@ -77,7 +77,7 @@ namespace YellowJHelp
         /// <param name="Jsoncontent">参数</param>
         /// <param name="webHeaderCollection">head</param>
         /// <returns></returns>
-        public string HttHeadersPost(string url, string Jsoncontent, WebHeaderCollection webHeaderCollection)
+        public static string HttHeadersPost(string url, string Jsoncontent, WebHeaderCollection webHeaderCollection)
         {
 
             //定义request并设置request的路径
