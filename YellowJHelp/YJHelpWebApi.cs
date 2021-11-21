@@ -6,6 +6,9 @@ using System.Text;
 
 namespace YellowJHelp
 {
+    /// <summary>
+    /// 接口调用方法
+    /// </summary>
     public class YJHelpWebApi
     {
         /// <summary>

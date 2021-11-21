@@ -6,6 +6,9 @@ using System.Security.Cryptography;
 
 namespace YellowJHelp
 {
+    /// <summary>
+    /// 通用帮助方法
+    /// </summary>
     public class YJHelp
     {
         /// <summary>

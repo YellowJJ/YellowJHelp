@@ -7,10 +7,10 @@ using System.Text;
 namespace YellowJHelp
 {
     /// <summary>
-    /// 将集合分组
+    /// 通用方法<T>
     /// </summary>
     /// <typeparam name="T"></typeparam>
-    public class TfzHelp<T>
+    public class YJHelpT<T>
     {
         /// <summary>
         /// 将集合按大小分

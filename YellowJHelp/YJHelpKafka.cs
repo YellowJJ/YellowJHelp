@@ -8,6 +8,9 @@ using YellowJHelp.Entry;
 
 namespace YellowJHelp
 {
+    /// <summary>
+    /// Kafka链接通用方法
+    /// </summary>
     public class YJHelpKafka
     {
         /// <summary>
@@ -19,10 +22,7 @@ namespace YellowJHelp
         public static async Task<string> Produce(string theme, string json,string BS,string name,string pwd)
         {
             string ret = "";
-
-            //var config = new ProducerConfig { BootstrapServers = "127.0.0.1:9092"};
             var config = new ProducerConfig { BootstrapServers = BS, SecurityProtocol = SecurityProtocol.SaslPlaintext, SaslMechanism = SaslMechanism.Plain, SaslUsername = name, SaslPassword = pwd };
-            //var config = new ProducerConfig { BootstrapServers = "192.168.1.254:9092" , SecurityProtocol = SecurityProtocol.SaslPlaintext, SaslMechanism= SaslMechanism.Plain, SaslUsername = "orico", SaslPassword = "kafka_f2b211" };
 
             using (var p = new ProducerBuilder<Null, string>(config).Build())
             {
@@ -40,7 +40,6 @@ namespace YellowJHelp
 
                     log.Returbed = dr.Value;
                     ret = dr.Value;
-                    //Help.YellowJLog($"记录 '{DateTime.Now}：{dr.Value}'  主题：'{dr.TopicPartitionOffset}'", "kafka");
                 }
                 catch (ProduceException<Null, string> e)
                 {

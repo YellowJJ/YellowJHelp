@@ -54,6 +54,11 @@
             返回值
             </summary>
         </member>
+        <member name="T:YellowJHelp.YJHelp">
+            <summary>
+            通用帮助方法
+            </summary>
+        </member>
         <member name="F:YellowJHelp.YJHelp.message">
             <summary>
             消息注明
@@ -112,6 +117,11 @@
             <param name="endstr">后字符</param>
             <returns></returns>
         </member>
+        <member name="T:YellowJHelp.YJHelpKafka">
+            <summary>
+            Kafka链接通用方法
+            </summary>
+        </member>
         <member name="M:YellowJHelp.YJHelpKafka.Produce(System.String,System.String,System.String,System.String,System.String)">
             <summary>
             发布者（带账号密码）
@@ -119,6 +129,16 @@
             <param name="theme">主题</param>
             <param name="json">数据</param>
             <param name="BS">kafka连接地址</param>
+        </member>
+        <member name="T:YellowJHelp.YJHelpSql">
+            <summary>
+            数据库通用方法（测试）
+            </summary>
+        </member>
+        <member name="F:YellowJHelp.YJHelpSql.sqlconntion">
+            <summary>
+            sqlserver链接参数
+            </summary>
         </member>
         <member name="M:YellowJHelp.YJHelpSql.Query">
             <summary>
@@ -131,34 +151,35 @@
             数据库日志记录
             </summary>
         </member>
-        <member name="T:YellowJHelp.TfzHelp`1">
+        <member name="M:YellowJHelp.YJHelpSql.SYQuery">
             <summary>
-            将集合分组
+            私有数据库
             </summary>
-            <typeparam name="T"></typeparam>
+            <returns></returns>
         </member>
-        <member name="M:YellowJHelp.TfzHelp`1.SpliteSourceBySize(System.Collections.Generic.List{`0},System.Int32)">
+        <!-- Badly formed XML comment ignored for member "T:YellowJHelp.YJHelpT`1" -->
+        <member name="M:YellowJHelp.YJHelpT`1.SpliteSourceBySize(System.Collections.Generic.List{`0},System.Int32)">
             <summary>
             将集合按大小分
             </summary>
             <param name="source">数据集</param>
             <param name="pageSiez">每一组大小</param>
         </member>
-        <member name="M:YellowJHelp.TfzHelp`1.SpliteSourceByCount(System.Collections.Generic.List{`0},System.Int32)">
+        <member name="M:YellowJHelp.YJHelpT`1.SpliteSourceByCount(System.Collections.Generic.List{`0},System.Int32)">
             <summary> 
             将集合安按组数分
             </summary> 
             <param name="source">数据集</param> 
             <param name="count">组数</param> 
         </member>
-        <member name="M:YellowJHelp.TfzHelp`1.DistinctList(System.Collections.Generic.List{`0})">
+        <member name="M:YellowJHelp.YJHelpT`1.DistinctList(System.Collections.Generic.List{`0})">
             <summary>
             集合去重(哈西,只针对数值类型)
             </summary>
             <param name="list"></param>
             <returns></returns>
         </member>
-        <member name="M:YellowJHelp.TfzHelp`1.Merge(System.Collections.Generic.List{`0},System.Collections.Generic.List{`0})">
+        <member name="M:YellowJHelp.YJHelpT`1.Merge(System.Collections.Generic.List{`0},System.Collections.Generic.List{`0})">
             <summary>
             合并两个集合的函数-不允许有重复项
             </summary>
@@ -166,7 +187,7 @@
             <param name="list2">第二个集合</param>
             <returns>返回第union的合并结果</returns>
         </member>
-        <member name="M:YellowJHelp.TfzHelp`1.MergeC(System.Collections.Generic.List{`0},System.Collections.Generic.List{`0})">
+        <member name="M:YellowJHelp.YJHelpT`1.MergeC(System.Collections.Generic.List{`0},System.Collections.Generic.List{`0})">
             <summary>
             合并两个集合的函数-允许出现重复项
             </summary>
@@ -174,13 +195,18 @@
             <param name="list2">第二个集合</param>
             <returns>返回第union的合并结果</returns>
         </member>
-        <member name="M:YellowJHelp.TfzHelp`1.DiffsetT(System.Collections.Generic.List{`0},System.Collections.Generic.List{`0})">
+        <member name="M:YellowJHelp.YJHelpT`1.DiffsetT(System.Collections.Generic.List{`0},System.Collections.Generic.List{`0})">
             <summary>
             获取差集（集合）
             </summary>
             <param name="left">左边的数据</param>
             <param name="right">右边的数据</param>
             <returns></returns>
+        </member>
+        <member name="T:YellowJHelp.YJHelpWebApi">
+            <summary>
+            接口调用方法
+            </summary>
         </member>
         <member name="M:YellowJHelp.YJHelpWebApi.HttpGet(System.String)">
             <summary>
