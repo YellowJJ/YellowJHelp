@@ -122,13 +122,23 @@
             Kafka链接通用方法
             </summary>
         </member>
-        <member name="M:YellowJHelp.YJHelpKafka.Produce(System.String,System.String,System.String,System.String,System.String)">
+        <member name="M:YellowJHelp.YJHelpKafka.Produce(System.String,System.String,System.String)">
+            <summary>
+            发布者
+            </summary>
+            <param name="theme">主题</param>
+            <param name="json">数据</param>
+            <param name="BS">kafka连接地址</param>
+        </member>
+        <member name="M:YellowJHelp.YJHelpKafka.ProduceAdmin(System.String,System.String,System.String,System.String,System.String)">
             <summary>
             发布者（带账号密码）
             </summary>
             <param name="theme">主题</param>
             <param name="json">数据</param>
             <param name="BS">kafka连接地址</param>
+            <param name="name">账号</param>
+            <param name="pwd">密码</param>
         </member>
         <member name="T:YellowJHelp.YJHelpSql">
             <summary>
