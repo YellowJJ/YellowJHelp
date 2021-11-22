@@ -1,4 +1,5 @@
-﻿using Microsoft.Extensions.Caching.Memory;
+﻿using Microsoft.AspNetCore.Http;
+using Microsoft.Extensions.Caching.Memory;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -71,10 +72,19 @@ namespace YellowJHelp
             {
                 return CacheDictionary.ContainsKey(key);
             }
+            
             /// <summary>
             /// 删除缓存
             /// </summary>
             /// <param name="key"></param>
+            public static void Clear(string key)
+            {
+                CacheDictionary.Remove(key);
+            }
+
+            /// <summary>
+            /// 删除所有
+            /// </summary>
             /// <returns></returns>
             public static void Clear()
             {
@@ -87,7 +97,7 @@ namespace YellowJHelp
         /// 日志
         /// </summary>
         /// <param name="text">消息</param>
-        /// <param name="address">相对文件地址</param>
+        /// <param name="address">相对文件名</param>
         public static void YellowJLog(string text, string address)
         {
 
@@ -132,6 +142,81 @@ namespace YellowJHelp
 
             return result;
         }
+
+        #region --cookie--
+        /// <summary>
+        /// 设置本地cookie
+        /// </summary>
+        /// <param name="ctx">Microsoft.AspNetCore.Http</param>
+        /// <param name="key">键</param>
+        /// <param name="value">值</param>  
+        /// <param name="minutes">过期时长，单位：分钟</param>      
+        public void SetCookies(HttpContext ctx, string key, string value, int minutes = 30)
+        {
+            ctx.Response.Cookies.Append(key, value);
+            //HttpContext.Response.Cookies.Append(key, value, new CookieOptions
+            //{
+            //    Expires = DateTime.Now.AddMinutes(minutes)
+            //});
+        }
+
+        /// <summary>
+        /// 删除指定的cookie
+        /// </summary>
+        /// <param name="ctx">Microsoft.AspNetCore.Http</param>
+        /// <param name="key">键</param>
+        public void DeleteCookies(HttpContext ctx, string key)
+        {
+            ctx.Response.Cookies.Delete(key);
+        }
+
+        /// <summary>
+        /// 获取cookies
+        /// </summary>
+        /// <param name="ctx">Microsoft.AspNetCore.Http</param>
+        /// <param name="key">键</param>
+        /// <returns>返回对应的值</returns>
+        public string GetCookies(HttpContext ctx, string key)
+        {
+            ctx.Request.Cookies.TryGetValue(key, out string value);
+            if (string.IsNullOrEmpty(value))
+                value = string.Empty;
+            return value;
+        }
+        #endregion
+        #region --Session--
+        /// <summary>
+        /// 添加Session
+        /// </summary>
+        /// <param name="ctx">Microsoft.AspNetCore.Http</param>
+        /// <param name="strSessionName">Session对象名称</param>
+        /// <param name="strValue">Session值</param>
+        public void SessionAdd(HttpContext ctx, string strSessionName, string strValue)
+        {
+            ctx.Session.SetString(strSessionName, strValue);
+        }
+
+        /// <summary>
+        /// 获取Session
+        /// </summary>
+        /// <param name="ctx">Microsoft.AspNetCore.Http</param>
+        /// <param name="strSessionName">Session对象名称</param>
+        public string SessionGet(HttpContext ctx, string strSessionName)
+        {
+            return ctx.Session.GetString(strSessionName);
+        }
+        /// <summary>
+        /// 删除Session
+        /// </summary>
+        /// <param name="ctx">Microsoft.AspNetCore.Http</param>
+        /// <param name="strSessionName">Session对象名称</param>
+        public void SessionDel(HttpContext ctx, string strSessionName)
+        {
+            ctx.Session.Remove(strSessionName);
+
+        }
+
+        #endregion
 
     }
 }

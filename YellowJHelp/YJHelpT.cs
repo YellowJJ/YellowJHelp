@@ -7,7 +7,7 @@ using System.Text;
 namespace YellowJHelp
 {
     /// <summary>
-    /// 通用方法<T>
+    /// 通用方法(范型)
     /// </summary>
     /// <typeparam name="T"></typeparam>
     public class YJHelpT<T>

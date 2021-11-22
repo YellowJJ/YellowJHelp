@@ -1,20 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Documentation\\YellowJ\\yellow-jhelp\\YellowJHelp\\YellowJHelp.csproj": {}
+    "I:\\YellowJ\\打包通用项目\\YellowJHelp\\yellow-jhelp\\YellowJHelp\\YellowJHelp.csproj": {}
   },
   "projects": {
-    "E:\\Documentation\\YellowJ\\yellow-jhelp\\YellowJHelp\\YellowJHelp.csproj": {
-      "version": "1.0.7",
+    "I:\\YellowJ\\打包通用项目\\YellowJHelp\\yellow-jhelp\\YellowJHelp\\YellowJHelp.csproj": {
+      "version": "1.0.8",
       "restore": {
-        "projectUniqueName": "E:\\Documentation\\YellowJ\\yellow-jhelp\\YellowJHelp\\YellowJHelp.csproj",
+        "projectUniqueName": "I:\\YellowJ\\打包通用项目\\YellowJHelp\\yellow-jhelp\\YellowJHelp\\YellowJHelp.csproj",
         "projectName": "YellowJHelp",
-        "projectPath": "E:\\Documentation\\YellowJ\\yellow-jhelp\\YellowJHelp\\YellowJHelp.csproj",
-        "packagesPath": "C:\\Users\\YellowJ\\.nuget\\packages\\",
-        "outputPath": "E:\\Documentation\\YellowJ\\yellow-jhelp\\YellowJHelp\\obj\\",
+        "projectPath": "I:\\YellowJ\\打包通用项目\\YellowJHelp\\yellow-jhelp\\YellowJHelp\\YellowJHelp.csproj",
+        "packagesPath": "C:\\Users\\hjklkl\\.nuget\\packages\\",
+        "outputPath": "I:\\YellowJ\\打包通用项目\\YellowJHelp\\yellow-jhelp\\YellowJHelp\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\YellowJ\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\hjklkl\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -52,9 +55,17 @@
               "target": "Package",
               "version": "[1.2.0, )"
             },
+            "Microsoft.AspNetCore.Mvc": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
             "Microsoft.Extensions.Caching.Memory": {
               "target": "Package",
               "version": "[6.0.0, )"
+            },
+            "ServiceStack.Redis": {
+              "target": "Package",
+              "version": "[5.13.2, )"
             },
             "SqlSugarCore": {
               "target": "Package",
@@ -76,7 +87,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100-rc.2.21505.57\\RuntimeIdentifierGraph.json"
         }
       }
     }
