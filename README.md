@@ -16,7 +16,7 @@ Confluent.Kafka
 
 
 #### 安装教程
-![9276a98aba281e9885e3ade9e94342d45610cdca](9276a98aba281e9885e3ade9e94342d45610cdca.png)
+![输入图片说明](https://images.gitee.com/uploads/images/2021/1122/134200_7e13f9f5_1731777.png "_Z5NP71B0T52]1@8PY4(}7J.png")
 
 
 #### 使用说明
