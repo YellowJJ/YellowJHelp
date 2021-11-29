@@ -10971,7 +10971,7 @@
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
-    "version": "1.0.8",
+    "version": "1.1.0",
     "restore": {
       "projectUniqueName": "I:\\YellowJ\\打包通用项目\\YellowJHelp\\yellow-jhelp\\YellowJHelp\\YellowJHelp.csproj",
       "projectName": "YellowJHelp",

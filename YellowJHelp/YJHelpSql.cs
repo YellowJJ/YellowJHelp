@@ -48,7 +48,7 @@ namespace YellowJHelp
             else if (OPSIndex > 999) { log.Number = "ApiLog" + DateTime.Now.ToString("yyyyMMdd") + DateTime.Now.ToString("hhmmss") + OPSIndex.ToString(); }
             else { log.Number = "ApiLog" + DateTime.Now.ToString("yyyyMMdd") + DateTime.Now.ToString("hhmmss") + "000" + OPSIndex.ToString(); }
             log.Date = DateTime.Now;
-            SYQuery().Insertable(log).ExecuteCommand();
+            //SYQuery().Insertable(log).ExecuteCommand();
             return "日志耗时记录【" + log.Number + "】：" + log;
 
         }
@@ -57,11 +57,11 @@ namespace YellowJHelp
         /// 私有数据库
         /// </summary>
         /// <returns></returns>
-        private static SqlSugarClient SYQuery()
+        private static SqlSugarClient SYQuery(string cofing)
         {
             SqlSugarClient db = new SqlSugarClient(new ConnectionConfig()
             {
-                ConnectionString = "Server=39.108.150.2;Database=YellowJCore;User ID=sa;Password=A1B2C3Dh.;",//必填, 数据库连接字符串
+                ConnectionString = cofing,//必填, 数据库连接字符串
                 DbType = SqlSugar.DbType.SqlServer,         //必填, 数据库类型
                 IsAutoCloseConnection = true,       //默认false, 时候知道关闭数据库连接, 设置为true无需使用using或者Close操作
                 InitKeyType = InitKeyType.SystemTable    //默认SystemTable, 字段信息读取, 如：该属性是不是主键，是不是标识列等等信息

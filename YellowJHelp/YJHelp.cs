@@ -218,5 +218,15 @@ namespace YellowJHelp
 
         #endregion
 
+        /// <summary>
+        /// string中是否包含某个值
+        /// </summary>
+        /// <param name="data">数据包</param>
+        /// <param name="value">值</param>
+        /// <returns></returns>
+        public static bool IsString(string data,string value) {
+            if (data.IndexOf(value, StringComparison.OrdinalIgnoreCase)>0) return true;else return false;
+        }
+
     }
 }

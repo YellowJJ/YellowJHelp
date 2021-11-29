@@ -29,3 +29,4 @@ E:\Documentation\YellowJ\yellow-jhelp\YellowJHelp\obj\Release\netstandard2.1\Yel
 E:\Documentation\YellowJ\yellow-jhelp\YellowJHelp\obj\Release\netstandard2.1\YellowJHelp.csprojAssemblyReference.cache
 E:\Documentation\YellowJ\yellow-jhelp\YellowJHelp\bin\Release\netstandard2.1\YellowJHelp.xml
 I:\YellowJ\打包通用项目\YellowJHelp\yellow-jhelp\YellowJHelp\bin\Release\netstandard2.1\YellowJHelp.xml
+I:\YellowJ\打包通用项目\YellowJHelp\yellow-jhelp\YellowJHelp\obj\Release\netstandard2.1\YellowJHelp.csproj.AssemblyReference.cache

@@ -46,14 +46,10 @@ namespace YellowJHelp
                 {
                     log.Returbed = e.Error.Reason;
                     ret = e.Error.Reason;
+                    YJHelp.YellowJLog(YJHelp.message + e.Error.Reason, "异常");
                 }
                 finally
                 {
-                    try
-                    {
-                        YJHelpSql.SqlApiLog(log);
-                    }
-                    catch (Exception ex) { YJHelp.YellowJLog(YJHelp.message + "Kafka记录日志-上传网络连接失败（本地可忽略）", "异常"); }
 
                 }
             }
@@ -95,12 +91,10 @@ namespace YellowJHelp
                 {
                     log.Returbed = e.Error.Reason;
                     ret = e.Error.Reason;
+                    YJHelp.YellowJLog(YJHelp.message + e.Error.Reason, "异常");
                 }
                 finally
                 {
-                    try {
-                        YJHelpSql.SqlApiLog(log);
-                    } catch (Exception ex) { YJHelp.YellowJLog(YJHelp.message+ "Kafka记录日志-上传网络连接失败（本地可忽略）", "异常"); }
                     
                 }
             }

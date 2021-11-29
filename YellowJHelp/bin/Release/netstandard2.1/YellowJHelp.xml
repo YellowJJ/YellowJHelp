@@ -168,6 +168,14 @@
             <param name="ctx">Microsoft.AspNetCore.Http</param>
             <param name="strSessionName">Session对象名称</param>
         </member>
+        <member name="M:YellowJHelp.YJHelp.IsString(System.String,System.String)">
+            <summary>
+            string中是否包含某个值
+            </summary>
+            <param name="data">数据包</param>
+            <param name="value">值</param>
+            <returns></returns>
+        </member>
         <member name="T:YellowJHelp.YJHelpKafka">
             <summary>
             Kafka链接通用方法
@@ -262,7 +270,7 @@
             数据库日志记录
             </summary>
         </member>
-        <member name="M:YellowJHelp.YJHelpSql.SYQuery">
+        <member name="M:YellowJHelp.YJHelpSql.SYQuery(System.String)">
             <summary>
             私有数据库
             </summary>
