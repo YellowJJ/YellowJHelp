@@ -225,7 +225,7 @@ namespace YellowJHelp
         /// <param name="value">值</param>
         /// <returns></returns>
         public static bool IsString(string data,string value) {
-            if (data.IndexOf(value, StringComparison.OrdinalIgnoreCase)>0) return true;else return false;
+            if (data.IndexOf(value, StringComparison.OrdinalIgnoreCase)>-1) return true;else return false;
         }
 
     }

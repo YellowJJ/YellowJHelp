@@ -65,12 +65,13 @@ namespace YellowJHelp
         /// <param name="BS">kafka连接地址</param>
         /// <param name="name">账号</param>
         /// <param name="pwd">密码</param>
-        public static async Task<string> ProduceAdmin(string theme, string json,string BS,string name,string pwd)
+        /// <param name="skey"></param>
+        public static async Task<string> ProduceAdmin(string theme, string json, string BS, string name, string pwd, string? skey = null)
         {
             string ret = "";
             var config = new ProducerConfig { BootstrapServers = BS, SecurityProtocol = SecurityProtocol.SaslPlaintext, SaslMechanism = SaslMechanism.Plain, SaslUsername = name, SaslPassword = pwd };
 
-            using (var p = new ProducerBuilder<Null, string>(config).Build())
+            using (var p = new ProducerBuilder<string?, string>(config).Build())
             {
 
                 LogInfo log = new LogInfo();
@@ -82,7 +83,7 @@ namespace YellowJHelp
                 try
                 {
 
-                    var dr = await p.ProduceAsync(theme, new Message<Null, string> { Value = json });
+                    var dr = await p.ProduceAsync(theme, new Message<string?, string> { Key = skey, Value = json });
 
                     log.Returbed = dr.Value;
                     ret = dr.Value;
@@ -95,7 +96,7 @@ namespace YellowJHelp
                 }
                 finally
                 {
-                    
+
                 }
             }
 
