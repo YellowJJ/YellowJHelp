@@ -128,7 +128,6 @@ I:\YellowJ\打包通用项目\YellowJHelp\yellow-jhelp\YellowJHelpFw\bin\Debug\S
 I:\YellowJ\打包通用项目\YellowJHelp\yellow-jhelp\YellowJHelpFw\bin\Debug\System.Memory.xml
 I:\YellowJ\打包通用项目\YellowJHelp\yellow-jhelp\YellowJHelpFw\bin\Debug\System.Numerics.Vectors.xml
 I:\YellowJ\打包通用项目\YellowJHelp\yellow-jhelp\YellowJHelpFw\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
-I:\YellowJ\打包通用项目\YellowJHelp\yellow-jhelp\YellowJHelpFw\obj\Debug\YellowJHelpFw.csproj.AssemblyReference.cache
 I:\YellowJ\打包通用项目\YellowJHelp\yellow-jhelp\YellowJHelpFw\obj\Debug\YellowJHelpFw.csproj.CoreCompileInputs.cache
 I:\YellowJ\打包通用项目\YellowJHelp\yellow-jhelp\YellowJHelpFw\obj\Debug\YellowJHelpFw.csproj.CopyComplete
 I:\YellowJ\打包通用项目\YellowJHelp\yellow-jhelp\YellowJHelpFw\obj\Debug\YellowJHelpFw.dll

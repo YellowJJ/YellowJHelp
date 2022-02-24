@@ -189,7 +189,8 @@
             <param name="json">数据</param>
             <param name="BS">kafka连接地址</param>
         </member>
-        <member name="M:YellowJHelp.YJHelpKafka.ProduceAdmin(System.String,System.String,System.String,System.String,System.String)">
+        <!-- Badly formed XML comment ignored for member "M:YellowJHelp.YJHelpKafka.Produce(System.String,System.String,System.String,System.Int32,System.Int32)" -->
+        <member name="M:YellowJHelp.YJHelpKafka.ProduceAdmin(System.String,System.String,System.String,System.String,System.String,System.String)">
             <summary>
             发布者（带账号密码）
             </summary>
@@ -198,7 +199,9 @@
             <param name="BS">kafka连接地址</param>
             <param name="name">账号</param>
             <param name="pwd">密码</param>
+            <param name="skey"></param>
         </member>
+        <!-- Badly formed XML comment ignored for member "M:YellowJHelp.YJHelpKafka.ProduceAdminPartition(System.String,System.String,System.String,System.String,System.String,System.Int32,System.Int32,System.String)" -->
         <member name="T:YellowJHelp.YJHelpRedis">
             <summary>
             redis通用使用（基于ServiceStack.Redis）

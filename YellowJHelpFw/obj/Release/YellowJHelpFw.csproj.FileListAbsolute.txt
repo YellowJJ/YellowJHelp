@@ -133,4 +133,3 @@ I:\YellowJ\打包通用项目\YellowJHelp\yellow-jhelp\YellowJHelpFw\bin\Release
 I:\YellowJ\打包通用项目\YellowJHelp\yellow-jhelp\YellowJHelpFw\bin\Release\System.Numerics.Vectors.xml
 I:\YellowJ\打包通用项目\YellowJHelp\yellow-jhelp\YellowJHelpFw\bin\Release\System.Runtime.CompilerServices.Unsafe.xml
 I:\YellowJ\打包通用项目\YellowJHelp\yellow-jhelp\YellowJHelpFw\obj\Release\YellowJHelpFw.csproj.CopyComplete
-I:\YellowJ\打包通用项目\YellowJHelp\yellow-jhelp\YellowJHelpFw\obj\Release\YellowJHelpFw.csproj.AssemblyReference.cache

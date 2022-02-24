@@ -15,11 +15,11 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyCopyrightAttribute("YellowJ")]
 [assembly: System.Reflection.AssemblyDescriptionAttribute("通用解决方案\r\n缓存，MD5加密，字段截取，集合类型差集计算，Cookie，Session\r\nKafka使用\r\nwebapi调用\r\nRedis使用")]
-[assembly: System.Reflection.AssemblyFileVersionAttribute("1.1.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.1.0")]
+[assembly: System.Reflection.AssemblyFileVersionAttribute("1.1.1.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.1.1")]
 [assembly: System.Reflection.AssemblyProductAttribute("YellowJHelp")]
 [assembly: System.Reflection.AssemblyTitleAttribute("YellowJHelp")]
-[assembly: System.Reflection.AssemblyVersionAttribute("1.1.0.0")]
+[assembly: System.Reflection.AssemblyVersionAttribute("1.1.1.0")]
 
 // 由 MSBuild WriteCodeFragment 类生成。
 
