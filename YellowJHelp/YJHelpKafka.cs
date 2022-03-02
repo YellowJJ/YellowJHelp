@@ -40,7 +40,7 @@ namespace YellowJHelp
                     var dr = await p.ProduceAsync(theme, new Message<Null, string> { Value = json });
 
                     log.Returbed = dr.Value;
-                    ret = dr.Value;
+                    ret = "执行节点：" + dr.Offset;
                 }
                 catch (ProduceException<Null, string> e)
                 {
@@ -94,7 +94,7 @@ namespace YellowJHelp
                     var dr = await p.ProduceAsync(topicPartition, new Message<Null, string> { Value = json });
 
                     log.Returbed = dr.Value;
-                    ret = dr.Value;
+                    ret = "执行节点：" + dr.Offset;
                 }
                 catch (ProduceException<Null, string> e)
                 {
@@ -140,7 +140,7 @@ namespace YellowJHelp
                     var dr = await p.ProduceAsync(theme, new Message<string?, string> { Key = skey, Value = json });
 
                     log.Returbed = dr.Value;
-                    ret = dr.Value;
+                    ret = "执行节点：" + dr.Offset;
                 }
                 catch (ProduceException<Null, string> e)
                 {
@@ -196,7 +196,7 @@ namespace YellowJHelp
                     var dr = await p.ProduceAsync(topicPartition, new Message<string?, string> { Key = skey, Value = json });
 
                     log.Returbed = dr.Value;
-                    ret = dr.Value;
+                    ret = "执行节点：" + dr.Offset;
                 }
                 catch (ProduceException<Null, string> e)
                 {

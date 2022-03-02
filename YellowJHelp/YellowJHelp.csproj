@@ -6,9 +6,9 @@
     <Nullable>enable</Nullable>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <Authors>YellowJ</Authors>
-    <Version>1.1.1</Version>
+    <Version>1.1.2</Version>
     <Description>通用解决方案
-缓存，MD5加密，字段截取，集合类型差集计算，Cookie，Session
+（调整kafka返回Offset）缓存，MD5加密，字段截取，集合类型差集计算，Cookie，Session
 Kafka使用
 webapi调用
 Redis使用</Description>

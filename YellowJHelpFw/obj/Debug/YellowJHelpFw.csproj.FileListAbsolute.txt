@@ -133,3 +133,4 @@ I:\YellowJ\打包通用项目\YellowJHelp\yellow-jhelp\YellowJHelpFw\obj\Debug\Y
 I:\YellowJ\打包通用项目\YellowJHelp\yellow-jhelp\YellowJHelpFw\obj\Debug\YellowJHelpFw.dll
 I:\YellowJ\打包通用项目\YellowJHelp\yellow-jhelp\YellowJHelpFw\obj\Debug\YellowJHelpFw.pdb
 I:\YellowJ\打包通用项目\YellowJHelp\yellow-jhelp\YellowJHelpFw\bin\Debug\YellowJHelpFw.xml
+I:\YellowJ\打包通用项目\YellowJHelp\yellow-jhelp\YellowJHelpFw\obj\Debug\YellowJHelpFw.csproj.AssemblyReference.cache
