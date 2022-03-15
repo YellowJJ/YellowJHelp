@@ -18,6 +18,7 @@ Mapster
 
 #### 方法库函数介绍
 ### YJHelp
+|   |   |
 |---|---|
 | message      |  消息注明 |
 | MD5Encrypt   |  32位MD5加密 |
