@@ -1,0 +1,2053 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>NewLife.Redis</name>
+    </assembly>
+    <members>
+        <member name="T:NewLife.Caching.Common.RedisException">
+            <summary>Redis异常</summary>
+        </member>
+        <member name="M:NewLife.Caching.Common.RedisException.#ctor(System.String)">
+            <summary>实例化Redis异常</summary>
+            <param name="message"></param>
+        </member>
+        <member name="M:NewLife.Caching.Common.RedisException.#ctor(System.String,System.Exception)">
+            <summary>实例化Redis异常</summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="T:NewLife.Caching.FullRedis">
+            <summary>增强版Redis</summary>
+        </member>
+        <member name="M:NewLife.Caching.FullRedis.Register">
+            <summary>注册</summary>
+        </member>
+        <member name="M:NewLife.Caching.FullRedis.Create(System.String)">
+            <summary>根据连接字符串创建</summary>
+            <param name="config"></param>
+            <returns></returns>
+        </member>
+        <member name="P:NewLife.Caching.FullRedis.Mode">
+            <summary>模式</summary>
+        </member>
+        <member name="P:NewLife.Caching.FullRedis.Cluster">
+            <summary>集群</summary>
+        </member>
+        <member name="M:NewLife.Caching.FullRedis.#ctor">
+            <summary>实例化增强版Redis</summary>
+        </member>
+        <member name="M:NewLife.Caching.FullRedis.#ctor(System.String,System.String,System.Int32)">
+            <summary>实例化增强版Redis</summary>
+            <param name="server"></param>
+            <param name="password"></param>
+            <param name="db"></param>
+        </member>
+        <member name="M:NewLife.Caching.FullRedis.#ctor(System.IServiceProvider,System.String)">
+            <summary>按照配置服务实例化Redis，用于NETCore依赖注入</summary>
+            <param name="provider">服务提供者，将要解析IConfigProvider</param>
+            <param name="name">缓存名称，也是配置中心key</param>
+        </member>
+        <member name="M:NewLife.Caching.FullRedis.Init(System.String)">
+            <summary>初始化配置</summary>
+            <param name="config"></param>
+        </member>
+        <member name="M:NewLife.Caching.FullRedis.Execute``1(System.String,System.Func{NewLife.Caching.RedisClient,``0},System.Boolean)">
+            <summary>重载执行，支持集群</summary>
+            <typeparam name="T"></typeparam>
+            <param name="key"></param>
+            <param name="func"></param>
+            <param name="write">是否写入操作</param>
+            <returns></returns>
+        </member>
+        <member name="M:NewLife.Caching.FullRedis.GetList``1(System.String)">
+            <summary>获取列表</summary>
+            <typeparam name="T"></typeparam>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NewLife.Caching.FullRedis.GetDictionary``1(System.String)">
+            <summary>获取哈希</summary>
+            <typeparam name="T"></typeparam>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NewLife.Caching.FullRedis.GetQueue``1(System.String)">
+            <summary>获取队列，快速LIST结构，无需确认</summary>
+            <typeparam name="T"></typeparam>
+            <param name="topic">消息队列主题</param>
+            <returns></returns>
+        </member>
+        <member name="M:NewLife.Caching.FullRedis.GetReliableQueue``1(System.String)">
+            <summary>获取可靠队列，消息需要确认</summary>
+            <typeparam name="T"></typeparam>
+            <param name="topic">消息队列主题</param>
+            <returns></returns>
+        </member>
+        <member name="M:NewLife.Caching.FullRedis.GetDelayQueue``1(System.String)">
+            <summary>获取延迟队列</summary>
+            <typeparam name="T"></typeparam>
+            <param name="topic">消息队列主题</param>
+            <returns></returns>
+        </member>
+        <member name="M:NewLife.Caching.FullRedis.GetStack``1(System.String)">
+            <summary>获取栈</summary>
+            <typeparam name="T"></typeparam>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NewLife.Caching.FullRedis.GetSet``1(System.String)">
+            <summary>获取Set</summary>
+            <typeparam name="T"></typeparam>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NewLife.Caching.FullRedis.GetStream``1(System.String)">
+            <summary>获取消息流</summary>
+            <typeparam name="T"></typeparam>
+            <param name="topic">消息队列主题</param>
+            <returns></returns>
+        </member>
+        <member name="M:NewLife.Caching.FullRedis.GetSortedSet``1(System.String)">
+            <summary>获取有序集合</summary>
+            <typeparam name="T"></typeparam>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NewLife.Caching.FullRedis.Append(System.String,System.String)">
+            <summary>附加字符串</summary>
+            <param name="key"></param>
+            <param name="value"></param>
+            <returns>返回字符串长度</returns>
+        </member>
+        <member name="M:NewLife.Caching.FullRedis.GetRange(System.String,System.Int32,System.Int32)">
+            <summary>获取字符串区间</summary>
+            <param name="key"></param>
+            <param name="start"></param>
+            <param name="end"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NewLife.Caching.FullRedis.SetRange(System.String,System.Int32,System.String)">
+            <summary>设置字符串区间</summary>
+            <param name="key"></param>
+            <param name="offset"></param>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NewLife.Caching.FullRedis.StrLen(System.String)">
+            <summary>字符串长度</summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NewLife.Caching.FullRedis.Rename(System.String,System.String,System.Boolean)">
+            <summary>重命名指定键</summary>
+            <param name="key"></param>
+            <param name="newKey"></param>
+            <param name="overwrite"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NewLife.Caching.FullRedis.Search(NewLife.Caching.Models.SearchModel)">
+            <summary>模糊搜索，支持?和*</summary>
+            <param name="model">搜索模型</param>
+            <returns></returns>
+        </member>
+        <member name="M:NewLife.Caching.FullRedis.Search(System.String,System.Int32)">
+            <summary>模糊搜索，支持?和*</summary>
+            <param name="pattern">匹配表达式</param>
+            <param name="count">返回个数</param>
+            <returns></returns>
+        </member>
+        <member name="M:NewLife.Caching.FullRedis.RPUSH``1(System.String,``0[])">
+            <summary>向列表末尾插入</summary>
+            <typeparam name="T"></typeparam>
+            <param name="key"></param>
+            <param name="values"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NewLife.Caching.FullRedis.LPUSH``1(System.String,``0[])">
+            <summary>向列表头部插入</summary>
+            <typeparam name="T"></typeparam>
+            <param name="key"></param>
+            <param name="values"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NewLife.Caching.FullRedis.RPOP``1(System.String)">
+            <summary>从列表末尾弹出一个元素</summary>
+            <typeparam name="T"></typeparam>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NewLife.Caching.FullRedis.RPOPLPUSH``1(System.String,System.String)">
+            <summary>从列表末尾弹出一个元素并插入到另一个列表头部</summary>
+            <remarks>适用于做安全队列</remarks>
+            <typeparam name="T"></typeparam>
+            <param name="source">源列表名称</param>
+            <param name="destination">元素后写入的新列表名称</param>
+            <returns></returns>
+        </member>
+        <member name="M:NewLife.Caching.FullRedis.BRPOPLPUSH``1(System.String,System.String,System.Int32)">
+            <summary>
+            从列表中弹出一个值，将弹出的元素插入到另外一个列表中并返回它； 如果列表没有元素会阻塞列表直到等待超时或发现可弹出元素为止。
+            适用于做安全队列(通过secTimeout决定阻塞时长)
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="source">源列表名称</param>
+            <param name="destination">元素后写入的新列表名称</param>
+            <param name="secTimeout">设置的阻塞时长，单位为秒。设置前请确认该值不能超过FullRedis.Timeout 否则会出现异常</param>
+            <returns></returns>
+        </member>
+        <member name="M:NewLife.Caching.FullRedis.LPOP``1(System.String)">
+            <summary>从列表头部弹出一个元素</summary>
+            <typeparam name="T"></typeparam>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NewLife.Caching.FullRedis.BRPOP``1(System.String[],System.Int32)">
+            <summary>从列表末尾弹出一个元素，阻塞</summary>
+            <remarks>
+            RPOP 的阻塞版本，因为这个命令会在给定list无法弹出任何元素的时候阻塞连接。
+            该命令会按照给出的 key 顺序查看 list，并在找到的第一个非空 list 的尾部弹出一个元素。
+            </remarks>
+            <typeparam name="T"></typeparam>
+            <param name="keys"></param>
+            <param name="secTimeout"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NewLife.Caching.FullRedis.BRPOP``1(System.String,System.Int32)">
+            <summary>从列表末尾弹出一个元素，阻塞</summary>
+            <typeparam name="T"></typeparam>
+            <param name="key"></param>
+            <param name="secTimeout"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NewLife.Caching.FullRedis.BLPOP``1(System.String[],System.Int32)">
+            <summary>从列表头部弹出一个元素，阻塞</summary>
+            <remarks>
+            命令 LPOP 的阻塞版本，这是因为当给定列表内没有任何元素可供弹出的时候，连接将被 BLPOP 命令阻塞。
+            当给定多个 key 参数时，按参数 key 的先后顺序依次检查各个列表，弹出第一个非空列表的头元素。
+            </remarks>
+            <typeparam name="T"></typeparam>
+            <param name="keys"></param>
+            <param name="secTimeout"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NewLife.Caching.FullRedis.BLPOP``1(System.String,System.Int32)">
+            <summary>从列表头部弹出一个元素，阻塞</summary>
+            <typeparam name="T"></typeparam>
+            <param name="key"></param>
+            <param name="secTimeout"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NewLife.Caching.FullRedis.SADD``1(System.String,``0[])">
+            <summary>向集合添加多个元素</summary>
+            <typeparam name="T"></typeparam>
+            <param name="key"></param>
+            <param name="members"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NewLife.Caching.FullRedis.SREM``1(System.String,``0[])">
+            <summary>向集合删除多个元素</summary>
+            <typeparam name="T"></typeparam>
+            <param name="key"></param>
+            <param name="members"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NewLife.Caching.FullRedis.SMEMBERS``1(System.String)">
+            <summary>获取所有元素</summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NewLife.Caching.FullRedis.SCARD(System.String)">
+            <summary>返回集合元素个数</summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NewLife.Caching.FullRedis.SISMEMBER``1(System.String,``0)">
+            <summary>成员 member 是否是存储的集合 key的成员</summary>
+            <param name="key"></param>
+            <param name="member"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NewLife.Caching.FullRedis.SMOVE``1(System.String,System.String,``0)">
+            <summary>将member从source集合移动到destination集合中</summary>
+            <param name="key"></param>
+            <param name="dest"></param>
+            <param name="member"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NewLife.Caching.FullRedis.SRANDMEMBER``1(System.String,System.Int32)">
+            <summary>随机获取多个</summary>
+            <param name="key"></param>
+            <param name="count"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NewLife.Caching.FullRedis.SPOP``1(System.String,System.Int32)">
+            <summary>随机获取并弹出</summary>
+            <param name="key"></param>
+            <param name="count"></param>
+            <returns></returns>
+        </member>
+        <member name="T:NewLife.Caching.HyperLogLog">
+            <summary>超级基数估算</summary>
+            <remarks>
+            HyperLogLog可以使用固定且很少的内存（每个HyperLogLog结构需要12K字节再加上key本身的几个字节）来存储集合的唯一元素。
+            返回的可见集合基数并不是精确值， 而是一个带有 0.81% 标准错误（standard error）的近似值。
+            例如为了记录一天会执行多少次各不相同的搜索查询， 一个程序可以在每次执行搜索查询时调用一次PFADD， 并通过调用PFCOUNT命令来获取这个记录的近似结果。
+            注意: 这个命令的一个副作用是可能会导致HyperLogLog内部被更改，出于缓存的目的,它会用8字节的来记录最近一次计算得到基数,所以PFCOUNT命令在技术上是个写命令。
+            </remarks>
+        </member>
+        <member name="M:NewLife.Caching.HyperLogLog.#ctor(NewLife.Caching.Redis,System.String)">
+            <summary>实例化超级基数</summary>
+            <param name="redis"></param>
+            <param name="key"></param>
+        </member>
+        <member name="M:NewLife.Caching.HyperLogLog.Add(System.String[])">
+            <summary>添加</summary>
+            <remarks>
+            这个命令的一个副作用是它可能会更改这个HyperLogLog的内部来反映在每添加一个唯一的对象时估计的基数(集合的基数)。
+            如果一个HyperLogLog的估计的近似基数在执行命令过程中发了变化， PFADD 返回1，否则返回0，
+            如果指定的key不存在，这个命令会自动创建一个空的HyperLogLog结构（指定长度和编码的字符串）。
+            如果在调用该命令时仅提供变量名而不指定元素也是可以的，如果这个变量名存在，则不会有任何操作，如果不存在，则会创建一个数据结构（返回1）
+            </remarks>
+            <param name="items"></param>
+            <returns></returns>
+        </member>
+        <member name="P:NewLife.Caching.HyperLogLog.Count">
+            <summary>近似基数</summary>
+            <remarks>
+            返回存储在HyperLogLog结构体的该变量的近似基数，如果该变量不存在,则返回0。
+            当参数为多个key时，返回这些HyperLogLog并集的近似基数，这个值是将所给定的所有key的HyperLoglog结构合并到一个临时的HyperLogLog结构中计算而得到的。
+            </remarks>
+        </member>
+        <member name="M:NewLife.Caching.HyperLogLog.Merge(System.String[])">
+            <summary>合并</summary>
+            <remarks>
+            将多个 HyperLogLog 合并（merge）为一个 HyperLogLog ， 合并后的 HyperLogLog 的基数接近于所有输入 HyperLogLog 的可见集合（observed set）的并集。
+            合并得出的 HyperLogLog 会被储存在目标变量（第一个参数）里面， 如果该键并不存在， 那么命令在执行之前， 会先为该键创建一个空的。
+            </remarks>
+            <param name="keys"></param>
+            <returns></returns>
+        </member>
+        <member name="T:NewLife.Caching.Models.ConsumerInfo">
+            <summary>消费者信息</summary>
+        </member>
+        <member name="P:NewLife.Caching.Models.ConsumerInfo.Name">
+            <summary>名称</summary>
+        </member>
+        <member name="P:NewLife.Caching.Models.ConsumerInfo.Pending">
+            <summary>挂起数</summary>
+        </member>
+        <member name="P:NewLife.Caching.Models.ConsumerInfo.Idle">
+            <summary>空闲</summary>
+        </member>
+        <member name="M:NewLife.Caching.Models.ConsumerInfo.Parse(System.Object[])">
+            <summary>分析</summary>
+            <param name="vs"></param>
+        </member>
+        <member name="T:NewLife.Caching.Models.GeoInfo">
+            <summary>地理坐标</summary>
+        </member>
+        <member name="P:NewLife.Caching.Models.GeoInfo.Name">
+            <summary>名称</summary>
+        </member>
+        <member name="P:NewLife.Caching.Models.GeoInfo.Longitude">
+            <summary>经度</summary>
+        </member>
+        <member name="P:NewLife.Caching.Models.GeoInfo.Latitude">
+            <summary>纬度</summary>
+        </member>
+        <member name="P:NewLife.Caching.Models.GeoInfo.Distance">
+            <summary>距离</summary>
+        </member>
+        <member name="T:NewLife.Caching.Models.GroupInfo">
+            <summary>消费组信息</summary>
+        </member>
+        <member name="P:NewLife.Caching.Models.GroupInfo.Name">
+            <summary>名称</summary>
+        </member>
+        <member name="P:NewLife.Caching.Models.GroupInfo.Consumers">
+            <summary>消费者</summary>
+        </member>
+        <member name="P:NewLife.Caching.Models.GroupInfo.Pending">
+            <summary>挂起数</summary>
+        </member>
+        <member name="M:NewLife.Caching.Models.GroupInfo.Parse(System.Object[])">
+            <summary>分析</summary>
+            <param name="vs"></param>
+        </member>
+        <member name="T:NewLife.Caching.Models.Message">
+            <summary>消息队列中消费得到的消息</summary>
+        </member>
+        <member name="P:NewLife.Caching.Models.Message.Id">
+            <summary>消息标识</summary>
+        </member>
+        <member name="P:NewLife.Caching.Models.Message.Body">
+            <summary>消息体</summary>
+        </member>
+        <member name="M:NewLife.Caching.Models.Message.GetBody``1">
+            <summary>解码消息体为具体类型</summary>
+            <typeparam name="T"></typeparam>
+            <returns></returns>
+        </member>
+        <member name="T:NewLife.Caching.Models.Node">
+            <summary>服务器节点。内部连接池</summary>
+        </member>
+        <member name="P:NewLife.Caching.Models.Node.Owner">
+            <summary>拥有者</summary>
+        </member>
+        <member name="P:NewLife.Caching.Models.Node.EndPoint">
+            <summary>当前节点地址</summary>
+        </member>
+        <member name="P:NewLife.Caching.Models.Node.ID">
+            <summary>标识</summary>
+        </member>
+        <member name="P:NewLife.Caching.Models.Node.Flags">
+            <summary>标志</summary>
+        </member>
+        <member name="P:NewLife.Caching.Models.Node.Master">
+            <summary>主机。当前节点对应的主机</summary>
+        </member>
+        <member name="P:NewLife.Caching.Models.Node.LinkState">
+            <summary>链接状态</summary>
+        </member>
+        <member name="P:NewLife.Caching.Models.Node.Slave">
+            <summary>是否从节点</summary>
+        </member>
+        <member name="P:NewLife.Caching.Models.Node.Slaves">
+            <summary>当前节点的从节点集合</summary>
+        </member>
+        <member name="P:NewLife.Caching.Models.Node.Slots">
+            <summary>本节点数据槽</summary>
+        </member>
+        <member name="P:NewLife.Caching.Models.Node.Importings">
+            <summary>正在转入</summary>
+        </member>
+        <member name="P:NewLife.Caching.Models.Node.Migratings">
+            <summary>正在转出</summary>
+        </member>
+        <member name="M:NewLife.Caching.Models.Node.ToString">
+            <summary>已重载。返回地址</summary>
+            <returns></returns>
+        </member>
+        <member name="M:NewLife.Caching.Models.Node.Parse(System.String)">
+            <summary>分析结果行</summary>
+            <param name="line"></param>
+        </member>
+        <member name="M:NewLife.Caching.Models.Node.Contain(System.Int32)">
+            <summary>是否包含数据槽</summary>
+            <param name="slot"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NewLife.Caching.Models.Node.GetSlots">
+            <summary>返回所有槽</summary>
+            <returns></returns>
+        </member>
+        <member name="P:NewLife.Caching.Models.Node.Pool">
+            <summary>连接池</summary>
+        </member>
+        <member name="M:NewLife.Caching.Models.Node.Execute``1(System.Func{NewLife.Caching.RedisClient,``0},System.Boolean)">
+            <summary>执行命令</summary>
+            <typeparam name="TResult">返回类型</typeparam>
+            <param name="func">回调函数</param>
+            <param name="write">是否写入操作</param>
+            <returns></returns>
+        </member>
+        <member name="T:NewLife.Caching.Models.PendingInfo">
+            <summary>等待信息</summary>
+        </member>
+        <member name="P:NewLife.Caching.Models.PendingInfo.Count">
+            <summary>个数</summary>
+        </member>
+        <member name="P:NewLife.Caching.Models.PendingInfo.StartId">
+            <summary>开始Id</summary>
+        </member>
+        <member name="P:NewLife.Caching.Models.PendingInfo.EndId">
+            <summary>结束Id</summary>
+        </member>
+        <member name="P:NewLife.Caching.Models.PendingInfo.Consumers">
+            <summary>消费者挂起情况</summary>
+        </member>
+        <member name="M:NewLife.Caching.Models.PendingInfo.Parse(System.Object[])">
+            <summary>分析</summary>
+            <param name="vs"></param>
+        </member>
+        <member name="T:NewLife.Caching.Models.PendingItem">
+            <summary>等待项</summary>
+        </member>
+        <member name="P:NewLife.Caching.Models.PendingItem.Id">
+            <summary>消息Id</summary>
+        </member>
+        <member name="P:NewLife.Caching.Models.PendingItem.Consumer">
+            <summary>消费者</summary>
+        </member>
+        <member name="P:NewLife.Caching.Models.PendingItem.Idle">
+            <summary>空闲时间。从读取到现在经历过的毫秒数</summary>
+        </member>
+        <member name="P:NewLife.Caching.Models.PendingItem.Delivery">
+            <summary>传递次数</summary>
+        </member>
+        <member name="M:NewLife.Caching.Models.PendingItem.Parse(System.Object[])">
+            <summary>分析</summary>
+            <param name="vs"></param>
+        </member>
+        <member name="T:NewLife.Caching.Models.RedisQueueStatus">
+            <summary>Redis队列状态</summary>
+        </member>
+        <member name="P:NewLife.Caching.Models.RedisQueueStatus.Key">
+            <summary>标识消费者的唯一Key</summary>
+        </member>
+        <member name="P:NewLife.Caching.Models.RedisQueueStatus.MachineName">
+            <summary>机器名</summary>
+        </member>
+        <member name="P:NewLife.Caching.Models.RedisQueueStatus.UserName">
+            <summary>用户名</summary>
+        </member>
+        <member name="P:NewLife.Caching.Models.RedisQueueStatus.ProcessId">
+            <summary>进程</summary>
+        </member>
+        <member name="P:NewLife.Caching.Models.RedisQueueStatus.Ip">
+            <summary>IP地址</summary>
+        </member>
+        <member name="P:NewLife.Caching.Models.RedisQueueStatus.CreateTime">
+            <summary>开始时间</summary>
+        </member>
+        <member name="P:NewLife.Caching.Models.RedisQueueStatus.LastActive">
+            <summary>最后活跃时间</summary>
+        </member>
+        <member name="P:NewLife.Caching.Models.RedisQueueStatus.Consumes">
+            <summary>消费消息数</summary>
+        </member>
+        <member name="P:NewLife.Caching.Models.RedisQueueStatus.Acks">
+            <summary>确认消息数</summary>
+        </member>
+        <member name="T:NewLife.Caching.Models.SearchModel">
+            <summary>模糊搜索模型</summary>
+        </member>
+        <member name="P:NewLife.Caching.Models.SearchModel.Pattern">
+            <summary>匹配表达式</summary>
+        </member>
+        <member name="P:NewLife.Caching.Models.SearchModel.Count">
+            <summary>个数</summary>
+        </member>
+        <member name="P:NewLife.Caching.Models.SearchModel.Position">
+            <summary>开始位置，同时由内部填充返回</summary>
+        </member>
+        <member name="T:NewLife.Caching.Models.Slot">
+            <summary>数据槽区间</summary>
+        </member>
+        <member name="F:NewLife.Caching.Models.Slot.From">
+            <summary>起始</summary>
+        </member>
+        <member name="F:NewLife.Caching.Models.Slot.To">
+            <summary>结束</summary>
+        </member>
+        <member name="M:NewLife.Caching.Models.Slot.ToString">
+            <summary>已重载。返回区间</summary>
+            <returns></returns>
+        </member>
+        <member name="T:NewLife.Caching.Models.StreamInfo">
+            <summary>消息流信息</summary>
+        </member>
+        <member name="P:NewLife.Caching.Models.StreamInfo.Length">
+            <summary>长度</summary>
+        </member>
+        <member name="P:NewLife.Caching.Models.StreamInfo.RadixTreeKeys">
+            <summary>基数树</summary>
+        </member>
+        <member name="P:NewLife.Caching.Models.StreamInfo.RadixTreeNodes">
+            <summary>基数树节点数</summary>
+        </member>
+        <member name="P:NewLife.Caching.Models.StreamInfo.Groups">
+            <summary>消费组</summary>
+        </member>
+        <member name="P:NewLife.Caching.Models.StreamInfo.LastGeneratedId">
+            <summary>最后生成Id</summary>
+        </member>
+        <member name="P:NewLife.Caching.Models.StreamInfo.FirstId">
+            <summary>第一个Id</summary>
+        </member>
+        <member name="P:NewLife.Caching.Models.StreamInfo.FirstValues">
+            <summary>第一个消息</summary>
+        </member>
+        <member name="P:NewLife.Caching.Models.StreamInfo.LastId">
+            <summary>最后一个Id</summary>
+        </member>
+        <member name="P:NewLife.Caching.Models.StreamInfo.LastValues">
+            <summary>最后一个消息</summary>
+        </member>
+        <member name="M:NewLife.Caching.Models.StreamInfo.Parse(System.Object[])">
+            <summary>分析</summary>
+            <param name="vs"></param>
+        </member>
+        <member name="T:NewLife.Caching.MultipleConsumerGroupsQueue`1">
+            <summary>
+            Redis多消费组可重复消费的队列
+            </summary>
+            <typeparam name="T">消息类型</typeparam>
+        </member>
+        <member name="F:NewLife.Caching.MultipleConsumerGroupsQueue`1._Redis">
+            <summary>
+            Redis客户端
+            </summary>
+        </member>
+        <member name="F:NewLife.Caching.MultipleConsumerGroupsQueue`1._Queue">
+            <summary>
+            消息列队
+            </summary>
+        </member>
+        <member name="P:NewLife.Caching.MultipleConsumerGroupsQueue`1.TimeOut">
+            <summary>
+            读写超时(默认15000ms)
+            </summary>
+        </member>
+        <member name="P:NewLife.Caching.MultipleConsumerGroupsQueue`1.SubscribeAppName">
+            <summary>
+            订阅者名称
+            </summary>
+        </member>
+        <member name="P:NewLife.Caching.MultipleConsumerGroupsQueue`1.ConsumeGroupExistErrMsgKeyWord">
+            <summary>
+            消费者组名已经存在的Redis错误消息关键词
+            </summary>
+        </member>
+        <member name="P:NewLife.Caching.MultipleConsumerGroupsQueue`1.QueueLen">
+            <summary>
+            列队长度
+            </summary>
+        </member>
+        <member name="P:NewLife.Caching.MultipleConsumerGroupsQueue`1.Log">
+            <summary>
+            日志对像
+            </summary>
+        </member>
+        <member name="M:NewLife.Caching.MultipleConsumerGroupsQueue`1.Connect(System.String,System.String,System.Int32,System.String,System.Int32)">
+            <summary>
+            连接Redis服务器
+            </summary>
+            <param name="host">Redis地址</param>
+            <param name="queueName">列队名称</param>
+            <param name="port">端口(默认6379)</param>
+            <param name="password">密码</param>
+            <param name="db">连接Redis数据库</param>
+        </member>
+        <member name="M:NewLife.Caching.MultipleConsumerGroupsQueue`1.Publish(`0)">
+            <summary>
+            发送消息
+            </summary>
+            <param name="data"></param>
+        </member>
+        <member name="F:NewLife.Caching.MultipleConsumerGroupsQueue`1._Cts">
+            <summary>
+            独立线程消费
+            </summary>
+        </member>
+        <member name="M:NewLife.Caching.MultipleConsumerGroupsQueue`1.Subscribe(System.String)">
+            <summary>
+            订阅
+            </summary>
+            <param name="subscribeAppName">消费者名称</param>
+        </member>
+        <member name="M:NewLife.Caching.MultipleConsumerGroupsQueue`1.UnSubscribe">
+            <summary>
+            取消订阅
+            </summary>
+        </member>
+        <member name="M:NewLife.Caching.MultipleConsumerGroupsQueue`1.getSubscribe(System.String)">
+            <summary>
+            获取消费消息
+            </summary>
+            <param name="subscribeAppName">订阅APP名称</param>
+        </member>
+        <member name="M:NewLife.Caching.MultipleConsumerGroupsQueue`1.Dispose">
+            <summary>
+            销毁对像
+            </summary>
+        </member>
+        <member name="T:NewLife.Caching.MultipleConsumerGroupsQueue`1.ReceivedHandler">
+            <summary>
+            通知订阅者接收到新消息
+            </summary>
+            <param name="data">命令</param>
+        </member>
+        <member name="E:NewLife.Caching.MultipleConsumerGroupsQueue`1.Received">
+            <summary>
+            通知订阅者接收到新消息
+            </summary>
+        </member>
+        <member name="M:NewLife.Caching.MultipleConsumerGroupsQueue`1.OnReceived(`0)">
+            <summary>
+            通知订阅者接收到新消息
+            </summary>
+            <param name="data"></param>
+        </member>
+        <member name="T:NewLife.Caching.MultipleConsumerGroupsQueue`1.StopSubscribeHandler">
+            <summary>
+            通知订阅者停止订阅
+            </summary>
+            <param name="msg">停止消息</param>
+        </member>
+        <member name="E:NewLife.Caching.MultipleConsumerGroupsQueue`1.StopSubscribe">
+            <summary>
+            通知订阅者停止订阅
+            </summary>
+            <remarks>可以在这里处理重新订阅的相关业务逻辑</remarks>
+        </member>
+        <member name="M:NewLife.Caching.MultipleConsumerGroupsQueue`1.OnStopSubscribe(System.String)">
+            <summary>通知订阅者停止订阅</summary>
+            <param name="msg">停止消息</param>
+        </member>
+        <member name="T:NewLife.Caching.MultipleConsumerGroupsQueue`1.DisconnectedHandler">
+            <summary>
+            通知订阅者断开连接
+            </summary>
+            <param name="msg">停止消息</param>
+        </member>
+        <member name="E:NewLife.Caching.MultipleConsumerGroupsQueue`1.Disconnected">
+            <summary>
+            通知订阅者断开连接
+            </summary>
+            <remarks>可以在这里处理重新连接的相关业务逻辑</remarks>
+        </member>
+        <member name="M:NewLife.Caching.MultipleConsumerGroupsQueue`1.OnDisconnected(System.String)">
+            <summary>
+            通知订阅者断开连接
+            </summary>
+            <param name="msg">停止消息</param>
+        </member>
+        <member name="T:NewLife.Caching.PubSub">
+            <summary>发布订阅</summary>
+        </member>
+        <member name="M:NewLife.Caching.PubSub.#ctor(NewLife.Caching.Redis,System.String)">
+            <summary>实例化发布订阅</summary>
+            <param name="redis"></param>
+            <param name="key"></param>
+        </member>
+        <member name="M:NewLife.Caching.PubSub.SubscribeAsync(System.Action{System.String,System.String},System.Threading.CancellationToken)">
+            <summary>订阅大循环</summary>
+            <param name="onMessage"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NewLife.Caching.PubSub.Publish(System.String)">
+            <summary>发布消息</summary>
+            <param name="message">消息内容</param>
+            <returns>返回接收到消息的客户端个数</returns>
+        </member>
+        <member name="T:NewLife.Caching.QueueBase">
+            <summary>消息队列基类</summary>
+        </member>
+        <member name="P:NewLife.Caching.QueueBase.TraceName">
+            <summary>追踪名。默认Key，主要用于解决动态Topic导致产生大量埋点的问题</summary>
+        </member>
+        <member name="P:NewLife.Caching.QueueBase.AttachTraceId">
+            <summary>是否在消息报文中自动注入TraceId。TraceId用于跨应用在生产者和消费者之间建立调用链，默认true</summary>
+        </member>
+        <member name="P:NewLife.Caching.QueueBase.ThrowOnFailure">
+            <summary>失败时抛出异常。默认false</summary>
+        </member>
+        <member name="P:NewLife.Caching.QueueBase.RetryTimesWhenSendFailed">
+            <summary>发送消息失败时的重试次数。默认3次</summary>
+        </member>
+        <member name="P:NewLife.Caching.QueueBase.RetryIntervalWhenSendFailed">
+            <summary>重试间隔。默认1000ms</summary>
+        </member>
+        <member name="P:NewLife.Caching.QueueBase.Topic">
+            <summary>消息队列主题</summary>
+        </member>
+        <member name="M:NewLife.Caching.QueueBase.#ctor(NewLife.Caching.Redis,System.String)">
+            <summary>实例化延迟队列</summary>
+            <param name="redis"></param>
+            <param name="key"></param>
+        </member>
+        <member name="M:NewLife.Caching.QueueBase.ValidWhenSendFailed(NewLife.Log.ISpan)">
+            <summary>验证失败</summary>
+            <param name="span"></param>
+        </member>
+        <member name="T:NewLife.Caching.QueueExtensions">
+            <summary>IProducerConsumer接口扩展</summary>
+        </member>
+        <member name="M:NewLife.Caching.QueueExtensions.ConsumeAsync``1(NewLife.Caching.IProducerConsumer{System.String},System.Func{``0,System.String,System.Threading.CancellationToken,System.Threading.Tasks.Task},System.Threading.CancellationToken,NewLife.Log.ILog,System.String)">
+            <summary>队列消费大循环，处理消息后自动确认</summary>
+            <typeparam name="T">消息类型</typeparam>
+            <param name="queue">队列</param>
+            <param name="onMessage">消息处理。如果处理消息时抛出异常，消息将延迟后回到队列</param>
+            <param name="cancellationToken">取消令牌</param>
+            <param name="log">日志对象</param>
+            <param name="idField">消息标识字段名，用于处理错误重试</param>
+            <returns></returns>
+        </member>
+        <member name="M:NewLife.Caching.QueueExtensions.ConsumeAsync``1(NewLife.Caching.IProducerConsumer{System.String},System.Action{``0},System.Threading.CancellationToken,NewLife.Log.ILog,System.String)">
+            <summary>队列消费大循环，处理消息后自动确认</summary>
+            <typeparam name="T">消息类型</typeparam>
+            <param name="queue">队列</param>
+            <param name="onMessage">消息处理。如果处理消息时抛出异常，消息将延迟后回到队列</param>
+            <param name="cancellationToken">取消令牌</param>
+            <param name="log">日志对象</param>
+            <param name="idField">消息标识字段名，用于处理错误重试</param>
+            <returns></returns>
+        </member>
+        <member name="M:NewLife.Caching.QueueExtensions.ConsumeAsync``1(NewLife.Caching.RedisReliableQueue{System.String},System.Func{``0,System.String,System.Threading.CancellationToken,System.Threading.Tasks.Task},System.Threading.CancellationToken,NewLife.Log.ILog,System.String)">
+            <summary>队列消费大循环，处理消息后自动确认</summary>
+            <typeparam name="T">消息类型</typeparam>
+            <param name="queue">队列</param>
+            <param name="onMessage">消息处理。如果处理消息时抛出异常，消息将延迟后回到队列</param>
+            <param name="cancellationToken">取消令牌</param>
+            <param name="log">日志对象</param>
+            <param name="idField">消息标识字段名，用于处理错误重试</param>
+            <returns></returns>
+        </member>
+        <member name="M:NewLife.Caching.QueueExtensions.ConsumeAsync``1(NewLife.Caching.RedisReliableQueue{System.String},System.Action{``0},System.Threading.CancellationToken,NewLife.Log.ILog,System.String)">
+            <summary>队列消费大循环，处理消息后自动确认</summary>
+            <typeparam name="T">消息类型</typeparam>
+            <param name="queue">队列</param>
+            <param name="onMessage">消息处理。如果处理消息时抛出异常，消息将延迟后回到队列</param>
+            <param name="cancellationToken">取消令牌</param>
+            <param name="log">日志对象</param>
+            <param name="idField">消息标识字段名，用于处理错误重试</param>
+            <returns></returns>
+        </member>
+        <member name="M:NewLife.Caching.QueueExtensions.ConsumeAsync``1(NewLife.Caching.RedisReliableQueue{System.String},System.Action{System.String},System.Threading.CancellationToken,NewLife.Log.ILog)">
+            <summary>队列消费大循环，处理消息后自动确认</summary>
+            <typeparam name="T">消息类型</typeparam>
+            <param name="queue">队列</param>
+            <param name="onMessage">消息处理。如果处理消息时抛出异常，消息将延迟后回到队列</param>
+            <param name="cancellationToken">取消令牌</param>
+            <param name="log">日志对象</param>
+            <returns></returns>
+        </member>
+        <member name="M:NewLife.Caching.QueueExtensions.ConsumeAsync``1(NewLife.Caching.RedisStream{System.String},System.Func{``0,NewLife.Caching.Models.Message,System.Threading.CancellationToken,System.Threading.Tasks.Task},System.Threading.CancellationToken,NewLife.Log.ILog)">
+            <summary>队列消费大循环，处理消息后自动确认</summary>
+            <typeparam name="T">消息类型</typeparam>
+            <param name="queue">队列</param>
+            <param name="onMessage">消息处理。如果处理消息时抛出异常，消息将延迟后回到队列</param>
+            <param name="cancellationToken">取消令牌</param>
+            <param name="log">日志对象</param>
+            <returns></returns>
+        </member>
+        <member name="M:NewLife.Caching.QueueExtensions.ConsumeAsync``1(NewLife.Caching.RedisStream{System.String},System.Action{``0},System.Threading.CancellationToken,NewLife.Log.ILog)">
+            <summary>队列消费大循环，处理消息后自动确认</summary>
+            <typeparam name="T">消息类型</typeparam>
+            <param name="queue">队列</param>
+            <param name="onMessage">消息处理。如果处理消息时抛出异常，消息将延迟后回到队列</param>
+            <param name="cancellationToken">取消令牌</param>
+            <param name="log">日志对象</param>
+            <returns></returns>
+        </member>
+        <member name="T:NewLife.Caching.RedisBase">
+            <summary>基础结构</summary>
+        </member>
+        <member name="P:NewLife.Caching.RedisBase.Redis">
+            <summary>客户端对象</summary>
+        </member>
+        <member name="P:NewLife.Caching.RedisBase.Key">
+            <summary>键</summary>
+        </member>
+        <member name="M:NewLife.Caching.RedisBase.#ctor(NewLife.Caching.Redis,System.String)">
+            <summary>实例化</summary>
+            <param name="redis"></param>
+            <param name="key"></param>
+        </member>
+        <member name="M:NewLife.Caching.RedisBase.Execute``1(System.Func{NewLife.Caching.RedisClient,``0},System.Boolean)">
+            <summary>执行命令</summary>
+            <typeparam name="T"></typeparam>
+            <param name="func"></param>
+            <param name="write">是否写入操作</param>
+            <returns></returns>
+        </member>
+        <member name="M:NewLife.Caching.RedisBase.ExecuteAsync``1(System.Func{NewLife.Caching.RedisClient,System.Threading.Tasks.Task{``0}},System.Boolean)">
+            <summary>异步执行命令</summary>
+            <typeparam name="T"></typeparam>
+            <param name="func"></param>
+            <param name="write">是否写入操作</param>
+            <returns></returns>
+        </member>
+        <member name="M:NewLife.Caching.RedisBase.ToBytes(System.Object)">
+            <summary>数值转字节数组</summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NewLife.Caching.RedisBase.FromBytes(NewLife.Data.Packet,System.Type)">
+            <summary>字节数组转对象</summary>
+            <param name="pk"></param>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NewLife.Caching.RedisBase.FromBytes``1(NewLife.Data.Packet)">
+            <summary>字节数组转对象</summary>
+            <typeparam name="T"></typeparam>
+            <param name="pk"></param>
+            <returns></returns>
+        </member>
+        <member name="T:NewLife.Caching.RedisCluster">
+            <summary>Redis集群</summary>
+        </member>
+        <member name="P:NewLife.Caching.RedisCluster.Nodes">
+            <summary>集群节点</summary>
+        </member>
+        <member name="M:NewLife.Caching.RedisCluster.#ctor(NewLife.Caching.Redis)">
+            <summary>实例化</summary>
+            <param name="redis"></param>
+        </member>
+        <member name="M:NewLife.Caching.RedisCluster.ParseNodes(System.String)">
+            <summary>分析节点</summary>
+            <param name="nodes"></param>
+        </member>
+        <member name="M:NewLife.Caching.RedisCluster.SelectNode(System.String)">
+            <summary>根据Key选择节点</summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NewLife.Caching.RedisCluster.Map(System.String,System.String)">
+            <summary>把Key映射到指定地址的节点</summary>
+            <param name="endpoint"></param>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NewLife.Caching.RedisCluster.Meet(System.String,System.Int32)">
+            <summary>向集群添加新节点</summary>
+            <param name="ip"></param>
+            <param name="port"></param>
+        </member>
+        <member name="M:NewLife.Caching.RedisCluster.AddSlots(NewLife.Caching.Models.Node,System.Int32[])">
+            <summary>向节点增加槽</summary>
+            <param name="node"></param>
+            <param name="slots"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NewLife.Caching.RedisCluster.DeleteSlots(NewLife.Caching.Models.Node,System.Int32[])">
+            <summary>从节点删除槽</summary>
+            <param name="node"></param>
+            <param name="slots"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NewLife.Caching.RedisCluster.Rebalance">
+            <summary>重新负载均衡</summary>
+            <remarks>
+            节点迁移太负责，直接干掉原来的分配，重新全局分配
+            </remarks>
+        </member>
+        <member name="T:NewLife.Caching.RedisDelayQueue`1">
+            <summary>Redis延迟队列</summary>
+            <remarks>
+            延迟Redis队列，每次生产操作1次Redis，消费操作4次Redis。
+            </remarks>
+        </member>
+        <member name="P:NewLife.Caching.RedisDelayQueue`1.TransferInterval">
+            <summary>转移延迟消息到主队列的间隔。默认10s</summary>
+        </member>
+        <member name="P:NewLife.Caching.RedisDelayQueue`1.Count">
+            <summary>个数</summary>
+        </member>
+        <member name="P:NewLife.Caching.RedisDelayQueue`1.IsEmpty">
+            <summary>是否为空</summary>
+        </member>
+        <member name="P:NewLife.Caching.RedisDelayQueue`1.Delay">
+            <summary>默认延迟时间。默认60秒</summary>
+        </member>
+        <member name="M:NewLife.Caching.RedisDelayQueue`1.#ctor(NewLife.Caching.Redis,System.String)">
+            <summary>实例化延迟队列</summary>
+            <param name="redis"></param>
+            <param name="key"></param>
+        </member>
+        <member name="M:NewLife.Caching.RedisDelayQueue`1.Add(`0,System.Int32)">
+            <summary>添加延迟消息</summary>
+            <param name="value"></param>
+            <param name="delay"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NewLife.Caching.RedisDelayQueue`1.Add(`0[])">
+            <summary>批量生产</summary>
+            <param name="values"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NewLife.Caching.RedisDelayQueue`1.Remove(`0)">
+            <summary>删除项</summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NewLife.Caching.RedisDelayQueue`1.TakeOne(System.Int32)">
+            <summary>获取一个</summary>
+            <param name="timeout">超时时间，默认0秒永远阻塞；负数表示直接返回，不阻塞。</param>
+            <returns></returns>
+        </member>
+        <member name="M:NewLife.Caching.RedisDelayQueue`1.TakeOneAsync(System.Int32,System.Threading.CancellationToken)">
+            <summary>异步获取一个</summary>
+            <param name="timeout">超时时间，默认0秒永远阻塞；负数表示直接返回，不阻塞。</param>
+            <param name="cancellationToken">取消令牌</param>
+            <returns></returns>
+        </member>
+        <member name="M:NewLife.Caching.RedisDelayQueue`1.NewLife#Caching#IProducerConsumer{T}#TakeOneAsync(System.Int32)">
+            <summary>异步消费获取</summary>
+            <param name="timeout">超时时间，默认0秒永远阻塞；负数表示直接返回，不阻塞。</param>
+            <returns></returns>
+        </member>
+        <member name="M:NewLife.Caching.RedisDelayQueue`1.Take(System.Int32)">
+            <summary>获取一批</summary>
+            <param name="count"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NewLife.Caching.RedisDelayQueue`1.TryPop(`0)">
+            <summary>争夺消费，只有一个线程能够成功删除，作为抢到的标志。同时备份到Ack队列</summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NewLife.Caching.RedisDelayQueue`1.Acknowledge(`0[])">
+            <summary>确认删除</summary>
+            <param name="keys"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NewLife.Caching.RedisDelayQueue`1.NewLife#Caching#IProducerConsumer{T}#Acknowledge(System.String[])">
+            <summary>确认删除</summary>
+            <param name="keys"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NewLife.Caching.RedisDelayQueue`1.TransferAsync(NewLife.Caching.IProducerConsumer{`0},System.Action{System.Exception},System.Threading.CancellationToken)">
+            <summary>异步转移消息，已到期消息转移到目标队列</summary>
+            <param name="queue">队列</param>
+            <param name="onException">异常处理</param>
+            <param name="cancellationToken">取消令牌</param>
+            <returns></returns>
+        </member>
+        <member name="T:NewLife.Caching.RedisGeo">
+            <summary>地理信息数据</summary>
+            <remarks>
+            将指定的地理空间位置（纬度、经度、名称）添加到指定的key中。
+            这些数据将会存储到sorted set这样的目的是为了方便使用GEORADIUS或者GEORADIUSBYMEMBER命令对数据进行半径查询等操作。
+            该命令以采用标准格式的参数x,y,所以经度必须在纬度之前。这些坐标的限制是可以被编入索引的，区域面积可以很接近极点但是不能索引。
+            </remarks>
+        </member>
+        <member name="M:NewLife.Caching.RedisGeo.#ctor(NewLife.Caching.Redis,System.String)">
+            <summary>实例化地理信息</summary>
+            <param name="redis"></param>
+            <param name="key"></param>
+        </member>
+        <member name="M:NewLife.Caching.RedisGeo.Add(System.String,System.Double,System.Double)">
+            <summary>添加</summary>
+            <param name="name"></param>
+            <param name="longitude"></param>
+            <param name="latitude"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NewLife.Caching.RedisGeo.Add(NewLife.Caching.Models.GeoInfo[])">
+            <summary>添加</summary>
+            <param name="items"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NewLife.Caching.RedisGeo.GetDistance(System.String,System.String,System.String)">
+            <summary>两点距离</summary>
+            <param name="from">开始点</param>
+            <param name="to">结束点</param>
+            <param name="unit">单位。m/km/mi/ft</param>
+            <returns></returns>
+        </member>
+        <member name="M:NewLife.Caching.RedisGeo.GetPosition(System.String[])">
+            <summary>获取一批点的坐标</summary>
+            <param name="members"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NewLife.Caching.RedisGeo.GetHash(System.String[])">
+            <summary>获取一批点的GeoHash一维编码</summary>
+            <remarks>
+            一维编码表示一个矩形区域，前缀表示更大区域，例如北京wx4fbzdvs80包含在wx4fbzdvs里面。
+            这个特性可以用于附近地点搜索。
+            GeoHash编码位数及距离关系：
+            1位，+-2500km；
+            2位，+-630km；
+            3位，+-78km；
+            4位，+-20km；
+            5位，+-2.4km；
+            6位，+-610m；
+            7位，+-76m；
+            8位，+-19m；
+            </remarks>
+            <param name="members"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NewLife.Caching.RedisGeo.GetRadius(System.Double,System.Double,System.Double,System.String,System.Int32)">
+            <summary>以给定的经纬度为中心， 返回键包含的位置元素当中， 与中心的距离不超过给定最大距离的所有位置元素</summary>
+            <param name="longitude"></param>
+            <param name="latitude"></param>
+            <param name="radius"></param>
+            <param name="unit"></param>
+            <param name="count"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NewLife.Caching.RedisGeo.GetRadius(System.String,System.Double,System.String,System.Int32)">
+            <summary>以给定的点位为中心， 返回键包含的位置元素当中， 与中心的距离不超过给定最大距离的所有位置元素</summary>
+            <param name="member"></param>
+            <param name="radius"></param>
+            <param name="unit"></param>
+            <param name="count"></param>
+            <returns></returns>
+        </member>
+        <member name="T:NewLife.Caching.RedisHash`2">
+            <summary>哈希结构</summary>
+            <typeparam name="TKey"></typeparam>
+            <typeparam name="TValue"></typeparam>
+        </member>
+        <member name="M:NewLife.Caching.RedisHash`2.#ctor(NewLife.Caching.Redis,System.String)">
+            <summary>实例化</summary>
+            <param name="redis"></param>
+            <param name="key"></param>
+        </member>
+        <member name="P:NewLife.Caching.RedisHash`2.Count">
+            <summary>个数</summary>
+        </member>
+        <member name="P:NewLife.Caching.RedisHash`2.Keys">
+            <summary>获取所有键</summary>
+        </member>
+        <member name="P:NewLife.Caching.RedisHash`2.Values">
+            <summary>获取所有值</summary>
+        </member>
+        <member name="P:NewLife.Caching.RedisHash`2.Item(`0)">
+            <summary>获取 或 设置 指定键的值</summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NewLife.Caching.RedisHash`2.ContainsKey(`0)">
+            <summary>是否包含指定键</summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NewLife.Caching.RedisHash`2.Add(`0,`1)">
+            <summary>添加</summary>
+            <param name="key"></param>
+            <param name="value"></param>
+        </member>
+        <member name="M:NewLife.Caching.RedisHash`2.Remove(`0)">
+            <summary>删除</summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NewLife.Caching.RedisHash`2.TryGetValue(`0,`1@)">
+            <summary>尝试获取</summary>
+            <param name="key"></param>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NewLife.Caching.RedisHash`2.Clear">
+            <summary>清空</summary>
+        </member>
+        <member name="M:NewLife.Caching.RedisHash`2.GetEnumerator">
+            <summary>迭代</summary>
+        </member>
+        <member name="M:NewLife.Caching.RedisHash`2.HDel(`0[])">
+            <summary>批量删除</summary>
+            <param name="fields"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NewLife.Caching.RedisHash`2.HMGet(`0[])">
+            <summary>只在 key 指定的哈希集中不存在指定的字段时，设置字段的值</summary>
+            <param name="fields"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NewLife.Caching.RedisHash`2.HMSet(System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{`0,`1}})">
+            <summary>批量插入</summary>
+            <param name="keyValues"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NewLife.Caching.RedisHash`2.GetAll">
+            <summary>获取所有名值对</summary>
+            <returns></returns>
+        </member>
+        <member name="M:NewLife.Caching.RedisHash`2.HIncrBy(`0,System.Int64)">
+            <summary>增加指定字段值</summary>
+            <param name="field"></param>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NewLife.Caching.RedisHash`2.HIncrBy(`0,System.Double)">
+            <summary>增加指定字段值</summary>
+            <param name="field"></param>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NewLife.Caching.RedisHash`2.HSetNX(`0,`1)">
+            <summary>只在 key 指定的哈希集中不存在指定的字段时，设置字段的值</summary>
+            <param name="field"></param>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NewLife.Caching.RedisHash`2.HStrLen(`0)">
+            <summary>返回hash指定field的value的字符串长度</summary>
+            <param name="field"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NewLife.Caching.RedisHash`2.Search(NewLife.Caching.Models.SearchModel)">
+            <summary>模糊搜索，支持?和*</summary>
+            <param name="model">搜索模型</param>
+            <returns></returns>
+        </member>
+        <member name="M:NewLife.Caching.RedisHash`2.Search(System.String,System.Int32)">
+            <summary>模糊搜索，支持?和*</summary>
+            <param name="pattern">匹配表达式</param>
+            <param name="count">返回个数</param>
+            <returns></returns>
+        </member>
+        <member name="T:NewLife.Caching.RedisHelper">
+            <summary>Redis助手</summary>
+        </member>
+        <member name="M:NewLife.Caching.RedisHelper.AttachTraceId(NewLife.Caching.Redis,System.Object)">
+            <summary>在消息队列发布消息前</summary>
+            <param name="redis"></param>
+            <param name="msg"></param>
+            <returns></returns>
+        </member>
+        <member name="T:NewLife.Caching.RedisList`1">
+            <summary>列表结构，右边进入</summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="M:NewLife.Caching.RedisList`1.#ctor(NewLife.Caching.Redis,System.String)">
+            <summary>实例化</summary>
+            <param name="redis"></param>
+            <param name="key"></param>
+        </member>
+        <member name="P:NewLife.Caching.RedisList`1.Item(System.Int32)">
+            <summary>获取 或 设置 指定位置的值</summary>
+            <param name="index"></param>
+            <returns></returns>
+        </member>
+        <member name="P:NewLife.Caching.RedisList`1.Count">
+            <summary>个数</summary>
+        </member>
+        <member name="M:NewLife.Caching.RedisList`1.Add(`0)">
+            <summary>添加元素在后面</summary>
+            <param name="item"></param>
+        </member>
+        <member name="M:NewLife.Caching.RedisList`1.AddRange(System.Collections.Generic.IEnumerable{`0})">
+            <summary>批量添加</summary>
+            <param name="values"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NewLife.Caching.RedisList`1.Clear">
+            <summary>清空列表-start>end 清空</summary>
+        </member>
+        <member name="M:NewLife.Caching.RedisList`1.Contains(`0)">
+            <summary>是否包含指定元素</summary>
+            <param name="item"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NewLife.Caching.RedisList`1.CopyTo(`0[],System.Int32)">
+            <summary>复制到目标数组</summary>
+            <param name="array"></param>
+            <param name="arrayIndex"></param>
+        </member>
+        <member name="M:NewLife.Caching.RedisList`1.IndexOf(`0)">
+            <summary>查找指定元素位置</summary>
+            <param name="item"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NewLife.Caching.RedisList`1.Insert(System.Int32,`0)">
+            <summary>在指定位置插入</summary>
+            <param name="index"></param>
+            <param name="item"></param>
+        </member>
+        <member name="M:NewLife.Caching.RedisList`1.Remove(`0)">
+            <summary>删除指定元素</summary>
+            <param name="item"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NewLife.Caching.RedisList`1.RemoveAt(System.Int32)">
+            <summary>删除指定位置数据</summary>
+            <param name="index"></param>
+        </member>
+        <member name="M:NewLife.Caching.RedisList`1.GetEnumerator">
+            <summary>遍历</summary>
+            <returns></returns>
+        </member>
+        <member name="M:NewLife.Caching.RedisList`1.RPUSH(System.Collections.Generic.IEnumerable{`0})">
+            <summary>右边批量添加，返回队列元素总数</summary>
+            <param name="values"></param>
+            <returns>队列元素总数</returns>
+        </member>
+        <member name="M:NewLife.Caching.RedisList`1.LPUSH(System.Collections.Generic.IEnumerable{`0})">
+            <summary>左边批量添加，返回队列元素总数</summary>
+            <param name="values"></param>
+            <returns>队列元素总数</returns>
+        </member>
+        <member name="M:NewLife.Caching.RedisList`1.RPOP">
+            <summary>移除并返回最右边一个元素</summary>
+            <returns></returns>
+        </member>
+        <member name="M:NewLife.Caching.RedisList`1.LPOP">
+            <summary>移除并返回最左边一个元素</summary>
+            <returns></returns>
+        </member>
+        <member name="M:NewLife.Caching.RedisList`1.RPOPLPUSH(System.String)">
+            <summary>移除并返回最右边一个元素，并插入目标列表左边，原子操作</summary>
+            <remarks>
+            用于高可靠性消费
+            </remarks>
+            <param name="destKey">目标列表</param>
+            <returns></returns>
+        </member>
+        <member name="M:NewLife.Caching.RedisList`1.BRPOPLPUSH(System.String,System.Int32)">
+            <summary>移除并返回最右边一个元素，并插入目标列表左边，原子操作</summary>
+            <remarks>
+            用于高可靠性消费
+            </remarks>
+            <param name="destKey">目标列表</param>
+            <param name="timeout">超时时间，默认0秒永远阻塞；负数表示直接返回，不阻塞。</param>
+            <returns></returns>
+        </member>
+        <member name="M:NewLife.Caching.RedisList`1.LInsertBefore(`0,`0)">
+            <summary>在指定元素之前插入</summary>
+            <param name="pivot"></param>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NewLife.Caching.RedisList`1.LInsertAfter(`0,`0)">
+            <summary>返回指定范围的列表</summary>
+            <param name="pivot"></param>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NewLife.Caching.RedisList`1.LRange(System.Int32,System.Int32)">
+            <summary>返回指定范围的列表</summary>
+            <param name="start"></param>
+            <param name="stop"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NewLife.Caching.RedisList`1.GetAll">
+            <summary>获取所有元素</summary>
+            <returns></returns>
+        </member>
+        <member name="M:NewLife.Caching.RedisList`1.LTrim(System.Int32,System.Int32)">
+            <summary>修剪一个已存在的列表</summary>
+            <remarks>
+            LTRIM foobar 0 2 将会对存储在 foobar 的列表进行修剪，只保留列表里的前3个元素。
+            </remarks>
+            <param name="start">由0开始计数，-1 表示列表里的最后一个元素</param>
+            <param name="stop">由0开始计数，-1 表示列表里的最后一个元素</param>
+            <returns></returns>
+        </member>
+        <member name="M:NewLife.Caching.RedisList`1.LRem(System.Int32,`0)">
+            <summary>从存于 key 的列表里移除前 count 次出现的值为 value 的元素</summary>
+            <param name="count"></param>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="T:NewLife.Caching.RedisQueue`1">
+            <summary>Redis队列，左进右出</summary>
+            <remarks>
+            默认弹出消费，不需要确认，使用非常简单，但如果消费者处理失败，消息将会丢失；
+            
+            普通Redis队列，每次生产操作1次Redis，消费操作1次Redis。
+            </remarks>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="P:NewLife.Caching.RedisQueue`1.MinPipeline">
+            <summary>最小管道阈值，达到该值时使用管道，默认3</summary>
+        </member>
+        <member name="P:NewLife.Caching.RedisQueue`1.Count">
+            <summary>个数</summary>
+        </member>
+        <member name="P:NewLife.Caching.RedisQueue`1.IsEmpty">
+            <summary>是否为空</summary>
+        </member>
+        <member name="M:NewLife.Caching.RedisQueue`1.#ctor(NewLife.Caching.Redis,System.String)">
+            <summary>实例化队列</summary>
+            <param name="redis"></param>
+            <param name="key"></param>
+        </member>
+        <member name="M:NewLife.Caching.RedisQueue`1.Add(`0)">
+            <summary>生产添加</summary>
+            <param name="value">消息</param>
+            <returns></returns>
+        </member>
+        <member name="M:NewLife.Caching.RedisQueue`1.Add(`0[])">
+            <summary>批量生产添加</summary>
+            <param name="values">消息集合</param>
+            <returns></returns>
+        </member>
+        <member name="M:NewLife.Caching.RedisQueue`1.TakeOne(System.Int32)">
+            <summary>消费获取，支持阻塞</summary>
+            <param name="timeout">超时，0秒永远阻塞；负数表示直接返回，不阻塞。</param>
+            <returns></returns>
+        </member>
+        <member name="M:NewLife.Caching.RedisQueue`1.TakeOneAsync(System.Int32,System.Threading.CancellationToken)">
+            <summary>异步消费获取</summary>
+            <param name="timeout">超时时间，默认0秒永远阻塞；负数表示直接返回，不阻塞。</param>
+            <param name="cancellationToken">取消令牌</param>
+            <returns></returns>
+        </member>
+        <member name="M:NewLife.Caching.RedisQueue`1.NewLife#Caching#IProducerConsumer{T}#TakeOneAsync(System.Int32)">
+            <summary>异步消费获取</summary>
+            <param name="timeout">超时时间，默认0秒永远阻塞；负数表示直接返回，不阻塞。</param>
+            <returns></returns>
+        </member>
+        <member name="M:NewLife.Caching.RedisQueue`1.Take(System.Int32)">
+            <summary>批量消费获取</summary>
+            <param name="count">要消费的消息个数</param>
+            <returns></returns>
+        </member>
+        <member name="M:NewLife.Caching.RedisQueue`1.NewLife#Caching#IProducerConsumer{T}#Acknowledge(System.String[])">
+            <summary>确认消费。不支持</summary>
+            <param name="keys"></param>
+            <returns></returns>
+        </member>
+        <member name="T:NewLife.Caching.RedisReliableQueue`1">
+            <summary>可靠Redis队列，左进右出</summary>
+            <remarks>
+            严格模式下消费，弹出消息的同时插入Ack队列，消费者处理成功后将从ACK队列删除该消息，若处理失败，则将延迟消费Ack消息；
+            
+            可信队列对象不是线程安全，要求每个线程独享队列对象。
+            为了让严格模式支持多线程消费，确认队列AckKey构造为 Key:Ack:Rand16 的格式，每一个消费者都将有自己完全独一无二的确认队列。
+            消费者每30秒（RetryInterval）清理一次确认队列的死信（未确认消息），重新投入主队列。
+            应用异常退出时，可能产生一些死信，在应用启动首次消费时通过TakeAllAck消费清理所有Ack队列。
+            由于引入状态队列，清理不活跃消费者时，不会影响正常消费者。
+            
+            设计要点：
+            1，消费时，RPOPLPUSH从Key弹出并备份到AckKey，消息处理完成后，再从AckKey删除
+            2，AckKey设计为Key:Ack:ukey，ukey=Rand16，让每个实例都有专属的Ack确认队列
+            3，消费时，每60秒更新一次状态到Key:Status:ukey，表明ukey还在消费
+            4，全局定期扫描Key:Status:ukey，若不活跃，回滚它的Ack消息
+            
+            消费者要慎重处理错误消息，有可能某条消息一直处理失败，如果未确认，队列会反复把消息送回主队列。
+            建议用户自己处理并确认消费，通过消息体或者redisKey计数。
+            
+            高级队列技巧：
+            1，按kv写入消息体，然后key作为消息键写入队列并消费，成功消费后从kv删除；
+            2，消息键key自定义，随时可以查看或删除消息体，也可以避免重复生产；
+            3，Redis队列确保至少消费一次，消息体和消息键分离后，可以做到有且仅有一次，若有二次消费，再也拿不到数据内容；
+            4，同一个消息被重复生产时，尽管队列里面有两条消息键，但由于消息键相同，消息体只有一份，从而避免重复消费；
+            
+            可信Redis队列，每次生产操作1次Redis，消费操作2次Redis；
+            高级Redis队列，每次生产操作3次Redis，消费操作4次Redis；
+            </remarks>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="P:NewLife.Caching.RedisReliableQueue`1.AckKey">
+            <summary>用于确认的列表</summary>
+        </member>
+        <member name="P:NewLife.Caching.RedisReliableQueue`1.RetryInterval">
+            <summary>重新处理确认队列中死信的间隔。默认60s</summary>
+        </member>
+        <member name="P:NewLife.Caching.RedisReliableQueue`1.MinPipeline">
+            <summary>最小管道阈值，达到该值时使用管道，默认3</summary>
+        </member>
+        <member name="P:NewLife.Caching.RedisReliableQueue`1.Count">
+            <summary>个数</summary>
+        </member>
+        <member name="P:NewLife.Caching.RedisReliableQueue`1.IsEmpty">
+            <summary>是否为空</summary>
+        </member>
+        <member name="P:NewLife.Caching.RedisReliableQueue`1.Status">
+            <summary>消费状态</summary>
+        </member>
+        <member name="M:NewLife.Caching.RedisReliableQueue`1.#ctor(NewLife.Caching.Redis,System.String)">
+            <summary>实例化队列</summary>
+            <param name="redis"></param>
+            <param name="key"></param>
+        </member>
+        <member name="M:NewLife.Caching.RedisReliableQueue`1.Finalize">
+            <summary>析构</summary>
+        </member>
+        <member name="M:NewLife.Caching.RedisReliableQueue`1.Dispose">
+            <summary>释放</summary>
+        </member>
+        <member name="M:NewLife.Caching.RedisReliableQueue`1.Dispose(System.Boolean)">
+            <summary>释放</summary>
+            <param name="disposing"></param>
+        </member>
+        <member name="M:NewLife.Caching.RedisReliableQueue`1.Add(`0[])">
+            <summary>批量生产添加</summary>
+            <param name="values">消息集合</param>
+            <returns>返回插入后的LIST长度</returns>
+        </member>
+        <member name="M:NewLife.Caching.RedisReliableQueue`1.TakeOne(System.Int32)">
+            <summary>消费获取，从Key弹出并备份到AckKey，支持阻塞</summary>
+            <remarks>假定前面获取的消息已经确认，因该方法内部可能回滚确认队列，避免误杀</remarks>
+            <param name="timeout">超时时间，默认0秒永远阻塞；负数表示直接返回，不阻塞。</param>
+            <returns></returns>
+        </member>
+        <member name="M:NewLife.Caching.RedisReliableQueue`1.TakeOneAsync(System.Int32,System.Threading.CancellationToken)">
+            <summary>异步消费获取</summary>
+            <param name="timeout">超时时间，默认0秒永远阻塞；负数表示直接返回，不阻塞。</param>
+            <param name="cancellationToken">取消令牌</param>
+            <returns></returns>
+        </member>
+        <member name="M:NewLife.Caching.RedisReliableQueue`1.NewLife#Caching#IProducerConsumer{T}#TakeOneAsync(System.Int32)">
+            <summary>异步消费获取</summary>
+            <param name="timeout">超时时间，默认0秒永远阻塞；负数表示直接返回，不阻塞。</param>
+            <returns></returns>
+        </member>
+        <member name="M:NewLife.Caching.RedisReliableQueue`1.Take(System.Int32)">
+            <summary>批量消费获取，从Key弹出并备份到AckKey</summary>
+            <remarks>假定前面获取的消息已经确认，因该方法内部可能回滚确认队列，避免误杀</remarks>
+            <param name="count">要消费的消息个数</param>
+            <returns></returns>
+        </member>
+        <member name="M:NewLife.Caching.RedisReliableQueue`1.Acknowledge(System.String[])">
+            <summary>确认消费，从AckKey中删除</summary>
+            <param name="keys"></param>
+        </member>
+        <member name="M:NewLife.Caching.RedisReliableQueue`1.InitDelay">
+            <summary>初始化延迟队列功能。生产者自动初始化，消费者最好能够按队列初始化一次</summary>
+            <remarks>
+            该功能是附加功能，需要消费者主动调用，每个队列的多消费者开一个即可。
+            核心工作是启动延迟队列的TransferAsync大循环，每个进程内按队列开一个最合适，多了没有用反而形成争夺。
+            </remarks>
+        </member>
+        <member name="M:NewLife.Caching.RedisReliableQueue`1.AddDelay(`0,System.Int32)">
+            <summary>添加延迟消息</summary>
+            <param name="value"></param>
+            <param name="delay"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NewLife.Caching.RedisReliableQueue`1.Publish(System.Collections.Generic.IDictionary{System.String,`0},System.Int32)">
+            <summary>高级生产消息。消息体和消息键分离，业务层指定消息键，可随时查看或删除，同时避免重复生产</summary>
+            <remarks>
+            Publish 必须跟 ConsumeAsync 配对使用。
+            </remarks>
+            <param name="messages">消息字典，id为键，消息体为值</param>
+            <param name="expire">消息体过期时间，单位秒</param>
+            <returns></returns>
+        </member>
+        <member name="M:NewLife.Caching.RedisReliableQueue`1.ConsumeAsync``1(System.Func{`0,System.Threading.Tasks.Task{``0}},System.Int32)">
+            <summary>高级消费消息。消息处理成功后，自动确认并删除消息体</summary>
+            <remarks>
+            Publish 必须跟 ConsumeAsync 配对使用。
+            </remarks>
+            <param name="func"></param>
+            <param name="timeout"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NewLife.Caching.RedisReliableQueue`1.TakeAck(System.Int32)">
+            <summary>从确认列表弹出消息，用于消费中断后，重新恢复现场时获取</summary>
+            <remarks>理论上Ack队列只存储极少数数据</remarks>
+            <param name="count"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NewLife.Caching.RedisReliableQueue`1.ClearAllAck">
+            <summary>清空所有Ack队列。危险操作！！！</summary>
+            <returns></returns>
+        </member>
+        <member name="M:NewLife.Caching.RedisReliableQueue`1.RollbackAck(System.String,System.String)">
+            <summary>回滚指定AckKey内的消息到Key</summary>
+            <param name="key"></param>
+            <param name="ackKey"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NewLife.Caching.RedisReliableQueue`1.RollbackAllAck">
+            <summary>全局回滚死信，一般由单一线程执行，避免干扰处理中数据</summary>
+            <returns></returns>
+        </member>
+        <member name="M:NewLife.Caching.RedisReliableQueue`1.RetryAck">
+            <summary>处理未确认的死信，重新放入队列</summary>
+        </member>
+        <member name="T:NewLife.Caching.RedisSet`1">
+            <summary>Set结构</summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="M:NewLife.Caching.RedisSet`1.#ctor(NewLife.Caching.Redis,System.String)">
+            <summary>实例化</summary>
+            <param name="redis"></param>
+            <param name="key"></param>
+        </member>
+        <member name="P:NewLife.Caching.RedisSet`1.Count">
+            <summary>个数</summary>
+        </member>
+        <member name="M:NewLife.Caching.RedisSet`1.Add(`0)">
+            <summary>添加元素在后面</summary>
+            <param name="item"></param>
+        </member>
+        <member name="M:NewLife.Caching.RedisSet`1.Clear">
+            <summary>清空列表</summary>
+        </member>
+        <member name="M:NewLife.Caching.RedisSet`1.Contains(`0)">
+            <summary>是否包含指定元素</summary>
+            <param name="item"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NewLife.Caching.RedisSet`1.CopyTo(`0[],System.Int32)">
+            <summary>复制到目标数组</summary>
+            <param name="array"></param>
+            <param name="arrayIndex"></param>
+        </member>
+        <member name="M:NewLife.Caching.RedisSet`1.Remove(`0)">
+            <summary>删除指定元素</summary>
+            <param name="item"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NewLife.Caching.RedisSet`1.GetEnumerator">
+            <summary>遍历</summary>
+            <returns></returns>
+        </member>
+        <member name="M:NewLife.Caching.RedisSet`1.SAdd(`0[])">
+            <summary>批量添加</summary>
+            <param name="members"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NewLife.Caching.RedisSet`1.SDel(`0[])">
+            <summary>批量删除</summary>
+            <param name="members"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NewLife.Caching.RedisSet`1.GetAll">
+            <summary>获取所有元素</summary>
+            <returns></returns>
+        </member>
+        <member name="M:NewLife.Caching.RedisSet`1.Move(System.String,`0)">
+            <summary>将member从source集合移动到destination集合中</summary>
+            <param name="dest"></param>
+            <param name="member"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NewLife.Caching.RedisSet`1.RandomGet(System.Int32)">
+            <summary>随机获取多个</summary>
+            <param name="count"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NewLife.Caching.RedisSet`1.Pop(System.Int32)">
+            <summary>随机获取并弹出</summary>
+            <param name="count"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NewLife.Caching.RedisSet`1.Search(NewLife.Caching.Models.SearchModel)">
+            <summary>模糊搜索，支持?和*</summary>
+            <param name="model">搜索模型</param>
+            <returns></returns>
+        </member>
+        <member name="M:NewLife.Caching.RedisSet`1.Search(System.String,System.Int32)">
+            <summary>模糊搜索，支持?和*</summary>
+            <param name="pattern">匹配表达式</param>
+            <param name="count">返回个数</param>
+            <returns></returns>
+        </member>
+        <member name="T:NewLife.Caching.RedisSortedSet`1">
+            <summary>有序集合ZSET</summary>
+        </member>
+        <member name="P:NewLife.Caching.RedisSortedSet`1.Count">
+            <summary>个数</summary>
+        </member>
+        <member name="M:NewLife.Caching.RedisSortedSet`1.#ctor(NewLife.Caching.Redis,System.String)">
+            <summary>实例化有序集合</summary>
+            <param name="redis"></param>
+            <param name="key"></param>
+        </member>
+        <member name="M:NewLife.Caching.RedisSortedSet`1.Add(`0,System.Double)">
+            <summary>添加元素并指定分数，返回添加到集合的成员数量</summary>
+            <param name="member">元素</param>
+            <param name="score">分数</param>
+            <returns>添加到有序集合的成员数量，不包括已经存在更新分数的成员</returns>
+        </member>
+        <member name="M:NewLife.Caching.RedisSortedSet`1.Add(System.Collections.Generic.IEnumerable{`0},System.Double)">
+            <summary>批量添加，返回添加到集合的成员数量</summary>
+            <param name="members"></param>
+            <param name="score"></param>
+            <returns>添加到有序集合的成员数量，不包括已经存在更新分数的成员</returns>
+        </member>
+        <member name="M:NewLife.Caching.RedisSortedSet`1.Remove(`0[])">
+            <summary>删除元素</summary>
+            <param name="members"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NewLife.Caching.RedisSortedSet`1.GetScore(`0)">
+            <summary>返回有序集key中，成员member的score值</summary>
+            <param name="member"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NewLife.Caching.RedisSortedSet`1.Add(System.String,System.Collections.Generic.IDictionary{`0,System.Double})">
+            <summary>批量添加</summary>
+            <remarks>
+            将所有指定成员添加到键为key有序集合（sorted set）里面。 添加时可以指定多个分数/成员（score/member）对。
+            如果指定添加的成员已经是有序集合里面的成员，则会更新改成员的分数（scrore）并更新到正确的排序位置。
+            
+            
+            ZADD 命令在key后面分数/成员（score/member）对前面支持一些参数，他们是：
+            XX: 仅仅更新存在的成员，不添加新成员。
+            NX: 不更新存在的成员。只添加新成员。
+            CH: 修改返回值为发生变化的成员总数，原始是返回新添加成员的总数(CH 是 changed 的意思)。
+            更改的元素是新添加的成员，已经存在的成员更新分数。 所以在命令中指定的成员有相同的分数将不被计算在内。
+            注：在通常情况下，ZADD返回值只计算新添加成员的数量。
+            INCR: 当ZADD指定这个选项时，成员的操作就等同ZINCRBY命令，对成员的分数进行递增操作。
+            </remarks>
+            <param name="options">支持参数</param>
+            <param name="members"></param>
+            <returns>添加到有序集合的成员数量，不包括已经存在更新分数的成员</returns>
+        </member>
+        <member name="M:NewLife.Caching.RedisSortedSet`1.Increment(`0,System.Double)">
+            <summary>为有序集key的成员member的score值加上增量increment</summary>
+            <param name="member"></param>
+            <param name="score"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NewLife.Caching.RedisSortedSet`1.PopMax(System.Int32)">
+            <summary>删除并返回有序集合key中的最多count个具有最高得分的成员</summary>
+            <param name="count"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NewLife.Caching.RedisSortedSet`1.PopMin(System.Int32)">
+            <summary>删除并返回有序集合key中的最多count个具有最低得分的成员</summary>
+            <param name="count"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NewLife.Caching.RedisSortedSet`1.FindCount(System.Double,System.Double)">
+            <summary>
+            返回有序集key中，score值在min和max之间(默认包括score值等于min或max)的成员个数
+            </summary>
+            <param name="min"></param>
+            <param name="max"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NewLife.Caching.RedisSortedSet`1.Range(System.Int32,System.Int32)">
+            <summary>返回指定范围的列表</summary>
+            <param name="start"></param>
+            <param name="stop"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NewLife.Caching.RedisSortedSet`1.RangeWithScores(System.Int32,System.Int32)">
+            <summary>返回指定范围的成员分数对</summary>
+            <param name="start"></param>
+            <param name="stop"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NewLife.Caching.RedisSortedSet`1.RangeByScore(System.Double,System.Double,System.Int32,System.Int32)">
+            <summary>返回指定分数区间的成员列表，低分到高分排序</summary>
+            <param name="min">低分，包含</param>
+            <param name="max">高分，包含</param>
+            <param name="offset">偏移</param>
+            <param name="count">个数</param>
+            <returns></returns>
+        </member>
+        <member name="M:NewLife.Caching.RedisSortedSet`1.RangeByScoreAsync(System.Double,System.Double,System.Int32,System.Int32,System.Threading.CancellationToken)">
+            <summary>返回指定分数区间的成员列表，低分到高分排序</summary>
+            <param name="min">低分，包含</param>
+            <param name="max">高分，包含</param>
+            <param name="offset">偏移</param>
+            <param name="count">个数</param>
+            <param name="cancellationToken">取消令牌</param>
+            <returns></returns>
+        </member>
+        <member name="M:NewLife.Caching.RedisSortedSet`1.RangeByScoreWithScores(System.Double,System.Double,System.Int32,System.Int32)">
+            <summary>返回指定分数区间的成员分数对，低分到高分排序</summary>
+            <param name="min">低分，包含</param>
+            <param name="max">高分，包含</param>
+            <param name="offset">偏移</param>
+            <param name="count">个数</param>
+            <returns></returns>
+        </member>
+        <member name="M:NewLife.Caching.RedisSortedSet`1.Rank(`0)">
+            <summary>返回有序集key中成员member的排名。其中有序集成员按score值递增(从小到大)顺序排列</summary>
+            <param name="member"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NewLife.Caching.RedisSortedSet`1.Search(System.String,System.Int32,System.Int32)">
+            <summary>模糊搜索，支持?和*</summary>
+            <param name="pattern"></param>
+            <param name="count"></param>
+            <param name="position"></param>
+            <returns></returns>
+        </member>
+        <member name="T:NewLife.Caching.RedisStack`1">
+            <summary>Redis栈，右进右出</summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="P:NewLife.Caching.RedisStack`1.Count">
+            <summary>个数</summary>
+        </member>
+        <member name="P:NewLife.Caching.RedisStack`1.IsEmpty">
+            <summary>是否为空</summary>
+        </member>
+        <member name="P:NewLife.Caching.RedisStack`1.MinPipeline">
+            <summary>最小管道阈值，达到该值时使用管道，默认3</summary>
+        </member>
+        <member name="M:NewLife.Caching.RedisStack`1.#ctor(NewLife.Caching.Redis,System.String)">
+            <summary>实例化队列</summary>
+            <param name="redis"></param>
+            <param name="key"></param>
+        </member>
+        <member name="M:NewLife.Caching.RedisStack`1.Add(`0[])">
+            <summary>批量生产添加</summary>
+            <param name="values"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NewLife.Caching.RedisStack`1.Take(System.Int32)">
+            <summary>批量消费获取</summary>
+            <param name="count"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NewLife.Caching.RedisStack`1.TakeOne(System.Int32)">
+            <summary>消费获取，支持阻塞</summary>
+            <param name="timeout">超时，0秒永远阻塞；负数表示直接返回，不阻塞。</param>
+            <returns></returns>
+        </member>
+        <member name="M:NewLife.Caching.RedisStack`1.TakeOneAsync(System.Int32,System.Threading.CancellationToken)">
+            <summary>异步消费获取</summary>
+            <param name="timeout">超时时间，默认0秒永远阻塞；负数表示直接返回，不阻塞。</param>
+            <param name="cancellationToken">取消令牌</param>
+            <returns></returns>
+        </member>
+        <member name="M:NewLife.Caching.RedisStack`1.NewLife#Caching#IProducerConsumer{T}#TakeOneAsync(System.Int32)">
+            <summary>异步消费获取</summary>
+            <param name="timeout">超时时间，默认0秒永远阻塞；负数表示直接返回，不阻塞。</param>
+            <returns></returns>
+        </member>
+        <member name="T:NewLife.Caching.SaveDelegate">
+            <summary>保存指定key数据的委托</summary>
+            <param name="key"></param>
+            <param name="data"></param>
+        </member>
+        <member name="T:NewLife.Caching.RedisStat">
+            <summary>Redis流式统计</summary>
+            <remarks>
+            借助Redis进行流式增量计算。
+            1，HASH结构对Key下的统计标量进行累加
+            2，有变化的Key进入延迟队列，延迟一定时间后进入普通队列
+            3，消费队列，得到Key后进行Rename，然后把数据取回来写入数据库
+            </remarks>
+        </member>
+        <member name="P:NewLife.Caching.RedisStat.Name">
+            <summary>统计名称。如StationDayStat等</summary>
+        </member>
+        <member name="P:NewLife.Caching.RedisStat.OnSave">
+            <summary>取回统计数据后的委托。一般用于保存到数据库</summary>
+        </member>
+        <member name="M:NewLife.Caching.RedisStat.#ctor(NewLife.Caching.FullRedis,System.String)">
+            <summary>实例化</summary>
+            <param name="redis"></param>
+            <param name="name"></param>
+        </member>
+        <member name="M:NewLife.Caching.RedisStat.Dispose(System.Boolean)">
+            <summary>销毁</summary>
+            <param name="disposing"></param>
+        </member>
+        <member name="M:NewLife.Caching.RedisStat.Increment(System.String,System.String,System.Int32)">
+            <summary>增加指定标量的值</summary>
+            <param name="key"></param>
+            <param name="field"></param>
+            <param name="value"></param>
+        </member>
+        <member name="M:NewLife.Caching.RedisStat.AddDelayQueue(System.String,System.Int32)">
+            <summary>放入延迟队列</summary>
+            <param name="key"></param>
+            <param name="delay"></param>
+        </member>
+        <member name="M:NewLife.Caching.RedisStat.OnProcess(System.String)">
+            <summary>消费处理</summary>
+            <param name="key"></param>
+        </member>
+        <member name="T:NewLife.Caching.RedisStatGroup">
+            <summary>Redis统计组</summary>
+        </member>
+        <member name="P:NewLife.Caching.RedisStatGroup.Redis">
+            <summary>实例</summary>
+        </member>
+        <member name="P:NewLife.Caching.RedisStatGroup.Stats">
+            <summary>统计集合</summary>
+        </member>
+        <member name="T:NewLife.Caching.RedisStream`1">
+            <summary>Redis5.0的Stream数据结构，完整态消息队列，支持多消费组</summary>
+            <remarks>
+            特殊的$，表示接收从阻塞那一刻开始添加到流的消息
+            </remarks>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="P:NewLife.Caching.RedisStream`1.Count">
+            <summary>个数</summary>
+        </member>
+        <member name="P:NewLife.Caching.RedisStream`1.IsEmpty">
+            <summary>是否为空</summary>
+        </member>
+        <member name="P:NewLife.Caching.RedisStream`1.RetryInterval">
+            <summary>重新处理确认队列中死信的间隔。默认60s</summary>
+        </member>
+        <member name="P:NewLife.Caching.RedisStream`1.PrimitiveKey">
+            <summary>基元类型数据添加该key构成集合。默认__data</summary>
+        </member>
+        <member name="P:NewLife.Caching.RedisStream`1.MaxLenngth">
+            <summary>最大队列长度。要保留的消息个数，超过则移除较老消息，非精确，实际上略大于该值，默认100万</summary>
+        </member>
+        <member name="P:NewLife.Caching.RedisStream`1.MaxRetry">
+            <summary>最大重试次数。超过该次数后，消息将被抛弃，默认10次</summary>
+        </member>
+        <member name="P:NewLife.Caching.RedisStream`1.StartId">
+            <summary>开始编号。独立消费时使用，消费组消费时不使用，默认0-0</summary>
+        </member>
+        <member name="P:NewLife.Caching.RedisStream`1.Group">
+            <summary>消费者组。指定消费组后，不再使用独立消费。通过SetGroup可自动创建消费组</summary>
+        </member>
+        <member name="P:NewLife.Caching.RedisStream`1.Consumer">
+            <summary>消费者</summary>
+        </member>
+        <member name="M:NewLife.Caching.RedisStream`1.#ctor(NewLife.Caching.Redis,System.String)">
+            <summary>实例化队列</summary>
+            <param name="redis"></param>
+            <param name="key"></param>
+        </member>
+        <member name="M:NewLife.Caching.RedisStream`1.SetGroup(System.String)">
+            <summary>设置消费组。如果消费组不存在则创建</summary>
+            <param name="group"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NewLife.Caching.RedisStream`1.Add(`0,System.String)">
+            <summary>生产添加</summary>
+            <param name="value">消息体</param>
+            <param name="msgId">消息ID</param>
+            <returns>返回消息ID</returns>
+        </member>
+        <member name="M:NewLife.Caching.RedisStream`1.NewLife#Caching#IProducerConsumer{T}#Add(`0[])">
+            <summary>批量生产添加</summary>
+            <param name="values"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NewLife.Caching.RedisStream`1.Take(System.Int32)">
+            <summary>批量消费获取，前移指针StartId</summary>
+            <param name="count"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NewLife.Caching.RedisStream`1.TakeOne(System.Int32)">
+            <summary>消费获取一个</summary>
+            <param name="timeout"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NewLife.Caching.RedisStream`1.TakeOneAsync(System.Int32,System.Threading.CancellationToken)">
+            <summary>异步消费获取一个</summary>
+            <param name="timeout">超时时间，默认0秒永远阻塞</param>
+            <param name="cancellationToken">取消令牌</param>
+            <returns></returns>
+        </member>
+        <member name="M:NewLife.Caching.RedisStream`1.NewLife#Caching#IProducerConsumer{T}#TakeOneAsync(System.Int32)">
+            <summary>异步消费获取</summary>
+            <param name="timeout">超时时间，默认0秒永远阻塞；负数表示直接返回，不阻塞。</param>
+            <returns></returns>
+        </member>
+        <member name="M:NewLife.Caching.RedisStream`1.TakeMessageAsync(System.Int32,System.Threading.CancellationToken)">
+            <summary>异步消费获取一个</summary>
+            <param name="timeout">超时时间，默认0秒永远阻塞</param>
+            <param name="cancellationToken">取消令牌</param>
+            <returns></returns>
+        </member>
+        <member name="M:NewLife.Caching.RedisStream`1.Acknowledge(System.String[])">
+            <summary>消费确认</summary>
+            <param name="keys"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NewLife.Caching.RedisStream`1.RetryAck">
+            <summary>处理未确认的死信，重新放入队列</summary>
+        </member>
+        <member name="M:NewLife.Caching.RedisStream`1.Delete(System.String)">
+            <summary>删除指定消息</summary>
+            <param name="id">消息Id</param>
+            <returns></returns>
+        </member>
+        <member name="M:NewLife.Caching.RedisStream`1.Trim(System.Int32)">
+            <summary>裁剪队列到指定大小</summary>
+            <param name="maxLen">最大长度。为了提高效率，最大长度并没有那么精准</param>
+            <returns></returns>
+        </member>
+        <member name="M:NewLife.Caching.RedisStream`1.Ack(System.String,System.String)">
+            <summary>确认消息</summary>
+            <param name="group">消费组名称</param>
+            <param name="id">消息Id</param>
+            <returns></returns>
+        </member>
+        <member name="M:NewLife.Caching.RedisStream`1.Claim(System.String,System.String,System.String,System.Int32)">
+            <summary>改变待处理消息的所有权，抢夺他人未确认消息</summary>
+            <param name="group">消费组名称</param>
+            <param name="consumer">目标消费者</param>
+            <param name="id">消息Id</param>
+            <param name="msIdle">空闲时间。默认3600_000</param>
+            <returns></returns>
+        </member>
+        <member name="M:NewLife.Caching.RedisStream`1.Range(System.String,System.String,System.Int32)">
+            <summary>获取区间消息</summary>
+            <param name="startId"></param>
+            <param name="endId"></param>
+            <param name="count"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NewLife.Caching.RedisStream`1.Range(System.DateTime,System.DateTime,System.Int32)">
+            <summary>获取区间消息</summary>
+            <param name="start"></param>
+            <param name="end"></param>
+            <param name="count"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NewLife.Caching.RedisStream`1.Read(System.String,System.Int32)">
+            <summary>原始独立消费</summary>
+            <remarks>
+            特殊的$，表示接收从阻塞那一刻开始添加到流的消息
+            </remarks>
+            <param name="startId">开始编号</param>
+            <param name="count">消息个数</param>
+            <returns></returns>
+        </member>
+        <member name="M:NewLife.Caching.RedisStream`1.ReadAsync(System.String,System.Int32,System.Int32,System.Threading.CancellationToken)">
+            <summary>异步原始独立消费</summary>
+            <remarks>
+            特殊的$，表示接收从阻塞那一刻开始添加到流的消息
+            </remarks>
+            <param name="startId">开始编号</param>
+            <param name="count">消息个数</param>
+            <param name="block">阻塞毫秒数，0表示永远</param>
+            <param name="cancellationToken">取消令牌</param>
+            <returns></returns>
+        </member>
+        <member name="M:NewLife.Caching.RedisStream`1.GetPending(System.String)">
+            <summary>获取等待列表信息</summary>
+            <param name="group">消费组名称</param>
+            <returns></returns>
+        </member>
+        <member name="M:NewLife.Caching.RedisStream`1.Pending(System.String,System.String,System.String,System.Int32)">
+            <summary>获取等待列表消息</summary>
+            <param name="group">消费组名称</param>
+            <param name="startId"></param>
+            <param name="endId"></param>
+            <param name="count"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NewLife.Caching.RedisStream`1.GroupCreate(System.String,System.String)">
+            <summary>创建消费组</summary>
+            <param name="group">消费组名称</param>
+            <param name="startId">开始编号。0表示从开头，$表示从末尾，收到下一条生产消息才开始消费 stream不存在，则会报错，所以在后面 加上 mkstream</param>
+            <returns></returns>
+        </member>
+        <member name="M:NewLife.Caching.RedisStream`1.GroupDestroy(System.String)">
+            <summary>销毁消费组</summary>
+            <param name="group">消费组名称</param>
+            <returns></returns>
+        </member>
+        <member name="M:NewLife.Caching.RedisStream`1.GroupDeleteConsumer(System.String,System.String)">
+            <summary>销毁消费者</summary>
+            <param name="group">消费组名称</param>
+            <param name="consumer">消费者</param>
+            <returns>返回消费者在被删除之前所拥有的待处理消息数量</returns>
+        </member>
+        <member name="M:NewLife.Caching.RedisStream`1.GroupSetId(System.String,System.String)">
+            <summary>设置消费组Id</summary>
+            <param name="group">消费组名称</param>
+            <param name="startId">开始编号</param>
+            <returns></returns>
+        </member>
+        <member name="M:NewLife.Caching.RedisStream`1.ReadGroup(System.String,System.String,System.Int32)">
+            <summary>消费组消费</summary>
+            <param name="group">消费组</param>
+            <param name="consumer">消费组</param>
+            <param name="count">消息个数</param>
+            <returns></returns>
+        </member>
+        <member name="M:NewLife.Caching.RedisStream`1.ReadGroupAsync(System.String,System.String,System.Int32,System.Int32,System.Threading.CancellationToken)">
+            <summary>异步消费组消费</summary>
+            <param name="group">消费组</param>
+            <param name="consumer">消费组</param>
+            <param name="count">消息个数</param>
+            <param name="block">阻塞毫秒数，0表示永远</param>
+            <param name="cancellationToken">取消令牌</param>
+            <returns></returns>
+        </member>
+        <member name="M:NewLife.Caching.RedisStream`1.GetInfo">
+            <summary>获取信息</summary>
+            <returns></returns>
+        </member>
+        <member name="M:NewLife.Caching.RedisStream`1.GetGroups">
+            <summary>获取消费组</summary>
+            <returns></returns>
+        </member>
+        <member name="M:NewLife.Caching.RedisStream`1.GetConsumers(System.String)">
+            <summary>获取消费者</summary>
+            <param name="group">消费组名称</param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

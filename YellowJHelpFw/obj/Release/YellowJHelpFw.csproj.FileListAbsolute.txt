@@ -134,3 +134,9 @@ I:\YellowJ\打包通用项目\YellowJHelp\yellow-jhelp\YellowJHelpFw\bin\Release
 I:\YellowJ\打包通用项目\YellowJHelp\yellow-jhelp\YellowJHelpFw\bin\Release\System.Runtime.CompilerServices.Unsafe.xml
 I:\YellowJ\打包通用项目\YellowJHelp\yellow-jhelp\YellowJHelpFw\obj\Release\YellowJHelpFw.csproj.CopyComplete
 I:\YellowJ\打包通用项目\YellowJHelp\yellow-jhelp\YellowJHelpFw\obj\Release\YellowJHelpFw.csproj.AssemblyReference.cache
+I:\YellowJ\打包通用项目\YellowJHelp\yellow-jhelp\YellowJHelpFw\bin\Release\NewLife.Core.dll
+I:\YellowJ\打包通用项目\YellowJHelp\yellow-jhelp\YellowJHelpFw\bin\Release\NewLife.Redis.dll
+I:\YellowJ\打包通用项目\YellowJHelp\yellow-jhelp\YellowJHelpFw\bin\Release\NewLife.Core.pdb
+I:\YellowJ\打包通用项目\YellowJHelp\yellow-jhelp\YellowJHelpFw\bin\Release\NewLife.Core.xml
+I:\YellowJ\打包通用项目\YellowJHelp\yellow-jhelp\YellowJHelpFw\bin\Release\NewLife.Redis.pdb
+I:\YellowJ\打包通用项目\YellowJHelp\yellow-jhelp\YellowJHelpFw\bin\Release\NewLife.Redis.xml
