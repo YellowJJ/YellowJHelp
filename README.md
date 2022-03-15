@@ -18,6 +18,7 @@ Mapster
 
 #### 方法库函数介绍
 ### YJHelp
+|---|---|
 | message      |  消息注明 |
 | MD5Encrypt   |  32位MD5加密 |
 | YellowJLog   |  文件流日志 |
@@ -26,6 +27,7 @@ Mapster
 | Cache        | 缓存方法库  |
 
 ### YJHelpKafka
+|---|---|
 | Produce                  | 发布者  |
 | Produce                  | 发布者-随机分区  |
 | ProduceAdmin             | 发布者（带账号密码）  |
@@ -33,6 +35,7 @@ Mapster
 
 
 ### YJHelpRedis
+|---|---|
 | RedisCli           | redis 配置中心  |
 | Get                | 获取单个实体|
 | GetList            | 获取列表List  |
@@ -47,6 +50,7 @@ Mapster
 | SCARD              | 返回集合个数  |
 
 ### YJHelpT
+|---|---|
 | SpliteSourceBySize    | 将集合按大小分组  |
 | SpliteSourceByCount   |将集合安按组数分组|
 | DistinctList          | 集合去重(哈西,只针对数值类型)  |
