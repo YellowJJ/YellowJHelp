@@ -27,7 +27,7 @@ Redis使用</Description>
     <PackageReference Include="Mapster.Core" Version="1.2.0" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="2.2.0" />
     <PackageReference Include="Microsoft.Extensions.Caching.Memory" Version="6.0.0" />
-    <PackageReference Include="ServiceStack.Redis" Version="5.13.2" />
+    <PackageReference Include="NewLife.Redis" Version="4.0.2022.312" />
     <PackageReference Include="SqlSugarCore" Version="5.0.4.3" />
   </ItemGroup>
 

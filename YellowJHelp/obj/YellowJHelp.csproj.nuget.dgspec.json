@@ -63,9 +63,9 @@
               "target": "Package",
               "version": "[6.0.0, )"
             },
-            "ServiceStack.Redis": {
+            "NewLife.Redis": {
               "target": "Package",
-              "version": "[5.13.2, )"
+              "version": "[4.0.2022.312, )"
             },
             "SqlSugarCore": {
               "target": "Package",

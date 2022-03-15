@@ -1,4 +1,5 @@
-﻿using ServiceStack.Redis;
+﻿using Mapster;
+using NewLife.Caching;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -6,186 +7,156 @@ using System.Text;
 namespace YellowJHelp
 {
     /// <summary>
-    /// redis通用使用（基于ServiceStack.Redis）
+    /// redis通用使用
     /// </summary>
     public class YJHelpRedis
     {
         /// <summary>
-        /// 最大读链接数(默认12)
+        /// redis 配置中心
         /// </summary>
-        public static int RedisMaxReadPool = 12;
-        /// <summary>
-        /// 最大写链接数(默认8)
-        /// </summary>
-        public static int RedisMaxWritePool = 5;
-        /// <summary>
-        /// 连接地址（列：123456@127.0.0.1:6379）
-        /// </summary>
-        public static string redisSession = null;
-        private static readonly PooledRedisClientManager pool = null;
-        private static readonly string[] redisHosts = null;
-        public static RedisPubSubServer pubSubServer;
-
-        static YJHelpRedis()
+        /// <returns></returns>
+        public FullRedis RedisCli(string Create="127.0.0.1")
         {
-            var redisHostStr = redisSession;
+            //var ret = FullRedis.Create(OPSDbs.Configuration["Redis:Create"]);
+            //ret.UserName = OPSDbs.Configuration["Redis:UserName"];
+            //ret.Password = OPSDbs.Configuration["Redis:Password"];
+            ///*fullRedis.StartPipeline();*/
+            //if (!string.IsNullOrEmpty(OPSDbs.Configuration["Redis:MaxMessageSize"]))
+            //{
+            //    ret.MaxMessageSize = 1024 * 1024 * (Convert.ToInt32(OPSDbs.Configuration["Redis:MaxMessageSize"]));
+            //}
+            //ret.Db = Convert.ToInt32(OPSDbs.Configuration["Redis:Db"]);
+            //ret.Expire = Convert.ToInt32(OPSDbs.Configuration["Redis:Expire"]);
+            var ret = FullRedis.Create(Create);
+            return ret;
+        }
 
-            if (!string.IsNullOrEmpty(redisHostStr))
-            {
-                redisHosts = redisHostStr.Split(',');
 
-                if (redisHosts.Length > 0)
-                {
-                    pool = new PooledRedisClientManager(redisHosts, redisHosts,
-                        new RedisClientManagerConfig()
-                        {
-                            MaxWritePoolSize = RedisMaxWritePool,
-                            MaxReadPoolSize = RedisMaxReadPool,
-                            AutoStart = true
-                        });
-                }
-            }
+        /// <summary>
+        /// 获取单个实体
+        /// </summary>
+        /// <typeparam name="T">实体</typeparam>
+        /// <param name="key">健</param>
+        /// <returns></returns>
+        public T Get<T>(string key)
+        {
+            var ret = RedisCli().Get<T>(key);
 
+            return ret;
+        }
+        /// <summary>
+        /// 获取列表List
+        /// </summary>
+        /// <typeparam name="T">实体</typeparam>
+        /// <param name="key">健</param>
+        /// <returns></returns>
+        public List<T> GetList<T>(string key)
+        {
+            var ret = RedisCli().GetList<T>(key).ToList();
+
+            return ret;
+        }
+
+
+        /// <summary>
+        /// 写入单项实体
+        /// </summary>
+        /// <typeparam name="T">实体</typeparam>
+        /// <param name="key">健</param>
+        /// <param name="enety">值</param>
+        /// <param name="expire">过期时间，秒。小于0时采用默认缓存时间NewLife.Caching.Cache.Expire</param>
+        public void Set<T>(string key, T enety, int expire = -1)
+        {
+            var ret = RedisCli().Set(key, enety, expire);
+        }
+
+
+        /// <summary>
+        /// 添加，已存在时不更新
+        /// </summary>
+        /// <typeparam name="T">实体</typeparam>
+        /// <param name="key">健</param>
+        /// <param name="enety">值</param>
+        /// <param name="expire">过期时间，秒。小于0时采用默认缓存时间NewLife.Caching.Cache.Expire</param>
+        public void Add<T>(string key, T enety, int expire = -1)
+        {
+            var ret = RedisCli().Add(key, enety, expire);
+        }
+
+        /// <summary>
+        /// 写入集合：尾部增加
+        /// </summary>
+        /// <typeparam name="T">实体</typeparam>
+        /// <param name="key">健</param>
+        /// <param name="enety">值</param>
+        public void ListSetW<T>(string key, List<T> enety)
+        {
+            T[] ts = enety.Adapt<T[]>();
+            var ret = RedisCli().RPUSH<T>(key, ts);
+
+        }
+        /// <summary>
+        /// 写入集合：头部增加
+        /// </summary>
+        /// <typeparam name="T">实体</typeparam>
+        /// <param name="key">健</param>
+        /// <param name="enety">值</param>
+        public void ListSetT<T>(string key, List<T> enety)
+        {
+            T[] ts = enety.Adapt<T[]>();
+            var ret = RedisCli().LPUSH<T>(key, ts);
 
         }
 
         /// <summary>
-        /// 存储
+        /// 清空所有缓存项
         /// </summary>
-        /// <typeparam name="T"></typeparam>
-        /// <param name="key"></param>
-        /// <param name="value"></param>
-        /// <param name="expiry">时效日期</param>
-        public static void Add<T>(string key, T value, DateTime expiry)
+        public void Clear()
         {
-            if (value == null)
-            {
-                return;
-            }
-
-            if (expiry <= DateTime.Now)
-            {
-                Remove(key);
-
-                return;
-            }
-
-            try
-            {
-                if (pool != null)
-                {
-                    using (var r = pool.GetClient())
-                    {
-                        if (r != null)
-                        {
-                            r.SendTimeout = 1000;
-                            r.Set(key, value, expiry - DateTime.Now);
-                        }
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                string msg = string.Format("{0}:{1}发生异常!{2}", "cache", "存储", key);
-                YJHelp.YellowJLog(msg + ex.Message, "Redis异常");
-            }
-
+            RedisCli().Clear();
         }
+
 
         /// <summary>
-        /// 删除
+        /// 清空所有缓存项
         /// </summary>
-        /// <param name="key"></param>
-        public static void Remove(string key)
+        public void Remove(string[] Keys)
         {
-            try
-            {
-                if (pool != null)
-                {
-                    using (var r = pool.GetClient())
-                    {
-                        if (r != null)
-                        {
-                            r.SendTimeout = 1000;
-                            r.Remove(key);
-                        }
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                string msg = string.Format("{0}:{1}发生异常!{2}", "缓存", "删除", key);
-                YJHelp.YellowJLog( msg+ ex.Message , "Redis异常");
-            }
-
+            RedisCli().Remove(Keys);
         }
+
+
+        /// <summary>
+        /// 获取缓存项有效期
+        /// </summary>
+        public void GetExpire(string Key)
+        {
+            RedisCli().GetExpire(Key);
+        }
+
         /// <summary>
         /// 是否存在
         /// </summary>
-        /// <param name="key"></param>
-        /// <returns></returns>
-        public static bool Exists(string key)
+        public bool ContainsKey(string Key)
         {
-            try
-            {
-                if (pool != null)
-                {
-                    using (var r = pool.GetClient())
-                    {
-                        if (r != null)
-                        {
-                            r.SendTimeout = 1000;
-                            return r.ContainsKey(key);
-                        }
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                string msg = string.Format("{0}:{1}发生异常!{2}", "cache", "是否存在", key);
-                YJHelp.YellowJLog(msg + ex.Message, "Redis异常");
-            }
+            return RedisCli().ContainsKey(Key);
+        }
 
-            return false;
+
+        /// <summary>
+        /// 缓存个数
+        /// </summary>
+        public int Count()
+        {
+            return RedisCli().Count;
         }
 
         /// <summary>
-        /// 获取
+        /// 返回集合个数
         /// </summary>
-        /// <typeparam name="T"></typeparam>
-        /// <param name="key"></param>
-        /// <returns></returns>
-        public static T Get<T>(string key)
+        public int SCARD(string Key)
         {
-            if (string.IsNullOrEmpty(key))
-            {
-                return default(T);
-            }
-
-            T obj = default(T);
-
-            try
-            {
-                if (pool != null)
-                {
-                    using (var r = pool.GetClient())
-                    {
-                        if (r != null)
-                        {
-                            r.SendTimeout = 1000;
-                            obj = r.Get<T>(key);
-                        }
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                string msg = string.Format("{0}:{1}发生异常!{2}", "cache", "获取", key);
-                YJHelp.YellowJLog(msg + ex.Message, "Redis异常");
-            }
-
-
-            return obj;
+            return RedisCli().SCARD(Key);
         }
 
     }
