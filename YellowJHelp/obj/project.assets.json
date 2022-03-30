@@ -10537,8 +10537,7 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\hjklkl\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\94332\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.1.3",
@@ -10546,14 +10545,11 @@
       "projectUniqueName": "I:\\YellowJ\\打包通用项目\\YellowJHelp\\yellow-jhelp\\YellowJHelp\\YellowJHelp.csproj",
       "projectName": "YellowJHelp",
       "projectPath": "I:\\YellowJ\\打包通用项目\\YellowJHelp\\yellow-jhelp\\YellowJHelp\\YellowJHelp.csproj",
-      "packagesPath": "C:\\Users\\hjklkl\\.nuget\\packages\\",
+      "packagesPath": "C:\\Users\\94332\\.nuget\\packages\\",
       "outputPath": "I:\\YellowJ\\打包通用项目\\YellowJHelp\\yellow-jhelp\\YellowJHelp\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-      ],
       "configFilePaths": [
-        "C:\\Users\\hjklkl\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\94332\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -10623,7 +10619,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100-rc.2.21505.57\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
       }
     }
   }
