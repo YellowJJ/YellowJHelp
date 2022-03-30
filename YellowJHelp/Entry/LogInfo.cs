@@ -13,7 +13,9 @@ namespace YellowJHelp.Entry
     [SugarTable("YellowJ_Log")]
     public class LogInfo
     {
-
+        /// <summary>
+        /// ID
+        /// </summary>
         [SugarColumn(IsIdentity = true, IsPrimaryKey = true)]
         public int Id { get; set; }
         /// <summary>

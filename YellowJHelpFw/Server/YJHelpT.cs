@@ -1,23 +1,22 @@
 ﻿using Newtonsoft.Json;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
+using YellowJHelpFw.IServer;
 
-namespace YellowJHelp
+namespace YellowJHelpFw
 {
     /// <summary>
     /// 通用方法(范型)
     /// </summary>
     /// <typeparam name="T"></typeparam>
-    public class YJHelpT<T>
+    public class YJHelpT<T> : IYJHelpT<T>
     {
         /// <summary>
         /// 将集合按大小分
         /// </summary>
         /// <param name="source">数据集</param>
         /// <param name="pageSiez">每一组大小</param>
-        public static List<List<T>> SpliteSourceBySize(List<T> source, int pageSiez)
+        public List<List<T>> SpliteSourceBySize(List<T> source, int pageSiez)
         {
             int listCount = (source.Count() - 1) / pageSiez + 1;
 
@@ -35,7 +34,7 @@ namespace YellowJHelp
         /// </summary> 
         /// <param name="source">数据集</param> 
         /// <param name="count">组数</param> 
-        public static List<List<T>> SpliteSourceByCount(List<T> source, int count)
+        public List<List<T>> SpliteSourceByCount(List<T> source, int count)
         {
             int pageSiez = source.Count() / count;//取每一页大小 
             int remainder = source.Count() % count;//取余数 
@@ -59,7 +58,7 @@ namespace YellowJHelp
         /// </summary>
         /// <param name="list"></param>
         /// <returns></returns>
-        public static List<T> DistinctList(List<T> list)
+        public List<T> DistinctList(List<T> list)
         {//去除重复
             HashSet<T> ha = new HashSet<T>(list);
             list.Clear();
@@ -73,7 +72,7 @@ namespace YellowJHelp
         /// <param name="list1">第一个集合</param>
         /// <param name="list2">第二个集合</param>
         /// <returns>返回第union的合并结果</returns>
-        public static List<T> Merge(List<T> list1, List<T> list2)
+        public List<T> Merge(List<T> list1, List<T> list2)
         {
             List<T> listMerge1 = list1.Union(list2).ToList();//不允许有重复项
             //listMerge1:(结果){0,1,2,3,4,5,6,7,8,9}
@@ -88,7 +87,7 @@ namespace YellowJHelp
         /// <param name="list1">第一个集合</param>
         /// <param name="list2">第二个集合</param>
         /// <returns>返回第union的合并结果</returns>
-        public static List<T> MergeC(List<T> list1, List<T> list2)
+        public List<T> MergeC(List<T> list1, List<T> list2)
         {
             List<T> listMerge2 = list1.Concat(list2).ToList();//允许出现重复项
             return listMerge2;//返回
@@ -101,7 +100,7 @@ namespace YellowJHelp
         /// <param name="left">左边的数据</param>
         /// <param name="right">右边的数据</param>
         /// <returns></returns>
-        public static List<T> DiffsetT(List<T> left, List<T> right)
+        public List<T> DiffsetT(List<T> left, List<T> right)
         {
             if (left == null)
             {

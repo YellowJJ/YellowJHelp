@@ -3,13 +3,14 @@ using NewLife.Caching;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using YellowJHelp.IServer;
 
 namespace YellowJHelp
 {
     /// <summary>
     /// redis通用使用
     /// </summary>
-    public class YJHelpRedis
+    public class YJHelpRedis: IYJHelpRedis
     {
         /// <summary>
         /// redis 配置中心
