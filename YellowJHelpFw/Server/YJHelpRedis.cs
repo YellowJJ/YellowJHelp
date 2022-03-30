@@ -1,22 +1,24 @@
 ﻿using Mapster;
 using NewLife.Caching;
-using System;
 using System.Collections.Generic;
 using System.Linq;
+using YellowJHelpFw.IServer;
 
 namespace YellowJHelpFw
 {
     /// <summary>
     /// redis通用使用
     /// </summary>
-    public class YJHelpRedis
+    public class YJHelpRedis : IYJHelpRedis
     {
         /// <summary>
         /// redis 配置中心
         /// </summary>
         /// <returns></returns>
-        public FullRedis RedisCli(string Create = "127.0.0.1")
+        public FullRedis RedisCli(string Create = null)
         {
+            var ret = new FullRedis();
+            if (!string.IsNullOrEmpty(Create)) { ret = FullRedis.Create(Create); }
             //var ret = FullRedis.Create(OPSDbs.Configuration["Redis:Create"]);
             //ret.UserName = OPSDbs.Configuration["Redis:UserName"];
             //ret.Password = OPSDbs.Configuration["Redis:Password"];
@@ -27,7 +29,6 @@ namespace YellowJHelpFw
             //}
             //ret.Db = Convert.ToInt32(OPSDbs.Configuration["Redis:Db"]);
             //ret.Expire = Convert.ToInt32(OPSDbs.Configuration["Redis:Expire"]);
-            var ret = FullRedis.Create(Create);
             return ret;
         }
 

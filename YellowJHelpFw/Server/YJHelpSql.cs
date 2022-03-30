@@ -1,18 +1,16 @@
 ﻿using Mapster;
 using SqlSugar;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Newtonsoft.Json;
 using YellowJHelpFw.Entry;
+using YellowJHelpFw.IServer;
 
 namespace YellowJHelpFw
 {
     /// <summary>
     /// 数据库通用方法（测试）
     /// </summary>
-    public class YJHelpSql
+    public class YJHelpSql : IYJHelpSql
     {
         /// <summary>
         /// sqlserver链接参数
@@ -22,7 +20,7 @@ namespace YellowJHelpFw
         /// 数据库操作
         /// </summary>
         /// <returns></returns>
-        public static SqlSugarClient Query()
+        public SqlSugarClient Db()
         {
             SqlSugarClient db = new SqlSugarClient(new ConnectionConfig()
             {
@@ -37,7 +35,7 @@ namespace YellowJHelpFw
         /// <summary>
         /// 数据库日志记录
         /// </summary>
-        public static string SqlApiLog(LogInfo apilog)
+        public string SqlApiLog(LogInfo apilog)
         {
             LogInfo log = new LogInfo();
             log = apilog.Adapt<LogInfo>();
@@ -49,7 +47,7 @@ namespace YellowJHelpFw
             else { log.Number = "ApiLog" + DateTime.Now.ToString("yyyyMMdd") + DateTime.Now.ToString("hhmmss") + "000" + OPSIndex.ToString(); }
             log.Date = DateTime.Now;
             //SYQuery().Insertable(log).ExecuteCommand();
-            return "日志耗时记录【" + log.Number + "】：" + log;
+            return "日志耗时记录【" + log.Number + "】：" + JsonConvert.SerializeObject(log);
 
         }
 
@@ -57,7 +55,7 @@ namespace YellowJHelpFw
         /// 私有数据库
         /// </summary>
         /// <returns></returns>
-        private static SqlSugarClient SYQuery(string cofing)
+        public SqlSugarClient SYDb(string cofing)
         {
             SqlSugarClient db = new SqlSugarClient(new ConnectionConfig()
             {

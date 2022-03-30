@@ -1,22 +1,20 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Net;
+﻿using System.Net;
 using System.Text;
+using YellowJHelp.IServer;
 
 namespace YellowJHelp
 {
     /// <summary>
     /// 接口调用方法
     /// </summary>
-    public class YJHelpWebApi
+    public class YJHelpWebApi: IYJHelpWebApi
     {
         /// <summary>
         /// 调用接口方法get
         /// </summary>
         /// <param name="url">地址</param>
         /// <returns></returns>
-        public static string HttpGet(string url)
+        public string HttpGet(string url)
         {
 
             Encoding encoding = Encoding.UTF8;
@@ -39,7 +37,7 @@ namespace YellowJHelp
         /// <param name="url">地址</param>
         /// <param name="Jsoncontent">参数</param>
         /// <returns></returns>
-        public static string HttPost(string url, string Jsoncontent)
+        public string HttPost(string url, string Jsoncontent)
         {
 
             //定义request并设置request的路径
@@ -80,7 +78,7 @@ namespace YellowJHelp
         /// <param name="Jsoncontent">参数</param>
         /// <param name="webHeaderCollection">head</param>
         /// <returns></returns>
-        public static string HttHeadersPost(string url, string Jsoncontent, WebHeaderCollection webHeaderCollection)
+        public string HttHeadersPost(string url, string Jsoncontent, WebHeaderCollection webHeaderCollection)
         {
 
             //定义request并设置request的路径

@@ -89,13 +89,19 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Entry\LogInfo.cs" />
+    <Compile Include="IServer\IYJHelp.cs" />
+    <Compile Include="IServer\IYJHelpKafka.cs" />
+    <Compile Include="IServer\IYJHelpRedis.cs" />
+    <Compile Include="IServer\IYJHelpSql.cs" />
+    <Compile Include="IServer\IYJHelpT.cs" />
+    <Compile Include="IServer\IYJHelpWebApi.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="YJHelp.cs" />
-    <Compile Include="YJHelpKafka.cs" />
-    <Compile Include="YJHelpRedis.cs" />
-    <Compile Include="YJHelpSql.cs" />
-    <Compile Include="YJHelpT.cs" />
-    <Compile Include="YJHelpWebApi.cs" />
+    <Compile Include="Server\YJHelp.cs" />
+    <Compile Include="Server\YJHelpKafka.cs" />
+    <Compile Include="Server\YJHelpRedis.cs" />
+    <Compile Include="Server\YJHelpSql.cs" />
+    <Compile Include="Server\YJHelpT.cs" />
+    <Compile Include="Server\YJHelpWebApi.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />

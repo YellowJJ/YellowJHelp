@@ -11,7 +11,6 @@ I:\YellowJ\打包通用项目\YellowJHelp\YellowJHelp\obj\Release\netstandard2.1
 I:\YellowJ\打包通用项目\YellowJHelp\yellow-jhelp\YellowJHelp\bin\Release\netstandard2.1\YellowJHelp.deps.json
 I:\YellowJ\打包通用项目\YellowJHelp\yellow-jhelp\YellowJHelp\bin\Release\netstandard2.1\YellowJHelp.dll
 I:\YellowJ\打包通用项目\YellowJHelp\yellow-jhelp\YellowJHelp\bin\Release\netstandard2.1\YellowJHelp.pdb
-I:\YellowJ\打包通用项目\YellowJHelp\yellow-jhelp\YellowJHelp\obj\Release\netstandard2.1\YellowJHelp.GlobalUsings.g.cs
 I:\YellowJ\打包通用项目\YellowJHelp\yellow-jhelp\YellowJHelp\obj\Release\netstandard2.1\YellowJHelp.GeneratedMSBuildEditorConfig.editorconfig
 I:\YellowJ\打包通用项目\YellowJHelp\yellow-jhelp\YellowJHelp\obj\Release\netstandard2.1\YellowJHelp.AssemblyInfoInputs.cache
 I:\YellowJ\打包通用项目\YellowJHelp\yellow-jhelp\YellowJHelp\obj\Release\netstandard2.1\YellowJHelp.AssemblyInfo.cs
