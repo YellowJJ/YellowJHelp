@@ -16,6 +16,9 @@ NewLife.Redis
 Confluent.Kafka
 Mapster
 
+#### 版本说明
+2.0.0：优化结构，新增Server层和Iserver层，实现接口层封装
+
 #### 方法库函数介绍
 ### YJHelp
 |  YJHelp |   |
