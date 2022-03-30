@@ -21,7 +21,7 @@ Mapster
 
 #### 方法库函数介绍
 ### YJHelp
-|  YJHelp |   |
+|  YJHelp |  IYJHelp  |
 |---|---|
 | message      |  消息注明 |
 | MD5Encrypt   |  32位MD5加密 |
@@ -31,7 +31,7 @@ Mapster
 | Cache        | 缓存方法库  |
 
 ### YJHelpKafka
-|  YJHelpKafka |   |
+|  YJHelpKafka |  IYJHelpKafka  |
 |---|---|
 | Produce                  | 发布者  |
 | Produce                  | 发布者-随机分区  |
@@ -40,7 +40,7 @@ Mapster
 
 
 ### YJHelpRedis
-|  YJHelpRedis |   |
+|  YJHelpRedis | IYJHelpRedis   |
 |---|---|
 | RedisCli           | redis 配置中心  |
 | Get                | 获取单个实体|
@@ -56,7 +56,7 @@ Mapster
 | SCARD              | 返回集合个数  |
 
 ### YJHelpT
-| YJHelpT  |   |
+| YJHelpT  | IYJHelpT    |
 |---|---|
 | SpliteSourceBySize    | 将集合按大小分组  |
 | SpliteSourceByCount   |将集合安按组数分组|
