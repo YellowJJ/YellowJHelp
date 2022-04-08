@@ -2,10 +2,13 @@
 using NewLife.Caching;
 using System.Collections.Generic;
 using System.Linq;
+using YellowJHelpFw.Entry;
 using YellowJHelpFw.IServer;
 
 namespace YellowJHelpFw
 {
+
+    [AutoInject(typeof(IYJHelpRedis))]
     /// <summary>
     /// redis通用使用
     /// </summary>

@@ -3,10 +3,13 @@ using NewLife.Caching;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using YellowJHelp.Entry;
 using YellowJHelp.IServer;
 
 namespace YellowJHelp
 {
+
+    [AutoInject(typeof(IYJHelpRedis))]
     /// <summary>
     /// redis通用使用
     /// </summary>

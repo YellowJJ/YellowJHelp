@@ -1,8 +1,11 @@
 ﻿using Newtonsoft.Json;
+using YellowJHelp.Entry;
 using YellowJHelp.IServer;
 
 namespace YellowJHelp
 {
+
+    [AutoInject(typeof(IYJHelpT<>))]
     /// <summary>
     /// 通用方法(范型)
     /// </summary>

@@ -4,10 +4,12 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Security.Cryptography;
+using YellowJHelp.Entry;
 using YellowJHelp.IServer;
 
 namespace YellowJHelp
 {
+    [AutoInject(typeof(IYJHelp))]
     /// <summary>
     /// 通用帮助方法
     /// </summary>
@@ -40,6 +42,8 @@ namespace YellowJHelp
             return ret.PadLeft(32, '0');
         }
 
+
+        [AutoInject(typeof(IYJHelp.ICache))]
         /// <summary>
         /// 缓存类
         /// </summary>

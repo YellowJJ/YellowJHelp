@@ -1,10 +1,13 @@
 ﻿using Newtonsoft.Json;
 using System.Collections.Generic;
 using System.Linq;
+using YellowJHelpFw.Entry;
 using YellowJHelpFw.IServer;
 
 namespace YellowJHelpFw
 {
+
+    [AutoInject(typeof(IYJHelpT<>))]
     /// <summary>
     /// 通用方法(范型)
     /// </summary>

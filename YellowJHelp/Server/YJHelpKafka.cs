@@ -6,6 +6,8 @@ using YellowJHelp.IServer;
 
 namespace YellowJHelp
 {
+
+    [AutoInject(typeof(IYJHelpKafka))]
     /// <summary>
     /// Kafka链接通用方法
     /// </summary>

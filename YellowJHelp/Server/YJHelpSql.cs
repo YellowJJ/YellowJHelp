@@ -6,6 +6,8 @@ using YellowJHelp.IServer;
 
 namespace YellowJHelp
 {
+
+    [AutoInject(typeof(IYJHelpSql))]
     /// <summary>
     /// 数据库通用方法（测试）
     /// </summary>

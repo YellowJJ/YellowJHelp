@@ -2,10 +2,13 @@
 using System.IO;
 using System.Net;
 using System.Text;
+using YellowJHelpFw.Entry;
 using YellowJHelpFw.IServer;
 
 namespace YellowJHelpFw
 {
+
+    [AutoInject(typeof(IYJHelpWebApi))]
     /// <summary>
     /// 接口调用方法
     /// </summary>

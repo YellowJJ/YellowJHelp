@@ -2,10 +2,13 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Security.Cryptography;
+using YellowJHelpFw.Entry;
 using YellowJHelpFw.IServer;
 
 namespace YellowJHelpFw
 {
+
+    [AutoInject(typeof(IYJHelp))]
     /// <summary>
     /// 通用帮助方法
     /// </summary>
@@ -38,6 +41,8 @@ namespace YellowJHelpFw
             return ret.PadLeft(32, '0');
         }
 
+
+        [AutoInject(typeof(ICache))]
         /// <summary>
         /// 缓存类
         /// </summary>
