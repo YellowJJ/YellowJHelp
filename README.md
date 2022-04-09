@@ -39,7 +39,7 @@ Framework 4.6.1+
 
 `builder.Services.YJDiInJect();`
 
-![1649485546268](C:\Users\94332\AppData\Roaming\Typora\typora-user-images\1649485546268.png)
+![输入图片说明](1.png)
 
 
 
@@ -49,7 +49,7 @@ Framework 4.6.1+
 
 声明的都将自动注入程序集
 
-![1649485875110](C:\Users\94332\AppData\Roaming\Typora\typora-user-images\1649485875110.png)
+![输入图片说明](2.png)
 
 #### 方法库函数介绍
 ##### YJHelp
