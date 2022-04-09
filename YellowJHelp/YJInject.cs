@@ -92,6 +92,8 @@ namespace YellowJHelp
             {
                 //注册程序集
                 builder.RegisterAssemblyTypes(item.Key, item.Value).AsImplementedInterfaces();
+                YJHelp yJHelp = new YJHelp();
+                yJHelp.YellowJLog($"{item.Key.FullName},{item.Value.FullName},成功注入","YellowJ自动注入程序集信息");
             }
         }
         /// <summary>

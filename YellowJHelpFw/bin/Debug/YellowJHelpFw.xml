@@ -4,6 +4,64 @@
         <name>YellowJHelpFw</name>
     </assembly>
     <members>
+        <member name="M:YellowJHelpFw.Base.BaseHelp.GetAssembly">
+            <summary>
+            获取自动注入程序集名称
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:YellowJHelpFw.Entry.AutoInjectAttribute">
+            <summary>
+            依赖注入基类
+            </summary>
+        </member>
+        <member name="M:YellowJHelpFw.Entry.AutoInjectAttribute.#ctor(System.Type,YellowJHelpFw.Entry.InjectType)">
+            <summary>
+            绑定对应接口，自动注入程序集
+            </summary>
+            <param name="interfaceType"></param>
+            <param name="injectType"></param>
+        </member>
+        <member name="P:YellowJHelpFw.Entry.AutoInjectAttribute.InjectType">
+            <summary>
+            注入类型
+            </summary>
+        </member>
+        <member name="T:YellowJHelpFw.Entry.InjectType">
+            <summary>
+            注入类型（可控生命周期）
+            </summary>
+        </member>
+        <member name="F:YellowJHelpFw.Entry.InjectType.Scope">
+            <summary>
+            作用域
+            </summary>
+        </member>
+        <member name="F:YellowJHelpFw.Entry.InjectType.Single">
+            <summary>
+            单例
+            </summary>
+        </member>
+        <member name="F:YellowJHelpFw.Entry.InjectType.Transient">
+            <summary>
+            暂时/瞬时
+            </summary>
+        </member>
+        <member name="T:YellowJHelpFw.Entry.KeyValueInfo`2">
+            <summary>
+            键值类
+            </summary>
+        </member>
+        <member name="P:YellowJHelpFw.Entry.KeyValueInfo`2.Key">
+            <summary>
+            键
+            </summary>
+        </member>
+        <member name="P:YellowJHelpFw.Entry.KeyValueInfo`2.Value">
+            <summary>
+            值
+            </summary>
+        </member>
         <member name="T:YellowJHelpFw.Entry.LogInfo">
             <summary>
             日志
@@ -365,11 +423,6 @@
             <param name="webHeaderCollection">head</param>
             <returns></returns>
         </member>
-        <member name="T:YellowJHelpFw.YJHelp">
-            <summary>
-            通用帮助方法
-            </summary>
-        </member>
         <member name="M:YellowJHelpFw.YJHelp.message">
             <summary>
             消息注明
@@ -382,11 +435,6 @@
             <param name="strText">要加密字符串</param>
             <param name="IsLower">是否以小写方式返回</param>
             <returns></returns>
-        </member>
-        <member name="T:YellowJHelpFw.YJHelp.Cache">
-            <summary>
-            缓存类
-            </summary>
         </member>
         <member name="M:YellowJHelpFw.YJHelp.Cache.Add(System.String,System.Object)">
             <summary>
@@ -441,11 +489,6 @@
             <param name="value">值</param>
             <returns></returns>
         </member>
-        <member name="T:YellowJHelpFw.YJHelpKafka">
-            <summary>
-            Kafka链接通用方法
-            </summary>
-        </member>
         <member name="F:YellowJHelpFw.YJHelpKafka._Help">
             <summary>
             帮助接口
@@ -492,11 +535,6 @@
             <param name="skey"></param>
             <param name="start">分区起始值：0</param>
             <param name="end">分区结束值：0</param>
-        </member>
-        <member name="T:YellowJHelpFw.YJHelpRedis">
-            <summary>
-            redis通用使用
-            </summary>
         </member>
         <member name="M:YellowJHelpFw.YJHelpRedis.RedisCli(System.String)">
             <summary>
@@ -584,11 +622,6 @@
             返回集合个数
             </summary>
         </member>
-        <member name="T:YellowJHelpFw.YJHelpSql">
-            <summary>
-            数据库通用方法（测试）
-            </summary>
-        </member>
         <member name="F:YellowJHelpFw.YJHelpSql.sqlconntion">
             <summary>
             sqlserver链接参数
@@ -610,12 +643,6 @@
             私有数据库
             </summary>
             <returns></returns>
-        </member>
-        <member name="T:YellowJHelpFw.YJHelpT`1">
-            <summary>
-            通用方法(范型)
-            </summary>
-            <typeparam name="T"></typeparam>
         </member>
         <member name="M:YellowJHelpFw.YJHelpT`1.SpliteSourceBySize(System.Collections.Generic.List{`0},System.Int32)">
             <summary>
@@ -662,11 +689,6 @@
             <param name="right">右边的数据</param>
             <returns></returns>
         </member>
-        <member name="T:YellowJHelpFw.YJHelpWebApi">
-            <summary>
-            接口调用方法
-            </summary>
-        </member>
         <member name="M:YellowJHelpFw.YJHelpWebApi.HttpGet(System.String)">
             <summary>
             调用接口方法get
@@ -689,6 +711,37 @@
             <param name="url">地址</param>
             <param name="Jsoncontent">参数</param>
             <param name="webHeaderCollection">head</param>
+            <returns></returns>
+        </member>
+        <member name="T:YellowJHelpFw.YJDiInject">
+            <summary>
+            自动注入
+            </summary>
+        </member>
+        <member name="M:YellowJHelpFw.YJDiInject.YJAutofacDiInJect(Microsoft.Extensions.Hosting.IHostBuilder)">
+            <summary>
+            自动注入所有的程序集（Autofac继承默认生命周期）
+            </summary>
+            <param name="host"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YellowJHelpFw.YJDiInject.YJDiInJect(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            自动注入所有的程序集(可控制生命周期)
+            </summary>
+            <param name="serviceCollection"></param>
+            <returns></returns>
+        </member>
+        <member name="T:YellowJHelpFw.AutofacModuleRegister">
+            <summary>
+            Autofac自动依赖注入配置
+            </summary>
+        </member>
+        <member name="M:YellowJHelpFw.AutofacModuleRegister.GetAssemblyByName(System.String)">
+            <summary>
+            根据程序集名称获取程序集
+            </summary>E
+            <param name="AssemblyName">程序集名称</param>
             <returns></returns>
         </member>
     </members>

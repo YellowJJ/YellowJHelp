@@ -6,7 +6,12 @@ using System.Runtime.InteropServices;
 // 控制。更改这些特性值可修改
 // 与程序集关联的信息。
 [assembly: AssemblyTitle("YellowJHelpFw")]
-[assembly: AssemblyDescription("YellowJHelp Framework 4.6.1++++/（Redis更换NewLife-日均百亿次项目验证/封装Iserver层）")]
+[assembly: AssemblyDescription(@"YellowJHelp Framework 4.6.1++++:
+2.1.0版本：自动依赖注入功能上线
+（Redis更换NewLife - 日均百亿次项目验证）缓存，MD5加密，字段截取，集合类型差集计算
+Kafka使用
+webapi调用
+Redis使用")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("YellowJHelpFw")]
@@ -32,5 +37,5 @@ using System.Runtime.InteropServices;
 //可以指定所有这些值，也可以使用“生成号”和“修订号”的默认值
 //通过使用 "*"，如下所示:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("2.0.0")]
-[assembly: AssemblyFileVersion("2.0.0")]
+[assembly: AssemblyVersion("2.2.0")]
+[assembly: AssemblyFileVersion("2.2.0")]

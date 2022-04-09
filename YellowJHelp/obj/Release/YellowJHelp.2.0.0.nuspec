@@ -12,11 +12,14 @@ Redis使用</description>
     <copyright>YellowJ</copyright>
     <dependencies>
       <group targetFramework=".NETStandard2.1">
+        <dependency id="Autofac" version="6.3.0" exclude="Build,Analyzers" />
+        <dependency id="Autofac.Extensions.DependencyInjection" version="7.2.0" exclude="Build,Analyzers" />
         <dependency id="Confluent.Kafka" version="1.8.2" exclude="Build,Analyzers" />
         <dependency id="Mapster" version="7.2.0" exclude="Build,Analyzers" />
         <dependency id="Mapster.Core" version="1.2.0" exclude="Build,Analyzers" />
         <dependency id="Microsoft.AspNetCore.Mvc" version="2.2.0" exclude="Build,Analyzers" />
         <dependency id="Microsoft.Extensions.Caching.Memory" version="6.0.0" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.Extensions.Hosting" version="6.0.1" exclude="Build,Analyzers" />
         <dependency id="NewLife.Redis" version="4.0.2022.312" exclude="Build,Analyzers" />
         <dependency id="SqlSugarCore" version="5.0.4.3" exclude="Build,Analyzers" />
       </group>
