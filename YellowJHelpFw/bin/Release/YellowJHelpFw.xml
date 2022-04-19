@@ -130,6 +130,24 @@
             <param name="strText">要加密字符串</param>
             <param name="IsLower">是否以小写方式返回</param>
         </member>
+        <member name="M:YellowJHelpFw.IServer.IYJHelp.Encode(System.String,System.String,System.String)">
+            <summary>
+            DES加密
+            </summary>
+            <param name="data">需要加密的值</param>
+            <param name="KEY_64">密钥长度8位</param>
+            <param name="IV_64">密钥长度8位</param>
+            <returns></returns>
+        </member>
+        <member name="M:YellowJHelpFw.IServer.IYJHelp.Decode(System.String,System.String,System.String)">
+            <summary>
+            DES解密
+            </summary>
+            <param name="data">需要加密的值</param>
+            <param name="KEY_64">密钥长度8位</param>
+            <param name="IV_64">密钥长度8位</param>
+            <returns></returns>
+        </member>
         <member name="M:YellowJHelpFw.IServer.IYJHelp.YellowJLog(System.String,System.String)">
             <summary>
             文件流日志记录
@@ -434,6 +452,24 @@
             </summary>
             <param name="strText">要加密字符串</param>
             <param name="IsLower">是否以小写方式返回</param>
+            <returns></returns>
+        </member>
+        <member name="M:YellowJHelpFw.YJHelp.Encode(System.String,System.String,System.String)">
+            <summary>
+            DES加密
+            </summary>
+            <param name="data">需要加密的值</param>
+            <param name="KEY_64">密钥长度8位</param>
+            <param name="IV_64">密钥长度8位</param>
+            <returns></returns>
+        </member>
+        <member name="M:YellowJHelpFw.YJHelp.Decode(System.String,System.String,System.String)">
+            <summary>
+            DES解密
+            </summary>
+            <param name="data">需要加密的值</param>
+            <param name="KEY_64">密钥长度8位</param>
+            <param name="IV_64">密钥长度8位</param>
             <returns></returns>
         </member>
         <member name="M:YellowJHelpFw.YJHelp.Cache.Add(System.String,System.Object)">

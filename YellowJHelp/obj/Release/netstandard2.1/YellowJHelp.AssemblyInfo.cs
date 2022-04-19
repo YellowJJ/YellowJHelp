@@ -14,13 +14,13 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("YellowJ")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyCopyrightAttribute("YellowJ")]
-[assembly: System.Reflection.AssemblyDescriptionAttribute("通用解决方案：\r\n2.1.0版本：自动依赖注入功能上线\r\n（Redis更换NewLife-日均百亿次项目验证）缓存，MD5加密，字段截取，集合类型差集计算\r\nKa" +
-    "fka使用\r\nwebapi调用\r\nRedis使用")]
-[assembly: System.Reflection.AssemblyFileVersionAttribute("2.2.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("2.2.0")]
+[assembly: System.Reflection.AssemblyDescriptionAttribute("通用解决方案：\r\n最新版本：新增DES加解密方法\r\n2.1.0版本：自动依赖注入功能上线\r\n（Redis更换NewLife-日均百亿次项目验证）缓存，MD5加密，" +
+    "字段截取，集合类型差集计算\r\nKafka使用\r\nwebapi调用\r\nRedis使用")]
+[assembly: System.Reflection.AssemblyFileVersionAttribute("2.2.1.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("2.2.1")]
 [assembly: System.Reflection.AssemblyProductAttribute("YellowJHelp")]
 [assembly: System.Reflection.AssemblyTitleAttribute("YellowJHelp")]
-[assembly: System.Reflection.AssemblyVersionAttribute("2.2.0.0")]
+[assembly: System.Reflection.AssemblyVersionAttribute("2.2.1.0")]
 
 // 由 MSBuild WriteCodeFragment 类生成。
 

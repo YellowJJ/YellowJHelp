@@ -19,6 +19,8 @@ namespace YellowJHelpFw
         /// </summary>
         public string message() { return "秃头猿YellowJ温馨提醒您："; }
 
+
+        #region 加解密
         /// <summary>
         /// 32位MD5加密
         /// </summary>
@@ -40,6 +42,63 @@ namespace YellowJHelpFw
 
             return ret.PadLeft(32, '0');
         }
+
+        /// <summary>
+        /// DES加密
+        /// </summary>
+        /// <param name="data">需要加密的值</param>
+        /// <param name="KEY_64">密钥长度8位</param>
+        /// <param name="IV_64">密钥长度8位</param>
+        /// <returns></returns>
+        public string Encode(string data, string KEY_64, string IV_64)
+        {
+            byte[] byKey = System.Text.ASCIIEncoding.ASCII.GetBytes(KEY_64);
+            byte[] byIV = System.Text.ASCIIEncoding.ASCII.GetBytes(IV_64);
+
+            DESCryptoServiceProvider cryptoProvider = new DESCryptoServiceProvider();
+            int i = cryptoProvider.KeySize;
+            MemoryStream ms = new MemoryStream();
+            CryptoStream cst = new CryptoStream(ms, cryptoProvider.CreateEncryptor(byKey, byIV), CryptoStreamMode.Write);
+
+            StreamWriter sw = new StreamWriter(cst);
+            sw.Write(data);
+            sw.Flush();
+            cst.FlushFinalBlock();
+            sw.Flush();
+            return Convert.ToBase64String(ms.GetBuffer(), 0, (int)ms.Length);
+
+        }
+        /// <summary>
+        /// DES解密
+        /// </summary>
+        /// <param name="data">需要加密的值</param>
+        /// <param name="KEY_64">密钥长度8位</param>
+        /// <param name="IV_64">密钥长度8位</param>
+        /// <returns></returns>
+        public string Decode(string data, string KEY_64, string IV_64)
+        {
+            byte[] byKey = System.Text.ASCIIEncoding.ASCII.GetBytes(KEY_64);
+            byte[] byIV = System.Text.ASCIIEncoding.ASCII.GetBytes(IV_64);
+
+            byte[] byEnc;
+            try
+            {
+                byEnc = Convert.FromBase64String(data);
+            }
+            catch
+            {
+                return null;
+            }
+
+            DESCryptoServiceProvider cryptoProvider = new DESCryptoServiceProvider();
+            MemoryStream ms = new MemoryStream(byEnc);
+            CryptoStream cst = new CryptoStream(ms, cryptoProvider.CreateDecryptor(byKey, byIV), CryptoStreamMode.Read);
+            StreamReader sr = new StreamReader(cst);
+            return sr.ReadToEnd();
+        }
+
+
+        #endregion
 
 
         [AutoInject(typeof(ICache))]

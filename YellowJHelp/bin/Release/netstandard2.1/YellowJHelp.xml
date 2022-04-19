@@ -135,6 +135,24 @@
             <param name="strText">要加密字符串</param>
             <param name="IsLower">是否以小写方式返回</param>
         </member>
+        <member name="M:YellowJHelp.IServer.IYJHelp.Encode(System.String,System.String,System.String)">
+            <summary>
+            DES加密
+            </summary>
+            <param name="data">需要加密的值</param>
+            <param name="KEY_64">密钥长度8位</param>
+            <param name="IV_64">密钥长度8位</param>
+            <returns></returns>
+        </member>
+        <member name="M:YellowJHelp.IServer.IYJHelp.Decode(System.String,System.String,System.String)">
+            <summary>
+            DES解密
+            </summary>
+            <param name="data">需要加密的值</param>
+            <param name="KEY_64">密钥长度8位</param>
+            <param name="IV_64">密钥长度8位</param>
+            <returns></returns>
+        </member>
         <member name="T:YellowJHelp.IServer.IYJHelp.ICache">
             <summary>
             缓存类
@@ -487,6 +505,24 @@
             </summary>
             <param name="strText">要加密字符串</param>
             <param name="IsLower">是否以小写方式返回</param>
+            <returns></returns>
+        </member>
+        <member name="M:YellowJHelp.YJHelp.Encode(System.String,System.String,System.String)">
+            <summary>
+            DES加密
+            </summary>
+            <param name="data">需要加密的值</param>
+            <param name="KEY_64">密钥长度8位</param>
+            <param name="IV_64">密钥长度8位</param>
+            <returns></returns>
+        </member>
+        <member name="M:YellowJHelp.YJHelp.Decode(System.String,System.String,System.String)">
+            <summary>
+            DES解密
+            </summary>
+            <param name="data">需要加密的值</param>
+            <param name="KEY_64">密钥长度8位</param>
+            <param name="IV_64">密钥长度8位</param>
             <returns></returns>
         </member>
         <member name="M:YellowJHelp.YJHelp.Cache.Add(System.String,System.Object)">

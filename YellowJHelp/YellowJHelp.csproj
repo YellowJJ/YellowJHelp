@@ -6,8 +6,9 @@
     <Nullable>enable</Nullable>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <Authors>YellowJ</Authors>
-    <Version>2.2.0</Version>
+    <Version>2.2.1</Version>
     <Description>通用解决方案：
+最新版本：新增DES加解密方法
 2.1.0版本：自动依赖注入功能上线
 （Redis更换NewLife-日均百亿次项目验证）缓存，MD5加密，字段截取，集合类型差集计算
 Kafka使用

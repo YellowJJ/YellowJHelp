@@ -13,12 +13,31 @@ namespace YellowJHelp.IServer
         /// </summary>
         /// <returns></returns>
         string message();
+        #region 加解密
         /// <summary>
         /// 32位MD5加密
         /// </summary>
         /// <param name="strText">要加密字符串</param>
         /// <param name="IsLower">是否以小写方式返回</param>
         string MD5Encrypt(string strText, bool IsLower);
+        /// <summary>
+        /// DES加密
+        /// </summary>
+        /// <param name="data">需要加密的值</param>
+        /// <param name="KEY_64">密钥长度8位</param>
+        /// <param name="IV_64">密钥长度8位</param>
+        /// <returns></returns>
+        string Encode(string data, string KEY_64, string IV_64);
+        /// <summary>
+        /// DES解密
+        /// </summary>
+        /// <param name="data">需要加密的值</param>
+        /// <param name="KEY_64">密钥长度8位</param>
+        /// <param name="IV_64">密钥长度8位</param>
+        /// <returns></returns>
+        string Decode(string data, string KEY_64, string IV_64);
+        #endregion
+
         /// <summary>
         /// 缓存类
         /// </summary>
