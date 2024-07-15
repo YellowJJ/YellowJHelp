@@ -222,7 +222,7 @@
             <param name="key">键</param>
             <returns>返回对应的值</returns>
         </member>
-        <member name="M:YellowJHelp.IServer.IYJHelp.SessionAdd(Microsoft.AspNetCore.Http.HttpContext,System.String,System.String)">
+        <member name="M:YellowJHelp.IServer.IYJHelp.SessionAdd(Microsoft.AspNetCore.Http.HttpContext,System.String,System.Byte[])">
             <summary>
             添加Session
             </summary>
@@ -230,12 +230,12 @@
             <param name="strSessionName">Session对象名称</param>
             <param name="strValue">Session值</param>
         </member>
-        <member name="M:YellowJHelp.IServer.IYJHelp.SessionGet(Microsoft.AspNetCore.Http.HttpContext,System.String)">
+        <member name="M:YellowJHelp.IServer.IYJHelp.SessionGet(Microsoft.AspNetCore.Http.HttpContext,System.Threading.CancellationToken)">
             <summary>
             获取Session
             </summary>
             <param name="ctx">Microsoft.AspNetCore.Http</param>
-            <param name="strSessionName">Session对象名称</param>
+            <param name="cancellationToken"></param>
         </member>
         <member name="M:YellowJHelp.IServer.IYJHelp.SessionDel(Microsoft.AspNetCore.Http.HttpContext,System.String)">
             <summary>
@@ -594,7 +594,7 @@
             <param name="key">键</param>
             <returns>返回对应的值</returns>
         </member>
-        <member name="M:YellowJHelp.YJHelp.SessionAdd(Microsoft.AspNetCore.Http.HttpContext,System.String,System.String)">
+        <member name="M:YellowJHelp.YJHelp.SessionAdd(Microsoft.AspNetCore.Http.HttpContext,System.String,System.Byte[])">
             <summary>
             添加Session
             </summary>
@@ -602,12 +602,12 @@
             <param name="strSessionName">Session对象名称</param>
             <param name="strValue">Session值</param>
         </member>
-        <member name="M:YellowJHelp.YJHelp.SessionGet(Microsoft.AspNetCore.Http.HttpContext,System.String)">
+        <member name="M:YellowJHelp.YJHelp.SessionGet(Microsoft.AspNetCore.Http.HttpContext,System.Threading.CancellationToken)">
             <summary>
             获取Session
             </summary>
             <param name="ctx">Microsoft.AspNetCore.Http</param>
-            <param name="strSessionName">Session对象名称</param>
+            <param name="cancellationToken"></param>
         </member>
         <member name="M:YellowJHelp.YJHelp.SessionDel(Microsoft.AspNetCore.Http.HttpContext,System.String)">
             <summary>

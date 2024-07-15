@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using YellowJHelp.Entry;
 using YellowJHelp.IServer;
+using YellowJAutoInjection;
 
 namespace YellowJHelp
 {

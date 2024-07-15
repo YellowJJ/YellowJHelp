@@ -1,3 +1,5 @@
 is_global = true
 build_property.RootNamespace = YellowJHelp
-build_property.ProjectDir = I:\YellowJ\打包通用项目\YellowJHelp\yellow-jhelp\YellowJHelp\
+build_property.ProjectDir = D:\Document\YellowJWebApi\yellow-jhelp-master\Help\yellow-jhelp\YellowJHelp\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 

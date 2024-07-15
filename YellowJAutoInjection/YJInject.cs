@@ -4,12 +4,14 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using System;
 using System.Collections.Generic;
+using System.IO;
+using System.Linq;
 using System.Reflection;
 using System.Text;
-using YellowJHelp.Base;
-using YellowJHelp.Entry;
+using YellowJAutoInjection.Entry;
+using YellowJAutoInjection.Help;
 
-namespace YellowJHelp
+namespace YellowJAutoInjection
 {
     /// <summary>
     /// 自动注入
@@ -25,7 +27,7 @@ namespace YellowJHelp
         {
             //Autofac自动依赖注入
             host.UseServiceProviderFactory(new AutofacServiceProviderFactory());
-            host.ConfigureContainer<ContainerBuilder>(builder =>
+            IHostBuilder hostBuilder = host.ConfigureContainer<ContainerBuilder>( (hostbuilder, builder) =>
             {
                 //新模块组件注册    
                 builder.RegisterModule<AutofacModuleRegister>();
@@ -86,14 +88,15 @@ namespace YellowJHelp
         //重写Autofac管道Load方法，在这里注册注入
         protected override void Load(ContainerBuilder builder)
         {
-            var dllname = BaseHelp.GetAssembly();
+            BaseHelp baseHelp = new BaseHelp();
+            var dllname = baseHelp.GetAssembly();
 
             foreach (var item in dllname)
             {
                 //注册程序集
                 builder.RegisterAssemblyTypes(item.Key, item.Value).AsImplementedInterfaces();
-                YJHelp yJHelp = new YJHelp();
-                yJHelp.YellowJLog($"{item.Key.FullName},{item.Value.FullName},成功注入","YellowJ自动注入程序集信息");
+                AutoHelp yJHelp = new AutoHelp();
+                yJHelp.YellowJLog($"{item.Key.FullName},{item.Value.FullName},成功注入", "YellowJ自动注入程序集信息");
             }
         }
         /// <summary>

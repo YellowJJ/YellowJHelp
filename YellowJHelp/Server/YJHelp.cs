@@ -6,6 +6,7 @@ using System.IO;
 using System.Security.Cryptography;
 using YellowJHelp.Entry;
 using YellowJHelp.IServer;
+using YellowJAutoInjection;
 
 namespace YellowJHelp
 {
@@ -250,19 +251,19 @@ namespace YellowJHelp
         /// <param name="ctx">Microsoft.AspNetCore.Http</param>
         /// <param name="strSessionName">Session对象名称</param>
         /// <param name="strValue">Session值</param>
-        public void SessionAdd(HttpContext ctx, string strSessionName, string strValue)
+        public void SessionAdd(HttpContext ctx, string strSessionName, byte[] strValue)
         {
-            ctx.Session.SetString(strSessionName, strValue);
+            ctx.Session.Set(strSessionName, strValue);
         }
 
         /// <summary>
         /// 获取Session
         /// </summary>
         /// <param name="ctx">Microsoft.AspNetCore.Http</param>
-        /// <param name="strSessionName">Session对象名称</param>
-        public string SessionGet(HttpContext ctx, string strSessionName)
+        /// <param name="cancellationToken"></param>
+        public async Task SessionGet(HttpContext ctx, CancellationToken cancellationToken)
         {
-            return ctx.Session.GetString(strSessionName);
+              await ctx.Session.LoadAsync(cancellationToken);
         }
         /// <summary>
         /// 删除Session

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace YellowJHelp.Entry
+namespace YellowJAutoInjection
 {
     /// <summary>
     /// 依赖注入基类

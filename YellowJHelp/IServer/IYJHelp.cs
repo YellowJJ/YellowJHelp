@@ -111,14 +111,14 @@ namespace YellowJHelp.IServer
         /// <param name="ctx">Microsoft.AspNetCore.Http</param>
         /// <param name="strSessionName">Session对象名称</param>
         /// <param name="strValue">Session值</param>
-        void SessionAdd(HttpContext ctx, string strSessionName, string strValue);
+        void SessionAdd(HttpContext ctx, string strSessionName, byte[] strValue);
 
         /// <summary>
         /// 获取Session
         /// </summary>
         /// <param name="ctx">Microsoft.AspNetCore.Http</param>
-        /// <param name="strSessionName">Session对象名称</param>
-        string SessionGet(HttpContext ctx, string strSessionName);
+        /// <param name="cancellationToken"></param>
+        Task SessionGet(HttpContext ctx, CancellationToken cancellationToken);
         /// <summary>
         /// 删除Session
         /// </summary>

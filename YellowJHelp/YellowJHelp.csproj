@@ -20,20 +20,18 @@ Redis使用</Description>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
-    <DocumentationFile>E:\Documentation\YellowJ\yellow-jhelp\YellowJHelp\YellowJHelp.xml</DocumentationFile>
+    <DocumentationFile>.\YellowJHelp\YellowJHelp.xml</DocumentationFile>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Autofac" Version="6.3.0" />
-    <PackageReference Include="Autofac.Extensions.DependencyInjection" Version="7.2.0" />
     <PackageReference Include="Confluent.Kafka" Version="1.8.2" />
     <PackageReference Include="Mapster" Version="7.2.0" />
     <PackageReference Include="Mapster.Core" Version="1.2.0" />
-    <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Http.Abstractions" Version="2.2.0" />
     <PackageReference Include="Microsoft.Extensions.Caching.Memory" Version="6.0.0" />
-    <PackageReference Include="Microsoft.Extensions.Hosting" Version="6.0.1" />
     <PackageReference Include="NewLife.Redis" Version="4.0.2022.312" />
     <PackageReference Include="SqlSugarCore" Version="5.0.4.3" />
+    <PackageReference Include="YellowJAutoInjection" Version="1.0.1" />
   </ItemGroup>
 
 </Project>

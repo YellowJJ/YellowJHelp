@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "I:\\YellowJ\\打包通用项目\\YellowJHelp\\yellow-jhelp\\YellowJHelp\\YellowJHelp.csproj": {}
+    "D:\\Document\\YellowJWebApi\\yellow-jhelp-master\\Help\\yellow-jhelp\\YellowJHelp\\YellowJHelp.csproj": {}
   },
   "projects": {
-    "I:\\YellowJ\\打包通用项目\\YellowJHelp\\yellow-jhelp\\YellowJHelp\\YellowJHelp.csproj": {
+    "D:\\Document\\YellowJWebApi\\yellow-jhelp-master\\Help\\yellow-jhelp\\YellowJHelp\\YellowJHelp.csproj": {
       "version": "2.2.1",
       "restore": {
-        "projectUniqueName": "I:\\YellowJ\\打包通用项目\\YellowJHelp\\yellow-jhelp\\YellowJHelp\\YellowJHelp.csproj",
+        "projectUniqueName": "D:\\Document\\YellowJWebApi\\yellow-jhelp-master\\Help\\yellow-jhelp\\YellowJHelp\\YellowJHelp.csproj",
         "projectName": "YellowJHelp",
-        "projectPath": "I:\\YellowJ\\打包通用项目\\YellowJHelp\\yellow-jhelp\\YellowJHelp\\YellowJHelp.csproj",
+        "projectPath": "D:\\Document\\YellowJWebApi\\yellow-jhelp-master\\Help\\yellow-jhelp\\YellowJHelp\\YellowJHelp.csproj",
         "packagesPath": "C:\\Users\\94332\\.nuget\\packages\\",
-        "outputPath": "I:\\YellowJ\\打包通用项目\\YellowJHelp\\yellow-jhelp\\YellowJHelp\\obj\\",
+        "outputPath": "D:\\Document\\YellowJWebApi\\yellow-jhelp-master\\Help\\yellow-jhelp\\YellowJHelp\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\94332\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -22,6 +22,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -34,20 +35,17 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
         "netstandard2.1": {
           "targetAlias": "netstandard2.1",
           "dependencies": {
-            "Autofac": {
-              "target": "Package",
-              "version": "[6.3.0, )"
-            },
-            "Autofac.Extensions.DependencyInjection": {
-              "target": "Package",
-              "version": "[7.2.0, )"
-            },
             "Confluent.Kafka": {
               "target": "Package",
               "version": "[1.8.2, )"
@@ -60,17 +58,13 @@
               "target": "Package",
               "version": "[1.2.0, )"
             },
-            "Microsoft.AspNetCore.Mvc": {
+            "Microsoft.AspNetCore.Http.Abstractions": {
               "target": "Package",
               "version": "[2.2.0, )"
             },
             "Microsoft.Extensions.Caching.Memory": {
               "target": "Package",
               "version": "[6.0.0, )"
-            },
-            "Microsoft.Extensions.Hosting": {
-              "target": "Package",
-              "version": "[6.0.1, )"
             },
             "NewLife.Redis": {
               "target": "Package",
@@ -79,6 +73,10 @@
             "SqlSugarCore": {
               "target": "Package",
               "version": "[5.0.4.3, )"
+            },
+            "YellowJAutoInjection": {
+              "target": "Package",
+              "version": "[1.0.1, )"
             }
           },
           "imports": [
@@ -87,7 +85,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -96,7 +95,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300\\RuntimeIdentifierGraph.json"
         }
       }
     }

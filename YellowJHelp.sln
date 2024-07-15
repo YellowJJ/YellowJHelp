@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "YellowJHelp", "YellowJHelp\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YellowJHelpFw", "YellowJHelpFw\YellowJHelpFw.csproj", "{CCB3F3F1-FCBC-443B-BD10-EE91E7CF61B6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YellowJAutoInjection", "YellowJAutoInjection\YellowJAutoInjection.csproj", "{9AE69515-9797-44D6-B0EC-0A6760A1897E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{CCB3F3F1-FCBC-443B-BD10-EE91E7CF61B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CCB3F3F1-FCBC-443B-BD10-EE91E7CF61B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CCB3F3F1-FCBC-443B-BD10-EE91E7CF61B6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9AE69515-9797-44D6-B0EC-0A6760A1897E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9AE69515-9797-44D6-B0EC-0A6760A1897E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9AE69515-9797-44D6-B0EC-0A6760A1897E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9AE69515-9797-44D6-B0EC-0A6760A1897E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

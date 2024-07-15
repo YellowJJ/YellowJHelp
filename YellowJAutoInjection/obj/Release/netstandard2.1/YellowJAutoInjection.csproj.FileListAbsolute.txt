@@ -1,0 +1,10 @@
+D:\Document\YellowJWebApi\yellow-jhelp-master\YellowJAutoInjection\obj\Release\netstandard2.1\YellowJAutoInjection.csproj.AssemblyReference.cache
+D:\Document\YellowJWebApi\yellow-jhelp-master\YellowJAutoInjection\obj\Release\netstandard2.1\YellowJAutoInjection.GeneratedMSBuildEditorConfig.editorconfig
+D:\Document\YellowJWebApi\yellow-jhelp-master\YellowJAutoInjection\obj\Release\netstandard2.1\YellowJAutoInjection.AssemblyInfoInputs.cache
+D:\Document\YellowJWebApi\yellow-jhelp-master\YellowJAutoInjection\obj\Release\netstandard2.1\YellowJAutoInjection.AssemblyInfo.cs
+D:\Document\YellowJWebApi\yellow-jhelp-master\YellowJAutoInjection\obj\Release\netstandard2.1\YellowJAutoInjection.csproj.CoreCompileInputs.cache
+D:\Document\YellowJWebApi\yellow-jhelp-master\YellowJAutoInjection\bin\Release\netstandard2.1\YellowJAutoInjection.deps.json
+D:\Document\YellowJWebApi\yellow-jhelp-master\YellowJAutoInjection\bin\Release\netstandard2.1\YellowJAutoInjection.dll
+D:\Document\YellowJWebApi\yellow-jhelp-master\YellowJAutoInjection\bin\Release\netstandard2.1\YellowJAutoInjection.pdb
+D:\Document\YellowJWebApi\yellow-jhelp-master\YellowJAutoInjection\obj\Release\netstandard2.1\YellowJAutoInjection.dll
+D:\Document\YellowJWebApi\yellow-jhelp-master\YellowJAutoInjection\obj\Release\netstandard2.1\YellowJAutoInjection.pdb

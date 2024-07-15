@@ -29,3 +29,14 @@ E:\Documentation\YellowJ\yellow-jhelp\YellowJHelp\obj\Release\netstandard2.1\Yel
 E:\Documentation\YellowJ\yellow-jhelp\YellowJHelp\bin\Release\netstandard2.1\YellowJHelp.xml
 I:\YellowJ\打包通用项目\YellowJHelp\yellow-jhelp\YellowJHelp\bin\Release\netstandard2.1\YellowJHelp.xml
 I:\YellowJ\打包通用项目\YellowJHelp\yellow-jhelp\YellowJHelp\obj\Release\netstandard2.1\YellowJHelp.csproj.AssemblyReference.cache
+D:\Document\YellowJWebApi\yellow-jhelp-master\YellowJHelp\obj\Release\netstandard2.1\YellowJHelp.csproj.AssemblyReference.cache
+D:\Document\YellowJWebApi\yellow-jhelp-master\YellowJHelp\obj\Release\netstandard2.1\YellowJHelp.GeneratedMSBuildEditorConfig.editorconfig
+D:\Document\YellowJWebApi\yellow-jhelp-master\YellowJHelp\obj\Release\netstandard2.1\YellowJHelp.AssemblyInfoInputs.cache
+D:\Document\YellowJWebApi\yellow-jhelp-master\YellowJHelp\obj\Release\netstandard2.1\YellowJHelp.AssemblyInfo.cs
+D:\Document\YellowJWebApi\yellow-jhelp-master\YellowJHelp\obj\Release\netstandard2.1\YellowJHelp.csproj.CoreCompileInputs.cache
+D:\Document\YellowJWebApi\yellow-jhelp-master\YellowJHelp\obj\Release\netstandard2.1\YellowJHelp.dll
+D:\Document\YellowJWebApi\yellow-jhelp-master\YellowJHelp\obj\Release\netstandard2.1\YellowJHelp.pdb
+D:\Document\YellowJWebApi\yellow-jhelp-master\YellowJHelp\bin\Release\netstandard2.1\YellowJHelp.deps.json
+D:\Document\YellowJWebApi\yellow-jhelp-master\YellowJHelp\bin\Release\netstandard2.1\YellowJHelp.dll
+D:\Document\YellowJWebApi\yellow-jhelp-master\YellowJHelp\bin\Release\netstandard2.1\YellowJHelp.pdb
+D:\Document\YellowJWebApi\yellow-jhelp-master\YellowJHelp\bin\Release\netstandard2.1\YellowJHelp.xml
