@@ -51,6 +51,7 @@ Framework 4.6.1+
 | Autofac         |
 | NewLife.Redis   |
 | SqlSugarCore    |
+| Autofac |
 
 
 
@@ -119,7 +120,5 @@ YJHelpKafka
 YJHelpRedis
 YJHelpWebApi
 
-#### 引用第三方说明，感谢
-|Autofac|
 
 #### 参与贡献
