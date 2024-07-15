@@ -119,5 +119,7 @@ YJHelpKafka
 YJHelpRedis
 YJHelpWebApi
 
-#### 参与贡献
+#### 引用第三方说明，感谢
+|Autofac|
 
+#### 参与贡献
