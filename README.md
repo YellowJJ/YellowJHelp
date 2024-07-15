@@ -51,7 +51,6 @@ Framework 4.6.1+
 | Autofac         |
 | NewLife.Redis   |
 | SqlSugarCore    |
-| Autofac |
 
 
 
