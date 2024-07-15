@@ -1,3 +1,33 @@
+# YellowJAutoInjection 
+
+依赖注入功能独立
+Nuget 获取YellowJAutoInjection 
+
+#### 程序集自动注入说明：满足IOC开发
+
+案列：Net6
+
+在Program类中注入
+
+`builder.Host.YJAutofacDiInJect();`
+
+或者
+
+`builder.Services.YJDiInJect();`
+
+![输入图片说明](1.png)
+
+
+
+类库中满足如：
+
+`[AutoInject(typeof(ILoginServer))]`
+
+声明的都将自动注入程序集
+
+![输入图片说明](2.png)
+
+
 # YellowJHelp
 
 #### 介绍
@@ -25,31 +55,7 @@ Framework 4.6.1+
 
 
 #### 版本说明
-2.0.0：优化结构，新增Server层和Iserver层，实现接口层封装，满足IOC开发
-
-#### 程序集自动注入说明：满足IOC开发
-
-案列：Net6
-
-在Program类中注入
-
-`builder.Host.YJAutofacDiInJect();`
-
-或者
-
-`builder.Services.YJDiInJect();`
-
-![输入图片说明](1.png)
-
-
-
-类库中满足如：
-
-`[AutoInject(typeof(ILoginServer))]`
-
-声明的都将自动注入程序集
-
-![输入图片说明](2.png)
+2.0.0：优化结构，新增Server层和Iserver层，实现接口层封装
 
 #### 方法库函数介绍
 ##### YJHelp
