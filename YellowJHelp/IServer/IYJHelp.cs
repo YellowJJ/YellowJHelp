@@ -19,7 +19,7 @@ namespace YellowJHelp.IServer
         /// </summary>
         /// <param name="strText">要加密字符串</param>
         /// <param name="IsLower">是否以小写方式返回</param>
-        string MD5Encrypt(string strText, bool IsLower);
+        Task<string> MD5EncryptAsync(string strText, bool IsLower);
         /// <summary>
         /// DES加密
         /// </summary>
@@ -27,7 +27,7 @@ namespace YellowJHelp.IServer
         /// <param name="KEY_64">密钥长度8位</param>
         /// <param name="IV_64">密钥长度8位</param>
         /// <returns></returns>
-        string Encode(string data, string KEY_64, string IV_64);
+        Task<string> Encode(string data, string KEY_64, string IV_64);
         /// <summary>
         /// DES解密
         /// </summary>
@@ -35,7 +35,7 @@ namespace YellowJHelp.IServer
         /// <param name="KEY_64">密钥长度8位</param>
         /// <param name="IV_64">密钥长度8位</param>
         /// <returns></returns>
-        string Decode(string data, string KEY_64, string IV_64);
+        Task<string> Decode(string data, string KEY_64, string IV_64);
         #endregion
 
         /// <summary>

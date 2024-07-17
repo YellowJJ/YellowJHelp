@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "/7H/QOqXGgE=",
+  "dgSpecHash": "Jtabj2cve0Q=",
   "success": true,
-  "projectFilePath": "D:\\Document\\YellowJWebApi\\yellow-jhelp-master\\Help\\yellow-jhelp\\YellowJAutoInjection\\YellowJAutoInjection.csproj",
+  "projectFilePath": "D:\\Document\\YellowJWebApi\\yellow-jhelp-master\\YellowJAutoInjection\\YellowJAutoInjection.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\94332\\.nuget\\packages\\autofac\\8.0.0\\autofac.8.0.0.nupkg.sha512",
     "C:\\Users\\94332\\.nuget\\packages\\autofac.extensions.dependencyinjection\\8.0.0\\autofac.extensions.dependencyinjection.8.0.0.nupkg.sha512",

@@ -6,7 +6,7 @@
     <authors>YellowJ</authors>
     <description>自动依赖注入，控制反转</description>
     <copyright>YellowJ</copyright>
-    <repository type="git" />
+    <repository type="git" commit="219ffdaa3e0c315343d9bc92891847b9fc7433c2" />
     <dependencies>
       <group targetFramework=".NETStandard2.1">
         <dependency id="Autofac" version="8.0.0" exclude="Build,Analyzers" />

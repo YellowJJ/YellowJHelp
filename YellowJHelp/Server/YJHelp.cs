@@ -1,19 +1,14 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.Extensions.Caching.Memory;
-using System;
-using System.Collections.Generic;
-using System.IO;
+﻿global using YellowJAutoInjection;
+using Microsoft.AspNetCore.Http;
 using System.Security.Cryptography;
-using YellowJHelp.Entry;
 using YellowJHelp.IServer;
-using YellowJAutoInjection;
 
 namespace YellowJHelp
 {
-    [AutoInject(typeof(IYJHelp))]
     /// <summary>
     /// 通用帮助方法
     /// </summary>
+    [AutoInject(typeof(IYJHelp))]
     public class YJHelp: IYJHelp
     {
         /// <summary>
@@ -28,20 +23,23 @@ namespace YellowJHelp
         /// <param name="strText">要加密字符串</param>
         /// <param name="IsLower">是否以小写方式返回</param>
         /// <returns></returns>
-        public string MD5Encrypt(string strText, bool IsLower)
+        public Task<string> MD5EncryptAsync(string strText, bool IsLower)
         {
-            MD5 md5 = new MD5CryptoServiceProvider();
-            byte[] bytes = System.Text.Encoding.UTF8.GetBytes(strText);
-            bytes = md5.ComputeHash(bytes);
-            md5.Clear();
-
-            string ret = "";
-            for (int i = 0; i < bytes.Length; i++)
+            return Task.Run(() =>
             {
-                ret += Convert.ToString(bytes[i], 16).PadLeft(2, '0');
-            }
+                MD5 md5 = new MD5CryptoServiceProvider();
+                byte[] bytes = System.Text.Encoding.UTF8.GetBytes(strText);
+                bytes = md5.ComputeHash(bytes);
+                md5.Clear();
 
-            return ret.PadLeft(32, '0');
+                string ret = "";
+                for (int i = 0; i < bytes.Length; i++)
+                {
+                    ret += Convert.ToString(bytes[i], 16).PadLeft(2, '0');
+                }
+                return ret.PadLeft(32, '0');
+            });
+            
         }
 
         /// <summary>
@@ -51,7 +49,7 @@ namespace YellowJHelp
         /// <param name="KEY_64">密钥长度8位</param>
         /// <param name="IV_64">密钥长度8位</param>
         /// <returns></returns>
-        public string Encode(string data,string KEY_64, string IV_64)
+        public async Task<string> Encode(string data,string KEY_64, string IV_64)
         {
             byte[] byKey = System.Text.ASCIIEncoding.ASCII.GetBytes(KEY_64);
             byte[] byIV = System.Text.ASCIIEncoding.ASCII.GetBytes(IV_64);
@@ -62,10 +60,10 @@ namespace YellowJHelp
             CryptoStream cst = new CryptoStream(ms, cryptoProvider.CreateEncryptor(byKey, byIV), CryptoStreamMode.Write);
 
             StreamWriter sw = new StreamWriter(cst);
-            sw.Write(data);
-            sw.Flush();
+            await sw.WriteAsync(data);
+            await sw.FlushAsync();
             cst.FlushFinalBlock();
-            sw.Flush();
+            await sw.FlushAsync();
             return Convert.ToBase64String(ms.GetBuffer(), 0, (int)ms.Length);
 
         }
@@ -76,7 +74,7 @@ namespace YellowJHelp
         /// <param name="KEY_64">密钥长度8位</param>
         /// <param name="IV_64">密钥长度8位</param>
         /// <returns></returns>
-        public string Decode(string data, string KEY_64, string IV_64)
+        public async Task<string> Decode(string data, string KEY_64, string IV_64)
         {
             byte[] byKey = System.Text.ASCIIEncoding.ASCII.GetBytes(KEY_64);
             byte[] byIV = System.Text.ASCIIEncoding.ASCII.GetBytes(IV_64);
@@ -88,24 +86,24 @@ namespace YellowJHelp
             }
             catch
             {
-                return null;
+                return  "";
             }
 
             DESCryptoServiceProvider cryptoProvider = new DESCryptoServiceProvider();
             MemoryStream ms = new MemoryStream(byEnc);
             CryptoStream cst = new CryptoStream(ms, cryptoProvider.CreateDecryptor(byKey, byIV), CryptoStreamMode.Read);
             StreamReader sr = new StreamReader(cst);
-            return sr.ReadToEnd();
+            return await sr.ReadToEndAsync();
         }
 
 
         #endregion
 
 
-        [AutoInject(typeof(IYJHelp.ICache))]
         /// <summary>
         /// 缓存类
         /// </summary>
+        [AutoInject(typeof(IYJHelp.ICache))]
         public class Cache: IYJHelp.ICache
         {
             #region 缓存定义

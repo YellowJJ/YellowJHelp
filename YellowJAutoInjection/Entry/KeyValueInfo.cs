@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace YellowJAutoInjection.Entry
+﻿namespace YellowJAutoInjection.Entry
 {
     /// <summary>
     /// 键值类
@@ -12,10 +8,10 @@ namespace YellowJAutoInjection.Entry
         /// <summary>
         /// 键
         /// </summary>
-        public T Key { get; set; }
+        public T? Key { get; set; }
         /// <summary>
         /// 值
         /// </summary>
-        public T1 Value { get; set; }
+        public T1? Value { get; set; }
     }
 }

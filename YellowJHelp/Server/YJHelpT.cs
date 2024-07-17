@@ -1,15 +1,14 @@
 ﻿using Newtonsoft.Json;
-using YellowJHelp.Entry;
 using YellowJHelp.IServer;
 
 namespace YellowJHelp
 {
 
-    [AutoInject(typeof(IYJHelpT<>))]
     /// <summary>
     /// 通用方法(范型)
     /// </summary>
     /// <typeparam name="T"></typeparam>
+    [AutoInject(typeof(IYJHelpT<>))]
     public class YJHelpT<T>: IYJHelpT<T>
     {
         /// <summary>
@@ -101,7 +100,7 @@ namespace YellowJHelp
         /// <param name="left">左边的数据</param>
         /// <param name="right">右边的数据</param>
         /// <returns></returns>
-        public List<T> DiffsetT(List<T> left, List<T> right)
+        public List<T>? DiffsetT(List<T> left, List<T> right)
         {
             if (left == null)
             {

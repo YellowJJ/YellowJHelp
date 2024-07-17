@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Text;
-
-namespace YellowJAutoInjection.Help
+﻿namespace YellowJAutoInjection.Help
 {
     public class AutoHelp
     {

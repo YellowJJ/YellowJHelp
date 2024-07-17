@@ -1,15 +1,14 @@
 ﻿using System.Net;
 using System.Text;
-using YellowJHelp.Entry;
 using YellowJHelp.IServer;
 
 namespace YellowJHelp
 {
 
-    [AutoInject(typeof(IYJHelpWebApi))]
     /// <summary>
     /// 接口调用方法
     /// </summary>
+    [AutoInject(typeof(IYJHelpWebApi))]
     public class YJHelpWebApi: IYJHelpWebApi
     {
         /// <summary>

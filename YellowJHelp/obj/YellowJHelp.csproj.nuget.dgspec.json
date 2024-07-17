@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Document\\YellowJWebApi\\yellow-jhelp-master\\Help\\yellow-jhelp\\YellowJHelp\\YellowJHelp.csproj": {}
+    "D:\\Document\\YellowJWebApi\\yellow-jhelp-master\\YellowJHelp\\YellowJHelp.csproj": {}
   },
   "projects": {
-    "D:\\Document\\YellowJWebApi\\yellow-jhelp-master\\Help\\yellow-jhelp\\YellowJHelp\\YellowJHelp.csproj": {
+    "D:\\Document\\YellowJWebApi\\yellow-jhelp-master\\YellowJHelp\\YellowJHelp.csproj": {
       "version": "2.2.1",
       "restore": {
-        "projectUniqueName": "D:\\Document\\YellowJWebApi\\yellow-jhelp-master\\Help\\yellow-jhelp\\YellowJHelp\\YellowJHelp.csproj",
+        "projectUniqueName": "D:\\Document\\YellowJWebApi\\yellow-jhelp-master\\YellowJHelp\\YellowJHelp.csproj",
         "projectName": "YellowJHelp",
-        "projectPath": "D:\\Document\\YellowJWebApi\\yellow-jhelp-master\\Help\\yellow-jhelp\\YellowJHelp\\YellowJHelp.csproj",
+        "projectPath": "D:\\Document\\YellowJWebApi\\yellow-jhelp-master\\YellowJHelp\\YellowJHelp.csproj",
         "packagesPath": "C:\\Users\\94332\\.nuget\\packages\\",
-        "outputPath": "D:\\Document\\YellowJWebApi\\yellow-jhelp-master\\Help\\yellow-jhelp\\YellowJHelp\\obj\\",
+        "outputPath": "D:\\Document\\YellowJWebApi\\yellow-jhelp-master\\YellowJHelp\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\94332\\AppData\\Roaming\\NuGet\\NuGet.Config",

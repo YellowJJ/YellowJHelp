@@ -14,10 +14,10 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("YellowJ")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyCopyrightAttribute("YellowJ")]
-[assembly: System.Reflection.AssemblyDescriptionAttribute("通用解决方案：\n最新版本：新增DES加解密方法\n2.1.0版本：自动依赖注入功能上线\n（Redis更换NewLife-日均百亿次项目验证）缓存，MD5加密，字段截" +
-    "取，集合类型差集计算\nKafka使用\nwebapi调用\nRedis使用")]
+[assembly: System.Reflection.AssemblyDescriptionAttribute("通用解决方案：\r\n最新版本：新增DES加解密方法\r\n2.1.0版本：自动依赖注入功能上线\r\n（Redis更换NewLife-日均百亿次项目验证）缓存，MD5加密，" +
+    "字段截取，集合类型差集计算\r\nKafka使用\r\nwebapi调用\r\nRedis使用")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("2.2.1.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("2.2.1+bf5b60064c79e84d1f881a4403fae68c628fad89")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("2.2.1+219ffdaa3e0c315343d9bc92891847b9fc7433c2")]
 [assembly: System.Reflection.AssemblyProductAttribute("YellowJHelp")]
 [assembly: System.Reflection.AssemblyTitleAttribute("YellowJHelp")]
 [assembly: System.Reflection.AssemblyVersionAttribute("2.2.1.0")]

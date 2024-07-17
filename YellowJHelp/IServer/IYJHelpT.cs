@@ -51,7 +51,7 @@ namespace YellowJHelp.IServer
         /// <param name="left">左边的数据</param>
         /// <param name="right">右边的数据</param>
         /// <returns></returns>
-        List<T> DiffsetT(List<T> left, List<T> right);
+        List<T>? DiffsetT(List<T> left, List<T> right);
 
 
 

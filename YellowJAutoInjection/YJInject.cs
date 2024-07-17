@@ -1,14 +1,9 @@
-﻿using Autofac;
+﻿global using System;
+using Autofac;
 using Autofac.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
 using System.Reflection;
-using System.Text;
-using YellowJAutoInjection.Entry;
 using YellowJAutoInjection.Help;
 
 namespace YellowJAutoInjection
@@ -93,6 +88,7 @@ namespace YellowJAutoInjection
 
             foreach (var item in dllname)
             {
+                if(item==null || item.Key==null || item.Value==null) continue;
                 //注册程序集
                 builder.RegisterAssemblyTypes(item.Key, item.Value).AsImplementedInterfaces();
                 AutoHelp yJHelp = new AutoHelp();

@@ -1,32 +1,28 @@
 ﻿using Mapster;
 using NewLife.Caching;
-using System;
-using System.Collections.Generic;
-using System.Text;
-using YellowJHelp.Entry;
 using YellowJHelp.IServer;
 
 namespace YellowJHelp
 {
 
-    [AutoInject(typeof(IYJHelpRedis))]
     /// <summary>
     /// redis通用使用
     /// </summary>
+    [AutoInject(typeof(IYJHelpRedis))]
     public class YJHelpRedis: IYJHelpRedis
     {
         /// <summary>
         /// redis 配置中心
         /// </summary>
         /// <returns></returns>
-        public FullRedis RedisCli(string Create=null)
+        public FullRedis RedisCli(string? Create=null)
         {
-            var ret =new FullRedis();
-            if (!string.IsNullOrEmpty(Create)) { ret=FullRedis.Create(Create);}
+            var ret = new FullRedis();
+            if (!string.IsNullOrEmpty(Create)) { ret= FullRedis.Create(Create);}
             //var ret = FullRedis.Create(OPSDbs.Configuration["Redis:Create"]);
             //ret.UserName = OPSDbs.Configuration["Redis:UserName"];
             //ret.Password = OPSDbs.Configuration["Redis:Password"];
-            ///*fullRedis.StartPipeline();*/
+            //*fullRedis.StartPipeline();*/
             //if (!string.IsNullOrEmpty(OPSDbs.Configuration["Redis:MaxMessageSize"]))
             //{
             //    ret.MaxMessageSize = 1024 * 1024 * (Convert.ToInt32(OPSDbs.Configuration["Redis:MaxMessageSize"]));
@@ -46,7 +42,6 @@ namespace YellowJHelp
         public T Get<T>(string key)
         {
             var ret = RedisCli().Get<T>(key);
-
             return ret;
         }
         /// <summary>

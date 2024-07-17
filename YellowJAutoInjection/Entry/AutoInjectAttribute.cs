@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace YellowJAutoInjection
+﻿namespace YellowJAutoInjection
 {
     /// <summary>
     /// 依赖注入基类

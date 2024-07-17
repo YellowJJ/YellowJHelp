@@ -12,7 +12,7 @@ namespace YellowJHelp.IServer
         /// redis 配置中心
         /// </summary>
         /// <returns></returns>
-        FullRedis RedisCli(string Create = null);
+       FullRedis RedisCli(string? Create = null);
 
 
         /// <summary>

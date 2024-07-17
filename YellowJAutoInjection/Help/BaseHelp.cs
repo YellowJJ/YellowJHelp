@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Reflection;
-using System.Text;
+﻿using System.Reflection;
 using YellowJAutoInjection.Entry;
 
 namespace YellowJAutoInjection.Help
@@ -46,6 +41,7 @@ namespace YellowJAutoInjection.Help
                     KeyValueInfo<Assembly, Assembly> keyValueInfo = new KeyValueInfo<Assembly, Assembly>();
                     keyValueInfo.Key = assembly;
                     keyValueInfo.Value = attr.Type.Assembly;
+                    //if (keyValueInfo.Key==null || keyValueInfo.Value==null) { continue; }
                     vs.Add(keyValueInfo);
                     break;
                 }

@@ -3,20 +3,19 @@ using Newtonsoft.Json;
 using SqlSugar;
 using YellowJHelp.Entry;
 using YellowJHelp.IServer;
-
 namespace YellowJHelp
 {
 
-    [AutoInject(typeof(IYJHelpSql))]
     /// <summary>
     /// 数据库通用方法（测试）
     /// </summary>
+    [AutoInject(typeof(IYJHelpSql))]
     public class YJHelpSql: IYJHelpSql
     {
         /// <summary>
         /// sqlserver链接参数
         /// </summary>
-        public static string sqlconntion = null;
+        public static string? sqlconntion = null;
         /// <summary>
         /// 数据库操作
         /// </summary>

@@ -1,23 +1,29 @@
 ﻿using Confluent.Kafka;
-using System;
-using System.Collections.Generic;
 using YellowJHelp.Entry;
 using YellowJHelp.IServer;
-using YellowJAutoInjection;
 
 namespace YellowJHelp
 {
 
-    [AutoInject(typeof(IYJHelpKafka))]
     /// <summary>
     /// Kafka链接通用方法
     /// </summary>
-    public class YJHelpKafka: IYJHelpKafka
+    [AutoInject(typeof(IYJHelpKafka))]
+    public class YJHelpKafka : IYJHelpKafka
     {
+
         /// <summary>
         /// 帮助接口
         /// </summary>
         private IYJHelp _Help;
+        /// <summary>
+        /// 构造函数
+        /// </summary>
+        /// <param name="yJHelp"></param>
+        public YJHelpKafka(IYJHelp yJHelp)
+        {
+            _Help=yJHelp;
+        }
         /// <summary>
         /// 发布者
         /// </summary>
