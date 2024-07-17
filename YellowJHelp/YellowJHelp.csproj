@@ -6,9 +6,8 @@
     <Nullable>enable</Nullable>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <Authors>YellowJ</Authors>
-    <Version>2.3.0</Version>
-    <Description>
-		通用解决方案：
+    <Version>2.3.1</Version>
+    <Description>通用解决方案：
 		2.2.0版本：自动依赖注入功能转移至：YellowJAutoInjection
 		（Redis更换NewLife-日均百亿次项目验证）缓存，MD5加密，字段截取，集合类型差集计算
 		Kafka使用
@@ -17,11 +16,22 @@
     <LangVersion>preview</LangVersion>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
     <Copyright>YellowJ</Copyright>
+    <PackageProjectUrl>https://gitee.com/xiaoyi1314/yellow-jhelp</PackageProjectUrl>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <RepositoryUrl>https://gitee.com/xiaoyi1314/yellow-jhelp</RepositoryUrl>
+    <PackageReleaseNotes>优化所有警告信息</PackageReleaseNotes>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
     <DocumentationFile>.\YellowJHelp\YellowJHelp.xml</DocumentationFile>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Confluent.Kafka" Version="1.8.2" />
@@ -31,7 +41,7 @@
     <PackageReference Include="Microsoft.Extensions.Caching.Memory" Version="6.0.0" />
     <PackageReference Include="NewLife.Redis" Version="4.0.2022.312" />
     <PackageReference Include="SqlSugarCore" Version="5.0.4.3" />
-    <PackageReference Include="YellowJAutoInjection" Version="1.0.1" />
+    <PackageReference Include="YellowJAutoInjection" Version="1.1.1" />
   </ItemGroup>
 
 </Project>

@@ -7,7 +7,7 @@
   "targets": {
     ".NETStandard,Version=v2.1": {},
     ".NETStandard,Version=v2.1/": {
-      "YellowJAutoInjection/1.1.0": {
+      "YellowJAutoInjection/1.1.1": {
         "dependencies": {
           "Autofac": "8.0.0",
           "Autofac.Extensions.DependencyInjection": "8.0.0",
@@ -198,7 +198,7 @@
     }
   },
   "libraries": {
-    "YellowJAutoInjection/1.1.0": {
+    "YellowJAutoInjection/1.1.1": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

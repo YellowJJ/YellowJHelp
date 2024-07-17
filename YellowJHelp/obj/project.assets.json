@@ -3010,7 +3010,7 @@
           "lib/netstandard1.3/System.Xml.XPath.XmlDocument.dll": {}
         }
       },
-      "YellowJAutoInjection/1.0.1": {
+      "YellowJAutoInjection/1.1.1": {
         "type": "package",
         "dependencies": {
           "Autofac": "8.0.0",
@@ -9185,15 +9185,16 @@
         "system.xml.xpath.xmldocument.nuspec"
       ]
     },
-    "YellowJAutoInjection/1.0.1": {
-      "sha512": "Xm8KGSnAM7BmX1D2UXEcOowoGloGTvHCpg4vM450+UmOTa9U6Alt2Lq6NvflpiKWeHUpVPWwDeh+/ZZfKUQryQ==",
+    "YellowJAutoInjection/1.1.1": {
+      "sha512": "+5KOtK8ovv2tO4toWPygosXjFkwVSxoJ/iPm98QgIoZTNW6vG/80zOm74UPzt1FBoaIkdX5mywonT1xJ03VDfA==",
       "type": "package",
-      "path": "yellowjautoinjection/1.0.1",
+      "path": "yellowjautoinjection/1.1.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
+        "README.md",
         "lib/netstandard2.1/YellowJAutoInjection.dll",
-        "yellowjautoinjection.1.0.1.nupkg.sha512",
+        "yellowjautoinjection.1.1.1.nupkg.sha512",
         "yellowjautoinjection.nuspec"
       ]
     }
@@ -9207,14 +9208,14 @@
       "Microsoft.Extensions.Caching.Memory >= 6.0.0",
       "NewLife.Redis >= 4.0.2022.312",
       "SqlSugarCore >= 5.0.4.3",
-      "YellowJAutoInjection >= 1.0.1"
+      "YellowJAutoInjection >= 1.1.1"
     ]
   },
   "packageFolders": {
     "C:\\Users\\94332\\.nuget\\packages\\": {}
   },
   "project": {
-    "version": "2.3.0",
+    "version": "2.3.1",
     "restore": {
       "projectUniqueName": "D:\\Document\\YellowJWebApi\\yellow-jhelp-master\\YellowJHelp\\YellowJHelp.csproj",
       "projectName": "YellowJHelp",
@@ -9285,7 +9286,7 @@
           },
           "YellowJAutoInjection": {
             "target": "Package",
-            "version": "[1.0.1, )"
+            "version": "[1.1.1, )"
           }
         },
         "imports": [
