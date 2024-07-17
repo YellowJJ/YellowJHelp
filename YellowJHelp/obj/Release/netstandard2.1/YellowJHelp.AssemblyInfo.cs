@@ -14,13 +14,13 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("YellowJ")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyCopyrightAttribute("YellowJ")]
-[assembly: System.Reflection.AssemblyDescriptionAttribute("通用解决方案：\r\n最新版本：新增DES加解密方法\r\n2.1.0版本：自动依赖注入功能上线\r\n（Redis更换NewLife-日均百亿次项目验证）缓存，MD5加密，" +
-    "字段截取，集合类型差集计算\r\nKafka使用\r\nwebapi调用\r\nRedis使用")]
-[assembly: System.Reflection.AssemblyFileVersionAttribute("2.2.1.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("2.2.1+219ffdaa3e0c315343d9bc92891847b9fc7433c2")]
+[assembly: System.Reflection.AssemblyDescriptionAttribute("\r\n\t\t通用解决方案：\r\n\t\t2.2.0版本：自动依赖注入功能转移至：YellowJAutoInjection\r\n\t\t（Redis更换NewLife-日均百亿次项" +
+    "目验证）缓存，MD5加密，字段截取，集合类型差集计算\r\n\t\tKafka使用\r\n\t\twebapi调用\r\n\t\tRedis使用")]
+[assembly: System.Reflection.AssemblyFileVersionAttribute("2.3.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("2.3.0+aad4a252a0b83836249bcb9392078f12295991f7")]
 [assembly: System.Reflection.AssemblyProductAttribute("YellowJHelp")]
 [assembly: System.Reflection.AssemblyTitleAttribute("YellowJHelp")]
-[assembly: System.Reflection.AssemblyVersionAttribute("2.2.1.0")]
+[assembly: System.Reflection.AssemblyVersionAttribute("2.3.0.0")]
 
 // 由 MSBuild WriteCodeFragment 类生成。
 
