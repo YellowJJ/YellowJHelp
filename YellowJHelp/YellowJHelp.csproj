@@ -6,8 +6,10 @@
     <Nullable>enable</Nullable>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <Authors>YellowJ</Authors>
-    <Version>2.3.1</Version>
-    <Description>通用解决方案：
+    <Version>3.0.0</Version>
+    <Description>
+		通用解决方案：
+		3.0.0版本后方法基本改成异步。
 		2.2.0版本：自动依赖注入功能转移至：YellowJAutoInjection
 		（Redis更换NewLife-日均百亿次项目验证）缓存，MD5加密，字段截取，集合类型差集计算
 		Kafka使用
