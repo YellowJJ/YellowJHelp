@@ -49,7 +49,7 @@ namespace YellowJHelp
         /// <param name="KEY_64">密钥长度8位</param>
         /// <param name="IV_64">密钥长度8位</param>
         /// <returns></returns>
-        public async Task<string> Encode(string data,string KEY_64, string IV_64)
+        public async Task<string> EncodeAsync(string data,string KEY_64, string IV_64)
         {
             byte[] byKey = System.Text.ASCIIEncoding.ASCII.GetBytes(KEY_64);
             byte[] byIV = System.Text.ASCIIEncoding.ASCII.GetBytes(IV_64);
@@ -74,7 +74,7 @@ namespace YellowJHelp
         /// <param name="KEY_64">密钥长度8位</param>
         /// <param name="IV_64">密钥长度8位</param>
         /// <returns></returns>
-        public async Task<string> Decode(string data, string KEY_64, string IV_64)
+        public async Task<string> DecodeAsync(string data, string KEY_64, string IV_64)
         {
             byte[] byKey = System.Text.ASCIIEncoding.ASCII.GetBytes(KEY_64);
             byte[] byIV = System.Text.ASCIIEncoding.ASCII.GetBytes(IV_64);
@@ -160,7 +160,7 @@ namespace YellowJHelp
         /// </summary>
         /// <param name="text">消息</param>
         /// <param name="address">相对文件名</param>
-        public void YellowJLog(string text, string address)
+        public async Task YellowJLogAsync(string text, string address)
         {
 
             string path = AppDomain.CurrentDomain.BaseDirectory;
@@ -177,7 +177,7 @@ namespace YellowJHelp
 
             using (StreamWriter output = System.IO.File.AppendText(fileFullName))
             {
-                output.WriteLine(DateTime.Now.ToString() + " 日志信息：" + text);
+                await output.WriteLineAsync(DateTime.Now.ToString() + " 日志信息：" + text);
 
                 output.Close();
             }
@@ -189,20 +189,23 @@ namespace YellowJHelp
         /// <param name="startstr">前字符</param>
         /// <param name="endstr">后字符</param>
         /// <returns></returns>
-        public string MidStrEx(string sourse, string startstr, string endstr)
+        public async Task<string> MidStrExAsync(string sourse, string startstr, string endstr)
         {
-            string result = string.Empty;
-            int startindex, endindex;
-            startindex = sourse.IndexOf(startstr);
-            if (startindex == -1)
-                return result;
-            string tmpstr = sourse.Substring(startindex + startstr.Length);
-            endindex = tmpstr.IndexOf(endstr);
-            if (endindex == -1)
-                return result;
-            result = tmpstr.Remove(endindex);
+            return await Task.Run(() => {
+                string result = string.Empty;
+                int startindex, endindex;
+                startindex = sourse.IndexOf(startstr);
+                if (startindex == -1)
+                    return result;
+                string tmpstr = sourse.Substring(startindex + startstr.Length);
+                endindex = tmpstr.IndexOf(endstr);
+                if (endindex == -1)
+                    return result;
+                result = tmpstr.Remove(endindex);
 
-            return result;
+                return result;
+            });
+            
         }
 
         #region --cookie--

@@ -16,7 +16,7 @@ namespace YellowJHelp
         /// </summary>
         /// <param name="url">地址</param>
         /// <returns></returns>
-        public string HttpGet(string url)
+        public async Task<string> HttpGetAsync(string url)
         {
 
             Encoding encoding = Encoding.UTF8;
@@ -25,11 +25,11 @@ namespace YellowJHelp
             request.ContentType = "application/json";
             request.Headers["Accept-Encoding"] = "gzip,deflase";
             request.AutomaticDecompression = DecompressionMethods.GZip;
-            HttpWebResponse response = (HttpWebResponse)request.GetResponse();
+            WebResponse response =await request.GetResponseAsync();
 
             using (StreamReader reader = new StreamReader(response.GetResponseStream(), Encoding.UTF8))
             {
-                return reader.ReadToEnd();
+                return await reader.ReadToEndAsync();
             }
         }
 
@@ -39,7 +39,7 @@ namespace YellowJHelp
         /// <param name="url">地址</param>
         /// <param name="Jsoncontent">参数</param>
         /// <returns></returns>
-        public string HttPost(string url, string Jsoncontent)
+        public async Task<string> HttPostAsync(string url, string Jsoncontent)
         {
 
             //定义request并设置request的路径
@@ -54,12 +54,12 @@ namespace YellowJHelp
             request.ContentLength = byteArray.Length;
 
             //打开request字符流
-            Stream dataStream = request.GetRequestStream();
-            dataStream.Write(byteArray, 0, byteArray.Length);
+            Stream dataStream =await request.GetRequestStreamAsync();
+            await dataStream.WriteAsync(byteArray, 0, byteArray.Length);
             dataStream.Close();
 
             //定义response为前面的request响应
-            WebResponse response = request.GetResponse();
+            WebResponse response =await request.GetResponseAsync();
 
             //获取相应的状态代码
             Console.WriteLine(((HttpWebResponse)response).StatusDescription);
@@ -67,7 +67,7 @@ namespace YellowJHelp
             //定义response字符流
             dataStream = response.GetResponseStream();
             StreamReader reader = new StreamReader(dataStream);
-            string data = reader.ReadToEnd();//读取所有
+            string data =await reader.ReadToEndAsync();//读取所有
 
             return data;
         }
@@ -80,7 +80,7 @@ namespace YellowJHelp
         /// <param name="Jsoncontent">参数</param>
         /// <param name="webHeaderCollection">head</param>
         /// <returns></returns>
-        public string HttHeadersPost(string url, string Jsoncontent, WebHeaderCollection webHeaderCollection)
+        public async Task<string> HttHeadersPostAsync(string url, string Jsoncontent, WebHeaderCollection webHeaderCollection)
         {
 
             //定义request并设置request的路径
@@ -95,12 +95,12 @@ namespace YellowJHelp
             request.ContentLength = byteArray.Length;
             request.Headers = webHeaderCollection;
             //打开request字符流
-            Stream dataStream = request.GetRequestStream();
-            dataStream.Write(byteArray, 0, byteArray.Length);
+            Stream dataStream = await request.GetRequestStreamAsync();
+            await dataStream.WriteAsync(byteArray, 0, byteArray.Length);
             dataStream.Close();
 
             //定义response为前面的request响应
-            WebResponse response = request.GetResponse();
+            WebResponse response =await request.GetResponseAsync();
 
             //获取相应的状态代码
             Console.WriteLine(((HttpWebResponse)response).StatusDescription);
@@ -108,7 +108,7 @@ namespace YellowJHelp
             //定义response字符流
             dataStream = response.GetResponseStream();
             StreamReader reader = new StreamReader(dataStream);
-            string data = reader.ReadToEnd();//读取所有
+            string data =await reader.ReadToEndAsync();//读取所有
 
             return data;
         }

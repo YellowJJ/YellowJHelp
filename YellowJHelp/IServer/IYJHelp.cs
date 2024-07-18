@@ -27,7 +27,7 @@ namespace YellowJHelp.IServer
         /// <param name="KEY_64">密钥长度8位</param>
         /// <param name="IV_64">密钥长度8位</param>
         /// <returns></returns>
-        Task<string> Encode(string data, string KEY_64, string IV_64);
+        Task<string> EncodeAsync(string data, string KEY_64, string IV_64);
         /// <summary>
         /// DES解密
         /// </summary>
@@ -35,7 +35,7 @@ namespace YellowJHelp.IServer
         /// <param name="KEY_64">密钥长度8位</param>
         /// <param name="IV_64">密钥长度8位</param>
         /// <returns></returns>
-        Task<string> Decode(string data, string KEY_64, string IV_64);
+        Task<string> DecodeAsync(string data, string KEY_64, string IV_64);
         #endregion
 
         /// <summary>
@@ -77,7 +77,7 @@ namespace YellowJHelp.IServer
         /// </summary>
         /// <param name="text">参数</param>
         /// <param name="address">新建文件名（地址）</param>
-        void YellowJLog(string text, string address);
+        Task YellowJLogAsync(string text, string address);
 
         #region --cookie--
         /// <summary>

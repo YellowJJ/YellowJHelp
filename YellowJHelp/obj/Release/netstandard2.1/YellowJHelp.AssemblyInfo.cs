@@ -17,7 +17,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyDescriptionAttribute("通用解决方案：\r\n\t\t2.2.0版本：自动依赖注入功能转移至：YellowJAutoInjection\r\n\t\t（Redis更换NewLife-日均百亿次项目验证）" +
     "缓存，MD5加密，字段截取，集合类型差集计算\r\n\t\tKafka使用\r\n\t\twebapi调用\r\n\t\tRedis使用")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("2.3.1.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("2.3.1+75352dd05040147947e00a568155204140cf7f4c")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("2.3.1+077fda6757dc1a1b2ff2bc82debb7c75448de142")]
 [assembly: System.Reflection.AssemblyProductAttribute("YellowJHelp")]
 [assembly: System.Reflection.AssemblyTitleAttribute("YellowJHelp")]
 [assembly: System.Reflection.AssemblyVersionAttribute("2.3.1.0")]

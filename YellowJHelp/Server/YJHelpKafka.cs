@@ -56,7 +56,7 @@ namespace YellowJHelp
                 {
                     log.Returbed = e.Error.Reason;
                     ret = e.Error.Reason;
-                    _Help.YellowJLog(_Help.message() + e.Error.Reason, "异常");
+                    await _Help.YellowJLogAsync(_Help.message() + e.Error.Reason, "异常");
                 }
                 finally
                 {
@@ -110,7 +110,7 @@ namespace YellowJHelp
                 {
                     log.Returbed = e.Error.Reason;
                     ret = e.Error.Reason;
-                    _Help.YellowJLog(_Help.message() + e.Error.Reason, "异常");
+                    await _Help.YellowJLogAsync(_Help.message() + e.Error.Reason, "异常");
                 }
                 finally
                 {
@@ -156,7 +156,7 @@ namespace YellowJHelp
                 {
                     log.Returbed = e.Error.Reason;
                     ret = e.Error.Reason;
-                    _Help.YellowJLog(_Help.message() + e.Error.Reason, "异常");
+                    await _Help.YellowJLogAsync(_Help.message() + e.Error.Reason, "异常");
                 }
                 finally
                 {
@@ -212,7 +212,7 @@ namespace YellowJHelp
                 {
                     log.Returbed = e.Error.Reason;
                     ret = e.Error.Reason;
-                    _Help.YellowJLog(_Help.message() + e.Error.Reason, "异常");
+                    await _Help.YellowJLogAsync(_Help.message() + e.Error.Reason, "异常");
                 }
                 finally
                 {

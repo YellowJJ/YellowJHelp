@@ -15,7 +15,7 @@ namespace YellowJHelp.IServer
         /// </summary>
         /// <param name="url">地址</param>
         /// <returns></returns>
-        string HttpGet(string url);
+        Task<string> HttpGetAsync(string url);
 
         /// <summary>
         /// 调用接口方法Post
@@ -23,7 +23,7 @@ namespace YellowJHelp.IServer
         /// <param name="url">地址</param>
         /// <param name="Jsoncontent">参数</param>
         /// <returns></returns>
-        string HttPost(string url, string Jsoncontent);
+        Task<string> HttPostAsync(string url, string Jsoncontent);
 
 
         /// <summary>
@@ -33,7 +33,7 @@ namespace YellowJHelp.IServer
         /// <param name="Jsoncontent">参数</param>
         /// <param name="webHeaderCollection">head</param>
         /// <returns></returns>
-        string HttHeadersPost(string url, string Jsoncontent, WebHeaderCollection webHeaderCollection);
+        Task<string> HttHeadersPostAsync(string url, string Jsoncontent, WebHeaderCollection webHeaderCollection);
 
 
     }
