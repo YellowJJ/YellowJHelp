@@ -18,7 +18,7 @@ using System.Reflection;
     "Redis更换NewLife-日均百亿次项目验证）缓存，MD5加密，字段截取，集合类型差集计算\r\n\t\tKafka使用\r\n\t\twebapi调用\r\n\t\tRedis使" +
     "用")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("3.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("3.0.0+1e309e2d14863e35e4abcafd8be9a0035a9f3a21")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("3.0.0+6fde7ae511654c71130b1916c2f5f6274afd01f5")]
 [assembly: System.Reflection.AssemblyProductAttribute("YellowJHelp")]
 [assembly: System.Reflection.AssemblyTitleAttribute("YellowJHelp")]
 [assembly: System.Reflection.AssemblyVersionAttribute("3.0.0.0")]

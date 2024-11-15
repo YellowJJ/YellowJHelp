@@ -48,31 +48,23 @@
           "dependencies": {
             "Confluent.Kafka": {
               "target": "Package",
-              "version": "[1.8.2, )"
+              "version": "[2.6.0, )"
             },
             "Mapster": {
               "target": "Package",
-              "version": "[7.2.0, )"
-            },
-            "Mapster.Core": {
-              "target": "Package",
-              "version": "[1.2.0, )"
+              "version": "[7.3.0, )"
             },
             "Microsoft.AspNetCore.Http.Abstractions": {
               "target": "Package",
-              "version": "[2.2.0, )"
-            },
-            "Microsoft.Extensions.Caching.Memory": {
-              "target": "Package",
-              "version": "[6.0.0, )"
+              "version": "[2.1.1, )"
             },
             "NewLife.Redis": {
               "target": "Package",
-              "version": "[4.0.2022.312, )"
+              "version": "[6.0.2024.1101, )"
             },
-            "SqlSugarCore": {
+            "System.Text.Json": {
               "target": "Package",
-              "version": "[5.0.4.3, )"
+              "version": "[9.0.0, )"
             },
             "YellowJAutoInjection": {
               "target": "Package",

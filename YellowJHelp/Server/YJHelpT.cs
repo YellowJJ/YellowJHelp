@@ -1,4 +1,4 @@
-﻿using Newtonsoft.Json;
+﻿using System.Text.Json;
 using YellowJHelp.IServer;
 
 namespace YellowJHelp
@@ -115,11 +115,11 @@ namespace YellowJHelp
             List<string> resrig = new List<string>();
             foreach (var le in left)
             {
-                resleft.Add(JsonConvert.SerializeObject(le));
+                resleft.Add(JsonSerializer.Serialize(le));
             }
             foreach (var le in right)
             {
-                resrig.Add(JsonConvert.SerializeObject(le));
+                resrig.Add(JsonSerializer.Serialize(le));
             }
 
             var rstr = resleft.Except(resrig).ToList();
@@ -128,7 +128,7 @@ namespace YellowJHelp
             List<T> res = new List<T>();
             foreach (var le in rstr)
             {
-                res.Add(JsonConvert.DeserializeObject<T>(le));
+                res.Add(JsonSerializer.Deserialize<T>(le));
             }
 
             return res;

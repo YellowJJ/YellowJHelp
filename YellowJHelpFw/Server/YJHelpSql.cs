@@ -49,7 +49,7 @@ namespace YellowJHelpFw
             else { log.Number = "ApiLog" + DateTime.Now.ToString("yyyyMMdd") + DateTime.Now.ToString("hhmmss") + "000" + OPSIndex.ToString(); }
             log.Date = DateTime.Now;
             //SYQuery().Insertable(log).ExecuteCommand();
-            return "日志耗时记录【" + log.Number + "】：" + JsonConvert.SerializeObject(log);
+            return "日志耗时记录【" + log.Number + "】：" + JsonSerializer.Serialize(log);
 
         }
 

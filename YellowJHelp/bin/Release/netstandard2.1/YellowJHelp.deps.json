@@ -10,11 +10,9 @@
       "YellowJHelp/3.0.0": {
         "dependencies": {
           "Confluent.Kafka": "1.8.2",
-          "Mapster": "7.2.0",
-          "Mapster.Core": "1.2.0",
-          "Microsoft.AspNetCore.Http.Abstractions": "2.2.0",
-          "Microsoft.Extensions.Caching.Memory": "6.0.0",
-          "NewLife.Redis": "4.0.2022.312",
+          "Mapster": "7.3.0",
+          "Microsoft.AspNetCore.Http.Abstractions": "2.1.1",
+          "NewLife.Redis": "6.0.2024.1101",
           "SqlSugarCore": "5.0.4.3",
           "YellowJAutoInjection": "1.1.1"
         },
@@ -116,7 +114,7 @@
         }
       },
       "librdkafka.redist/1.8.2": {},
-      "Mapster/7.2.0": {
+      "Mapster/7.3.0": {
         "dependencies": {
           "Mapster.Core": "1.2.0",
           "Microsoft.CSharp": "4.5.0",
@@ -124,8 +122,8 @@
         },
         "runtime": {
           "lib/netstandard2.0/Mapster.dll": {
-            "assemblyVersion": "7.2.0.0",
-            "fileVersion": "7.2.0.0"
+            "assemblyVersion": "7.3.0.0",
+            "fileVersion": "7.3.0.0"
           }
         }
       },
@@ -137,26 +135,26 @@
           }
         }
       },
-      "Microsoft.AspNetCore.Http.Abstractions/2.2.0": {
+      "Microsoft.AspNetCore.Http.Abstractions/2.1.1": {
         "dependencies": {
-          "Microsoft.AspNetCore.Http.Features": "2.2.0",
+          "Microsoft.AspNetCore.Http.Features": "2.1.1",
           "System.Text.Encodings.Web": "4.7.0"
         },
         "runtime": {
           "lib/netstandard2.0/Microsoft.AspNetCore.Http.Abstractions.dll": {
-            "assemblyVersion": "2.2.0.0",
-            "fileVersion": "2.2.0.18316"
+            "assemblyVersion": "2.1.1.0",
+            "fileVersion": "2.1.1.18157"
           }
         }
       },
-      "Microsoft.AspNetCore.Http.Features/2.2.0": {
+      "Microsoft.AspNetCore.Http.Features/2.1.1": {
         "dependencies": {
           "Microsoft.Extensions.Primitives": "8.0.0"
         },
         "runtime": {
           "lib/netstandard2.0/Microsoft.AspNetCore.Http.Features.dll": {
-            "assemblyVersion": "2.2.0.0",
-            "fileVersion": "2.2.0.18316"
+            "assemblyVersion": "2.1.1.0",
+            "fileVersion": "2.1.1.18157"
           }
         }
       },
@@ -213,32 +211,6 @@
           "lib/netstandard2.0/Microsoft.Data.Sqlite.dll": {
             "assemblyVersion": "2.2.4.0",
             "fileVersion": "2.2.4.19081"
-          }
-        }
-      },
-      "Microsoft.Extensions.Caching.Abstractions/6.0.0": {
-        "dependencies": {
-          "Microsoft.Extensions.Primitives": "8.0.0"
-        },
-        "runtime": {
-          "lib/netstandard2.0/Microsoft.Extensions.Caching.Abstractions.dll": {
-            "assemblyVersion": "6.0.0.0",
-            "fileVersion": "6.0.21.52210"
-          }
-        }
-      },
-      "Microsoft.Extensions.Caching.Memory/6.0.0": {
-        "dependencies": {
-          "Microsoft.Extensions.Caching.Abstractions": "6.0.0",
-          "Microsoft.Extensions.DependencyInjection.Abstractions": "8.0.0",
-          "Microsoft.Extensions.Logging.Abstractions": "8.0.0",
-          "Microsoft.Extensions.Options": "8.0.0",
-          "Microsoft.Extensions.Primitives": "8.0.0"
-        },
-        "runtime": {
-          "lib/netstandard2.0/Microsoft.Extensions.Caching.Memory.dll": {
-            "assemblyVersion": "6.0.0.0",
-            "fileVersion": "6.0.21.52210"
           }
         }
       },
@@ -519,22 +491,25 @@
           "System.Xml.XDocument": "4.3.0"
         }
       },
-      "NewLife.Core/9.0.2022.304": {
+      "NewLife.Core/11.0.2024.1101": {
+        "dependencies": {
+          "System.Runtime.CompilerServices.Unsafe": "6.0.0"
+        },
         "runtime": {
           "lib/netstandard2.1/NewLife.Core.dll": {
-            "assemblyVersion": "9.0.8098.19786",
-            "fileVersion": "9.0.2022.304"
+            "assemblyVersion": "11.0.2024.1101",
+            "fileVersion": "11.0.2024.1101"
           }
         }
       },
-      "NewLife.Redis/4.0.2022.312": {
+      "NewLife.Redis/6.0.2024.1101": {
         "dependencies": {
-          "NewLife.Core": "9.0.2022.304"
+          "NewLife.Core": "11.0.2024.1101"
         },
         "runtime": {
           "lib/netstandard2.1/NewLife.Redis.dll": {
-            "assemblyVersion": "4.0.8106.9328",
-            "fileVersion": "4.0.2022.312"
+            "assemblyVersion": "6.0.2024.1101",
+            "fileVersion": "6.0.2024.1101"
           }
         }
       },
@@ -2061,12 +2036,12 @@
       "path": "librdkafka.redist/1.8.2",
       "hashPath": "librdkafka.redist.1.8.2.nupkg.sha512"
     },
-    "Mapster/7.2.0": {
+    "Mapster/7.3.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-dIXWyCPHrzcQ7Aeblz/bKxsP9ZxGMMbHZTyywZS7/cGa9elPcJiTNeJ4OahzLtATzL13xC4MF8NRNcj49cCIng==",
-      "path": "mapster/7.2.0",
-      "hashPath": "mapster.7.2.0.nupkg.sha512"
+      "sha512": "sha512-NrCUX/rJa5PTyo6iW4AL5dZLU9PDNlYnrJOVjgdpo5OQM9EtWH2CMHnC5sSuJWC0d0b0SnmeRrIviEem6WxtuQ==",
+      "path": "mapster/7.3.0",
+      "hashPath": "mapster.7.3.0.nupkg.sha512"
     },
     "Mapster.Core/1.2.0": {
       "type": "package",
@@ -2075,19 +2050,19 @@
       "path": "mapster.core/1.2.0",
       "hashPath": "mapster.core.1.2.0.nupkg.sha512"
     },
-    "Microsoft.AspNetCore.Http.Abstractions/2.2.0": {
+    "Microsoft.AspNetCore.Http.Abstractions/2.1.1": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-Nxs7Z1q3f1STfLYKJSVXCs1iBl+Ya6E8o4Oy1bCxJ/rNI44E/0f6tbsrVqAWfB7jlnJfyaAtIalBVxPKUPQb4Q==",
-      "path": "microsoft.aspnetcore.http.abstractions/2.2.0",
-      "hashPath": "microsoft.aspnetcore.http.abstractions.2.2.0.nupkg.sha512"
+      "sha512": "sha512-kQUEVOU4loc8CPSb2WoHFTESqwIa8Ik7ysCBfTwzHAd0moWovc9JQLmhDIHlYLjHbyexqZAlkq/FPRUZqokebw==",
+      "path": "microsoft.aspnetcore.http.abstractions/2.1.1",
+      "hashPath": "microsoft.aspnetcore.http.abstractions.2.1.1.nupkg.sha512"
     },
-    "Microsoft.AspNetCore.Http.Features/2.2.0": {
+    "Microsoft.AspNetCore.Http.Features/2.1.1": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-ziFz5zH8f33En4dX81LW84I6XrYXKf9jg6aM39cM+LffN9KJahViKZ61dGMSO2gd3e+qe5yBRwsesvyqlZaSMg==",
-      "path": "microsoft.aspnetcore.http.features/2.2.0",
-      "hashPath": "microsoft.aspnetcore.http.features.2.2.0.nupkg.sha512"
+      "sha512": "sha512-VklZ7hWgSvHBcDtwYYkdMdI/adlf7ebxTZ9kdzAhX+gUs5jSHE9mZlTamdgf9miSsxc1QjNazHXTDJdVPZKKTw==",
+      "path": "microsoft.aspnetcore.http.features/2.1.1",
+      "hashPath": "microsoft.aspnetcore.http.features.2.1.1.nupkg.sha512"
     },
     "Microsoft.Bcl.AsyncInterfaces/1.1.0": {
       "type": "package",
@@ -2130,20 +2105,6 @@
       "sha512": "sha512-69DJj8bUJpXPfWpmJ/Sh165GWjLjlL516l0GnJDImabfR+leXb61HaQF97THWvyx5yY7MvpO94QW5nyiXMVOAA==",
       "path": "microsoft.data.sqlite.core/2.2.4",
       "hashPath": "microsoft.data.sqlite.core.2.2.4.nupkg.sha512"
-    },
-    "Microsoft.Extensions.Caching.Abstractions/6.0.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-bcz5sSFJbganH0+YrfvIjJDIcKNW7TL07C4d1eTmXy/wOt52iz4LVogJb6pazs7W0+74j0YpXFErvp++Aq5Bsw==",
-      "path": "microsoft.extensions.caching.abstractions/6.0.0",
-      "hashPath": "microsoft.extensions.caching.abstractions.6.0.0.nupkg.sha512"
-    },
-    "Microsoft.Extensions.Caching.Memory/6.0.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-Ve3BlCzhAlVp5IgO3+8dacAhZk1A0GlIlFNkAcfR2TfAibLKWIt5DhVJZfu4YtW+XZ89OjYf/agMcgjDtPxdGA==",
-      "path": "microsoft.extensions.caching.memory/6.0.0",
-      "hashPath": "microsoft.extensions.caching.memory.6.0.0.nupkg.sha512"
     },
     "Microsoft.Extensions.Configuration.Abstractions/8.0.0": {
       "type": "package",
@@ -2285,19 +2246,19 @@
       "path": "netstandard.library/1.6.1",
       "hashPath": "netstandard.library.1.6.1.nupkg.sha512"
     },
-    "NewLife.Core/9.0.2022.304": {
+    "NewLife.Core/11.0.2024.1101": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-23OVgUoMvPyWKN8dB7fdqJKk2j+EOy8z5BUITUaoaas7PuySDoow+lfpCKf9n6gtjDi+YkYnEA3Sjib6o6pInw==",
-      "path": "newlife.core/9.0.2022.304",
-      "hashPath": "newlife.core.9.0.2022.304.nupkg.sha512"
+      "sha512": "sha512-hZ4dKk7lxOmDG+wZYKSaCSBZphEc+NFTq0crMXdkgdGRIRfvZGsJJ4TXoI7a3Qa22FxeoEDKxbb41qjiJU57CQ==",
+      "path": "newlife.core/11.0.2024.1101",
+      "hashPath": "newlife.core.11.0.2024.1101.nupkg.sha512"
     },
-    "NewLife.Redis/4.0.2022.312": {
+    "NewLife.Redis/6.0.2024.1101": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-MaV09VN+xsLDNGwKCs3L/6hkwGyJLCy9ox9sUWGclRaERA39Nc6HJTRKVHRQyQ1hqFd7IJkXZKvLL0D8J3GuRg==",
-      "path": "newlife.redis/4.0.2022.312",
-      "hashPath": "newlife.redis.4.0.2022.312.nupkg.sha512"
+      "sha512": "sha512-EefhXlbNyDlTWhAd9csK8MX5+nq2RZN5FI02W5gwtS3UOfJkI4BsCOUMjpMR9TejG5u3QkoNq84VAqJw0PQCRw==",
+      "path": "newlife.redis/6.0.2024.1101",
+      "hashPath": "newlife.redis.6.0.2024.1101.nupkg.sha512"
     },
     "Newtonsoft.Json/10.0.3": {
       "type": "package",
