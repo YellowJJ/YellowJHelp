@@ -14,13 +14,15 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("YellowJ")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyCopyrightAttribute("YellowJ")]
-[assembly: System.Reflection.AssemblyDescriptionAttribute("通用解决方案：\r\n2.1.0版本：自动依赖注入功能上线\r\n（Redis更换NewLife-日均百亿次项目验证）缓存，MD5加密，字段截取，集合类型差集计算\r\nKa" +
-    "fka使用\r\nwebapi调用\r\nRedis使用")]
-[assembly: System.Reflection.AssemblyFileVersionAttribute("2.2.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("2.2.0")]
+[assembly: System.Reflection.AssemblyDescriptionAttribute("\r\n\t\t通用解决方案：\r\n                        新增IYJHelpCache缓存接口\r\n\t\t3.0.0版本后方法基本改成异步。\r\n\t\t2" +
+    ".2.0版本：自动依赖注入功能转移至：YellowJAutoInjection\r\n\t\t（Redis更换NewLife-日均百亿次项目验证）缓存，MD5加密，字段" +
+    "截取，集合类型差集计算\r\n\t\tKafka使用\r\n\t\twebapi调用\r\n\t\tRedis使用")]
+[assembly: System.Reflection.AssemblyFileVersionAttribute("3.2.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("3.2.0+6fde7ae511654c71130b1916c2f5f6274afd01f5")]
 [assembly: System.Reflection.AssemblyProductAttribute("YellowJHelp")]
 [assembly: System.Reflection.AssemblyTitleAttribute("YellowJHelp")]
-[assembly: System.Reflection.AssemblyVersionAttribute("2.2.0.0")]
+[assembly: System.Reflection.AssemblyVersionAttribute("3.2.0.0")]
+[assembly: System.Reflection.AssemblyMetadataAttribute("RepositoryUrl", "https://gitee.com/xiaoyi1314/yellow-jhelp")]
 
 // 由 MSBuild WriteCodeFragment 类生成。
 

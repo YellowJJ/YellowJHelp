@@ -15,7 +15,7 @@
 		Redis使用</description>
     <releaseNotes>优化所有警告信息</releaseNotes>
     <copyright>YellowJ</copyright>
-    <repository type="git" url="https://gitee.com/xiaoyi1314/yellow-jhelp" commit="1e309e2d14863e35e4abcafd8be9a0035a9f3a21" />
+    <repository type="git" url="https://gitee.com/xiaoyi1314/yellow-jhelp" commit="6fde7ae511654c71130b1916c2f5f6274afd01f5" />
     <dependencies>
       <group targetFramework=".NETStandard2.1">
         <dependency id="Confluent.Kafka" version="1.8.2" exclude="Build,Analyzers" />
@@ -30,8 +30,8 @@
     </dependencies>
   </metadata>
   <files>
-    <file src="D:\Document\YellowJWebApi\yellow-jhelp-master\YellowJHelp\bin\Release\netstandard2.1\YellowJHelp.dll" target="lib\netstandard2.1\YellowJHelp.dll" />
-    <file src="D:\Document\YellowJWebApi\yellow-jhelp-master\YellowJHelp\bin\Release\netstandard2.1\YellowJHelp.xml" target="lib\netstandard2.1\YellowJHelp.xml" />
-    <file src="D:\Document\YellowJWebApi\yellow-jhelp-master\README.md" target="\README.md" />
+    <file src="W:\YellowJ\YellowJHelp\yellow-jhelp\YellowJHelp\bin\Release\netstandard2.1\YellowJHelp.dll" target="lib\netstandard2.1\YellowJHelp.dll" />
+    <file src="W:\YellowJ\YellowJHelp\yellow-jhelp\YellowJHelp\bin\Release\netstandard2.1\YellowJHelp.xml" target="lib\netstandard2.1\YellowJHelp.xml" />
+    <file src="W:\YellowJ\YellowJHelp\yellow-jhelp\README.md" target="\README.md" />
   </files>
 </package>

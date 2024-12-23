@@ -1,5 +1,8 @@
 is_global = true
 build_property.RootNamespace = YellowJAutoInjection
-build_property.ProjectDir = D:\Document\YellowJWebApi\yellow-jhelp-master\YellowJAutoInjection\
+build_property.ProjectDir = W:\YellowJ\YellowJHelp\yellow-jhelp\YellowJAutoInjection\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.CsWinRTUseWindowsUIXamlProjections = false
+build_property.EffectiveAnalysisLevelStyle = 
+build_property.EnableCodeStyleSeverity = 

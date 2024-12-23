@@ -68,6 +68,14 @@ Framework 4.6.1+
 | IsString     |  string中是否包含某个值 |
 | Cache        | 缓存方法库  |
 
+##### YJHelp
+|  YJHelpCache |  IYJHelpCache  |
+|---|---|
+| TryGetValue      |  是否存在 |
+| Get   |  获取 |
+| Set   |  写入 |
+| Remove     |  删除 |
+
 ##### YJHelpKafka
 |  YJHelpKafka |  IYJHelpKafka  |
 |---|---|
@@ -115,6 +123,8 @@ Framework 4.6.1+
 方法库
 
 YJHelp
+YJHelpT
+YJHelpCache
 YJHelpKafka
 YJHelpRedis
 YJHelpWebApi

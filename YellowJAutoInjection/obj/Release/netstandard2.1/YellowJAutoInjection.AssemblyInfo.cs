@@ -16,7 +16,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCopyrightAttribute("YellowJ")]
 [assembly: System.Reflection.AssemblyDescriptionAttribute("自动依赖注入，控制反转")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.1.1.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.1.1+75352dd05040147947e00a568155204140cf7f4c")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.1.1+6fde7ae511654c71130b1916c2f5f6274afd01f5")]
 [assembly: System.Reflection.AssemblyProductAttribute("YellowJAutoInjection")]
 [assembly: System.Reflection.AssemblyTitleAttribute("YellowJAutoInjection")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.1.1.0")]

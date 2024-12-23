@@ -863,19 +863,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\94332\\.nuget\\packages\\": {}
+    "C:\\Users\\YellowJ\\.nuget\\packages\\": {},
+    "D:\\VS\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.1.1",
     "restore": {
-      "projectUniqueName": "D:\\Document\\YellowJWebApi\\yellow-jhelp-master\\YellowJAutoInjection\\YellowJAutoInjection.csproj",
+      "projectUniqueName": "W:\\YellowJ\\YellowJHelp\\yellow-jhelp\\YellowJAutoInjection\\YellowJAutoInjection.csproj",
       "projectName": "YellowJAutoInjection",
-      "projectPath": "D:\\Document\\YellowJWebApi\\yellow-jhelp-master\\YellowJAutoInjection\\YellowJAutoInjection.csproj",
-      "packagesPath": "C:\\Users\\94332\\.nuget\\packages\\",
-      "outputPath": "D:\\Document\\YellowJWebApi\\yellow-jhelp-master\\YellowJAutoInjection\\obj\\",
+      "projectPath": "W:\\YellowJ\\YellowJHelp\\yellow-jhelp\\YellowJAutoInjection\\YellowJAutoInjection.csproj",
+      "packagesPath": "C:\\Users\\YellowJ\\.nuget\\packages\\",
+      "outputPath": "W:\\YellowJ\\YellowJHelp\\yellow-jhelp\\YellowJAutoInjection\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "D:\\VS\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\94332\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\YellowJ\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -883,7 +888,6 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -901,7 +905,8 @@
         "enableAudit": "true",
         "auditLevel": "low",
         "auditMode": "direct"
-      }
+      },
+      "SdkAnalysisLevel": "9.0.100"
     },
     "frameworks": {
       "netstandard2.1": {
@@ -936,7 +941,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.101\\RuntimeIdentifierGraph.json"
       }
     }
   }

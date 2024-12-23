@@ -18,3 +18,13 @@ I:\YellowJ\打包通用项目\YellowJHelp\yellow-jhelp\YellowJHelp\obj\Debug\net
 I:\YellowJ\打包通用项目\YellowJHelp\yellow-jhelp\YellowJHelp\obj\Debug\netstandard2.1\YellowJHelp.csproj.CoreCompileInputs.cache
 I:\YellowJ\打包通用项目\YellowJHelp\yellow-jhelp\YellowJHelp\obj\Debug\netstandard2.1\YellowJHelp.dll
 I:\YellowJ\打包通用项目\YellowJHelp\yellow-jhelp\YellowJHelp\obj\Debug\netstandard2.1\YellowJHelp.pdb
+W:\YellowJ\YellowJHelp\yellow-jhelp\YellowJHelp\bin\Debug\netstandard2.1\YellowJHelp.deps.json
+W:\YellowJ\YellowJHelp\yellow-jhelp\YellowJHelp\bin\Debug\netstandard2.1\YellowJHelp.dll
+W:\YellowJ\YellowJHelp\yellow-jhelp\YellowJHelp\bin\Debug\netstandard2.1\YellowJHelp.pdb
+W:\YellowJ\YellowJHelp\yellow-jhelp\YellowJHelp\obj\Debug\netstandard2.1\YellowJHelp.csproj.AssemblyReference.cache
+W:\YellowJ\YellowJHelp\yellow-jhelp\YellowJHelp\obj\Debug\netstandard2.1\YellowJHelp.GeneratedMSBuildEditorConfig.editorconfig
+W:\YellowJ\YellowJHelp\yellow-jhelp\YellowJHelp\obj\Debug\netstandard2.1\YellowJHelp.AssemblyInfoInputs.cache
+W:\YellowJ\YellowJHelp\yellow-jhelp\YellowJHelp\obj\Debug\netstandard2.1\YellowJHelp.AssemblyInfo.cs
+W:\YellowJ\YellowJHelp\yellow-jhelp\YellowJHelp\obj\Debug\netstandard2.1\YellowJHelp.csproj.CoreCompileInputs.cache
+W:\YellowJ\YellowJHelp\yellow-jhelp\YellowJHelp\obj\Debug\netstandard2.1\YellowJHelp.dll
+W:\YellowJ\YellowJHelp\yellow-jhelp\YellowJHelp\obj\Debug\netstandard2.1\YellowJHelp.pdb

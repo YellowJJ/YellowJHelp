@@ -194,6 +194,41 @@
             <param name="value">值</param>
             <returns></returns>
         </member>
+        <member name="T:YellowJHelp.IServer.IYJHelpCache">
+            <summary>
+            缓存接口（建议程序内使用）
+            </summary>
+        </member>
+        <member name="M:YellowJHelp.IServer.IYJHelpCache.TryGetValue(System.String,System.String@)">
+            <summary>
+            是否存在
+            </summary>
+            <param name="key"></param>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YellowJHelp.IServer.IYJHelpCache.Get(System.String)">
+            <summary>
+            获取
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YellowJHelp.IServer.IYJHelpCache.Set(System.String,System.String,Microsoft.Extensions.Caching.Memory.MemoryCacheEntryOptions)">
+            <summary>
+            写入
+            </summary>
+            <param name="key"></param>
+            <param name="value"></param>
+            <param name="options"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YellowJHelp.IServer.IYJHelpCache.Set(System.String)">
+            <summary>
+            删除
+            </summary>
+            <param name="key"></param>
+        </member>
         <member name="T:YellowJHelp.IServer.IYJHelpKafka">
             <summary>
             Kafka链接通用方法
