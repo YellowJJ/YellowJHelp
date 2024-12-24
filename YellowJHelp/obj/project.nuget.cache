@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "bcyl8gwaf4E=",
+  "dgSpecHash": "7dFbZ3aFp9E=",
   "success": true,
   "projectFilePath": "W:\\YellowJ\\YellowJHelp\\yellow-jhelp\\YellowJHelp\\YellowJHelp.csproj",
   "expectedPackageFiles": [
@@ -165,7 +165,7 @@
     "C:\\Users\\YellowJ\\.nuget\\packages\\system.xml.xmlserializer\\4.3.0\\system.xml.xmlserializer.4.3.0.nupkg.sha512",
     "C:\\Users\\YellowJ\\.nuget\\packages\\system.xml.xpath\\4.0.1\\system.xml.xpath.4.0.1.nupkg.sha512",
     "C:\\Users\\YellowJ\\.nuget\\packages\\system.xml.xpath.xmldocument\\4.0.1\\system.xml.xpath.xmldocument.4.0.1.nupkg.sha512",
-    "C:\\Users\\YellowJ\\.nuget\\packages\\yellowjautoinjection\\1.1.1\\yellowjautoinjection.1.1.1.nupkg.sha512"
+    "C:\\Users\\YellowJ\\.nuget\\packages\\yellowjautoinjection\\1.1.2\\yellowjautoinjection.1.1.2.nupkg.sha512"
   ],
   "logs": []
 }

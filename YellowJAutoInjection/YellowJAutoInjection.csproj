@@ -13,10 +13,11 @@
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <AssemblyVersion></AssemblyVersion>
     <FileVersion></FileVersion>
-    <Version>1.1.1</Version>
+    <Version>1.1.2</Version>
     <PackageProjectUrl>https://gitee.com/xiaoyi1314/yellow-jhelp</PackageProjectUrl>
     <RepositoryUrl>https://gitee.com/xiaoyi1314/yellow-jhelp</RepositoryUrl>
     <PackageReleaseNotes>优化所有警告信息</PackageReleaseNotes>
+    <PackageIcon>YellowJ图标.png</PackageIcon>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
@@ -29,6 +30,10 @@
 
   <ItemGroup>
     <None Include="..\README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+    <None Include="C:\Users\YellowJ\Pictures\YellowJ图标.png">
       <Pack>True</Pack>
       <PackagePath>\</PackagePath>
     </None>

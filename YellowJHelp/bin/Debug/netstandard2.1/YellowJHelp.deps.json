@@ -7,7 +7,7 @@
   "targets": {
     ".NETStandard,Version=v2.1": {},
     ".NETStandard,Version=v2.1/": {
-      "YellowJHelp/3.2.0": {
+      "YellowJHelp/3.3.0": {
         "dependencies": {
           "Confluent.Kafka": "1.8.2",
           "Mapster": "7.2.0",
@@ -16,7 +16,7 @@
           "Microsoft.Extensions.Caching.Memory": "6.0.0",
           "NewLife.Redis": "4.0.2022.312",
           "SqlSugarCore": "5.0.4.3",
-          "YellowJAutoInjection": "1.1.1"
+          "YellowJAutoInjection": "1.1.2"
         },
         "runtime": {
           "YellowJHelp.dll": {}
@@ -1977,7 +1977,7 @@
           }
         }
       },
-      "YellowJAutoInjection/1.1.1": {
+      "YellowJAutoInjection/1.1.2": {
         "dependencies": {
           "Autofac": "8.0.0",
           "Autofac.Extensions.DependencyInjection": "8.0.0",
@@ -1993,7 +1993,7 @@
     }
   },
   "libraries": {
-    "YellowJHelp/3.2.0": {
+    "YellowJHelp/3.3.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
@@ -3125,12 +3125,12 @@
       "path": "system.xml.xpath.xmldocument/4.0.1",
       "hashPath": "system.xml.xpath.xmldocument.4.0.1.nupkg.sha512"
     },
-    "YellowJAutoInjection/1.1.1": {
+    "YellowJAutoInjection/1.1.2": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-+5KOtK8ovv2tO4toWPygosXjFkwVSxoJ/iPm98QgIoZTNW6vG/80zOm74UPzt1FBoaIkdX5mywonT1xJ03VDfA==",
-      "path": "yellowjautoinjection/1.1.1",
-      "hashPath": "yellowjautoinjection.1.1.1.nupkg.sha512"
+      "sha512": "sha512-3BeFmbJPbtptyjKprkc8uWf1IdVjx6gMqEPT55aEitUs0LgNCfX5/7cuW47aPcgGdTxy+ll7lQD+Fk89yFY7nA==",
+      "path": "yellowjautoinjection/1.1.2",
+      "hashPath": "yellowjautoinjection.1.1.2.nupkg.sha512"
     }
   }
 }

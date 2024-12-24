@@ -42,33 +42,39 @@ namespace YellowJAutoInjection
             var assemblies = Directory.GetFiles(path, "*.dll").Select(Assembly.LoadFrom).ToList();
             foreach (var assembly in assemblies)
             {
-                if (!string.IsNullOrEmpty(assembly.FullName))
+                try 
                 {
-                    if (assembly.FullName.IndexOf("Microsoft", StringComparison.OrdinalIgnoreCase) > -1) { continue; }
-                }
 
-                var types = assembly.GetTypes().Where(a => a.GetCustomAttribute<AutoInjectAttribute>() != null)
-                    .ToList();
-                if (types.Count <= 0) continue;
-                foreach (var type in types)
-                {
-                    var attr = type.GetCustomAttribute<AutoInjectAttribute>();
-                    if (attr?.Type == null) continue;
-                    switch (attr.InjectType)
+                    if (!string.IsNullOrEmpty(assembly.FullName))
                     {
-                        case InjectType.Scope:
-                            serviceCollection.AddScoped(attr.Type, type);
-                            break;
-                        case InjectType.Single:
-                            serviceCollection.AddSingleton(attr.Type, type);
-                            break;
-                        case InjectType.Transient:
-                            serviceCollection.AddTransient(attr.Type, type);
-                            break;
-                        default:
-                            throw new ArgumentOutOfRangeException();
+                        if (assembly.FullName.IndexOf("Microsoft", StringComparison.OrdinalIgnoreCase) > -1) { continue; }
+                        //if (assembly.FullName.StartsWith("System", StringComparison.OrdinalIgnoreCase)) { continue; }
+                    }
+
+                    var types = assembly.GetTypes().Where(a => a.GetCustomAttribute<AutoInjectAttribute>() != null)
+                        .ToList();
+                    if (types.Count <= 0) continue;
+                    foreach (var type in types)
+                    {
+                        var attr = type.GetCustomAttribute<AutoInjectAttribute>();
+                        if (attr?.Type == null) continue;
+                        switch (attr.InjectType)
+                        {
+                            case InjectType.Scope:
+                                serviceCollection.AddScoped(attr.Type, type);
+                                break;
+                            case InjectType.Single:
+                                serviceCollection.AddSingleton(attr.Type, type);
+                                break;
+                            case InjectType.Transient:
+                                serviceCollection.AddTransient(attr.Type, type);
+                                break;
+                            default:
+                                throw new ArgumentOutOfRangeException();
+                        }
                     }
                 }
+                catch { continue; }
             }
 
             return serviceCollection;
