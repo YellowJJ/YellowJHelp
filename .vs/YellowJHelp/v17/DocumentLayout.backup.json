@@ -3,8 +3,60 @@
   "WorkspaceRootPath": "W:\\YellowJ\\YellowJHelp\\yellow-jhelp\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{9AE69515-9797-44D6-B0EC-0A6760A1897E}|YellowJAutoInjection\\YellowJAutoInjection.csproj|w:\\yellowj\\yellowjhelp\\yellow-jhelp\\yellowjautoinjection\\yellowjautoinjection.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
-      "RelativeMoniker": "D:0:0:{9AE69515-9797-44D6-B0EC-0A6760A1897E}|YellowJAutoInjection\\YellowJAutoInjection.csproj|solutionrelative:yellowjautoinjection\\yellowjautoinjection.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+      "AbsoluteMoniker": "D:0:0:{50C3FDA1-2A53-4E3E-8C1C-0FB015B16E47}|YellowJHelp\\YellowJHelp.csproj|w:\\yellowj\\yellowjhelp\\yellow-jhelp\\yellowjhelp\\yellowjhelp.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
+      "RelativeMoniker": "D:0:0:{50C3FDA1-2A53-4E3E-8C1C-0FB015B16E47}|YellowJHelp\\YellowJHelp.csproj|solutionrelative:yellowjhelp\\yellowjhelp.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{50C3FDA1-2A53-4E3E-8C1C-0FB015B16E47}|YellowJHelp\\YellowJHelp.csproj|w:\\yellowj\\yellowjhelp\\yellow-jhelp\\yellowjhelp\\server\\yjhelp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{50C3FDA1-2A53-4E3E-8C1C-0FB015B16E47}|YellowJHelp\\YellowJHelp.csproj|solutionrelative:yellowjhelp\\server\\yjhelp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{65DC9974-E2C4-4506-9DBC-3FB588CB6CFE}|YellowJHelpTestProject\\YellowJHelpTestProject.csproj|w:\\yellowj\\yellowjhelp\\yellow-jhelp\\yellowjhelptestproject\\yjhelptests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{65DC9974-E2C4-4506-9DBC-3FB588CB6CFE}|YellowJHelpTestProject\\YellowJHelpTestProject.csproj|solutionrelative:yellowjhelptestproject\\yjhelptests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6CBBF433-2688-4DB9-BE0C-ADF7B78D6BCF}|YellowJConsole\\YellowJConsole.csproj|w:\\yellowj\\yellowjhelp\\yellow-jhelp\\yellowjconsole\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6CBBF433-2688-4DB9-BE0C-ADF7B78D6BCF}|YellowJConsole\\YellowJConsole.csproj|solutionrelative:yellowjconsole\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{65DC9974-E2C4-4506-9DBC-3FB588CB6CFE}|YellowJHelpTestProject\\YellowJHelpTestProject.csproj|w:\\yellowj\\yellowjhelp\\yellow-jhelp\\yellowjhelptestproject\\unittest1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{65DC9974-E2C4-4506-9DBC-3FB588CB6CFE}|YellowJHelpTestProject\\YellowJHelpTestProject.csproj|solutionrelative:yellowjhelptestproject\\unittest1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{50C3FDA1-2A53-4E3E-8C1C-0FB015B16E47}|YellowJHelp\\YellowJHelp.csproj|w:\\yellowj\\yellowjhelp\\yellow-jhelp\\yellowjhelp\\iserver\\iyjhelp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{50C3FDA1-2A53-4E3E-8C1C-0FB015B16E47}|YellowJHelp\\YellowJHelp.csproj|solutionrelative:yellowjhelp\\iserver\\iyjhelp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6CBBF433-2688-4DB9-BE0C-ADF7B78D6BCF}|YellowJConsole\\YellowJConsole.csproj|w:\\yellowj\\yellowjhelp\\yellow-jhelp\\yellowjconsole\\test.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6CBBF433-2688-4DB9-BE0C-ADF7B78D6BCF}|YellowJConsole\\YellowJConsole.csproj|solutionrelative:yellowjconsole\\test.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{50C3FDA1-2A53-4E3E-8C1C-0FB015B16E47}|YellowJHelp\\YellowJHelp.csproj|w:\\yellowj\\yellowjhelp\\yellow-jhelp\\yellowjhelp\\iserver\\iyjhelpt.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{50C3FDA1-2A53-4E3E-8C1C-0FB015B16E47}|YellowJHelp\\YellowJHelp.csproj|solutionrelative:yellowjhelp\\iserver\\iyjhelpt.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{50C3FDA1-2A53-4E3E-8C1C-0FB015B16E47}|YellowJHelp\\YellowJHelp.csproj|w:\\yellowj\\yellowjhelp\\yellow-jhelp\\yellowjhelp\\server\\yjhelpt.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{50C3FDA1-2A53-4E3E-8C1C-0FB015B16E47}|YellowJHelp\\YellowJHelp.csproj|solutionrelative:yellowjhelp\\server\\yjhelpt.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{50C3FDA1-2A53-4E3E-8C1C-0FB015B16E47}|YellowJHelp\\YellowJHelp.csproj|w:\\yellowj\\yellowjhelp\\yellow-jhelp\\yellowjhelp\\entry\\yallocationinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{50C3FDA1-2A53-4E3E-8C1C-0FB015B16E47}|YellowJHelp\\YellowJHelp.csproj|solutionrelative:yellowjhelp\\entry\\yallocationinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{50C3FDA1-2A53-4E3E-8C1C-0FB015B16E47}|YellowJHelp\\YellowJHelp.csproj|w:\\yellowj\\yellowjhelp\\yellow-jhelp\\yellowjhelp\\iserver\\iyjhelpcache.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{50C3FDA1-2A53-4E3E-8C1C-0FB015B16E47}|YellowJHelp\\YellowJHelp.csproj|solutionrelative:yellowjhelp\\iserver\\iyjhelpcache.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{50C3FDA1-2A53-4E3E-8C1C-0FB015B16E47}|YellowJHelp\\YellowJHelp.csproj|w:\\yellowj\\yellowjhelp\\yellow-jhelp\\yellowjhelp\\server\\yjhelpcache.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{50C3FDA1-2A53-4E3E-8C1C-0FB015B16E47}|YellowJHelp\\YellowJHelp.csproj|solutionrelative:yellowjhelp\\server\\yjhelpcache.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{50C3FDA1-2A53-4E3E-8C1C-0FB015B16E47}|YellowJHelp\\YellowJHelp.csproj|w:\\yellowj\\yellowjhelp\\yellow-jhelp\\yellowjhelp\\server\\yjhelpwebapi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{50C3FDA1-2A53-4E3E-8C1C-0FB015B16E47}|YellowJHelp\\YellowJHelp.csproj|solutionrelative:yellowjhelp\\server\\yjhelpwebapi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{50C3FDA1-2A53-4E3E-8C1C-0FB015B16E47}|YellowJHelp\\YellowJHelp.csproj|w:\\yellowj\\yellowjhelp\\yellow-jhelp\\yellowjhelp\\iserver\\iyjhelpredis.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{50C3FDA1-2A53-4E3E-8C1C-0FB015B16E47}|YellowJHelp\\YellowJHelp.csproj|solutionrelative:yellowjhelp\\iserver\\iyjhelpredis.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9AE69515-9797-44D6-B0EC-0A6760A1897E}|YellowJAutoInjection\\YellowJAutoInjection.csproj|w:\\yellowj\\yellowjhelp\\yellow-jhelp\\yellowjautoinjection\\yjinject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -13,18 +65,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{9AE69515-9797-44D6-B0EC-0A6760A1897E}|YellowJAutoInjection\\YellowJAutoInjection.csproj|w:\\yellowj\\yellowjhelp\\yellow-jhelp\\yellowjautoinjection\\help\\autohelp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9AE69515-9797-44D6-B0EC-0A6760A1897E}|YellowJAutoInjection\\YellowJAutoInjection.csproj|solutionrelative:yellowjautoinjection\\help\\autohelp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{50C3FDA1-2A53-4E3E-8C1C-0FB015B16E47}|YellowJHelp\\YellowJHelp.csproj|w:\\yellowj\\yellowjhelp\\yellow-jhelp\\yellowjhelp\\server\\yjhelp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{50C3FDA1-2A53-4E3E-8C1C-0FB015B16E47}|YellowJHelp\\YellowJHelp.csproj|solutionrelative:yellowjhelp\\server\\yjhelp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{50C3FDA1-2A53-4E3E-8C1C-0FB015B16E47}|YellowJHelp\\YellowJHelp.csproj|w:\\yellowj\\yellowjhelp\\yellow-jhelp\\yellowjhelp\\server\\yjhelpwebapi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{50C3FDA1-2A53-4E3E-8C1C-0FB015B16E47}|YellowJHelp\\YellowJHelp.csproj|solutionrelative:yellowjhelp\\server\\yjhelpwebapi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{50C3FDA1-2A53-4E3E-8C1C-0FB015B16E47}|YellowJHelp\\YellowJHelp.csproj|w:\\yellowj\\yellowjhelp\\yellow-jhelp\\yellowjhelp\\server\\yjhelpt.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{50C3FDA1-2A53-4E3E-8C1C-0FB015B16E47}|YellowJHelp\\YellowJHelp.csproj|solutionrelative:yellowjhelp\\server\\yjhelpt.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{50C3FDA1-2A53-4E3E-8C1C-0FB015B16E47}|YellowJHelp\\YellowJHelp.csproj|w:\\yellowj\\yellowjhelp\\yellow-jhelp\\yellowjhelp\\server\\yjhelpsql.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -39,28 +79,8 @@
       "RelativeMoniker": "D:0:0:{50C3FDA1-2A53-4E3E-8C1C-0FB015B16E47}|YellowJHelp\\YellowJHelp.csproj|solutionrelative:yellowjhelp\\server\\yjhelpkafka.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{50C3FDA1-2A53-4E3E-8C1C-0FB015B16E47}|YellowJHelp\\YellowJHelp.csproj|w:\\yellowj\\yellowjhelp\\yellow-jhelp\\yellowjhelp\\server\\yjhelpcache.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{50C3FDA1-2A53-4E3E-8C1C-0FB015B16E47}|YellowJHelp\\YellowJHelp.csproj|solutionrelative:yellowjhelp\\server\\yjhelpcache.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{50C3FDA1-2A53-4E3E-8C1C-0FB015B16E47}|YellowJHelp\\YellowJHelp.csproj|w:\\yellowj\\yellowjhelp\\yellow-jhelp\\yellowjhelp\\iserver\\iyjhelpcache.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{50C3FDA1-2A53-4E3E-8C1C-0FB015B16E47}|YellowJHelp\\YellowJHelp.csproj|solutionrelative:yellowjhelp\\iserver\\iyjhelpcache.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{50C3FDA1-2A53-4E3E-8C1C-0FB015B16E47}|YellowJHelp\\YellowJHelp.csproj|w:\\yellowj\\yellowjhelp\\yellow-jhelp\\yellowjhelp\\iserver\\iyjhelpwebapi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{50C3FDA1-2A53-4E3E-8C1C-0FB015B16E47}|YellowJHelp\\YellowJHelp.csproj|solutionrelative:yellowjhelp\\iserver\\iyjhelpwebapi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{50C3FDA1-2A53-4E3E-8C1C-0FB015B16E47}|YellowJHelp\\YellowJHelp.csproj|w:\\yellowj\\yellowjhelp\\yellow-jhelp\\yellowjhelp\\yellowjhelp.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
-      "RelativeMoniker": "D:0:0:{50C3FDA1-2A53-4E3E-8C1C-0FB015B16E47}|YellowJHelp\\YellowJHelp.csproj|solutionrelative:yellowjhelp\\yellowjhelp.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6CBBF433-2688-4DB9-BE0C-ADF7B78D6BCF}|YellowJConsole\\YellowJConsole.csproj|w:\\yellowj\\yellowjhelp\\yellow-jhelp\\yellowjconsole\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6CBBF433-2688-4DB9-BE0C-ADF7B78D6BCF}|YellowJConsole\\YellowJConsole.csproj|solutionrelative:yellowjconsole\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6CBBF433-2688-4DB9-BE0C-ADF7B78D6BCF}|YellowJConsole\\YellowJConsole.csproj|w:\\yellowj\\yellowjhelp\\yellow-jhelp\\yellowjconsole\\test.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6CBBF433-2688-4DB9-BE0C-ADF7B78D6BCF}|YellowJConsole\\YellowJConsole.csproj|solutionrelative:yellowjconsole\\test.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{50C3FDA1-2A53-4E3E-8C1C-0FB015B16E47}|YellowJHelp\\YellowJHelp.csproj|w:\\yellowj\\yellowjhelp\\yellow-jhelp\\yellowjhelp\\yellowjhelp.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
@@ -71,16 +91,8 @@
       "RelativeMoniker": "D:0:0:{9AE69515-9797-44D6-B0EC-0A6760A1897E}|YellowJAutoInjection\\YellowJAutoInjection.csproj|solutionrelative:yellowjautoinjection\\yellowjautoinjection.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{50C3FDA1-2A53-4E3E-8C1C-0FB015B16E47}|YellowJHelp\\YellowJHelp.csproj|w:\\yellowj\\yellowjhelp\\yellow-jhelp\\yellowjhelp\\iserver\\iyjhelp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{50C3FDA1-2A53-4E3E-8C1C-0FB015B16E47}|YellowJHelp\\YellowJHelp.csproj|solutionrelative:yellowjhelp\\iserver\\iyjhelp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{50C3FDA1-2A53-4E3E-8C1C-0FB015B16E47}|YellowJHelp\\YellowJHelp.csproj|w:\\yellowj\\yellowjhelp\\yellow-jhelp\\yellowjhelp\\iserver\\iyjhelpkafka.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{50C3FDA1-2A53-4E3E-8C1C-0FB015B16E47}|YellowJHelp\\YellowJHelp.csproj|solutionrelative:yellowjhelp\\iserver\\iyjhelpkafka.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|W:\\YellowJ\\YellowJHelp\\yellow-jhelp\\YellowJAutoInjection\\obj\\Release\\netstandard2.1\\YellowJAutoInjection.GlobalUsings.g.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:YellowJAutoInjection\\obj\\Release\\netstandard2.1\\YellowJAutoInjection.GlobalUsings.g.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{50C3FDA1-2A53-4E3E-8C1C-0FB015B16E47}|YellowJHelp\\YellowJHelp.csproj|w:\\yellowj\\yellowjhelp\\yellow-jhelp\\yellowjhelp\\yellowjhelp\\yellowjhelp.xml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
@@ -93,14 +105,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{50C3FDA1-2A53-4E3E-8C1C-0FB015B16E47}|YellowJHelp\\YellowJHelp.csproj|w:\\yellowj\\yellowjhelp\\yellow-jhelp\\yellowjhelp\\entry\\loginfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{50C3FDA1-2A53-4E3E-8C1C-0FB015B16E47}|YellowJHelp\\YellowJHelp.csproj|solutionrelative:yellowjhelp\\entry\\loginfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{50C3FDA1-2A53-4E3E-8C1C-0FB015B16E47}|YellowJHelp\\YellowJHelp.csproj|w:\\yellowj\\yellowjhelp\\yellow-jhelp\\yellowjhelp\\iserver\\iyjhelpt.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{50C3FDA1-2A53-4E3E-8C1C-0FB015B16E47}|YellowJHelp\\YellowJHelp.csproj|solutionrelative:yellowjhelp\\iserver\\iyjhelpt.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{50C3FDA1-2A53-4E3E-8C1C-0FB015B16E47}|YellowJHelp\\YellowJHelp.csproj|w:\\yellowj\\yellowjhelp\\yellow-jhelp\\yellowjhelp\\iserver\\iyjhelpredis.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{50C3FDA1-2A53-4E3E-8C1C-0FB015B16E47}|YellowJHelp\\YellowJHelp.csproj|solutionrelative:yellowjhelp\\iserver\\iyjhelpredis.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9AE69515-9797-44D6-B0EC-0A6760A1897E}|YellowJAutoInjection\\YellowJAutoInjection.csproj|w:\\yellowj\\yellowjhelp\\yellow-jhelp\\yellowjautoinjection\\help\\basehelp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -197,138 +201,58 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "YellowJAutoInjection.GlobalUsings.g.cs",
-              "DocumentMoniker": "W:\\YellowJ\\YellowJHelp\\yellow-jhelp\\YellowJAutoInjection\\obj\\Release\\netstandard2.1\\YellowJAutoInjection.GlobalUsings.g.cs",
-              "RelativeDocumentMoniker": "YellowJAutoInjection\\obj\\Release\\netstandard2.1\\YellowJAutoInjection.GlobalUsings.g.cs",
-              "ToolTip": "W:\\YellowJ\\YellowJHelp\\yellow-jhelp\\YellowJAutoInjection\\obj\\Release\\netstandard2.1\\YellowJAutoInjection.GlobalUsings.g.cs",
-              "RelativeToolTip": "YellowJAutoInjection\\obj\\Release\\netstandard2.1\\YellowJAutoInjection.GlobalUsings.g.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAwAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-15T15:06:17.078Z",
-              "IsPinned": true
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 10,
               "Title": "IYJHelpCache.cs",
               "DocumentMoniker": "W:\\YellowJ\\YellowJHelp\\yellow-jhelp\\YellowJHelp\\IServer\\IYJHelpCache.cs",
               "RelativeDocumentMoniker": "YellowJHelp\\IServer\\IYJHelpCache.cs",
               "ToolTip": "W:\\YellowJ\\YellowJHelp\\yellow-jhelp\\YellowJHelp\\IServer\\IYJHelpCache.cs",
               "RelativeToolTip": "YellowJHelp\\IServer\\IYJHelpCache.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACIAAAAaAAAAAAAAAA==",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAUwBUAAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-21T16:41:26.682Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 11,
               "Title": "YJHelpCache.cs",
               "DocumentMoniker": "W:\\YellowJ\\YellowJHelp\\yellow-jhelp\\YellowJHelp\\Server\\YJHelpCache.cs",
               "RelativeDocumentMoniker": "YellowJHelp\\Server\\YJHelpCache.cs",
               "ToolTip": "W:\\YellowJ\\YellowJHelp\\yellow-jhelp\\YellowJHelp\\Server\\YJHelpCache.cs",
               "RelativeToolTip": "YellowJHelp\\Server\\YJHelpCache.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAkwBwAAAAZAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-21T16:12:04.845Z",
-              "IsPinned": true,
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Test.cs",
+              "DocumentMoniker": "W:\\YellowJ\\YellowJHelp\\yellow-jhelp\\YellowJConsole\\Test.cs",
+              "RelativeDocumentMoniker": "YellowJConsole\\Test.cs",
+              "ToolTip": "W:\\YellowJ\\YellowJHelp\\yellow-jhelp\\YellowJConsole\\Test.cs",
+              "RelativeToolTip": "YellowJConsole\\Test.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAawAoAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-21T20:04:35.543Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "YellowJAutoInjection",
-              "DocumentMoniker": "W:\\YellowJ\\YellowJHelp\\yellow-jhelp\\YellowJAutoInjection\\YellowJAutoInjection.csproj",
-              "RelativeDocumentMoniker": "YellowJAutoInjection\\YellowJAutoInjection.csproj",
-              "ToolTip": "W:\\YellowJ\\YellowJHelp\\yellow-jhelp\\YellowJAutoInjection\\YellowJAutoInjection.csproj",
-              "RelativeToolTip": "YellowJAutoInjection\\YellowJAutoInjection.csproj",
+              "Title": "YellowJHelp",
+              "DocumentMoniker": "W:\\YellowJ\\YellowJHelp\\yellow-jhelp\\YellowJHelp\\YellowJHelp.csproj",
+              "RelativeDocumentMoniker": "YellowJHelp\\YellowJHelp.csproj",
+              "ToolTip": "W:\\YellowJ\\YellowJHelp\\yellow-jhelp\\YellowJHelp\\YellowJHelp.csproj",
+              "RelativeToolTip": "YellowJHelp\\YellowJHelp.csproj",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-12-24T05:37:58.049Z",
+              "WhenOpened": "2024-12-23T01:56:13.617Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "YJHelpWebApi.cs",
-              "DocumentMoniker": "W:\\YellowJ\\YellowJHelp\\yellow-jhelp\\YellowJHelp\\Server\\YJHelpWebApi.cs",
-              "RelativeDocumentMoniker": "YellowJHelp\\Server\\YJHelpWebApi.cs",
-              "ToolTip": "W:\\YellowJ\\YellowJHelp\\yellow-jhelp\\YellowJHelp\\Server\\YJHelpWebApi.cs",
-              "RelativeToolTip": "YellowJHelp\\Server\\YJHelpWebApi.cs",
-              "ViewState": "AgIAAHEAAAAAAAAAAAAAAI4AAAAfAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-13T10:59:31.133Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "YJHelp.cs",
-              "DocumentMoniker": "W:\\YellowJ\\YellowJHelp\\yellow-jhelp\\YellowJHelp\\Server\\YJHelp.cs",
-              "RelativeDocumentMoniker": "YellowJHelp\\Server\\YJHelp.cs",
-              "ToolTip": "W:\\YellowJ\\YellowJHelp\\yellow-jhelp\\YellowJHelp\\Server\\YJHelp.cs",
-              "RelativeToolTip": "YellowJHelp\\Server\\YJHelp.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAArwBkAAABIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-15T09:02:48.565Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "YJHelpSql.cs",
-              "DocumentMoniker": "W:\\YellowJ\\YellowJHelp\\yellow-jhelp\\YellowJHelp\\Server\\YJHelpSql.cs",
-              "RelativeDocumentMoniker": "YellowJHelp\\Server\\YJHelpSql.cs",
-              "ToolTip": "W:\\YellowJ\\YellowJHelp\\yellow-jhelp\\YellowJHelp\\Server\\YJHelpSql.cs",
-              "RelativeToolTip": "YellowJHelp\\Server\\YJHelpSql.cs",
-              "ViewState": "AgIAAAcAAAAAAAAAAAAgwEMAAAATAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-13T10:59:31.127Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "YJHelpT.cs",
-              "DocumentMoniker": "W:\\YellowJ\\YellowJHelp\\yellow-jhelp\\YellowJHelp\\Server\\YJHelpT.cs",
-              "RelativeDocumentMoniker": "YellowJHelp\\Server\\YJHelpT.cs",
-              "ToolTip": "W:\\YellowJ\\YellowJHelp\\yellow-jhelp\\YellowJHelp\\Server\\YJHelpT.cs",
-              "RelativeToolTip": "YellowJHelp\\Server\\YJHelpT.cs",
-              "ViewState": "AgIAAGwAAAAAAAAAAAAuwGYAAAA9AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-13T10:59:31.129Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "YJInject.cs",
-              "DocumentMoniker": "W:\\YellowJ\\YellowJHelp\\yellow-jhelp\\YellowJAutoInjection\\YJInject.cs",
-              "RelativeDocumentMoniker": "YellowJAutoInjection\\YJInject.cs",
-              "ToolTip": "W:\\YellowJ\\YellowJHelp\\yellow-jhelp\\YellowJAutoInjection\\YJInject.cs",
-              "RelativeToolTip": "YellowJAutoInjection\\YJInject.cs",
-              "ViewState": "AgIAAB0AAAAAAAAAAAAowCMAAAAWAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-15T07:15:30.938Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "AutoHelp.cs",
-              "DocumentMoniker": "W:\\YellowJ\\YellowJHelp\\yellow-jhelp\\YellowJAutoInjection\\Help\\AutoHelp.cs",
-              "RelativeDocumentMoniker": "YellowJAutoInjection\\Help\\AutoHelp.cs",
-              "ToolTip": "W:\\YellowJ\\YellowJHelp\\yellow-jhelp\\YellowJAutoInjection\\Help\\AutoHelp.cs",
-              "RelativeToolTip": "YellowJAutoInjection\\Help\\AutoHelp.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAUwAMAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-15T07:32:00.702Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 17,
               "Title": "YJHelpRedis.cs",
               "DocumentMoniker": "W:\\YellowJ\\YellowJHelp\\yellow-jhelp\\YellowJHelp\\Server\\YJHelpRedis.cs",
               "RelativeDocumentMoniker": "YellowJHelp\\Server\\YJHelpRedis.cs",
@@ -336,12 +260,175 @@
               "RelativeToolTip": "YellowJHelp\\Server\\YJHelpRedis.cs",
               "ViewState": "AgIAAB0AAAAAAAAAAAAlwCsAAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-13T10:59:31.123Z",
+              "WhenOpened": "2024-07-13T10:59:31.123Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "W:\\YellowJ\\YellowJHelp\\yellow-jhelp\\YellowJConsole\\Program.cs",
+              "RelativeDocumentMoniker": "YellowJConsole\\Program.cs",
+              "ToolTip": "W:\\YellowJ\\YellowJHelp\\yellow-jhelp\\YellowJConsole\\Program.cs",
+              "RelativeToolTip": "YellowJConsole\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-21T19:54:38.285Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "YJHelpTests.cs",
+              "DocumentMoniker": "W:\\YellowJ\\YellowJHelp\\yellow-jhelp\\YellowJHelpTestProject\\YJHelpTests.cs",
+              "RelativeDocumentMoniker": "YellowJHelpTestProject\\YJHelpTests.cs",
+              "ToolTip": "W:\\YellowJ\\YellowJHelp\\yellow-jhelp\\YellowJHelpTestProject\\YJHelpTests.cs",
+              "RelativeToolTip": "YellowJHelpTestProject\\YJHelpTests.cs",
+              "ViewState": "AgIAAC0AAAAAAAAAAAAtwGEAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-26T03:38:12.229Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "IYJHelp.cs",
+              "DocumentMoniker": "W:\\YellowJ\\YellowJHelp\\yellow-jhelp\\YellowJHelp\\IServer\\IYJHelp.cs",
+              "RelativeDocumentMoniker": "YellowJHelp\\IServer\\IYJHelp.cs",
+              "ToolTip": "W:\\YellowJ\\YellowJHelp\\yellow-jhelp\\YellowJHelp\\IServer\\IYJHelp.cs",
+              "RelativeToolTip": "YellowJHelp\\IServer\\IYJHelp.cs",
+              "ViewState": "AgIAAIMAAAAAAAAAAAAkwJQAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-13T10:59:31.033Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 8,
+              "Title": "YJHelpT.cs",
+              "DocumentMoniker": "W:\\YellowJ\\YellowJHelp\\yellow-jhelp\\YellowJHelp\\Server\\YJHelpT.cs",
+              "RelativeDocumentMoniker": "YellowJHelp\\Server\\YJHelpT.cs",
+              "ToolTip": "W:\\YellowJ\\YellowJHelp\\yellow-jhelp\\YellowJHelp\\Server\\YJHelpT.cs",
+              "RelativeToolTip": "YellowJHelp\\Server\\YJHelpT.cs",
+              "ViewState": "AgIAAIwAAAAAAAAAAAAUwLcAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-13T10:59:31.129Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "YJHelp.cs",
+              "DocumentMoniker": "W:\\YellowJ\\YellowJHelp\\yellow-jhelp\\YellowJHelp\\Server\\YJHelp.cs",
+              "RelativeDocumentMoniker": "YellowJHelp\\Server\\YJHelp.cs",
+              "ToolTip": "W:\\YellowJ\\YellowJHelp\\yellow-jhelp\\YellowJHelp\\Server\\YJHelp.cs",
+              "RelativeToolTip": "YellowJHelp\\Server\\YJHelp.cs",
+              "ViewState": "AgIAAGwBAAAAAAAAAAAgwO8BAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-15T09:02:48.565Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "IYJHelpT.cs",
+              "DocumentMoniker": "W:\\YellowJ\\YellowJHelp\\yellow-jhelp\\YellowJHelp\\IServer\\IYJHelpT.cs",
+              "RelativeDocumentMoniker": "YellowJHelp\\IServer\\IYJHelpT.cs",
+              "ToolTip": "W:\\YellowJ\\YellowJHelp\\yellow-jhelp\\YellowJHelp\\IServer\\IYJHelpT.cs",
+              "RelativeToolTip": "YellowJHelp\\IServer\\IYJHelpT.cs",
+              "ViewState": "AgIAADoAAAAAAAAAAAAkwFAAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-13T10:59:31.131Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "YAllocationInfo.cs",
+              "DocumentMoniker": "W:\\YellowJ\\YellowJHelp\\yellow-jhelp\\YellowJHelp\\Entry\\YAllocationInfo.cs",
+              "RelativeDocumentMoniker": "YellowJHelp\\Entry\\YAllocationInfo.cs",
+              "ToolTip": "W:\\YellowJ\\YellowJHelp\\yellow-jhelp\\YellowJHelp\\Entry\\YAllocationInfo.cs",
+              "RelativeToolTip": "YellowJHelp\\Entry\\YAllocationInfo.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAAA4AAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-25T08:28:21.617Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "UnitTest1.cs",
+              "DocumentMoniker": "W:\\YellowJ\\YellowJHelp\\yellow-jhelp\\YellowJHelpTestProject\\UnitTest1.cs",
+              "RelativeDocumentMoniker": "YellowJHelpTestProject\\UnitTest1.cs",
+              "ToolTip": "W:\\YellowJ\\YellowJHelp\\yellow-jhelp\\YellowJHelpTestProject\\UnitTest1.cs",
+              "RelativeToolTip": "YellowJHelpTestProject\\UnitTest1.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-26T03:37:41.856Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "IYJHelpRedis.cs",
+              "DocumentMoniker": "W:\\YellowJ\\YellowJHelp\\yellow-jhelp\\YellowJHelp\\IServer\\IYJHelpRedis.cs",
+              "RelativeDocumentMoniker": "YellowJHelp\\IServer\\IYJHelpRedis.cs",
+              "ToolTip": "W:\\YellowJ\\YellowJHelp\\yellow-jhelp\\YellowJHelp\\IServer\\IYJHelpRedis.cs",
+              "RelativeToolTip": "YellowJHelp\\IServer\\IYJHelpRedis.cs",
+              "ViewState": "AgIAABcAAAAAAAAAAADwvw4AAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-13T10:59:31.148Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "YJHelpWebApi.cs",
+              "DocumentMoniker": "W:\\YellowJ\\YellowJHelp\\yellow-jhelp\\YellowJHelp\\Server\\YJHelpWebApi.cs",
+              "RelativeDocumentMoniker": "YellowJHelp\\Server\\YJHelpWebApi.cs",
+              "ToolTip": "W:\\YellowJ\\YellowJHelp\\yellow-jhelp\\YellowJHelp\\Server\\YJHelpWebApi.cs",
+              "RelativeToolTip": "YellowJHelp\\Server\\YJHelpWebApi.cs",
+              "ViewState": "AgIAABQAAAAAAAAAAAAUwJAAAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-13T10:59:31.133Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "AutoHelp.cs",
+              "DocumentMoniker": "W:\\YellowJ\\YellowJHelp\\yellow-jhelp\\YellowJAutoInjection\\Help\\AutoHelp.cs",
+              "RelativeDocumentMoniker": "YellowJAutoInjection\\Help\\AutoHelp.cs",
+              "ToolTip": "W:\\YellowJ\\YellowJHelp\\yellow-jhelp\\YellowJAutoInjection\\Help\\AutoHelp.cs",
+              "RelativeToolTip": "YellowJAutoInjection\\Help\\AutoHelp.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAUwAMAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-15T07:32:00.702Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "YJHelpSql.cs",
+              "DocumentMoniker": "W:\\YellowJ\\YellowJHelp\\yellow-jhelp\\YellowJHelp\\Server\\YJHelpSql.cs",
+              "RelativeDocumentMoniker": "YellowJHelp\\Server\\YJHelpSql.cs",
+              "ToolTip": "W:\\YellowJ\\YellowJHelp\\yellow-jhelp\\YellowJHelp\\Server\\YJHelpSql.cs",
+              "RelativeToolTip": "YellowJHelp\\Server\\YJHelpSql.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAgwEMAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-13T10:59:31.127Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "YJInject.cs",
+              "DocumentMoniker": "W:\\YellowJ\\YellowJHelp\\yellow-jhelp\\YellowJAutoInjection\\YJInject.cs",
+              "RelativeDocumentMoniker": "YellowJAutoInjection\\YJInject.cs",
+              "ToolTip": "W:\\YellowJ\\YellowJHelp\\yellow-jhelp\\YellowJAutoInjection\\YJInject.cs",
+              "RelativeToolTip": "YellowJAutoInjection\\YJInject.cs",
+              "ViewState": "AgIAABoAAAAAAAAAAAAowCYAAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-15T07:15:30.938Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
               "Title": "YJHelpKafka.cs",
               "DocumentMoniker": "W:\\YellowJ\\YellowJHelp\\yellow-jhelp\\YellowJHelp\\Server\\YJHelpKafka.cs",
               "RelativeDocumentMoniker": "YellowJHelp\\Server\\YJHelpKafka.cs",
@@ -349,24 +436,11 @@
               "RelativeToolTip": "YellowJHelp\\Server\\YJHelpKafka.cs",
               "ViewState": "AgIAAHkAAAAAAAAAAAAawNgAAAAXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-13T10:59:31.12Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-13T10:59:31.12Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "Test.cs",
-              "DocumentMoniker": "W:\\YellowJ\\YellowJHelp\\yellow-jhelp\\YellowJConsole\\Test.cs",
-              "RelativeDocumentMoniker": "YellowJConsole\\Test.cs",
-              "ToolTip": "W:\\YellowJ\\YellowJHelp\\yellow-jhelp\\YellowJConsole\\Test.cs",
-              "RelativeToolTip": "YellowJConsole\\Test.cs",
-              "ViewState": "AgIAAAcAAAAAAAAAAAAawAoAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-21T20:04:35.543Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 21,
               "Title": "YellowJAutoInjection.csproj",
               "DocumentMoniker": "W:\\YellowJ\\YellowJHelp\\yellow-jhelp\\YellowJAutoInjection\\YellowJAutoInjection.csproj",
               "RelativeDocumentMoniker": "YellowJAutoInjection\\YellowJAutoInjection.csproj",
@@ -378,30 +452,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "IYJHelp.cs",
-              "DocumentMoniker": "W:\\YellowJ\\YellowJHelp\\yellow-jhelp\\YellowJHelp\\IServer\\IYJHelp.cs",
-              "RelativeDocumentMoniker": "YellowJHelp\\IServer\\IYJHelp.cs",
-              "ToolTip": "W:\\YellowJ\\YellowJHelp\\yellow-jhelp\\YellowJHelp\\IServer\\IYJHelp.cs",
-              "RelativeToolTip": "YellowJHelp\\IServer\\IYJHelp.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAUAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-13T10:59:31.033Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "YellowJHelp",
-              "DocumentMoniker": "W:\\YellowJ\\YellowJHelp\\yellow-jhelp\\YellowJHelp\\YellowJHelp.csproj",
-              "RelativeDocumentMoniker": "YellowJHelp\\YellowJHelp.csproj",
-              "ToolTip": "W:\\YellowJ\\YellowJHelp\\yellow-jhelp\\YellowJHelp\\YellowJHelp.csproj",
-              "RelativeToolTip": "YellowJHelp\\YellowJHelp.csproj",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-12-23T01:56:13.617Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 19,
               "Title": "IYJHelpWebApi.cs",
               "DocumentMoniker": "W:\\YellowJ\\YellowJHelp\\yellow-jhelp\\YellowJHelp\\IServer\\IYJHelpWebApi.cs",
               "RelativeDocumentMoniker": "YellowJHelp\\IServer\\IYJHelpWebApi.cs",
@@ -413,7 +464,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 22,
               "Title": "IYJHelpKafka.cs",
               "DocumentMoniker": "W:\\YellowJ\\YellowJHelp\\yellow-jhelp\\YellowJHelp\\IServer\\IYJHelpKafka.cs",
               "RelativeDocumentMoniker": "YellowJHelp\\IServer\\IYJHelpKafka.cs",
@@ -425,7 +476,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 20,
               "Title": "YellowJHelp.csproj",
               "DocumentMoniker": "W:\\YellowJ\\YellowJHelp\\yellow-jhelp\\YellowJHelp\\YellowJHelp.csproj",
               "RelativeDocumentMoniker": "YellowJHelp\\YellowJHelp.csproj",
@@ -437,19 +488,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "Program.cs",
-              "DocumentMoniker": "W:\\YellowJ\\YellowJHelp\\yellow-jhelp\\YellowJConsole\\Program.cs",
-              "RelativeDocumentMoniker": "YellowJConsole\\Program.cs",
-              "ToolTip": "W:\\YellowJ\\YellowJHelp\\yellow-jhelp\\YellowJConsole\\Program.cs",
-              "RelativeToolTip": "YellowJConsole\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-21T19:54:38.285Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 23,
               "Title": "YellowJHelp.xml",
               "DocumentMoniker": "W:\\YellowJ\\YellowJHelp\\yellow-jhelp\\YellowJHelp\\YellowJHelp\\YellowJHelp.xml",
               "RelativeDocumentMoniker": "YellowJHelp\\YellowJHelp\\YellowJHelp.xml",
@@ -461,7 +500,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 24,
               "Title": "YellowJHelp.xml",
               "DocumentMoniker": "W:\\YellowJ\\YellowJHelp\\yellow-jhelp\\YellowJHelp\\YellowJHelp.xml",
               "RelativeDocumentMoniker": "YellowJHelp\\YellowJHelp.xml",
@@ -473,7 +512,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 25,
               "Title": "LogInfo.cs",
               "DocumentMoniker": "W:\\YellowJ\\YellowJHelp\\yellow-jhelp\\YellowJHelp\\Entry\\LogInfo.cs",
               "RelativeDocumentMoniker": "YellowJHelp\\Entry\\LogInfo.cs",
@@ -485,31 +524,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "IYJHelpT.cs",
-              "DocumentMoniker": "W:\\YellowJ\\YellowJHelp\\yellow-jhelp\\YellowJHelp\\IServer\\IYJHelpT.cs",
-              "RelativeDocumentMoniker": "YellowJHelp\\IServer\\IYJHelpT.cs",
-              "ToolTip": "W:\\YellowJ\\YellowJHelp\\yellow-jhelp\\YellowJHelp\\IServer\\IYJHelpT.cs",
-              "RelativeToolTip": "YellowJHelp\\IServer\\IYJHelpT.cs",
-              "ViewState": "AgIAACwAAAAAAAAAAABBwDYAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-13T10:59:31.131Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 24,
-              "Title": "IYJHelpRedis.cs",
-              "DocumentMoniker": "W:\\YellowJ\\YellowJHelp\\yellow-jhelp\\YellowJHelp\\IServer\\IYJHelpRedis.cs",
-              "RelativeDocumentMoniker": "YellowJHelp\\IServer\\IYJHelpRedis.cs",
-              "ToolTip": "W:\\YellowJ\\YellowJHelp\\yellow-jhelp\\YellowJHelp\\IServer\\IYJHelpRedis.cs",
-              "RelativeToolTip": "YellowJHelp\\IServer\\IYJHelpRedis.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAmwA4AAAAxAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-13T10:59:31.148Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 26,
               "Title": "BaseHelp.cs",
               "DocumentMoniker": "W:\\YellowJ\\YellowJHelp\\yellow-jhelp\\YellowJAutoInjection\\Help\\BaseHelp.cs",
               "RelativeDocumentMoniker": "YellowJAutoInjection\\Help\\BaseHelp.cs",
@@ -521,7 +536,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 27,
               "Title": "KeyValueInfo.cs",
               "DocumentMoniker": "W:\\YellowJ\\YellowJHelp\\yellow-jhelp\\YellowJAutoInjection\\Entry\\KeyValueInfo.cs",
               "RelativeDocumentMoniker": "YellowJAutoInjection\\Entry\\KeyValueInfo.cs",
@@ -533,7 +548,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 28,
               "Title": "AutoInjectAttribute.cs",
               "DocumentMoniker": "W:\\YellowJ\\YellowJHelp\\yellow-jhelp\\YellowJAutoInjection\\Entry\\AutoInjectAttribute.cs",
               "RelativeDocumentMoniker": "YellowJAutoInjection\\Entry\\AutoInjectAttribute.cs",
@@ -545,7 +560,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 30,
               "Title": "YJHelpKafka.cs",
               "DocumentMoniker": "W:\\YellowJ\\YellowJHelp\\yellow-jhelp\\YellowJHelpFw\\Server\\YJHelpKafka.cs",
               "RelativeDocumentMoniker": "YellowJHelpFw\\Server\\YJHelpKafka.cs",
@@ -557,7 +572,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 31,
               "Title": "YJInject.cs",
               "DocumentMoniker": "W:\\YellowJ\\YellowJHelp\\yellow-jhelp\\YellowJHelpFw\\YJInject.cs",
               "RelativeDocumentMoniker": "YellowJHelpFw\\YJInject.cs",
@@ -569,7 +584,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 32,
               "Title": "IYJHelp.cs",
               "DocumentMoniker": "W:\\YellowJ\\YellowJHelp\\yellow-jhelp\\YellowJHelpFw\\IServer\\IYJHelp.cs",
               "RelativeDocumentMoniker": "YellowJHelpFw\\IServer\\IYJHelp.cs",
@@ -581,7 +596,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 33,
               "Title": "YJHelp.cs",
               "DocumentMoniker": "W:\\YellowJ\\YellowJHelp\\yellow-jhelp\\YellowJHelpFw\\Server\\YJHelp.cs",
               "RelativeDocumentMoniker": "YellowJHelpFw\\Server\\YJHelp.cs",
@@ -593,7 +608,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 34,
               "Title": "YJHelpRedis.cs",
               "DocumentMoniker": "W:\\YellowJ\\YellowJHelp\\yellow-jhelp\\YellowJHelpFw\\Server\\YJHelpRedis.cs",
               "RelativeDocumentMoniker": "YellowJHelpFw\\Server\\YJHelpRedis.cs",
@@ -605,7 +620,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
+              "DocumentIndex": 35,
               "Title": "BaseHelp.cs",
               "DocumentMoniker": "W:\\YellowJ\\YellowJHelp\\yellow-jhelp\\YellowJHelpFw\\Base\\BaseHelp.cs",
               "RelativeDocumentMoniker": "YellowJHelpFw\\Base\\BaseHelp.cs",
@@ -617,7 +632,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 36,
               "Title": "YJHelpSql.cs",
               "DocumentMoniker": "W:\\YellowJ\\YellowJHelp\\yellow-jhelp\\YellowJHelpFw\\Server\\YJHelpSql.cs",
               "RelativeDocumentMoniker": "YellowJHelpFw\\Server\\YJHelpSql.cs",
@@ -629,7 +644,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 36,
+              "DocumentIndex": 37,
               "Title": "YJHelpT.cs",
               "DocumentMoniker": "W:\\YellowJ\\YellowJHelp\\yellow-jhelp\\YellowJHelpFw\\Server\\YJHelpT.cs",
               "RelativeDocumentMoniker": "YellowJHelpFw\\Server\\YJHelpT.cs",
@@ -641,7 +656,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 37,
+              "DocumentIndex": 38,
               "Title": "YJHelpWebApi.cs",
               "DocumentMoniker": "W:\\YellowJ\\YellowJHelp\\yellow-jhelp\\YellowJHelpFw\\Server\\YJHelpWebApi.cs",
               "RelativeDocumentMoniker": "YellowJHelpFw\\Server\\YJHelpWebApi.cs",
@@ -653,7 +668,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 38,
+              "DocumentIndex": 39,
               "Title": "KeyValueInfo.cs",
               "DocumentMoniker": "W:\\YellowJ\\YellowJHelp\\yellow-jhelp\\YellowJHelpFw\\Entry\\KeyValueInfo.cs",
               "RelativeDocumentMoniker": "YellowJHelpFw\\Entry\\KeyValueInfo.cs",
@@ -665,7 +680,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 39,
+              "DocumentIndex": 40,
               "Title": "AutoInjectAttribute.cs",
               "DocumentMoniker": "W:\\YellowJ\\YellowJHelp\\yellow-jhelp\\YellowJHelpFw\\Entry\\AutoInjectAttribute.cs",
               "RelativeDocumentMoniker": "YellowJHelpFw\\Entry\\AutoInjectAttribute.cs",
@@ -677,7 +692,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 29,
               "Title": "IHostBuilder.cs",
               "DocumentMoniker": "C:\\Users\\94332\\AppData\\Local\\Temp\\MetadataAsSource\\24c171cedd2c45aa8cc7aaf1475501d0\\DecompilationMetadataAsSourceFileProvider\\2348f9cc68f648d0a565dddf6bb81931\\IHostBuilder.cs",
               "ToolTip": "C:\\Users\\94332\\AppData\\Local\\Temp\\MetadataAsSource\\24c171cedd2c45aa8cc7aaf1475501d0\\DecompilationMetadataAsSourceFileProvider\\2348f9cc68f648d0a565dddf6bb81931\\IHostBuilder.cs",
@@ -686,7 +701,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 40,
+              "DocumentIndex": 41,
               "Title": "IYJHelpKafka.cs",
               "DocumentMoniker": "W:\\YellowJ\\YellowJHelp\\yellow-jhelp\\YellowJHelpFw\\IServer\\IYJHelpKafka.cs",
               "RelativeDocumentMoniker": "YellowJHelpFw\\IServer\\IYJHelpKafka.cs",
@@ -698,7 +713,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 41,
+              "DocumentIndex": 42,
               "Title": "IYJHelpSql.cs",
               "DocumentMoniker": "W:\\YellowJ\\YellowJHelp\\yellow-jhelp\\YellowJHelpFw\\IServer\\IYJHelpSql.cs",
               "RelativeDocumentMoniker": "YellowJHelpFw\\IServer\\IYJHelpSql.cs",
@@ -710,7 +725,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 42,
+              "DocumentIndex": 43,
               "Title": "IYJHelpRedis.cs",
               "DocumentMoniker": "W:\\YellowJ\\YellowJHelp\\yellow-jhelp\\YellowJHelpFw\\IServer\\IYJHelpRedis.cs",
               "RelativeDocumentMoniker": "YellowJHelpFw\\IServer\\IYJHelpRedis.cs",
@@ -722,7 +737,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 43,
+              "DocumentIndex": 44,
               "Title": "IYJHelpT.cs",
               "DocumentMoniker": "W:\\YellowJ\\YellowJHelp\\yellow-jhelp\\YellowJHelpFw\\IServer\\IYJHelpT.cs",
               "RelativeDocumentMoniker": "YellowJHelpFw\\IServer\\IYJHelpT.cs",
@@ -734,7 +749,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 44,
+              "DocumentIndex": 45,
               "Title": "IYJHelpWebApi.cs",
               "DocumentMoniker": "W:\\YellowJ\\YellowJHelp\\yellow-jhelp\\YellowJHelpFw\\IServer\\IYJHelpWebApi.cs",
               "RelativeDocumentMoniker": "YellowJHelpFw\\IServer\\IYJHelpWebApi.cs",
@@ -746,7 +761,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 45,
+              "DocumentIndex": 46,
               "Title": "LogInfo.cs",
               "DocumentMoniker": "W:\\YellowJ\\YellowJHelp\\yellow-jhelp\\YellowJHelpFw\\Entry\\LogInfo.cs",
               "RelativeDocumentMoniker": "YellowJHelpFw\\Entry\\LogInfo.cs",

@@ -3010,7 +3010,7 @@
           "lib/netstandard1.3/System.Xml.XPath.XmlDocument.dll": {}
         }
       },
-      "YellowJAutoInjection/1.1.2": {
+      "YellowJAutoInjection/1.1.3": {
         "type": "package",
         "dependencies": {
           "Autofac": "8.0.0",
@@ -3018,10 +3018,14 @@
           "Microsoft.Extensions.Hosting.Abstractions": "8.0.0"
         },
         "compile": {
-          "lib/netstandard2.1/YellowJAutoInjection.dll": {}
+          "lib/netstandard2.1/YellowJAutoInjection.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/netstandard2.1/YellowJAutoInjection.dll": {}
+          "lib/netstandard2.1/YellowJAutoInjection.dll": {
+            "related": ".xml"
+          }
         }
       }
     }
@@ -9185,17 +9189,18 @@
         "system.xml.xpath.xmldocument.nuspec"
       ]
     },
-    "YellowJAutoInjection/1.1.2": {
-      "sha512": "3BeFmbJPbtptyjKprkc8uWf1IdVjx6gMqEPT55aEitUs0LgNCfX5/7cuW47aPcgGdTxy+ll7lQD+Fk89yFY7nA==",
+    "YellowJAutoInjection/1.1.3": {
+      "sha512": "bNv70NdP801lr6Q/grP8OjCkfbaw7FQpiM3UYQTA65ed8vFVkGu/5Kn+CddBR/sXRjoaCRZ/JLCuuYOCdlmonw==",
       "type": "package",
-      "path": "yellowjautoinjection/1.1.2",
+      "path": "yellowjautoinjection/1.1.3",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "README.md",
         "YellowJ图标.png",
         "lib/netstandard2.1/YellowJAutoInjection.dll",
-        "yellowjautoinjection.1.1.2.nupkg.sha512",
+        "lib/netstandard2.1/YellowJAutoInjection.xml",
+        "yellowjautoinjection.1.1.3.nupkg.sha512",
         "yellowjautoinjection.nuspec"
       ]
     }
@@ -9209,7 +9214,7 @@
       "Microsoft.Extensions.Caching.Memory >= 6.0.0",
       "NewLife.Redis >= 4.0.2022.312",
       "SqlSugarCore >= 5.0.4.3",
-      "YellowJAutoInjection >= 1.1.2"
+      "YellowJAutoInjection >= 1.1.3"
     ]
   },
   "packageFolders": {
@@ -9217,7 +9222,7 @@
     "D:\\VS\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
-    "version": "3.3.0",
+    "version": "3.4.1",
     "restore": {
       "projectUniqueName": "W:\\YellowJ\\YellowJHelp\\yellow-jhelp\\YellowJHelp\\YellowJHelp.csproj",
       "projectName": "YellowJHelp",
@@ -9292,7 +9297,7 @@
           },
           "YellowJAutoInjection": {
             "target": "Package",
-            "version": "[1.1.2, )"
+            "version": "[1.1.3, )"
           }
         },
         "imports": [

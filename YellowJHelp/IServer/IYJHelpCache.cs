@@ -25,7 +25,7 @@ namespace YellowJHelp.IServer
         /// </summary>
         /// <param name="key"></param>
         /// <param name="value"></param>
-        /// <param name="options"></param>
+        /// <param name="options">过期时间</param>
         /// <returns></returns>
         public string Set(string key, string value, MemoryCacheEntryOptions options);
         /// <summary>

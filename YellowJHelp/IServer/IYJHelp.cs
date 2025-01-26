@@ -1,5 +1,6 @@
 ﻿
 using Microsoft.AspNetCore.Http;
+using YellowJHelp.Entry;
 
 namespace YellowJHelp.IServer
 {
@@ -41,6 +42,7 @@ namespace YellowJHelp.IServer
         /// <summary>
         /// 缓存类
         /// </summary>
+        [Obsolete("请使用的新的接口：IYJHelpCache")]
         interface ICache 
         {
             /// <summary>
@@ -135,5 +137,20 @@ namespace YellowJHelp.IServer
         /// <param name="value">值</param>
         /// <returns></returns>
         bool IsString(string data, string value);
+
+        /// <summary>
+        /// 分配数据
+        /// </summary>
+        /// <param name="yAllocations">分配集合</param>
+        /// <param name="yAllocations1">被分配集合</param>
+        /// <returns>返回分配集合（剩余），被分配集合（已分），分配结果详情</returns>
+        List<List<YAllocationInfo>> YAlloctionlist(List<YAllocationInfo> yAllocations, List<YAllocationInfo> yAllocations1);
+        /// <summary>
+        /// 分配数据-多线程
+        /// </summary>
+        /// <param name="yAllocations">分配集合</param>
+        /// <param name="yAllocations1">被分配集合</param>
+        /// <returns>返回分配集合（剩余），被分配集合（已分），分配结果详情</returns>
+        List<List<YAllocationInfo>> YAlloctionlistThred(List<YAllocationInfo> yAllocations, List<YAllocationInfo> yAllocations1);
     }
 }

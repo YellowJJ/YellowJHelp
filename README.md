@@ -34,11 +34,14 @@ Nuget 获取YellowJAutoInjection
 
 [Gitee]: v2.2.0	"https://gitee.com/xiaoyi1314/yellow-jhelp"
 
-通用解决方案
-缓存，MD5加密，字段截取，集合类型差集计算，Cookie，Session
-Kafka使用
-webapi调用
-Redis使用`
+通用解决方案：
+        3.4：针对大数据集合计算多线程处理，新增IYJHelpCache缓存接口
+		3.0.0版本后方法基本改成异步。
+		2.2.0版本：自动依赖注入功能转移至：YellowJAutoInjection
+		（Redis更换NewLife-日均百亿次项目验证）缓存，MD5加密，字段截取，集合类型差集计算
+		Kafka使用
+		webapi调用
+		Redis使用
 
 #### 软件架构
 netstandard2.1
@@ -68,13 +71,13 @@ Framework 4.6.1+
 | IsString     |  string中是否包含某个值 |
 | Cache        | 缓存方法库  |
 
-##### YJHelp
+##### YJHelpCache
 |  YJHelpCache |  IYJHelpCache  |
 |---|---|
-| TryGetValue      |  是否存在 |
-| Get   |  获取 |
-| Set   |  写入 |
-| Remove     |  删除 |
+| TryGetValue       |  是否存在 |
+| Get				|  获取 |
+| Set				|  写入 |
+| Remove			|  删除 |
 
 ##### YJHelpKafka
 |  YJHelpKafka |  IYJHelpKafka  |
@@ -110,6 +113,10 @@ Framework 4.6.1+
 | Merge                 | 合并两个集合的函数-不允许有重复项  |
 | MergeC                | 合并两个集合的函数-允许出现重复项  |
 | DiffsetT              | 获取差集（集合）  |
+| Diffset               | 获取差集（集合）  |
+| Intersect             | 获取交集（集合）  |
+| Union                 | 获取并集（集合）  |
+| ...					| 更多可看注释介绍  |
 
 
 

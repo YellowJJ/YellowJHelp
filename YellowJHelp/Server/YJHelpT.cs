@@ -1,4 +1,5 @@
 ﻿using Newtonsoft.Json;
+using Org.BouncyCastle.Utilities;
 using YellowJHelp.IServer;
 
 namespace YellowJHelp
@@ -11,11 +12,6 @@ namespace YellowJHelp
     [AutoInject(typeof(IYJHelpT<>))]
     public class YJHelpT<T>: IYJHelpT<T>
     {
-        /// <summary>
-        /// 将集合按大小分
-        /// </summary>
-        /// <param name="source">数据集</param>
-        /// <param name="pageSiez">每一组大小</param>
         public List<List<T>> SpliteSourceBySize(List<T> source, int pageSiez)
         {
             int listCount = (source.Count() - 1) / pageSiez + 1;
@@ -29,11 +25,6 @@ namespace YellowJHelp
             return pages;
         }
 
-        /// <summary> 
-        /// 将集合安按组数分
-        /// </summary> 
-        /// <param name="source">数据集</param> 
-        /// <param name="count">组数</param> 
         public List<List<T>> SpliteSourceByCount(List<T> source, int count)
         {
             int pageSiez = source.Count() / count;//取每一页大小 
@@ -65,7 +56,58 @@ namespace YellowJHelp
             list.AddRange(ha);
             return list;
         }
+        /// <summary>
+        /// 集合去重
+        /// </summary>
+        /// <param name="list">集合</param>
+        /// <returns></returns>
+        public List<T> Distinct(List<T> list)
+        {
+            List<string> strings = new();
+            foreach (var item in list)
+            {
+                var js = JsonConvert.SerializeObject(item);
+                strings.Add(js);
+            }
+            HashSet<string> ha = new HashSet<string>(strings);
+            var re= new List<string>(ha);
+            List<T> listRet = new();
+            foreach (var item in re) 
+            {
+                listRet.Add(JsonConvert.DeserializeObject<T>(item));
+            }
+            
+            return listRet;
+        }
+        
+        /// <summary>
+        /// YJ版本：合并两个集合的函数-不允许有重复项
+        /// </summary>
+        /// <param name="list1">第一个集合</param>
+        /// <param name="list2">第二个集合</param>
+        /// <returns>返回结果</returns>
+        public List<T> YJMerge(List<T> list1, List<T> list2)
+        {
+            List<string> strings = new();
+            foreach (var item in list1) {
+                var js = JsonConvert.SerializeObject(item);
+                strings.Add(js);
+            }
+            foreach (var item in list2)
+            {
+                var js = JsonConvert.SerializeObject(item);
+                strings.Add(js);
+            }
 
+            HashSet<string> ha = new HashSet<string>(strings);
+            var re = new List<string>(ha);
+            List<T> listRet = new();
+            foreach (var item in re)
+            {
+                listRet.Add(JsonConvert.DeserializeObject<T>(item));
+            }
+            return listRet;//返回第一项
+        }
         /// <summary>
         /// 合并两个集合的函数-不允许有重复项
         /// </summary>
@@ -134,6 +176,17 @@ namespace YellowJHelp
             return res;
         }
 
+        /// <summary>
+        /// 对象副本
+        /// </summary>
+        /// <param name="data">数据</param>
+        /// <returns>将对象复制成全新的对象，且不互相影响</returns>
+        public T? Copy(T data)
+        {
+            var js = JsonConvert.SerializeObject(data);
+            var res = JsonConvert.DeserializeObject<T>(js);
+            return res;
+        }
 
 
 

@@ -1,0 +1,5 @@
+W:\YellowJ\YellowJHelp\yellow-jhelp\YellowJConsole\obj\Release\net9.0\YellowJConsole.csproj.AssemblyReference.cache
+W:\YellowJ\YellowJHelp\yellow-jhelp\YellowJConsole\obj\Release\net9.0\YellowJConsole.GeneratedMSBuildEditorConfig.editorconfig
+W:\YellowJ\YellowJHelp\yellow-jhelp\YellowJConsole\obj\Release\net9.0\YellowJConsole.AssemblyInfoInputs.cache
+W:\YellowJ\YellowJHelp\yellow-jhelp\YellowJConsole\obj\Release\net9.0\YellowJConsole.AssemblyInfo.cs
+W:\YellowJ\YellowJHelp\yellow-jhelp\YellowJConsole\obj\Release\net9.0\YellowJConsole.csproj.CoreCompileInputs.cache

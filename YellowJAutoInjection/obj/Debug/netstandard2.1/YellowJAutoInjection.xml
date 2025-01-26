@@ -1,0 +1,104 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>YellowJAutoInjection</name>
+    </assembly>
+    <members>
+        <member name="T:YellowJAutoInjection.AutoInjectAttribute">
+            <summary>
+            依赖注入基类
+            </summary>
+        </member>
+        <member name="M:YellowJAutoInjection.AutoInjectAttribute.#ctor(System.Type,YellowJAutoInjection.InjectType)">
+            <summary>
+            绑定对应接口，自动注入程序集
+            </summary>
+            <param name="interfaceType"></param>
+            <param name="injectType"></param>
+        </member>
+        <member name="P:YellowJAutoInjection.AutoInjectAttribute.InjectType">
+            <summary>
+            注入类型
+            </summary>
+        </member>
+        <member name="T:YellowJAutoInjection.InjectType">
+            <summary>
+            注入类型（可控生命周期）
+            </summary>
+        </member>
+        <member name="F:YellowJAutoInjection.InjectType.Scope">
+            <summary>
+            作用域
+            </summary>
+        </member>
+        <member name="F:YellowJAutoInjection.InjectType.Single">
+            <summary>
+            单例
+            </summary>
+        </member>
+        <member name="F:YellowJAutoInjection.InjectType.Transient">
+            <summary>
+            暂时/瞬时
+            </summary>
+        </member>
+        <member name="T:YellowJAutoInjection.Entry.KeyValueInfo`2">
+            <summary>
+            键值类
+            </summary>
+        </member>
+        <member name="P:YellowJAutoInjection.Entry.KeyValueInfo`2.Key">
+            <summary>
+            键
+            </summary>
+        </member>
+        <member name="P:YellowJAutoInjection.Entry.KeyValueInfo`2.Value">
+            <summary>
+            值
+            </summary>
+        </member>
+        <member name="M:YellowJAutoInjection.Help.AutoHelp.YellowJLog(System.String,System.String)">
+            <summary>
+            日志
+            </summary>
+            <param name="text">消息</param>
+            <param name="address">相对文件名</param>
+        </member>
+        <member name="M:YellowJAutoInjection.Help.BaseHelp.GetAssembly">
+            <summary>
+            获取自动注入程序集名称
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:YellowJAutoInjection.YJDiInject">
+            <summary>
+            自动注入
+            </summary>
+        </member>
+        <member name="M:YellowJAutoInjection.YJDiInject.YJAutofacDiInJect(Microsoft.Extensions.Hosting.IHostBuilder)">
+            <summary>
+            自动注入所有的程序集（Autofac继承默认生命周期）
+            </summary>
+            <param name="host"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YellowJAutoInjection.YJDiInject.YJDiInJect(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            自动注入所有的程序集(可控制生命周期)
+            </summary>
+            <param name="serviceCollection"></param>
+            <returns></returns>
+        </member>
+        <member name="T:YellowJAutoInjection.AutofacModuleRegister">
+            <summary>
+            Autofac自动依赖注入配置
+            </summary>
+        </member>
+        <member name="M:YellowJAutoInjection.AutofacModuleRegister.GetAssemblyByName(System.String)">
+            <summary>
+            根据程序集名称获取程序集
+            </summary>E
+            <param name="AssemblyName">程序集名称</param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

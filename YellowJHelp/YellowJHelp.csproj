@@ -6,10 +6,10 @@
     <Nullable>enable</Nullable>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <Authors>YellowJ</Authors>
-    <Version>3.3.0</Version>
+    <Version>3.4.1</Version>
     <Description>
 		通用解决方案：
-                        新增IYJHelpCache缓存接口
+                        3.4：针对大数据集合计算多线程处理，新增IYJHelpCache缓存接口
 		3.0.0版本后方法基本改成异步。
 		2.2.0版本：自动依赖注入功能转移至：YellowJAutoInjection
 		（Redis更换NewLife-日均百亿次项目验证）缓存，MD5加密，字段截取，集合类型差集计算
@@ -24,6 +24,7 @@
     <RepositoryUrl>https://gitee.com/xiaoyi1314/yellow-jhelp</RepositoryUrl>
     <PackageReleaseNotes>优化所有警告信息</PackageReleaseNotes>
     <PackageIcon>YellowJ图标.png</PackageIcon>
+    <GenerateDocumentationFile>True</GenerateDocumentationFile>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
@@ -49,7 +50,7 @@
     <PackageReference Include="Microsoft.Extensions.Caching.Memory" Version="6.0.0" />
     <PackageReference Include="NewLife.Redis" Version="4.0.2022.312" />
     <PackageReference Include="SqlSugarCore" Version="5.0.4.3" />
-    <PackageReference Include="YellowJAutoInjection" Version="1.1.2" />
+    <PackageReference Include="YellowJAutoInjection" Version="1.1.3" />
   </ItemGroup>
 
 </Project>

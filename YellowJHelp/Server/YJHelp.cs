@@ -1,6 +1,12 @@
 ﻿global using YellowJAutoInjection;
 using Microsoft.AspNetCore.Http;
+using NetTaste;
+using Renci.SshNet.Security;
+using System.Collections.Concurrent;
+using System.Collections.Generic;
 using System.Security.Cryptography;
+using YellowJAutoInjection.Entry;
+using YellowJHelp.Entry;
 using YellowJHelp.IServer;
 
 namespace YellowJHelp
@@ -103,7 +109,7 @@ namespace YellowJHelp
         /// <summary>
         /// 缓存类
         /// </summary>
-        [AutoInject(typeof(IYJHelp.ICache))]
+        [AutoInject(typeof(IYJHelp.ICache)),Obsolete("请使用的新的接口方法：YJHelpCache")]
         public class Cache: IYJHelp.ICache
         {
             #region 缓存定义
@@ -288,6 +294,218 @@ namespace YellowJHelp
         public bool IsString(string data,string value) {
             if (data.IndexOf(value, StringComparison.OrdinalIgnoreCase)>-1) return true;else return false;
         }
+        /// <summary>
+        /// 分配数据
+        /// </summary>
+        /// <param name="yAllocations">分配集合</param>
+        /// <param name="yAllocations1">被分配集合</param>
+        /// <returns>返回分配集合（剩余），被分配集合（已分），分配结果详情</returns>
+        public List<List<YAllocationInfo>> YAlloctionlist(List<YAllocationInfo> yAllocations, List<YAllocationInfo> yAllocations1)
+        {
+            List<List<YAllocationInfo>> yAllocationInfos = new();
+            List<YAllocationInfo> list = new();
+            Dictionary<string, List<YAllocationInfo>> allocationDict = yAllocations.GroupBy(a => a.Key).ToDictionary(g => g.Key, g => g.ToList());
 
+            //foreach (var item in yAllocations)
+            //{
+            //    item.RemQty = item.Qty;
+            //}
+
+            foreach (var item in yAllocations1)
+            {
+                decimal itemqty = item.Qty - item.AQty;
+                if (itemqty <= 0) continue;
+
+                if (allocationDict.TryGetValue(item.Key, out var aa))
+                {
+                    foreach (var it in aa)
+                    {
+                        if (it.RemQty <= 0) continue;
+
+                        YAllocationInfo info = new()
+                        {
+                            Number = item.Number,
+                            Key = item.Key,
+                            Qty = item.Qty,
+                            FPNumber = it.Number
+                        };
+
+                        if (it.RemQty >= itemqty)
+                        {
+                            item.AQty += itemqty;
+                            it.RemQty -= itemqty;
+                            info.AQty = itemqty;
+                            list.Add(info);
+                            break;
+                        }
+                        else
+                        {
+                            item.AQty += it.RemQty;
+                            itemqty -= it.RemQty;
+                            info.AQty = it.RemQty;
+                            it.RemQty = 0;
+                            list.Add(info);
+                        }
+                    }
+                }
+            }
+
+            yAllocationInfos.Add(yAllocations);
+            yAllocationInfos.Add(yAllocations1);
+            yAllocationInfos.Add(list);
+            return yAllocationInfos;
+        }
+
+        /// <summary>
+        /// 分配数据-多线程
+        /// </summary>
+        /// <param name="yAllocations">分配集合</param>
+        /// <param name="yAllocations1">被分配集合</param>
+        /// <returns>返回分配集合（剩余），被分配集合（已分），分配结果详情</returns>
+        public List<List<YAllocationInfo>> YAlloctionlistThred(List<YAllocationInfo> yAllocations, List<YAllocationInfo> yAllocations1)
+        {
+            ConcurrentBag<KeyValueInfo<List<YAllocationInfo>, List<YAllocationInfo>>> keyValuePairs = new();
+            #region 分组
+            //List<List<YAllocationInfo>> listYA1 = new();
+            #region 注释方法
+            //foreach (var item in yAllocations)
+            //{
+            //    bool isnull = true;
+            //    var df = listYA1.Select(a => a.Where(b => b.Key == item.Key).FirstOrDefault()).ToList();
+            //    if (df.Count > 0 && df[0] != null)
+            //    {
+            //        YJHelpT<YAllocationInfo> yJHelpT = new();
+            //        df.Add(yJHelpT.Copy(item));
+            //        isnull = false;
+            //    }
+            //    else
+            //    {
+            //        List<YAllocationInfo> yss = new();
+            //        YJHelpT<YAllocationInfo> yJHelpT = new();
+            //        yss.Add(yJHelpT.Copy(item));
+            //        listYA1.Add(yss);
+            //    }
+            //    //foreach (var item1 in listYA1)
+            //    //{
+            //    //    var llt1 = item1.Where(a => a.Key == item.Key).FirstOrDefault();
+            //    //    if (llt1 != null)
+            //    //    {
+
+            //    //        break;
+            //    //    }
+            //    //}
+            //    //if (isnull)
+            //    //{
+            //    //    List<YAllocationInfo> yss = new();
+            //    //    YJHelpT<YAllocationInfo> yJHelpT = new();
+            //    //    yss.Add(yJHelpT.Copy(item));
+            //    //    listYA1.Add(yss);
+            //    //}
+            //}
+            #endregion
+            var listYA1s = yAllocations.GroupBy(a => a.Key).ToDictionary(g => g.Key, g => g.ToList());
+
+            //List<List<YAllocationInfo>> listYA2 = new();
+            #region 注释方法
+            //foreach (var item in yAllocations1)
+            //{
+            //    bool isnull = true;
+            //    foreach (var item1 in listYA2)
+            //    {
+            //        var llt1 = item1.Where(a => a.Key == item.Key).FirstOrDefault();
+            //        if (llt1 != null)
+            //        {
+            //            YJHelpT<YAllocationInfo> yJHelpT = new();
+            //            item1.Add(yJHelpT.Copy(item));
+            //            isnull = false;
+            //            break;
+            //        }
+            //    }
+            //    if (isnull)
+            //    {
+            //        List<YAllocationInfo> yss = new();
+            //        YJHelpT<YAllocationInfo> yJHelpT = new();
+            //        yss.Add(yJHelpT.Copy(item));
+            //        listYA2.Add(yss);
+            //    }
+            //}
+
+
+            //foreach (var item in listYA1)
+            //{
+            //    KeyValueInfo<List<YAllocationInfo>, List<YAllocationInfo>> keyValueInfo = new();
+            //    bool isnull = true;
+            //    foreach (var item1 in listYA2)
+            //    {
+            //        var iit = item1.Where(a => a.Key == item[0].Key).FirstOrDefault();
+            //        if (iit != null)
+            //        {
+            //            keyValueInfo.Value = item1;
+            //            isnull = false;
+            //            break;
+            //        }
+            //    }
+            //    if (!isnull)
+            //    {
+            //        keyValueInfo.Key = item;
+            //        keyValuePairs.Add(keyValueInfo);
+            //    }
+            //}
+            #endregion
+            var listYA2s = yAllocations1.GroupBy(a => a.Key).ToDictionary(g => g.Key, g => g.ToList());
+            foreach (var item in listYA1s)
+            {
+                KeyValueInfo<List<YAllocationInfo>, List<YAllocationInfo>> keyValueInfo = new();
+                bool isnull = false;
+                if (listYA2s.TryGetValue(item.Key, out var aa))
+                {
+                    keyValueInfo.Value = aa;
+                    isnull = true;
+                }
+                if (isnull)
+                {
+                    keyValueInfo.Key = item.Value;
+                    keyValuePairs.Add(keyValueInfo);
+                }
+
+            }
+
+            #endregion
+            #region 分配
+            ConcurrentBag<ConcurrentBag<YAllocationInfo>> yAllInfos = new();
+            for(int i=0;i<3;i++)
+            {
+                ConcurrentBag<YAllocationInfo> ys = new();
+                yAllInfos.Add(ys);
+            }
+            Parallel.ForEach(keyValuePairs, new ParallelOptions { MaxDegreeOfParallelism = Environment.ProcessorCount-1 }, item => {
+                ConcurrentBag<YAllocationInfo> ys = new();
+                var ret=YAlloctionlist(item.Key,item.Value);
+                int i = 0;
+                foreach (var item1 in yAllInfos) 
+                {
+                    foreach (var item2 in ret[i]) 
+                    {
+                        item1.Add(item2);
+                    }
+                    
+                    i++;
+                }
+            });
+            #endregion
+
+            //List<List<YAllocationInfo>> allocationInfos = new();
+            //foreach (var item in yAllInfos)
+            //{
+            //    List<YAllocationInfo> yAllocationInfos = new();
+            //    foreach (var item1 in item)
+            //    {
+            //        yAllocationInfos.Add(item1);
+            //    }
+            //    allocationInfos.Add(yAllocationInfos);
+            //}
+
+            return yAllInfos.Select(a => a.ToList()).ToList();
+        }
     }
 }
