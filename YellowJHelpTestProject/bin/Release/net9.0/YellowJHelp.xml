@@ -81,7 +81,7 @@
         </member>
         <member name="P:YellowJHelp.Entry.YAllocationInfo.RemQty">
             <summary>
-            分配数量/可分配数量：剩余数量
+            分配数量计算重点：剩余数量：请必填
             </summary>
         </member>
         <member name="P:YellowJHelp.Entry.YAllocationInfo.AQty">

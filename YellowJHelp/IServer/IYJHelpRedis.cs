@@ -1,5 +1,4 @@
-﻿using Mapster;
-using NewLife.Caching;
+﻿using NewLife.Caching;
 
 namespace YellowJHelp.IServer
 {

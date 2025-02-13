@@ -1,5 +1,5 @@
-﻿using Mapster;
-using NewLife.Caching;
+﻿using NewLife.Caching;
+using YellowJHelp.Entry;
 using YellowJHelp.IServer;
 
 namespace YellowJHelp
@@ -9,16 +9,16 @@ namespace YellowJHelp
     /// redis通用使用
     /// </summary>
     [AutoInject(typeof(IYJHelpRedis))]
-    public class YJHelpRedis: IYJHelpRedis
+    public class YJHelpRedis : IYJHelpRedis
     {
         /// <summary>
         /// redis 配置中心
         /// </summary>
         /// <returns></returns>
-        public FullRedis RedisCli(string? Create=null)
+        public FullRedis RedisCli(string? Create = null)
         {
             var ret = new FullRedis();
-            if (!string.IsNullOrEmpty(Create)) { ret= FullRedis.Create(Create);}
+            if (!string.IsNullOrEmpty(Create)) { ret = FullRedis.Create(Create); }
             //var ret = FullRedis.Create(OPSDbs.Configuration["Redis:Create"]);
             //ret.UserName = OPSDbs.Configuration["Redis:UserName"];
             //ret.Password = OPSDbs.Configuration["Redis:Password"];
@@ -91,8 +91,8 @@ namespace YellowJHelp
         /// <param name="enety">值</param>
         public void ListSetW<T>(string key, List<T> enety)
         {
-            T[] ts = enety.Adapt<T[]>();
-            var ret = RedisCli().RPUSH<T>(key, ts);
+            var ts = enety.ToArray();
+            var ret = RedisCli().RPUSH(key, ts);
 
         }
         /// <summary>
@@ -103,7 +103,7 @@ namespace YellowJHelp
         /// <param name="enety">值</param>
         public void ListSetT<T>(string key, List<T> enety)
         {
-            T[] ts = enety.Adapt<T[]>();
+            var ts = enety.ToArray();
             var ret = RedisCli().LPUSH<T>(key, ts);
 
         }

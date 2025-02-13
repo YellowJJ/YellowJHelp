@@ -14,14 +14,14 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("YellowJ")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyCopyrightAttribute("YellowJ")]
-[assembly: System.Reflection.AssemblyDescriptionAttribute("\r\n\t\t通用解决方案：\r\n                        3.4：针对大数据集合计算多线程处理，新增IYJHelpCache缓存接口\r\n\t\t3.0" +
-    ".0版本后方法基本改成异步。\r\n\t\t2.2.0版本：自动依赖注入功能转移至：YellowJAutoInjection\r\n\t\t（Redis更换NewLife-日均" +
-    "百亿次项目验证）缓存，MD5加密，字段截取，集合类型差集计算\r\n\t\tKafka使用\r\n\t\twebapi调用\r\n\t\tRedis使用")]
-[assembly: System.Reflection.AssemblyFileVersionAttribute("3.4.1.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("3.4.1+12f7469ee041ddc9a0150bc1e79e6d894a39eef1")]
+[assembly: System.Reflection.AssemblyDescriptionAttribute("\r\n\t\t通用解决方案：\r\n                        3.5：新增对象深拷贝，对象映射器，雪花id等功能，优化减少依赖，删除sqlsugar等" +
+    "功能\r\n\t\t2.2.0版本：自动依赖注入功能转移至：YellowJAutoInjection\r\n\t\t（Redis更换NewLife-日均百亿次项目验证）缓存，M" +
+    "D5加密，字段截取，集合类型差集计算\r\n\t\tKafka使用\r\n\t\twebapi调用\r\n\t\tRedis使用")]
+[assembly: System.Reflection.AssemblyFileVersionAttribute("3.5.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("3.5.0+acf5260d7e599215b9c5c0c704cf268a46d85f6f")]
 [assembly: System.Reflection.AssemblyProductAttribute("YellowJHelp")]
 [assembly: System.Reflection.AssemblyTitleAttribute("YellowJHelp")]
-[assembly: System.Reflection.AssemblyVersionAttribute("3.4.1.0")]
+[assembly: System.Reflection.AssemblyVersionAttribute("3.5.0.0")]
 [assembly: System.Reflection.AssemblyMetadataAttribute("RepositoryUrl", "https://gitee.com/xiaoyi1314/yellow-jhelp")]
 
 // 由 MSBuild WriteCodeFragment 类生成。

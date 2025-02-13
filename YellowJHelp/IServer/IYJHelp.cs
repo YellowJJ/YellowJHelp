@@ -152,5 +152,16 @@ namespace YellowJHelp.IServer
         /// <param name="yAllocations1">被分配集合</param>
         /// <returns>返回分配集合（剩余），被分配集合（已分），分配结果详情</returns>
         List<List<YAllocationInfo>> YAlloctionlistThred(List<YAllocationInfo> yAllocations, List<YAllocationInfo> yAllocations1);
+        /// <summary>
+        /// 生成雪花ID
+        /// </summary>
+        /// <param name="workerId">工作者的标识</param>
+        /// <returns></returns>
+        long NextId(long workerId);
+        /// <summary>
+        /// 对象映射器
+        /// </summary>
+        /// <returns></returns>
+        FastMapper Mapper();
     }
 }

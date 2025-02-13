@@ -7,16 +7,9 @@ Nuget 获取YellowJAutoInjection
 
 案列：Net6
 
-在Program类中注入
-
-`builder.Host.YJAutofacDiInJect();`
-
-或者
-
 `builder.Services.YJDiInJect();`
 
 ![输入图片说明](1.png)
-
 
 
 类库中满足如：
@@ -35,6 +28,7 @@ Nuget 获取YellowJAutoInjection
 [Gitee]: v2.2.0	"https://gitee.com/xiaoyi1314/yellow-jhelp"
 
 通用解决方案：
+		3.5：新增对象深拷贝，对象映射器，雪花id等功能，优化减少依赖，删除sqlsugar等功能
         3.4：针对大数据集合计算多线程处理，新增IYJHelpCache缓存接口
 		3.0.0版本后方法基本改成异步。
 		2.2.0版本：自动依赖注入功能转移至：YellowJAutoInjection
@@ -51,9 +45,7 @@ Framework 4.6.1+
 | --------------- |
 | Confluent.Kafka |
 | Mapster         |
-| Autofac         |
 | NewLife.Redis   |
-| SqlSugarCore    |
 
 
 
@@ -70,6 +62,7 @@ Framework 4.6.1+
 | MidStrEx     |  字段截取 |
 | IsString     |  string中是否包含某个值 |
 | Cache        | 缓存方法库  |
+| .....        | 新增功能自行验证  |
 
 ##### YJHelpCache
 |  YJHelpCache |  IYJHelpCache  |
@@ -136,5 +129,5 @@ YJHelpKafka
 YJHelpRedis
 YJHelpWebApi
 
-
+集成库
 #### 参与贡献

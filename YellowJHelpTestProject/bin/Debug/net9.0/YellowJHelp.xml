@@ -59,6 +59,18 @@
             返回值
             </summary>
         </member>
+        <member name="T:YellowJHelp.Entry.SnowflakeIdGenerator">
+            <summary>
+            雪花算法ID生成器
+            </summary>
+        </member>
+        <member name="M:YellowJHelp.Entry.SnowflakeIdGenerator.NextId">
+            <summary>
+            生成雪花ID
+            </summary>
+            <returns></returns>
+            <exception cref="T:System.InvalidOperationException"></exception>
+        </member>
         <member name="T:YellowJHelp.Entry.YAllocationInfo">
             <summary>
             数据分配类
@@ -81,7 +93,7 @@
         </member>
         <member name="P:YellowJHelp.Entry.YAllocationInfo.RemQty">
             <summary>
-            分配数量/可分配数量：剩余数量
+            分配数量计算重点：剩余数量：请必填
             </summary>
         </member>
         <member name="P:YellowJHelp.Entry.YAllocationInfo.AQty">
@@ -718,6 +730,13 @@
             <param name="yAllocations">分配集合</param>
             <param name="yAllocations1">被分配集合</param>
             <returns>返回分配集合（剩余），被分配集合（已分），分配结果详情</returns>
+        </member>
+        <member name="M:YellowJHelp.YJHelp.NextId(System.Int64)">
+            <summary>
+            生成雪花ID
+            </summary>
+            <param name="workerId">生成数</param>
+            <returns></returns>
         </member>
         <member name="T:YellowJHelp.YJHelpKafka">
             <summary>

@@ -1,5 +1,4 @@
-﻿using SqlSugar;
-using YellowJHelp.Entry;
+﻿using YellowJHelp.Entry;
 
 namespace YellowJHelp.IServer
 {
@@ -12,7 +11,7 @@ namespace YellowJHelp.IServer
         /// 数据库操作
         /// </summary>
         /// <returns></returns>
-        SqlSugarClient Db();
+        //SqlSugarClient Db();
         /// <summary>
         /// 数据库日志记录
         /// </summary>
@@ -22,7 +21,7 @@ namespace YellowJHelp.IServer
         /// 私有数据库
         /// </summary>
         /// <returns></returns>
-        SqlSugarClient SYDb(string cofing);
+        //SqlSugarClient SYDb(string cofing);
 
     }
 }

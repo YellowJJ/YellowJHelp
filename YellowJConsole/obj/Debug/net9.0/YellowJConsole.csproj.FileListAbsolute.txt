@@ -125,3 +125,4 @@ W:\YellowJ\YellowJHelp\yellow-jhelp\YellowJConsole\obj\Debug\net9.0\YellowJConso
 W:\YellowJ\YellowJHelp\yellow-jhelp\YellowJConsole\obj\Debug\net9.0\YellowJConsole.genruntimeconfig.cache
 W:\YellowJ\YellowJHelp\yellow-jhelp\YellowJConsole\obj\Debug\net9.0\ref\YellowJConsole.dll
 W:\YellowJ\YellowJHelp\yellow-jhelp\YellowJConsole\bin\Debug\net9.0\YellowJHelp.xml
+W:\YellowJ\YellowJHelp\yellow-jhelp\YellowJConsole\bin\Debug\net9.0\DeepCloner.dll

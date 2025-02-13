@@ -7,9 +7,10 @@
   "targets": {
     ".NETStandard,Version=v2.1": {},
     ".NETStandard,Version=v2.1/": {
-      "YellowJHelp/3.4.0": {
+      "YellowJHelp/3.4.1": {
         "dependencies": {
           "Confluent.Kafka": "1.8.2",
+          "DeepCloner": "0.10.4",
           "Mapster": "7.2.0",
           "Mapster.Core": "1.2.0",
           "Microsoft.AspNetCore.Http.Abstractions": "2.2.0",
@@ -67,6 +68,17 @@
           "lib/netstandard2.0/Confluent.Kafka.dll": {
             "assemblyVersion": "1.8.2.0",
             "fileVersion": "1.8.2.0"
+          }
+        }
+      },
+      "DeepCloner/0.10.4": {
+        "dependencies": {
+          "NETStandard.Library": "1.6.1"
+        },
+        "runtime": {
+          "lib/netstandard1.3/DeepCloner.dll": {
+            "assemblyVersion": "0.10.0.0",
+            "fileVersion": "0.10.4.0"
           }
         }
       },
@@ -1993,7 +2005,7 @@
     }
   },
   "libraries": {
-    "YellowJHelp/3.4.0": {
+    "YellowJHelp/3.4.1": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
@@ -2025,6 +2037,13 @@
       "sha512": "sha512-gUx1YnwMl19Sg/xOF5h9EQQkx31fcxdDW7LLPTEXbKQuXjvyvZONQsVbFFVCqetCB0tGEq/JKCmkdisIsOdV3g==",
       "path": "confluent.kafka/1.8.2",
       "hashPath": "confluent.kafka.1.8.2.nupkg.sha512"
+    },
+    "DeepCloner/0.10.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-z8ASd9bjXkVjcnIrwUKrxb/bPi/gvG5NX3nv7MHK/5QrlYwbK7N5ZTDNaYXQ5qunaUCMGN0UHdgkNARIEBTEyA==",
+      "path": "deepcloner/0.10.4",
+      "hashPath": "deepcloner.0.10.4.nupkg.sha512"
     },
     "Google.Protobuf/3.6.1": {
       "type": "package",

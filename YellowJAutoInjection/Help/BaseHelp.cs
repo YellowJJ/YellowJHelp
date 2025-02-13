@@ -3,6 +3,9 @@ using YellowJAutoInjection.Entry;
 
 namespace YellowJAutoInjection.Help
 {
+    /// <summary>
+    /// 帮助类
+    /// </summary>
     public class BaseHelp
     {
         /// <summary>

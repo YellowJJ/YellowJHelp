@@ -97,5 +97,38 @@ namespace YellowJHelp.Tests
             // Assert
             Assert.NotNull(result);
         }
+        [Fact]
+        public void YAlloctionlistThred_Copy()
+        {
+            // Arrange
+            List<YAllocationInfo> yAllocations = new List<YAllocationInfo>();
+            foreach (var i in Enumerable.Range(0, 10000000))
+            {
+                Random random = new Random();
+                decimal randomDoublenumber = Convert.ToDecimal(random.NextDouble());
+                decimal randomDouble = Convert.ToDecimal(random.NextDouble()); // 生成一个 [0.0, 1.0) 范围内的随机小数
+                YAllocationInfo yAllocationInfo = new YAllocationInfo
+                {
+                    Number = new List<string> { "YellowJ" + randomDoublenumber },
+                    Key = "key" + i,
+                    Qty = randomDouble,
+                    RemQty = randomDouble
+                };
+                yAllocations.Add(yAllocationInfo);
+            }
+            
+            YJHelpT<List<YAllocationInfo>> yJHelpT = new YJHelpT<List<YAllocationInfo>>();
+            var result = yJHelpT.Copy(yAllocations);
+            // Assert
+            Assert.NotNull(result);
+        }
+        [Fact]
+        public void YAlloctionlistThred_Nextid()
+        {
+            // Arrange
+            var result = _yjHelp.NextId(100);
+            // Assert
+            Assert.NotNull(result);
+        }
     }
 }

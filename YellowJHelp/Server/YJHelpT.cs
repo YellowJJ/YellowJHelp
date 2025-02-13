@@ -1,5 +1,7 @@
-﻿using Newtonsoft.Json;
-using Org.BouncyCastle.Utilities;
+﻿using Force.DeepCloner;
+using System.Runtime.Serialization.Formatters.Binary;
+using System.Text.Json;
+using YellowJHelp.Entry;
 using YellowJHelp.IServer;
 
 namespace YellowJHelp
@@ -66,7 +68,7 @@ namespace YellowJHelp
             List<string> strings = new();
             foreach (var item in list)
             {
-                var js = JsonConvert.SerializeObject(item);
+                var js = JsonSerializer.Serialize(item);
                 strings.Add(js);
             }
             HashSet<string> ha = new HashSet<string>(strings);
@@ -74,7 +76,7 @@ namespace YellowJHelp
             List<T> listRet = new();
             foreach (var item in re) 
             {
-                listRet.Add(JsonConvert.DeserializeObject<T>(item));
+                listRet.Add(JsonSerializer.Deserialize<T>(item));
             }
             
             return listRet;
@@ -90,12 +92,12 @@ namespace YellowJHelp
         {
             List<string> strings = new();
             foreach (var item in list1) {
-                var js = JsonConvert.SerializeObject(item);
+                var js = JsonSerializer.Serialize(item);
                 strings.Add(js);
             }
             foreach (var item in list2)
             {
-                var js = JsonConvert.SerializeObject(item);
+                var js = JsonSerializer.Serialize(item);
                 strings.Add(js);
             }
 
@@ -104,7 +106,7 @@ namespace YellowJHelp
             List<T> listRet = new();
             foreach (var item in re)
             {
-                listRet.Add(JsonConvert.DeserializeObject<T>(item));
+                listRet.Add(JsonSerializer.Deserialize<T>(item));
             }
             return listRet;//返回第一项
         }
@@ -157,11 +159,11 @@ namespace YellowJHelp
             List<string> resrig = new List<string>();
             foreach (var le in left)
             {
-                resleft.Add(JsonConvert.SerializeObject(le));
+                resleft.Add(JsonSerializer.Serialize(le));
             }
             foreach (var le in right)
             {
-                resrig.Add(JsonConvert.SerializeObject(le));
+                resrig.Add(JsonSerializer.Serialize(le));
             }
 
             var rstr = resleft.Except(resrig).ToList();
@@ -170,7 +172,7 @@ namespace YellowJHelp
             List<T> res = new List<T>();
             foreach (var le in rstr)
             {
-                res.Add(JsonConvert.DeserializeObject<T>(le));
+                res.Add(JsonSerializer.Deserialize<T>(le));
             }
 
             return res;
@@ -183,9 +185,7 @@ namespace YellowJHelp
         /// <returns>将对象复制成全新的对象，且不互相影响</returns>
         public T? Copy(T data)
         {
-            var js = JsonConvert.SerializeObject(data);
-            var res = JsonConvert.DeserializeObject<T>(js);
-            return res;
+            return data.DeepClone();
         }
 
 

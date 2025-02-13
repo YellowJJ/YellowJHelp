@@ -1,11 +1,9 @@
 {
   "version": 2,
-  "dgSpecHash": "g17nKQnmctY=",
+  "dgSpecHash": "QOFLIJTUsw4=",
   "success": true,
   "projectFilePath": "W:\\YellowJ\\YellowJHelp\\yellow-jhelp\\YellowJAutoInjection\\YellowJAutoInjection.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\YellowJ\\.nuget\\packages\\autofac\\8.0.0\\autofac.8.0.0.nupkg.sha512",
-    "C:\\Users\\YellowJ\\.nuget\\packages\\autofac.extensions.dependencyinjection\\8.0.0\\autofac.extensions.dependencyinjection.8.0.0.nupkg.sha512",
     "C:\\Users\\YellowJ\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\8.0.0\\microsoft.extensions.configuration.abstractions.8.0.0.nupkg.sha512",
     "C:\\Users\\YellowJ\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.0\\microsoft.extensions.dependencyinjection.abstractions.8.0.0.nupkg.sha512",
     "C:\\Users\\YellowJ\\.nuget\\packages\\microsoft.extensions.diagnostics.abstractions\\8.0.0\\microsoft.extensions.diagnostics.abstractions.8.0.0.nupkg.sha512",

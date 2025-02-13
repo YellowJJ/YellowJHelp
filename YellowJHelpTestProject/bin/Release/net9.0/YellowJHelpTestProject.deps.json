@@ -9,7 +9,7 @@
       "YellowJHelpTestProject/1.0.0": {
         "dependencies": {
           "Microsoft.NET.Test.Sdk": "17.11.1",
-          "YellowJHelp": "3.3.1",
+          "YellowJHelp": "3.4.1",
           "coverlet.collector": "6.0.2",
           "xunit": "2.9.2",
           "xunit.runner.visualstudio": "2.8.2"
@@ -2087,7 +2087,7 @@
           }
         }
       },
-      "YellowJHelp/3.3.1": {
+      "YellowJHelp/3.4.1": {
         "dependencies": {
           "Confluent.Kafka": "1.8.2",
           "Mapster": "7.2.0",
@@ -2100,8 +2100,8 @@
         },
         "runtime": {
           "YellowJHelp.dll": {
-            "assemblyVersion": "3.3.1",
-            "fileVersion": "3.3.1.0"
+            "assemblyVersion": "3.4.1",
+            "fileVersion": "3.4.1.0"
           }
         }
       }
@@ -3282,7 +3282,7 @@
       "path": "yellowjautoinjection/1.1.3",
       "hashPath": "yellowjautoinjection.1.1.3.nupkg.sha512"
     },
-    "YellowJHelp/3.3.1": {
+    "YellowJHelp/3.4.1": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

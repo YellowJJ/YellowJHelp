@@ -1,7 +1,5 @@
 ﻿global using YellowJAutoInjection;
 using Microsoft.AspNetCore.Http;
-using NetTaste;
-using Renci.SshNet.Security;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Security.Cryptography;
@@ -506,6 +504,22 @@ namespace YellowJHelp
             //}
 
             return yAllInfos.Select(a => a.ToList()).ToList();
+        }
+
+        /// <summary>
+        /// 生成雪花ID
+        /// </summary>
+        /// <param name="workerId">工作者的标识</param>
+        /// <returns></returns>
+        public long NextId(long workerId) 
+        {
+            SnowflakeIdGenerator snowflakeIdGenerator = new(workerId);
+            return snowflakeIdGenerator.NextId();
+        }
+
+        public FastMapper Mapper()
+        {
+            return new FastMapper();
         }
     }
 }

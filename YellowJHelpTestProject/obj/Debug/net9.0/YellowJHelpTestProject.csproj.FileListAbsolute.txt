@@ -208,3 +208,4 @@ W:\YellowJ\YellowJHelp\yellow-jhelp\YellowJHelpTestProject\obj\Debug\net9.0\refi
 W:\YellowJ\YellowJHelp\yellow-jhelp\YellowJHelpTestProject\obj\Debug\net9.0\YellowJHelpTestProject.pdb
 W:\YellowJ\YellowJHelp\yellow-jhelp\YellowJHelpTestProject\obj\Debug\net9.0\YellowJHelpTestProject.genruntimeconfig.cache
 W:\YellowJ\YellowJHelp\yellow-jhelp\YellowJHelpTestProject\obj\Debug\net9.0\ref\YellowJHelpTestProject.dll
+W:\YellowJ\YellowJHelp\yellow-jhelp\YellowJHelpTestProject\bin\Debug\net9.0\DeepCloner.dll
