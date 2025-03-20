@@ -7,7 +7,7 @@
   "targets": {
     ".NETStandard,Version=v2.1": {},
     ".NETStandard,Version=v2.1/": {
-      "YellowJHelp/3.5.0": {
+      "YellowJHelp/3.6.1": {
         "dependencies": {
           "Confluent.Kafka": "2.8.0",
           "DeepCloner": "0.10.4",
@@ -15,33 +15,10 @@
           "Microsoft.Extensions.Caching.Memory": "9.0.2",
           "NewLife.Redis": "6.1.2025.209",
           "System.Text.Json": "9.0.2",
-          "YellowJAutoInjection": "1.1.3"
+          "YellowJAutoInjection": "2.1.0"
         },
         "runtime": {
           "YellowJHelp.dll": {}
-        }
-      },
-      "Autofac/8.0.0": {
-        "dependencies": {
-          "System.Diagnostics.DiagnosticSource": "9.0.2"
-        },
-        "runtime": {
-          "lib/netstandard2.1/Autofac.dll": {
-            "assemblyVersion": "8.0.0.0",
-            "fileVersion": "8.0.0.0"
-          }
-        }
-      },
-      "Autofac.Extensions.DependencyInjection/8.0.0": {
-        "dependencies": {
-          "Autofac": "8.0.0",
-          "Microsoft.Extensions.DependencyInjection.Abstractions": "9.0.2"
-        },
-        "runtime": {
-          "lib/netstandard2.1/Autofac.Extensions.DependencyInjection.dll": {
-            "assemblyVersion": "8.0.0.0",
-            "fileVersion": "8.0.0.0"
-          }
         }
       },
       "Confluent.Kafka/2.8.0": {
@@ -1118,40 +1095,24 @@
           }
         }
       },
-      "YellowJAutoInjection/1.1.3": {
+      "YellowJAutoInjection/2.1.0": {
         "dependencies": {
-          "Autofac": "8.0.0",
-          "Autofac.Extensions.DependencyInjection": "8.0.0",
           "Microsoft.Extensions.Hosting.Abstractions": "8.0.0"
         },
         "runtime": {
           "lib/netstandard2.1/YellowJAutoInjection.dll": {
-            "assemblyVersion": "1.1.3.0",
-            "fileVersion": "1.1.3.0"
+            "assemblyVersion": "2.1.0.0",
+            "fileVersion": "2.1.0.0"
           }
         }
       }
     }
   },
   "libraries": {
-    "YellowJHelp/3.5.0": {
+    "YellowJHelp/3.6.1": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
-    },
-    "Autofac/8.0.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-qxVqJcl3fixxa5aZc9TmIuYTwooI9GCL5RzfUiTZtTlbAF3NcWz7bPeEyJEAyS/0qGhSyGnXeku2eiu/7L+3qw==",
-      "path": "autofac/8.0.0",
-      "hashPath": "autofac.8.0.0.nupkg.sha512"
-    },
-    "Autofac.Extensions.DependencyInjection/8.0.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-nGrXNpQX2FiZpIBydK9cxZnnoqP/cUd3k/53uRERYEqLtWzKtE15R6L+j5q5ax5Rv/+3wAIkOaPePkahfqrwjg==",
-      "path": "autofac.extensions.dependencyinjection/8.0.0",
-      "hashPath": "autofac.extensions.dependencyinjection.8.0.0.nupkg.sha512"
     },
     "Confluent.Kafka/2.8.0": {
       "type": "package",
@@ -1839,12 +1800,12 @@
       "path": "system.xml.xdocument/4.3.0",
       "hashPath": "system.xml.xdocument.4.3.0.nupkg.sha512"
     },
-    "YellowJAutoInjection/1.1.3": {
+    "YellowJAutoInjection/2.1.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-bNv70NdP801lr6Q/grP8OjCkfbaw7FQpiM3UYQTA65ed8vFVkGu/5Kn+CddBR/sXRjoaCRZ/JLCuuYOCdlmonw==",
-      "path": "yellowjautoinjection/1.1.3",
-      "hashPath": "yellowjautoinjection.1.1.3.nupkg.sha512"
+      "sha512": "sha512-hBJHphOHxttrBr3GCM25UmRemtpr6Q2X1nctztMXgkHlIT7ZrW9EF3hWibY7w7Hnrviq6BS/+Qk/VzTukUzdIw==",
+      "path": "yellowjautoinjection/2.1.0",
+      "hashPath": "yellowjautoinjection.2.1.0.nupkg.sha512"
     }
   }
 }

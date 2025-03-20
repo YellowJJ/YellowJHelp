@@ -7,7 +7,7 @@
   "targets": {
     ".NETStandard,Version=v2.1": {},
     ".NETStandard,Version=v2.1/": {
-      "YellowJAutoInjection/2.0.0": {
+      "YellowJAutoInjection/2.1.0": {
         "dependencies": {
           "Microsoft.Extensions.Hosting.Abstractions": "8.0.0"
         },
@@ -173,7 +173,7 @@
     }
   },
   "libraries": {
-    "YellowJAutoInjection/2.0.0": {
+    "YellowJAutoInjection/2.1.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

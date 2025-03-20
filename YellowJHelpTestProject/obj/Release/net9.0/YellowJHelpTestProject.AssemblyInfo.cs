@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("YellowJHelpTestProject")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+acf5260d7e599215b9c5c0c704cf268a46d85f6f")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3caeaa7d172964d41131b83b89bd5a74e3bc021f")]
 [assembly: System.Reflection.AssemblyProductAttribute("YellowJHelpTestProject")]
 [assembly: System.Reflection.AssemblyTitleAttribute("YellowJHelpTestProject")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

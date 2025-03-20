@@ -1,12 +1,13 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netstandard2.1</TargetFramework>
+	  <!--<TargetFramework>netstandard2.1</TargetFramework>-->
+    <TargetFrameworks>netstandard2.0;netstandard2.1</TargetFrameworks>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <Authors>YellowJ</Authors>
-    <Version>3.5.0</Version>
+    <Version>3.6.1</Version>
     <Description>
 		通用解决方案：
                         3.5：新增对象深拷贝，对象映射器，雪花id等功能，优化减少依赖，删除sqlsugar等功能
@@ -21,7 +22,7 @@
     <PackageProjectUrl>https://gitee.com/xiaoyi1314/yellow-jhelp</PackageProjectUrl>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <RepositoryUrl>https://gitee.com/xiaoyi1314/yellow-jhelp</RepositoryUrl>
-    <PackageReleaseNotes>优化所有警告信息</PackageReleaseNotes>
+    <PackageReleaseNotes></PackageReleaseNotes>
     <PackageIcon>YellowJ图标.png</PackageIcon>
     <GenerateDocumentationFile>True</GenerateDocumentationFile>
   </PropertyGroup>
@@ -48,7 +49,7 @@
     <PackageReference Include="Microsoft.Extensions.Caching.Memory" Version="9.0.2" />
     <PackageReference Include="NewLife.Redis" Version="6.1.2025.209" />
     <PackageReference Include="System.Text.Json" Version="9.0.2" />
-    <PackageReference Include="YellowJAutoInjection" Version="1.1.3" />
+    <PackageReference Include="YellowJAutoInjection" Version="2.1.0" />
   </ItemGroup>
 
 </Project>

@@ -1,0 +1,11 @@
+W:\YellowJ\YellowJHelp\yellow-jhelp\YellowJHelp\bin\Release\netstandard2.0\YellowJHelp.deps.json
+W:\YellowJ\YellowJHelp\yellow-jhelp\YellowJHelp\bin\Release\netstandard2.0\YellowJHelp.dll
+W:\YellowJ\YellowJHelp\yellow-jhelp\YellowJHelp\bin\Release\netstandard2.0\YellowJHelp.pdb
+W:\YellowJ\YellowJHelp\yellow-jhelp\YellowJHelp\bin\Release\netstandard2.0\YellowJHelp.xml
+W:\YellowJ\YellowJHelp\yellow-jhelp\YellowJHelp\obj\Release\netstandard2.0\YellowJHelp.csproj.AssemblyReference.cache
+W:\YellowJ\YellowJHelp\yellow-jhelp\YellowJHelp\obj\Release\netstandard2.0\YellowJHelp.GeneratedMSBuildEditorConfig.editorconfig
+W:\YellowJ\YellowJHelp\yellow-jhelp\YellowJHelp\obj\Release\netstandard2.0\YellowJHelp.AssemblyInfoInputs.cache
+W:\YellowJ\YellowJHelp\yellow-jhelp\YellowJHelp\obj\Release\netstandard2.0\YellowJHelp.AssemblyInfo.cs
+W:\YellowJ\YellowJHelp\yellow-jhelp\YellowJHelp\obj\Release\netstandard2.0\YellowJHelp.csproj.CoreCompileInputs.cache
+W:\YellowJ\YellowJHelp\yellow-jhelp\YellowJHelp\obj\Release\netstandard2.0\YellowJHelp.dll
+W:\YellowJ\YellowJHelp\yellow-jhelp\YellowJHelp\obj\Release\netstandard2.0\YellowJHelp.pdb

@@ -163,5 +163,33 @@ namespace YellowJHelp.IServer
         /// </summary>
         /// <returns></returns>
         FastMapper Mapper();
+        /// <summary>
+        /// 日期是否在目标年月内
+        /// </summary>
+        /// <param name="date">输入日期</param>
+        /// <param name="targetDate">目标日期</param>
+        /// <returns></returns>
+        bool IsDateInTargetMonth(DateTime date, DateTime targetDate);
+        #region --泛型方法--
+        /// <summary>
+        /// 对象副本
+        /// </summary>
+        /// <param name="data">数据</param>
+        /// <returns>将对象复制成全新的对象，且不互相影响</returns>
+        T? Copy<T>(T data);
+        /// <summary>
+        /// YJ版本：合并两个集合的函数-不允许有重复项
+        /// </summary>
+        /// <param name="list1">第一个集合</param>
+        /// <param name="list2">第二个集合</param>
+        /// <returns>返回结果</returns>
+        public List<T> YJMerge<T>(List<T> list1, List<T> list2);
+        /// <summary>
+        /// 集合去重
+        /// </summary>
+        /// <param name="list">集合</param>
+        /// <returns></returns>
+        public List<T> Distinct<T>(List<T> list);
+        #endregion
     }
 }

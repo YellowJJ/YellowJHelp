@@ -1,8 +1,10 @@
 ﻿global using YellowJAutoInjection;
+using Force.DeepCloner;
 using Microsoft.AspNetCore.Http;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Security.Cryptography;
+using System.Text.Json;
 using YellowJAutoInjection.Entry;
 using YellowJHelp.Entry;
 using YellowJHelp.IServer;
@@ -166,24 +168,18 @@ namespace YellowJHelp
         /// <param name="address">相对文件名</param>
         public async Task YellowJLogAsync(string text, string address)
         {
-
             string path = AppDomain.CurrentDomain.BaseDirectory;
-            path = System.IO.Path.Combine(path
-            , "YellowJ_Logs/" + address + "\\");
+            path = System.IO.Path.Combine(path, "YellowJ_Logs/" + address + "\\");
 
             if (!System.IO.Directory.Exists(path))
             {
                 System.IO.Directory.CreateDirectory(path);
             }
-            string fileFullName = System.IO.Path.Combine(path
-            , string.Format("{0}.txt", DateTime.Now.ToString("yyyyMMdd")));
+            string fileFullName = System.IO.Path.Combine(path, string.Format("{0}.txt", DateTime.Now.ToString("yyyyMMdd")));
 
-
-            using (StreamWriter output = System.IO.File.AppendText(fileFullName))
+            using (StreamWriter output = new StreamWriter(fileFullName, true, System.Text.Encoding.UTF8))
             {
                 await output.WriteLineAsync(DateTime.Now.ToString() + " 日志信息：" + text);
-
-                output.Close();
             }
         }
         /// <summary>
@@ -516,10 +512,88 @@ namespace YellowJHelp
             SnowflakeIdGenerator snowflakeIdGenerator = new(workerId);
             return snowflakeIdGenerator.NextId();
         }
-
+        /// <summary>
+        /// 对象映射器
+        /// </summary>
+        /// <returns></returns>
         public FastMapper Mapper()
         {
             return new FastMapper();
         }
+        /// <summary>
+        /// 日期是否在目标年月内
+        /// </summary>
+        /// <param name="date">输入日期</param>
+        /// <param name="targetDate">目标日期</param>
+        /// <returns></returns>
+        public bool IsDateInTargetMonth(DateTime date, DateTime targetDate)
+        {
+            return date.Year == targetDate.Year && date.Month == targetDate.Month;
+        }
+
+        #region 泛型方法
+        /// <summary>
+        /// 对象副本
+        /// </summary>
+        /// <param name="data">数据</param>
+        /// <returns>将对象复制成全新的对象，且不互相影响</returns>
+        public T? Copy<T>(T data)
+        {
+            return data.DeepClone();
+        }
+        /// <summary>
+        /// YJ版本：合并两个集合的函数-不允许有重复项
+        /// </summary>
+        /// <param name="list1">第一个集合</param>
+        /// <param name="list2">第二个集合</param>
+        /// <returns>返回结果</returns>
+        public List<T> YJMerge<T>(List<T> list1, List<T> list2)
+        {
+            List<string> strings = new();
+            foreach (var item in list1)
+            {
+                var js = JsonSerializer.Serialize(item);
+                strings.Add(js);
+            }
+            foreach (var item in list2)
+            {
+                var js = JsonSerializer.Serialize(item);
+                strings.Add(js);
+            }
+
+            HashSet<string> ha = new HashSet<string>(strings);
+            var re = new List<string>(ha);
+            List<T> listRet = new();
+            foreach (var item in re)
+            {
+                listRet.Add(JsonSerializer.Deserialize<T>(item));
+            }
+            return listRet;//返回第一项
+        }
+        /// <summary>
+        /// 集合去重
+        /// </summary>
+        /// <param name="list">集合</param>
+        /// <returns></returns>
+        public List<T> Distinct<T>(List<T> list)
+        {
+            List<string> strings = new();
+            foreach (var item in list)
+            {
+                var js = JsonSerializer.Serialize(item);
+                strings.Add(js);
+            }
+            HashSet<string> ha = new HashSet<string>(strings);
+            var re = new List<string>(ha);
+            List<T> listRet = new();
+            foreach (var item in re)
+            {
+                listRet.Add(JsonSerializer.Deserialize<T>(item));
+            }
+
+            return listRet;
+        }
+
+        #endregion
     }
 }

@@ -1,11 +1,9 @@
 {
   "version": 2,
-  "dgSpecHash": "0RQi+omWwmo=",
+  "dgSpecHash": "uY0mV0PWVx0=",
   "success": true,
   "projectFilePath": "W:\\YellowJ\\YellowJHelp\\yellow-jhelp\\YellowJHelpTestProject\\YellowJHelpTestProject.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\YellowJ\\.nuget\\packages\\autofac\\8.0.0\\autofac.8.0.0.nupkg.sha512",
-    "C:\\Users\\YellowJ\\.nuget\\packages\\autofac.extensions.dependencyinjection\\8.0.0\\autofac.extensions.dependencyinjection.8.0.0.nupkg.sha512",
     "C:\\Users\\YellowJ\\.nuget\\packages\\confluent.kafka\\2.8.0\\confluent.kafka.2.8.0.nupkg.sha512",
     "C:\\Users\\YellowJ\\.nuget\\packages\\coverlet.collector\\6.0.2\\coverlet.collector.6.0.2.nupkg.sha512",
     "C:\\Users\\YellowJ\\.nuget\\packages\\deepcloner\\0.10.4\\deepcloner.0.10.4.nupkg.sha512",
@@ -113,7 +111,7 @@
     "C:\\Users\\YellowJ\\.nuget\\packages\\xunit.extensibility.core\\2.9.2\\xunit.extensibility.core.2.9.2.nupkg.sha512",
     "C:\\Users\\YellowJ\\.nuget\\packages\\xunit.extensibility.execution\\2.9.2\\xunit.extensibility.execution.2.9.2.nupkg.sha512",
     "C:\\Users\\YellowJ\\.nuget\\packages\\xunit.runner.visualstudio\\2.8.2\\xunit.runner.visualstudio.2.8.2.nupkg.sha512",
-    "C:\\Users\\YellowJ\\.nuget\\packages\\yellowjautoinjection\\1.1.3\\yellowjautoinjection.1.1.3.nupkg.sha512"
+    "C:\\Users\\YellowJ\\.nuget\\packages\\yellowjautoinjection\\2.1.0\\yellowjautoinjection.2.1.0.nupkg.sha512"
   ],
   "logs": []
 }

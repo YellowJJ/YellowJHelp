@@ -289,6 +289,36 @@
             </summary>
             <returns></returns>
         </member>
+        <member name="M:YellowJHelp.IServer.IYJHelp.IsDateInTargetMonth(System.DateTime,System.DateTime)">
+            <summary>
+            日期是否在目标年月内
+            </summary>
+            <param name="date">输入日期</param>
+            <param name="targetDate">目标日期</param>
+            <returns></returns>
+        </member>
+        <member name="M:YellowJHelp.IServer.IYJHelp.Copy``1(``0)">
+            <summary>
+            对象副本
+            </summary>
+            <param name="data">数据</param>
+            <returns>将对象复制成全新的对象，且不互相影响</returns>
+        </member>
+        <member name="M:YellowJHelp.IServer.IYJHelp.YJMerge``1(System.Collections.Generic.List{``0},System.Collections.Generic.List{``0})">
+            <summary>
+            YJ版本：合并两个集合的函数-不允许有重复项
+            </summary>
+            <param name="list1">第一个集合</param>
+            <param name="list2">第二个集合</param>
+            <returns>返回结果</returns>
+        </member>
+        <member name="M:YellowJHelp.IServer.IYJHelp.Distinct``1(System.Collections.Generic.List{``0})">
+            <summary>
+            集合去重
+            </summary>
+            <param name="list">集合</param>
+            <returns></returns>
+        </member>
         <member name="T:YellowJHelp.IServer.IYJHelpCache">
             <summary>
             缓存接口
@@ -756,6 +786,42 @@
             生成雪花ID
             </summary>
             <param name="workerId">工作者的标识</param>
+            <returns></returns>
+        </member>
+        <member name="M:YellowJHelp.YJHelp.Mapper">
+            <summary>
+            对象映射器
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:YellowJHelp.YJHelp.IsDateInTargetMonth(System.DateTime,System.DateTime)">
+            <summary>
+            日期是否在目标年月内
+            </summary>
+            <param name="date">输入日期</param>
+            <param name="targetDate">目标日期</param>
+            <returns></returns>
+        </member>
+        <member name="M:YellowJHelp.YJHelp.Copy``1(``0)">
+            <summary>
+            对象副本
+            </summary>
+            <param name="data">数据</param>
+            <returns>将对象复制成全新的对象，且不互相影响</returns>
+        </member>
+        <member name="M:YellowJHelp.YJHelp.YJMerge``1(System.Collections.Generic.List{``0},System.Collections.Generic.List{``0})">
+            <summary>
+            YJ版本：合并两个集合的函数-不允许有重复项
+            </summary>
+            <param name="list1">第一个集合</param>
+            <param name="list2">第二个集合</param>
+            <returns>返回结果</returns>
+        </member>
+        <member name="M:YellowJHelp.YJHelp.Distinct``1(System.Collections.Generic.List{``0})">
+            <summary>
+            集合去重
+            </summary>
+            <param name="list">集合</param>
             <returns></returns>
         </member>
         <member name="T:YellowJHelp.YJHelpKafka">
