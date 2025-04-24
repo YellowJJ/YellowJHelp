@@ -17,11 +17,11 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyDescriptionAttribute("\r\n\t\t通用解决方案：\r\n                        3.5：新增对象深拷贝，对象映射器，雪花id等功能，优化减少依赖，删除sqlsugar等" +
     "功能\r\n\t\t2.2.0版本：自动依赖注入功能转移至：YellowJAutoInjection\r\n\t\t（Redis更换NewLife-日均百亿次项目验证）缓存，M" +
     "D5加密，字段截取，集合类型差集计算\r\n\t\tKafka使用\r\n\t\twebapi调用\r\n\t\tRedis使用")]
-[assembly: System.Reflection.AssemblyFileVersionAttribute("3.6.1.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("3.6.1+3caeaa7d172964d41131b83b89bd5a74e3bc021f")]
+[assembly: System.Reflection.AssemblyFileVersionAttribute("3.6.2.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("3.6.2+5012ff57805dc16854ef87cdc21f41f8047aa31c")]
 [assembly: System.Reflection.AssemblyProductAttribute("YellowJHelp")]
 [assembly: System.Reflection.AssemblyTitleAttribute("YellowJHelp")]
-[assembly: System.Reflection.AssemblyVersionAttribute("3.6.1.0")]
+[assembly: System.Reflection.AssemblyVersionAttribute("3.6.2.0")]
 [assembly: System.Reflection.AssemblyMetadataAttribute("RepositoryUrl", "https://gitee.com/xiaoyi1314/yellow-jhelp")]
 
 // 由 MSBuild WriteCodeFragment 类生成。

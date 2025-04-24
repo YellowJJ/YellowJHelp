@@ -54,6 +54,16 @@
       "frameworks": {
         "net9.0": {
           "targetAlias": "net9.0",
+          "dependencies": {
+            "System.Net.Http": {
+              "target": "Package",
+              "version": "[4.3.4, )"
+            },
+            "System.Text.RegularExpressions": {
+              "target": "Package",
+              "version": "[4.3.1, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -75,7 +85,7 @@
       }
     },
     "W:\\YellowJ\\YellowJHelp\\yellow-jhelp\\YellowJHelp\\YellowJHelp.csproj": {
-      "version": "3.6.1",
+      "version": "3.6.2",
       "restore": {
         "projectUniqueName": "W:\\YellowJ\\YellowJHelp\\yellow-jhelp\\YellowJHelp\\YellowJHelp.csproj",
         "projectName": "YellowJHelp",
@@ -153,9 +163,17 @@
               "target": "Package",
               "version": "[6.1.2025.209, )"
             },
+            "System.Net.Http": {
+              "target": "Package",
+              "version": "[4.3.4, )"
+            },
             "System.Text.Json": {
               "target": "Package",
               "version": "[9.0.2, )"
+            },
+            "System.Text.RegularExpressions": {
+              "target": "Package",
+              "version": "[4.3.1, )"
             },
             "YellowJAutoInjection": {
               "target": "Package",
@@ -198,9 +216,17 @@
               "target": "Package",
               "version": "[6.1.2025.209, )"
             },
+            "System.Net.Http": {
+              "target": "Package",
+              "version": "[4.3.4, )"
+            },
             "System.Text.Json": {
               "target": "Package",
               "version": "[9.0.2, )"
+            },
+            "System.Text.RegularExpressions": {
+              "target": "Package",
+              "version": "[4.3.1, )"
             },
             "YellowJAutoInjection": {
               "target": "Package",

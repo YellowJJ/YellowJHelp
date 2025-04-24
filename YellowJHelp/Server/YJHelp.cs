@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Http;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Security.Cryptography;
+using System.Text;
 using System.Text.Json;
 using YellowJAutoInjection.Entry;
 using YellowJHelp.Entry;
@@ -177,9 +178,11 @@ namespace YellowJHelp
             }
             string fileFullName = System.IO.Path.Combine(path, string.Format("{0}.txt", DateTime.Now.ToString("yyyyMMdd")));
 
-            using (StreamWriter output = new StreamWriter(fileFullName, true, System.Text.Encoding.UTF8))
+            // 显式指定带 BOM 的 UTF-8 编码  
+            using (var stream = new FileStream(fileFullName, FileMode.Append, FileAccess.Write, FileShare.Read))
+            using (var output = new StreamWriter(stream, new UTF8Encoding(true)))
             {
-                await output.WriteLineAsync(DateTime.Now.ToString() + " 日志信息：" + text);
+                await output.WriteLineAsync($"{DateTime.Now} 日志信息：{text}").ConfigureAwait(false);
             }
         }
         /// <summary>
