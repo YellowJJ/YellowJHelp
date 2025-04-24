@@ -17,7 +17,7 @@ namespace YellowJHelp.IServer
         /// <summary>
         /// 获取
         /// </summary>
-        /// <param name="key"></param>
+        /// <param name="key"></param> 
         /// <returns></returns>
         public object Get(string key);
         /// <summary>
