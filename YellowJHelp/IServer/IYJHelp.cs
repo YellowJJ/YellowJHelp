@@ -170,6 +170,37 @@ namespace YellowJHelp.IServer
         /// <param name="targetDate">目标日期</param>
         /// <returns></returns>
         bool IsDateInTargetMonth(DateTime date, DateTime targetDate);
+        /// <summary>
+        /// 异步将List集合根据指定键选择器生成字典，便于快速查找
+        /// </summary>
+        /// <typeparam name="TSource">集合元素类型</typeparam>
+        /// <typeparam name="TKey">字典Key类型</typeparam>
+        /// <param name="list">要转换的集合</param>
+        /// <param name="keySelector">用于获取Key的委托（如：item => item.Key）</param>
+        /// <param name="allowDuplicate">是否允许重复Key（true时后者覆盖前者，false时遇到重复抛异常）</param>
+        /// <returns>以指定Key为键的字典</returns>
+        /// <exception cref="ArgumentNullException">参数为空时抛出</exception>
+        /// <exception cref="ArgumentException">存在重复Key且不允许重复时抛出,默认允许重复</exception>
+        Task<Dictionary<TKey, TSource>> ToDictAsync<TSource, TKey>(
+            List<TSource> list,
+            Func<TSource, TKey> keySelector,
+            bool allowDuplicate = true);
+
+        /// <summary>
+        /// 异步将List集合根据指定集合Key选择器生成字典，支持Key为集合类型（如List&lt;string&gt;），便于快速查找
+        /// </summary>
+        /// <typeparam name="TSource">集合元素类型</typeparam>
+        /// <typeparam name="TKeyItem">集合Key的元素类型</typeparam>
+        /// <param name="list">要转换的集合</param>
+        /// <param name="keySelector">用于获取集合Key的委托（如：item => item.Number）</param>
+        /// <param name="allowDuplicate">是否允许重复Key（true时后者覆盖前者，false时遇到重复抛异常）</param>
+        /// <returns>以集合Key为键的字典（Key为集合的唯一字符串表示）</returns>
+        /// <exception cref="ArgumentNullException">参数为空时抛出</exception>
+        /// <exception cref="ArgumentException">存在重复Key且不允许重复时抛出，默认允许重复</exception>
+        Task<Dictionary<string, TSource>> ToDictAsync<TSource, TKeyItem>(
+            List<TSource> list,
+            Func<TSource, IEnumerable<TKeyItem>> keySelector,
+            bool allowDuplicate = true);
         #region --泛型方法--
         /// <summary>
         /// 对象副本

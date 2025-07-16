@@ -34,19 +34,23 @@ namespace YellowJHelp
         {
             return Task.Run(() =>
             {
-                MD5 md5 = new MD5CryptoServiceProvider();
-                byte[] bytes = System.Text.Encoding.UTF8.GetBytes(strText);
-                bytes = md5.ComputeHash(bytes);
-                md5.Clear();
+                if (string.IsNullOrEmpty(strText))
+                    return string.Empty;
 
-                string ret = "";
-                for (int i = 0; i < bytes.Length; i++)
+                using (MD5 md5 = MD5.Create())
                 {
-                    ret += Convert.ToString(bytes[i], 16).PadLeft(2, '0');
+                    byte[] bytes = Encoding.UTF8.GetBytes(strText);
+                    byte[] hashBytes = md5.ComputeHash(bytes);
+
+                    StringBuilder sb = new StringBuilder(32);
+                    foreach (byte b in hashBytes)
+                    {
+                        sb.Append(b.ToString("x2"));
+                    }
+                    string result = sb.ToString().PadLeft(32, '0');
+                    return IsLower ? result.ToLower() : result.ToUpper();
                 }
-                return ret.PadLeft(32, '0');
             });
-            
         }
 
         /// <summary>
@@ -56,23 +60,24 @@ namespace YellowJHelp
         /// <param name="KEY_64">密钥长度8位</param>
         /// <param name="IV_64">密钥长度8位</param>
         /// <returns></returns>
-        public async Task<string> EncodeAsync(string data,string KEY_64, string IV_64)
+        public async Task<string> EncodeAsync(string data, string KEY_64, string IV_64)
         {
-            byte[] byKey = System.Text.ASCIIEncoding.ASCII.GetBytes(KEY_64);
-            byte[] byIV = System.Text.ASCIIEncoding.ASCII.GetBytes(IV_64);
+            if (string.IsNullOrEmpty(data) || KEY_64?.Length != 8 || IV_64?.Length != 8)
+                throw new ArgumentException("参数无效，密钥和IV必须为8位");
 
-            DESCryptoServiceProvider cryptoProvider = new DESCryptoServiceProvider();
-            int i = cryptoProvider.KeySize;
-            MemoryStream ms = new MemoryStream();
-            CryptoStream cst = new CryptoStream(ms, cryptoProvider.CreateEncryptor(byKey, byIV), CryptoStreamMode.Write);
+            byte[] byKey = Encoding.ASCII.GetBytes(KEY_64);
+            byte[] byIV = Encoding.ASCII.GetBytes(IV_64);
 
-            StreamWriter sw = new StreamWriter(cst);
-            await sw.WriteAsync(data);
-            await sw.FlushAsync();
-            cst.FlushFinalBlock();
-            await sw.FlushAsync();
-            return Convert.ToBase64String(ms.GetBuffer(), 0, (int)ms.Length);
-
+            using (DESCryptoServiceProvider cryptoProvider = new DESCryptoServiceProvider())
+            using (MemoryStream ms = new MemoryStream())
+            using (CryptoStream cst = new CryptoStream(ms, cryptoProvider.CreateEncryptor(byKey, byIV), CryptoStreamMode.Write))
+            using (StreamWriter sw = new StreamWriter(cst))
+            {
+                await sw.WriteAsync(data);
+                await sw.FlushAsync();
+                cst.FlushFinalBlock();
+                return Convert.ToBase64String(ms.ToArray());
+            }
         }
         /// <summary>
         /// DES解密
@@ -83,24 +88,27 @@ namespace YellowJHelp
         /// <returns></returns>
         public async Task<string> DecodeAsync(string data, string KEY_64, string IV_64)
         {
-            byte[] byKey = System.Text.ASCIIEncoding.ASCII.GetBytes(KEY_64);
-            byte[] byIV = System.Text.ASCIIEncoding.ASCII.GetBytes(IV_64);
+            if (string.IsNullOrEmpty(data) || KEY_64?.Length != 8 || IV_64?.Length != 8)
+                throw new ArgumentException("参数无效，密钥和IV必须为8位");
 
-            byte[] byEnc;
             try
             {
-                byEnc = Convert.FromBase64String(data);
+                byte[] byKey = Encoding.ASCII.GetBytes(KEY_64);
+                byte[] byIV = Encoding.ASCII.GetBytes(IV_64);
+                byte[] byEnc = Convert.FromBase64String(data);
+
+                using (DESCryptoServiceProvider cryptoProvider = new DESCryptoServiceProvider())
+                using (MemoryStream ms = new MemoryStream(byEnc))
+                using (CryptoStream cst = new CryptoStream(ms, cryptoProvider.CreateDecryptor(byKey, byIV), CryptoStreamMode.Read))
+                using (StreamReader sr = new StreamReader(cst))
+                {
+                    return await sr.ReadToEndAsync();
+                }
             }
             catch
             {
-                return  "";
+                return string.Empty;
             }
-
-            DESCryptoServiceProvider cryptoProvider = new DESCryptoServiceProvider();
-            MemoryStream ms = new MemoryStream(byEnc);
-            CryptoStream cst = new CryptoStream(ms, cryptoProvider.CreateDecryptor(byKey, byIV), CryptoStreamMode.Read);
-            StreamReader sr = new StreamReader(cst);
-            return await sr.ReadToEndAsync();
         }
 
 
@@ -289,7 +297,7 @@ namespace YellowJHelp
         /// <param name="value">值</param>
         /// <returns></returns>
         public bool IsString(string data,string value) {
-            if (data.IndexOf(value, StringComparison.OrdinalIgnoreCase)>-1) return true;else return false;
+            return data?.IndexOf(value, StringComparison.OrdinalIgnoreCase) > -1;
         }
         /// <summary>
         /// 分配数据
@@ -299,14 +307,12 @@ namespace YellowJHelp
         /// <returns>返回分配集合（剩余），被分配集合（已分），分配结果详情</returns>
         public List<List<YAllocationInfo>> YAlloctionlist(List<YAllocationInfo> yAllocations, List<YAllocationInfo> yAllocations1)
         {
-            List<List<YAllocationInfo>> yAllocationInfos = new();
-            List<YAllocationInfo> list = new();
-            Dictionary<string, List<YAllocationInfo>> allocationDict = yAllocations.GroupBy(a => a.Key).ToDictionary(g => g.Key, g => g.ToList());
+            if (yAllocations == null || yAllocations1 == null)
+                return new List<List<YAllocationInfo>>();
 
-            //foreach (var item in yAllocations)
-            //{
-            //    item.RemQty = item.Qty;
-            //}
+            List<List<YAllocationInfo>> yAllocationInfos = new();
+            List<YAllocationInfo> resultList = new();
+            var allocationDict = yAllocations.GroupBy(a => a.Key).ToDictionary(g => g.Key, g => g.ToList());
 
             foreach (var item in yAllocations1)
             {
@@ -332,7 +338,7 @@ namespace YellowJHelp
                             item.AQty += itemqty;
                             it.RemQty -= itemqty;
                             info.AQty = itemqty;
-                            list.Add(info);
+                            resultList.Add(info);
                             break;
                         }
                         else
@@ -341,7 +347,7 @@ namespace YellowJHelp
                             itemqty -= it.RemQty;
                             info.AQty = it.RemQty;
                             it.RemQty = 0;
-                            list.Add(info);
+                            resultList.Add(info);
                         }
                     }
                 }
@@ -349,7 +355,7 @@ namespace YellowJHelp
 
             yAllocationInfos.Add(yAllocations);
             yAllocationInfos.Add(yAllocations1);
-            yAllocationInfos.Add(list);
+            yAllocationInfos.Add(resultList);
             return yAllocationInfos;
         }
 
@@ -361,146 +367,44 @@ namespace YellowJHelp
         /// <returns>返回分配集合（剩余），被分配集合（已分），分配结果详情</returns>
         public List<List<YAllocationInfo>> YAlloctionlistThred(List<YAllocationInfo> yAllocations, List<YAllocationInfo> yAllocations1)
         {
-            ConcurrentBag<KeyValueInfo<List<YAllocationInfo>, List<YAllocationInfo>>> keyValuePairs = new();
-            #region 分组
-            //List<List<YAllocationInfo>> listYA1 = new();
-            #region 注释方法
-            //foreach (var item in yAllocations)
-            //{
-            //    bool isnull = true;
-            //    var df = listYA1.Select(a => a.Where(b => b.Key == item.Key).FirstOrDefault()).ToList();
-            //    if (df.Count > 0 && df[0] != null)
-            //    {
-            //        YJHelpT<YAllocationInfo> yJHelpT = new();
-            //        df.Add(yJHelpT.Copy(item));
-            //        isnull = false;
-            //    }
-            //    else
-            //    {
-            //        List<YAllocationInfo> yss = new();
-            //        YJHelpT<YAllocationInfo> yJHelpT = new();
-            //        yss.Add(yJHelpT.Copy(item));
-            //        listYA1.Add(yss);
-            //    }
-            //    //foreach (var item1 in listYA1)
-            //    //{
-            //    //    var llt1 = item1.Where(a => a.Key == item.Key).FirstOrDefault();
-            //    //    if (llt1 != null)
-            //    //    {
+            if (yAllocations == null || yAllocations1 == null)
+                return new List<List<YAllocationInfo>>();
 
-            //    //        break;
-            //    //    }
-            //    //}
-            //    //if (isnull)
-            //    //{
-            //    //    List<YAllocationInfo> yss = new();
-            //    //    YJHelpT<YAllocationInfo> yJHelpT = new();
-            //    //    yss.Add(yJHelpT.Copy(item));
-            //    //    listYA1.Add(yss);
-            //    //}
-            //}
-            #endregion
+            var keyValuePairs = new ConcurrentBag<KeyValueInfo<List<YAllocationInfo>, List<YAllocationInfo>>>();
             var listYA1s = yAllocations.GroupBy(a => a.Key).ToDictionary(g => g.Key, g => g.ToList());
-
-            //List<List<YAllocationInfo>> listYA2 = new();
-            #region 注释方法
-            //foreach (var item in yAllocations1)
-            //{
-            //    bool isnull = true;
-            //    foreach (var item1 in listYA2)
-            //    {
-            //        var llt1 = item1.Where(a => a.Key == item.Key).FirstOrDefault();
-            //        if (llt1 != null)
-            //        {
-            //            YJHelpT<YAllocationInfo> yJHelpT = new();
-            //            item1.Add(yJHelpT.Copy(item));
-            //            isnull = false;
-            //            break;
-            //        }
-            //    }
-            //    if (isnull)
-            //    {
-            //        List<YAllocationInfo> yss = new();
-            //        YJHelpT<YAllocationInfo> yJHelpT = new();
-            //        yss.Add(yJHelpT.Copy(item));
-            //        listYA2.Add(yss);
-            //    }
-            //}
-
-
-            //foreach (var item in listYA1)
-            //{
-            //    KeyValueInfo<List<YAllocationInfo>, List<YAllocationInfo>> keyValueInfo = new();
-            //    bool isnull = true;
-            //    foreach (var item1 in listYA2)
-            //    {
-            //        var iit = item1.Where(a => a.Key == item[0].Key).FirstOrDefault();
-            //        if (iit != null)
-            //        {
-            //            keyValueInfo.Value = item1;
-            //            isnull = false;
-            //            break;
-            //        }
-            //    }
-            //    if (!isnull)
-            //    {
-            //        keyValueInfo.Key = item;
-            //        keyValuePairs.Add(keyValueInfo);
-            //    }
-            //}
-            #endregion
             var listYA2s = yAllocations1.GroupBy(a => a.Key).ToDictionary(g => g.Key, g => g.ToList());
+
             foreach (var item in listYA1s)
             {
-                KeyValueInfo<List<YAllocationInfo>, List<YAllocationInfo>> keyValueInfo = new();
-                bool isnull = false;
                 if (listYA2s.TryGetValue(item.Key, out var aa))
                 {
-                    keyValueInfo.Value = aa;
-                    isnull = true;
+                    keyValuePairs.Add(new KeyValueInfo<List<YAllocationInfo>, List<YAllocationInfo>>
+                    {
+                        Key = item.Value,
+                        Value = aa
+                    });
                 }
-                if (isnull)
-                {
-                    keyValueInfo.Key = item.Value;
-                    keyValuePairs.Add(keyValueInfo);
-                }
-
             }
 
-            #endregion
-            #region 分配
-            ConcurrentBag<ConcurrentBag<YAllocationInfo>> yAllInfos = new();
-            for(int i=0;i<3;i++)
+            var yAllInfos = new ConcurrentBag<ConcurrentBag<YAllocationInfo>>();
+            for (int i = 0; i < 3; i++)
             {
-                ConcurrentBag<YAllocationInfo> ys = new();
-                yAllInfos.Add(ys);
+                yAllInfos.Add(new ConcurrentBag<YAllocationInfo>());
             }
-            Parallel.ForEach(keyValuePairs, new ParallelOptions { MaxDegreeOfParallelism = Environment.ProcessorCount-1 }, item => {
-                ConcurrentBag<YAllocationInfo> ys = new();
-                var ret=YAlloctionlist(item.Key,item.Value);
+
+            Parallel.ForEach(keyValuePairs, new ParallelOptions { MaxDegreeOfParallelism = Math.Max(1, Environment.ProcessorCount - 1) }, item =>
+            {
+                var ret = YAlloctionlist(item.Key, item.Value);
                 int i = 0;
-                foreach (var item1 in yAllInfos) 
+                foreach (var item1 in yAllInfos)
                 {
-                    foreach (var item2 in ret[i]) 
+                    foreach (var item2 in ret[i])
                     {
                         item1.Add(item2);
                     }
-                    
                     i++;
                 }
             });
-            #endregion
-
-            //List<List<YAllocationInfo>> allocationInfos = new();
-            //foreach (var item in yAllInfos)
-            //{
-            //    List<YAllocationInfo> yAllocationInfos = new();
-            //    foreach (var item1 in item)
-            //    {
-            //        yAllocationInfos.Add(item1);
-            //    }
-            //    allocationInfos.Add(yAllocationInfos);
-            //}
 
             return yAllInfos.Select(a => a.ToList()).ToList();
         }
@@ -597,6 +501,108 @@ namespace YellowJHelp
             return listRet;
         }
 
+        /// <summary>
+        /// 异步将List集合根据指定键选择器生成字典，便于快速查找
+        /// </summary>
+        /// <typeparam name="TSource">集合元素类型</typeparam>
+        /// <typeparam name="TKey">字典Key类型</typeparam>
+        /// <param name="list">要转换的集合</param>
+        /// <param name="keySelector">用于获取Key的委托（如：item => item.Key）</param>
+        /// <param name="allowDuplicate">是否允许重复Key（true时后者覆盖前者，false时遇到重复抛异常）</param>
+        /// <returns>以指定Key为键的字典</returns>
+        /// <exception cref="ArgumentNullException">参数为空时抛出</exception>
+        /// <exception cref="ArgumentException">存在重复Key且不允许重复时抛出,默认允许重复</exception>
+        public async Task<Dictionary<TKey, TSource>> ToDictAsync<TSource, TKey>(
+            List<TSource> list,
+            Func<TSource, TKey> keySelector,
+            bool allowDuplicate = true)
+            where TKey : notnull
+        {
+            // 参数校验
+            if (list == null) throw new ArgumentNullException(nameof(list), "集合不能为空");
+            if (keySelector == null) throw new ArgumentNullException(nameof(keySelector), "Key选择器不能为空");
+
+            // 异步执行字典构建
+            return await Task.Run(() =>
+            {
+                var dict = new Dictionary<TKey, TSource>();
+                foreach (var item in list)
+                {
+                    var key = keySelector(item);
+                    if (dict.ContainsKey(key))
+                    {
+                        if (allowDuplicate)
+                        {
+                            // 允许重复时，后者覆盖前者
+                            dict[key] = item;
+                        }
+                        else
+                        {
+                            // 不允许重复时，抛出异常
+                            throw new ArgumentException($"集合中存在重复的Key: {key}");
+                        }
+                    }
+                    else
+                    {
+                        dict.Add(key, item);
+                    }
+                }
+                return dict;
+            });
+        }
+
+        /// <summary>
+        /// 异步将List集合根据指定集合Key选择器生成字典，支持Key为集合类型（如List&lt;string&gt;），便于快速查找
+        /// </summary>
+        /// <typeparam name="TSource">集合元素类型</typeparam>
+        /// <typeparam name="TKeyItem">集合Key的元素类型</typeparam>
+        /// <param name="list">要转换的集合</param>
+        /// <param name="keySelector">用于获取集合Key的委托（如：item => item.Number）</param>
+        /// <param name="allowDuplicate">是否允许重复Key（true时后者覆盖前者，false时遇到重复抛异常）</param>
+        /// <returns>以集合Key为键的字典（Key为集合的唯一字符串表示）</returns>
+        /// <exception cref="ArgumentNullException">参数为空时抛出</exception>
+        /// <exception cref="ArgumentException">存在重复Key且不允许重复时抛出，默认允许重复</exception>
+        public async Task<Dictionary<string, TSource>> ToDictAsync<TSource, TKeyItem>(
+            List<TSource> list,
+            Func<TSource, IEnumerable<TKeyItem>> keySelector,
+            bool allowDuplicate = true)
+        {
+            // 参数校验
+            if (list == null) throw new ArgumentNullException(nameof(list), "集合不能为空");
+            if (keySelector == null) throw new ArgumentNullException(nameof(keySelector), "Key选择器不能为空");
+
+            // 异步执行字典构建
+            return await Task.Run(() =>
+            {
+                var dict = new Dictionary<string, TSource>();
+                foreach (var item in list)
+                {
+                    var keyCollection = keySelector(item);
+                    if (keyCollection == null)
+                        throw new ArgumentException("Key集合不能为空");
+
+                    // 将集合Key序列化为唯一字符串（顺序敏感，元素用逗号分隔）
+                    string key = string.Join(",", keyCollection);
+
+                    if (dict.ContainsKey(key))
+                    {
+                        if (allowDuplicate)
+                        {
+                            dict[key] = item;
+                        }
+                        else
+                        {
+                            throw new ArgumentException($"集合中存在重复的集合Key: {key}");
+                        }
+                    }
+                    else
+                    {
+                        dict.Add(key, item);
+                    }
+                }
+                return dict;
+            });
+        }
         #endregion
     }
 }
