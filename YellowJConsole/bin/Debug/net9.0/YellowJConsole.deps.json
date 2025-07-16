@@ -10,7 +10,7 @@
         "dependencies": {
           "System.Net.Http": "4.3.4",
           "System.Text.RegularExpressions": "4.3.1",
-          "YellowJHelp": "3.7.1"
+          "YellowJHelp": "3.7.3"
         },
         "runtime": {
           "YellowJConsole.dll": {}
@@ -990,7 +990,7 @@
           }
         }
       },
-      "YellowJHelp/3.7.1": {
+      "YellowJHelp/3.7.3": {
         "dependencies": {
           "Confluent.Kafka": "2.8.0",
           "DeepCloner": "0.10.4",
@@ -1004,8 +1004,8 @@
         },
         "runtime": {
           "YellowJHelp.dll": {
-            "assemblyVersion": "3.7.1.0",
-            "fileVersion": "3.7.1.0"
+            "assemblyVersion": "3.7.3.0",
+            "fileVersion": "3.7.3.0"
           }
         }
       }
@@ -1668,7 +1668,7 @@
       "path": "yellowjautoinjection/2.1.0",
       "hashPath": "yellowjautoinjection.2.1.0.nupkg.sha512"
     },
-    "YellowJHelp/3.7.1": {
+    "YellowJHelp/3.7.3": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

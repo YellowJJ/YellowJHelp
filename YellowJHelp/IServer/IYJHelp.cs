@@ -159,10 +159,12 @@ namespace YellowJHelp.IServer
         /// <returns></returns>
         long NextId(long workerId);
         /// <summary>
-        /// 对象映射器
+        /// 高性能对象映射器（Mapster风格，支持属性名匹配、类型兼容、集合映射、嵌套对象、缓存优化，兼容netstandard2.0）
         /// </summary>
         /// <returns></returns>
-        FastMapper Mapper();
+        //FastMapper Mapper();
+
+
         /// <summary>
         /// 日期是否在目标年月内
         /// </summary>

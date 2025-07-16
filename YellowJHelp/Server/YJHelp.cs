@@ -420,13 +420,16 @@ namespace YellowJHelp
             return snowflakeIdGenerator.NextId();
         }
         /// <summary>
-        /// 对象映射器
+        /// 高性能对象映射器
         /// </summary>
         /// <returns></returns>
-        public FastMapper Mapper()
-        {
-            return new FastMapper();
-        }
+        //public FastMapper Mapper()
+        //{
+        //    List<string> sd = null;
+        //    var sdfd=FastMapper.Adapt(this, sd);
+        //    var df=sd.Adapt<List<string>>();
+        //    return new FastMapper();
+        //}
         /// <summary>
         /// 日期是否在目标年月内
         /// </summary>

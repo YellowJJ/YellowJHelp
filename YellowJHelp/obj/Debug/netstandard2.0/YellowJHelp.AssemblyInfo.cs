@@ -23,11 +23,11 @@ using System.Reflection;
 		Kafka使用
 		webapi调用
 		Redis使用")]
-[assembly: System.Reflection.AssemblyFileVersionAttribute("3.7.1.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("3.7.1+7907f6e031690c1456eeffccb4b292f2950f0a47")]
+[assembly: System.Reflection.AssemblyFileVersionAttribute("3.7.3.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("3.7.3+bff0c512ea66cb01c172900eba928c4c3a881272")]
 [assembly: System.Reflection.AssemblyProductAttribute("YellowJHelp")]
 [assembly: System.Reflection.AssemblyTitleAttribute("YellowJHelp")]
-[assembly: System.Reflection.AssemblyVersionAttribute("3.7.1.0")]
+[assembly: System.Reflection.AssemblyVersionAttribute("3.7.3.0")]
 [assembly: System.Reflection.AssemblyMetadataAttribute("RepositoryUrl", "https://gitee.com/xiaoyi1314/yellow-jhelp")]
 
 // 由 MSBuild WriteCodeFragment 类生成。

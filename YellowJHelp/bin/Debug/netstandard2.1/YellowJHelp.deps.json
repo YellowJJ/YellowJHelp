@@ -7,7 +7,7 @@
   "targets": {
     ".NETStandard,Version=v2.1": {},
     ".NETStandard,Version=v2.1/": {
-      "YellowJHelp/3.7.1": {
+      "YellowJHelp/3.7.3": {
         "dependencies": {
           "Confluent.Kafka": "2.8.0",
           "DeepCloner": "0.10.4",
@@ -1111,7 +1111,7 @@
     }
   },
   "libraries": {
-    "YellowJHelp/3.7.1": {
+    "YellowJHelp/3.7.3": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

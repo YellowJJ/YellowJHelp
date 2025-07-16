@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("YellowJConsole")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7907f6e031690c1456eeffccb4b292f2950f0a47")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+bff0c512ea66cb01c172900eba928c4c3a881272")]
 [assembly: System.Reflection.AssemblyProductAttribute("YellowJConsole")]
 [assembly: System.Reflection.AssemblyTitleAttribute("YellowJConsole")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

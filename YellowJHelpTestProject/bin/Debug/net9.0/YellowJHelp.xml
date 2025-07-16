@@ -5,23 +5,61 @@
     </assembly>
     <members>
         <member name="T:YellowJHelp.Entry.FastMapper">
-            <summary>
-            高性能对象映射器
-            </summary>
+             <summary>
+              高性能对象映射器（Mapster风格，支持属性名匹配、类型兼容、集合映射、嵌套对象、缓存优化，兼容netstandard2.0）
+             </summary>
+             优势与市场主流对比
+            自动属性名匹配、类型兼容、集合/嵌套递归：无需配置，适合绝大多数DTO/VO/POCO映射。
+            性能高：表达式树+委托缓存，和Mapster/AutoMapper同级，远高于反射。
+            零依赖、轻量级：无外部包，兼容netstandard2.0，适合微服务、工具库、性能敏感场景。
+            Mapster/AutoMapper：支持复杂配置、条件映射、自定义规则、深度嵌套、集合等，适合复杂业务。
+            本实现：专注零配置、自动递归、类型安全，适合绝大多数常规对象映射，维护成本低。
         </member>
         <member name="M:YellowJHelp.Entry.FastMapper.Adapt``2(``0)">
             <summary>
-            对象映射方法
+            将源对象映射为新对象（Mapster风格，source.Adapt&lt;TTarget&gt;()）
             </summary>
             <typeparam name="TSource">源类型</typeparam>
             <typeparam name="TTarget">目标类型</typeparam>
             <param name="source">源对象</param>
-            <returns>映射后的新对象</returns>
+            <returns>新目标对象</returns>
+            <remarks>
+            优势：
+            1. 用法与Mapster一致，支持 source.Adapt&lt;TTarget&gt;()。
+            2. 支持属性名自动匹配、类型自动转换、嵌套对象、集合递归映射。
+            3. 性能高，表达式树+委托缓存，适合高并发。
+            4. 兼容netstandard2.0，无外部依赖。
+            5. 轻量级，易维护，适合DTO/VO/POCO等常规对象映射。
+            
+            与市场主流对比：
+            - Mapster/AutoMapper支持复杂配置、条件映射、自定义规则、深度嵌套、集合等，适合复杂业务。
+            - 本实现专注于零配置、自动属性名匹配、类型兼容、集合/嵌套对象自动递归，适合绝大多数DTO/VO场景。
+            - 性能与Mapster接近，远高于反射，零依赖，适合对性能和体积有要求的项目。
+            </remarks>
         </member>
-        <member name="M:YellowJHelp.Entry.FastMapper.CreatePropertyBindings(System.Linq.Expressions.Expression,System.Type)">
+        <member name="M:YellowJHelp.Entry.FastMapper.Adapt``2(``0,``1)">
             <summary>
-            创建属性绑定表达式集合（性能优化点）
+            将源对象映射到已存在的目标对象（属性覆盖，source.Adapt(dest)）
             </summary>
+            <typeparam name="TSource">源类型</typeparam>
+            <typeparam name="TTarget">目标类型</typeparam>
+            <param name="source">源对象</param>
+            <param name="destination">目标对象（属性会被覆盖）</param>
+            <returns>目标对象（同传入实例）</returns>
+            <remarks>
+            - 用法与Mapster一致，支持 source.Adapt(dest)。
+            - 只会覆盖目标对象中与源对象同名且类型兼容的属性。
+            - 适合更新已有对象（如EF实体、ViewModel等）。
+            </remarks>
+        </member>
+        <member name="M:YellowJHelp.Entry.FastMapper.Adapt``2(System.Collections.Generic.IEnumerable{``0})">
+            <summary>
+            将源集合映射为目标集合（Mapster风格，sources.Adapt&lt;List&lt;TTarget&gt;&gt;()）
+            </summary>
+            <typeparam name="TSource">源集合元素类型</typeparam>
+            <typeparam name="TTarget">目标集合元素类型</typeparam>
+            <param name="sourceList">源集合</param>
+            <returns>目标集合</returns>
         </member>
         <member name="T:YellowJHelp.Entry.LogInfo">
             <summary>
@@ -281,12 +319,6 @@
             生成雪花ID
             </summary>
             <param name="workerId">工作者的标识</param>
-            <returns></returns>
-        </member>
-        <member name="M:YellowJHelp.IServer.IYJHelp.Mapper">
-            <summary>
-            对象映射器
-            </summary>
             <returns></returns>
         </member>
         <member name="M:YellowJHelp.IServer.IYJHelp.IsDateInTargetMonth(System.DateTime,System.DateTime)">
@@ -841,12 +873,6 @@
             生成雪花ID
             </summary>
             <param name="workerId">工作者的标识</param>
-            <returns></returns>
-        </member>
-        <member name="M:YellowJHelp.YJHelp.Mapper">
-            <summary>
-            对象映射器
-            </summary>
             <returns></returns>
         </member>
         <member name="M:YellowJHelp.YJHelp.IsDateInTargetMonth(System.DateTime,System.DateTime)">

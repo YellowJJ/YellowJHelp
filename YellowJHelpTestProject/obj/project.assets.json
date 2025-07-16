@@ -2135,7 +2135,7 @@
           }
         }
       },
-      "YellowJHelp/3.7.1": {
+      "YellowJHelp/3.7.3": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.1",
         "dependencies": {
@@ -6562,7 +6562,7 @@
         "yellowjautoinjection.nuspec"
       ]
     },
-    "YellowJHelp/3.7.1": {
+    "YellowJHelp/3.7.3": {
       "type": "project",
       "path": "../YellowJHelp/YellowJHelp.csproj",
       "msbuildProject": "../YellowJHelp/YellowJHelp.csproj"
@@ -6573,7 +6573,7 @@
       "Microsoft.NET.Test.Sdk >= 17.11.1",
       "System.Net.Http >= 4.3.4",
       "System.Text.RegularExpressions >= 4.3.1",
-      "YellowJHelp >= 3.7.1",
+      "YellowJHelp >= 3.7.3",
       "coverlet.collector >= 6.0.2",
       "xunit >= 2.9.2",
       "xunit.runner.visualstudio >= 2.8.2"
