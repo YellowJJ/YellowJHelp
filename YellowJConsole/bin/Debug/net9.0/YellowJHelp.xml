@@ -4,6 +4,25 @@
         <name>YellowJHelp</name>
     </assembly>
     <members>
+        <member name="T:YellowJHelp.Entry.FastMapper">
+            <summary>
+            高性能对象映射器
+            </summary>
+        </member>
+        <member name="M:YellowJHelp.Entry.FastMapper.Adapt``2(``0)">
+            <summary>
+            对象映射方法
+            </summary>
+            <typeparam name="TSource">源类型</typeparam>
+            <typeparam name="TTarget">目标类型</typeparam>
+            <param name="source">源对象</param>
+            <returns>映射后的新对象</returns>
+        </member>
+        <member name="M:YellowJHelp.Entry.FastMapper.CreatePropertyBindings(System.Linq.Expressions.Expression,System.Type)">
+            <summary>
+            创建属性绑定表达式集合（性能优化点）
+            </summary>
+        </member>
         <member name="T:YellowJHelp.Entry.LogInfo">
             <summary>
             日志
@@ -257,6 +276,104 @@
             <param name="yAllocations1">被分配集合</param>
             <returns>返回分配集合（剩余），被分配集合（已分），分配结果详情</returns>
         </member>
+        <member name="M:YellowJHelp.IServer.IYJHelp.NextId(System.Int64)">
+            <summary>
+            生成雪花ID
+            </summary>
+            <param name="workerId">工作者的标识</param>
+            <returns></returns>
+        </member>
+        <member name="M:YellowJHelp.IServer.IYJHelp.Mapper">
+            <summary>
+            对象映射器
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:YellowJHelp.IServer.IYJHelp.IsDateInTargetMonth(System.DateTime,System.DateTime)">
+            <summary>
+            日期是否在目标年月内
+            </summary>
+            <param name="date">输入日期</param>
+            <param name="targetDate">目标日期</param>
+            <returns></returns>
+        </member>
+        <member name="M:YellowJHelp.IServer.IYJHelp.ToDictAsync``2(System.Collections.Generic.List{``0},System.Func{``0,``1},System.Boolean)">
+            <summary>
+            异步将List集合根据指定键选择器生成字典，便于快速查找
+            </summary>
+            <typeparam name="TSource">集合元素类型</typeparam>
+            <typeparam name="TKey">字典Key类型</typeparam>
+            <param name="list">要转换的集合</param>
+            <param name="keySelector">用于获取Key的委托（如：item => item.Key）</param>
+            <param name="allowDuplicate">是否允许重复Key（true时后者覆盖前者，false时遇到重复抛异常）</param>
+            <returns>以指定Key为键的字典</returns>
+            <exception cref="T:System.ArgumentNullException">参数为空时抛出</exception>
+            <exception cref="T:System.ArgumentException">存在重复Key且不允许重复时抛出,默认允许重复</exception>
+        </member>
+        <member name="M:YellowJHelp.IServer.IYJHelp.ToDictAsync``2(System.Collections.Generic.List{``0},System.Func{``0,System.Collections.Generic.IEnumerable{``1}},System.Boolean)">
+            <summary>
+            异步将List集合根据指定集合Key选择器生成字典，支持Key为集合类型（如List&lt;string&gt;），便于快速查找
+            </summary>
+            <typeparam name="TSource">集合元素类型</typeparam>
+            <typeparam name="TKeyItem">集合Key的元素类型</typeparam>
+            <param name="list">要转换的集合</param>
+            <param name="keySelector">用于获取集合Key的委托（如：item => item.Number）</param>
+            <param name="allowDuplicate">是否允许重复Key（true时后者覆盖前者，false时遇到重复抛异常）</param>
+            <returns>以集合Key为键的字典（Key为集合的唯一字符串表示）</returns>
+            <exception cref="T:System.ArgumentNullException">参数为空时抛出</exception>
+            <exception cref="T:System.ArgumentException">存在重复Key且不允许重复时抛出，默认允许重复</exception>
+        </member>
+        <member name="M:YellowJHelp.IServer.IYJHelp.Copy``1(``0)">
+            <summary>
+            对象副本
+            </summary>
+            <param name="data">数据</param>
+            <returns>将对象复制成全新的对象，且不互相影响</returns>
+        </member>
+        <member name="M:YellowJHelp.IServer.IYJHelp.YJMerge``1(System.Collections.Generic.List{``0},System.Collections.Generic.List{``0})">
+            <summary>
+            YJ版本：合并两个集合的函数-不允许有重复项
+            </summary>
+            <param name="list1">第一个集合</param>
+            <param name="list2">第二个集合</param>
+            <returns>返回结果</returns>
+        </member>
+        <member name="M:YellowJHelp.IServer.IYJHelp.Distinct``1(System.Collections.Generic.List{``0})">
+            <summary>
+            集合去重
+            </summary>
+            <param name="list">集合</param>
+            <returns></returns>
+        </member>
+        <member name="M:YellowJHelp.IServer.IYJHelp.DistinctAsync``2(System.Collections.Generic.List{``0},System.Func{``0,``1})">
+             <summary>
+             异步根据指定字段去重，生成全新且不扰动原集合的去重List
+             </summary>
+             <typeparam name="T">集合元素类型</typeparam>
+             <typeparam name="TKey">唯一性字段类型（可为单字段、匿名类型、元组等）</typeparam>
+             <param name="list">待去重的集合</param>
+             <param name="keySelector">唯一性字段选择器（如：item => item.Key，或 item => new { item.Key, item.Name }）</param>
+             <returns>去重后的新集合（原集合不变）</returns>
+             <remarks>
+             优势：
+             1. 支持任意字段或字段组合去重，灵活性极高，满足复杂业务唯一性需求。
+             2. 不修改原集合，返回全新List，安全无副作用，线程安全。
+             3. 泛型实现，适用于任何类型的List，支持匿名类型、元组等多字段组合。
+             4. 性能高，基于HashSet实现，O(n)复杂度，适合大数据量。
+             5. 异步实现，适合Web、服务端等需要避免阻塞主线程的场景。
+            
+             使用场景：
+             - 需要根据业务唯一性规则（如单字段或多字段）去重的场景。
+             - 需要保留原集合不变，生成新集合的场景。
+             - 适用于实体对象、DTO、ViewModel等各种类型。
+             - 数据导入、批量处理、接口返回前的去重。
+            
+             使用方法示例：
+             var newList = await DistinctByFieldsAsync(list, x => x.Key); // 单字段
+             var newList = await DistinctByFieldsAsync(list, x => new { x.Key, x.Name }); // 多字段
+             var newList = await DistinctByFieldsAsync(list, x => Tuple.Create(x.Key, x.Name)); // 多字段（元组）
+             </remarks>
+        </member>
         <member name="T:YellowJHelp.IServer.IYJHelpCache">
             <summary>
             缓存接口
@@ -274,7 +391,7 @@
             <summary>
             获取
             </summary>
-            <param name="key"></param>
+            <param name="key"></param> 
             <returns></returns>
         </member>
         <member name="M:YellowJHelp.IServer.IYJHelpCache.Set(System.String,System.String,Microsoft.Extensions.Caching.Memory.MemoryCacheEntryOptions)">
@@ -437,22 +554,10 @@
             数据库通用方法（测试）
             </summary>
         </member>
-        <member name="M:YellowJHelp.IServer.IYJHelpSql.Db">
-            <summary>
-            数据库操作
-            </summary>
-            <returns></returns>
-        </member>
         <member name="M:YellowJHelp.IServer.IYJHelpSql.SqlApiLog(YellowJHelp.Entry.LogInfo)">
             <summary>
             数据库日志记录
             </summary>
-        </member>
-        <member name="M:YellowJHelp.IServer.IYJHelpSql.SYDb(System.String)">
-            <summary>
-            私有数据库
-            </summary>
-            <returns></returns>
         </member>
         <member name="T:YellowJHelp.IServer.IYJHelpT`1">
             <summary>
@@ -735,8 +840,99 @@
             <summary>
             生成雪花ID
             </summary>
-            <param name="workerId">生成数</param>
+            <param name="workerId">工作者的标识</param>
             <returns></returns>
+        </member>
+        <member name="M:YellowJHelp.YJHelp.Mapper">
+            <summary>
+            对象映射器
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:YellowJHelp.YJHelp.IsDateInTargetMonth(System.DateTime,System.DateTime)">
+            <summary>
+            日期是否在目标年月内
+            </summary>
+            <param name="date">输入日期</param>
+            <param name="targetDate">目标日期</param>
+            <returns></returns>
+        </member>
+        <member name="M:YellowJHelp.YJHelp.Copy``1(``0)">
+            <summary>
+            对象副本
+            </summary>
+            <param name="data">数据</param>
+            <returns>将对象复制成全新的对象，且不互相影响</returns>
+        </member>
+        <member name="M:YellowJHelp.YJHelp.YJMerge``1(System.Collections.Generic.List{``0},System.Collections.Generic.List{``0})">
+            <summary>
+            YJ版本：合并两个集合的函数-不允许有重复项
+            </summary>
+            <param name="list1">第一个集合</param>
+            <param name="list2">第二个集合</param>
+            <returns>返回结果</returns>
+        </member>
+        <member name="M:YellowJHelp.YJHelp.Distinct``1(System.Collections.Generic.List{``0})">
+            <summary>
+            集合去重
+            </summary>
+            <param name="list">集合</param>
+            <returns></returns>
+        </member>
+        <member name="M:YellowJHelp.YJHelp.DistinctAsync``2(System.Collections.Generic.List{``0},System.Func{``0,``1})">
+             <summary>
+             异步根据指定字段去重，生成全新且不扰动原集合的去重List
+             </summary>
+             <typeparam name="T">集合元素类型</typeparam>
+             <typeparam name="TKey">唯一性字段类型（可为单字段、匿名类型、元组等）</typeparam>
+             <param name="list">待去重的集合</param>
+             <param name="keySelector">唯一性字段选择器（如：item => item.Key，或 item => new { item.Key, item.Name }）</param>
+             <returns>去重后的新集合（原集合不变）</returns>
+             <remarks>
+             优势：
+             1. 支持任意字段或字段组合去重，灵活性极高，满足复杂业务唯一性需求。
+             2. 不修改原集合，返回全新List，安全无副作用，线程安全。
+             3. 泛型实现，适用于任何类型的List，支持匿名类型、元组等多字段组合。
+             4. 性能高，基于HashSet实现，O(n)复杂度，适合大数据量。
+             5. 异步实现，适合Web、服务端等需要避免阻塞主线程的场景。
+            
+             使用场景：
+             - 需要根据业务唯一性规则（如单字段或多字段）去重的场景。
+             - 需要保留原集合不变，生成新集合的场景。
+             - 适用于实体对象、DTO、ViewModel等各种类型。
+             - 数据导入、批量处理、接口返回前的去重。
+            
+             使用方法示例：
+             var newList = await DistinctByFieldsAsync(list, x => x.Key); // 单字段
+             var newList = await DistinctByFieldsAsync(list, x => new { x.Key, x.Name }); // 多字段
+             var newList = await DistinctByFieldsAsync(list, x => Tuple.Create(x.Key, x.Name)); // 多字段（元组）
+             </remarks>
+        </member>
+        <member name="M:YellowJHelp.YJHelp.ToDictAsync``2(System.Collections.Generic.List{``0},System.Func{``0,``1},System.Boolean)">
+            <summary>
+            异步将List集合根据指定键选择器生成字典，便于快速查找
+            </summary>
+            <typeparam name="TSource">集合元素类型</typeparam>
+            <typeparam name="TKey">字典Key类型</typeparam>
+            <param name="list">要转换的集合</param>
+            <param name="keySelector">用于获取Key的委托（如：item => item.Key）</param>
+            <param name="allowDuplicate">是否允许重复Key（true时后者覆盖前者，false时遇到重复抛异常）</param>
+            <returns>以指定Key为键的字典</returns>
+            <exception cref="T:System.ArgumentNullException">参数为空时抛出</exception>
+            <exception cref="T:System.ArgumentException">存在重复Key且不允许重复时抛出,默认允许重复</exception>
+        </member>
+        <member name="M:YellowJHelp.YJHelp.ToDictAsync``2(System.Collections.Generic.List{``0},System.Func{``0,System.Collections.Generic.IEnumerable{``1}},System.Boolean)">
+            <summary>
+            异步将List集合根据指定集合Key选择器生成字典，支持Key为集合类型（如List&lt;string&gt;），便于快速查找
+            </summary>
+            <typeparam name="TSource">集合元素类型</typeparam>
+            <typeparam name="TKeyItem">集合Key的元素类型</typeparam>
+            <param name="list">要转换的集合</param>
+            <param name="keySelector">用于获取集合Key的委托（如：item => item.Number）</param>
+            <param name="allowDuplicate">是否允许重复Key（true时后者覆盖前者，false时遇到重复抛异常）</param>
+            <returns>以集合Key为键的字典（Key为集合的唯一字符串表示）</returns>
+            <exception cref="T:System.ArgumentNullException">参数为空时抛出</exception>
+            <exception cref="T:System.ArgumentException">存在重复Key且不允许重复时抛出，默认允许重复</exception>
         </member>
         <member name="T:YellowJHelp.YJHelpKafka">
             <summary>
@@ -897,22 +1093,10 @@
             sqlserver链接参数
             </summary>
         </member>
-        <member name="M:YellowJHelp.YJHelpSql.Db">
-            <summary>
-            数据库操作
-            </summary>
-            <returns></returns>
-        </member>
         <member name="M:YellowJHelp.YJHelpSql.SqlApiLog(YellowJHelp.Entry.LogInfo)">
             <summary>
             数据库日志记录
             </summary>
-        </member>
-        <member name="M:YellowJHelp.YJHelpSql.SYDb(System.String)">
-            <summary>
-            私有数据库
-            </summary>
-            <returns></returns>
         </member>
         <member name="T:YellowJHelp.YJHelpT`1">
             <summary>

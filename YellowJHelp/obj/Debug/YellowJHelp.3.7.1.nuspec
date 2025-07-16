@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>YellowJHelp</id>
+    <version>3.7.1</version>
+    <authors>YellowJ</authors>
+    <icon>YellowJ图标.png</icon>
+    <readme>README.md</readme>
+    <projectUrl>https://gitee.com/xiaoyi1314/yellow-jhelp</projectUrl>
+    <description>通用解决方案：
+                        3.7：新增lis集合生成字典的方法，方便快速查询：ToDictAsync, 优化其它逻辑和新增集合去重逻辑
+                        3.5：新增对象深拷贝，对象映射器，雪花id等功能，优化减少依赖，删除sqlsugar等功能
+		2.2.0版本：自动依赖注入功能转移至：YellowJAutoInjection
+		（Redis更换NewLife-日均百亿次项目验证）缓存，MD5加密，字段截取，集合类型差集计算
+		Kafka使用
+		webapi调用
+		Redis使用</description>
+    <copyright>YellowJ</copyright>
+    <repository type="git" url="https://gitee.com/xiaoyi1314/yellow-jhelp" commit="7907f6e031690c1456eeffccb4b292f2950f0a47" />
+    <dependencies>
+      <group targetFramework=".NETStandard2.0">
+        <dependency id="Confluent.Kafka" version="2.8.0" exclude="Build,Analyzers" />
+        <dependency id="DeepCloner" version="0.10.4" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.AspNetCore.Http.Abstractions" version="2.3.0" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.Extensions.Caching.Memory" version="9.0.2" exclude="Build,Analyzers" />
+        <dependency id="NewLife.Redis" version="6.1.2025.209" exclude="Build,Analyzers" />
+        <dependency id="System.Net.Http" version="4.3.4" exclude="Build,Analyzers" />
+        <dependency id="System.Text.Json" version="9.0.2" exclude="Build,Analyzers" />
+        <dependency id="System.Text.RegularExpressions" version="4.3.1" exclude="Build,Analyzers" />
+        <dependency id="YellowJAutoInjection" version="2.1.0" exclude="Build,Analyzers" />
+      </group>
+      <group targetFramework=".NETStandard2.1">
+        <dependency id="Confluent.Kafka" version="2.8.0" exclude="Build,Analyzers" />
+        <dependency id="DeepCloner" version="0.10.4" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.AspNetCore.Http.Abstractions" version="2.3.0" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.Extensions.Caching.Memory" version="9.0.2" exclude="Build,Analyzers" />
+        <dependency id="NewLife.Redis" version="6.1.2025.209" exclude="Build,Analyzers" />
+        <dependency id="System.Net.Http" version="4.3.4" exclude="Build,Analyzers" />
+        <dependency id="System.Text.Json" version="9.0.2" exclude="Build,Analyzers" />
+        <dependency id="System.Text.RegularExpressions" version="4.3.1" exclude="Build,Analyzers" />
+        <dependency id="YellowJAutoInjection" version="2.1.0" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="W:\YellowJ\YellowJHelp\yellow-jhelp\YellowJHelp\bin\Debug\netstandard2.0\YellowJHelp.dll" target="lib\netstandard2.0\YellowJHelp.dll" />
+    <file src="W:\YellowJ\YellowJHelp\yellow-jhelp\YellowJHelp\bin\Debug\netstandard2.0\YellowJHelp.xml" target="lib\netstandard2.0\YellowJHelp.xml" />
+    <file src="W:\YellowJ\YellowJHelp\yellow-jhelp\YellowJHelp\bin\Debug\netstandard2.1\YellowJHelp.dll" target="lib\netstandard2.1\YellowJHelp.dll" />
+    <file src="W:\YellowJ\YellowJHelp\yellow-jhelp\YellowJHelp\bin\Debug\netstandard2.1\YellowJHelp.xml" target="lib\netstandard2.1\YellowJHelp.xml" />
+    <file src="W:\YellowJ\YellowJHelp\yellow-jhelp\README.md" target="\README.md" />
+    <file src="C:\Users\YellowJ\Pictures\YellowJ图标.png" target="\YellowJ图标.png" />
+  </files>
+</package>

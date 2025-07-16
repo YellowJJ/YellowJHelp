@@ -16,18 +16,18 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCopyrightAttribute("YellowJ")]
 [assembly: System.Reflection.AssemblyDescriptionAttribute(@"
 		通用解决方案：
-                        3.7：新增lis集合生成字典的方法，方便快速查询：ToDictAsync
+                        3.7：新增lis集合生成字典的方法，方便快速查询：ToDictAsync, 优化其它逻辑和新增集合去重逻辑
                         3.5：新增对象深拷贝，对象映射器，雪花id等功能，优化减少依赖，删除sqlsugar等功能
 		2.2.0版本：自动依赖注入功能转移至：YellowJAutoInjection
 		（Redis更换NewLife-日均百亿次项目验证）缓存，MD5加密，字段截取，集合类型差集计算
 		Kafka使用
 		webapi调用
 		Redis使用")]
-[assembly: System.Reflection.AssemblyFileVersionAttribute("3.7.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("3.7.0+c4c12e5f0802171371cab385d82ff9eddadf0da9")]
+[assembly: System.Reflection.AssemblyFileVersionAttribute("3.7.1.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("3.7.1+7907f6e031690c1456eeffccb4b292f2950f0a47")]
 [assembly: System.Reflection.AssemblyProductAttribute("YellowJHelp")]
 [assembly: System.Reflection.AssemblyTitleAttribute("YellowJHelp")]
-[assembly: System.Reflection.AssemblyVersionAttribute("3.7.0.0")]
+[assembly: System.Reflection.AssemblyVersionAttribute("3.7.1.0")]
 [assembly: System.Reflection.AssemblyMetadataAttribute("RepositoryUrl", "https://gitee.com/xiaoyi1314/yellow-jhelp")]
 
 // 由 MSBuild WriteCodeFragment 类生成。

@@ -500,6 +500,53 @@ namespace YellowJHelp
 
             return listRet;
         }
+        /// <summary>
+        /// 异步根据指定字段去重，生成全新且不扰动原集合的去重List
+        /// </summary>
+        /// <typeparam name="T">集合元素类型</typeparam>
+        /// <typeparam name="TKey">唯一性字段类型（可为单字段、匿名类型、元组等）</typeparam>
+        /// <param name="list">待去重的集合</param>
+        /// <param name="keySelector">唯一性字段选择器（如：item => item.Key，或 item => new { item.Key, item.Name }）</param>
+        /// <returns>去重后的新集合（原集合不变）</returns>
+        /// <remarks>
+        /// 优势：
+        /// 1. 支持任意字段或字段组合去重，灵活性极高，满足复杂业务唯一性需求。
+        /// 2. 不修改原集合，返回全新List，安全无副作用，线程安全。
+        /// 3. 泛型实现，适用于任何类型的List，支持匿名类型、元组等多字段组合。
+        /// 4. 性能高，基于HashSet实现，O(n)复杂度，适合大数据量。
+        /// 5. 异步实现，适合Web、服务端等需要避免阻塞主线程的场景。
+        ///
+        /// 使用场景：
+        /// - 需要根据业务唯一性规则（如单字段或多字段）去重的场景。
+        /// - 需要保留原集合不变，生成新集合的场景。
+        /// - 适用于实体对象、DTO、ViewModel等各种类型。
+        /// - 数据导入、批量处理、接口返回前的去重。
+        ///
+        /// 使用方法示例：
+        /// var newList = await DistinctByFieldsAsync(list, x => x.Key); // 单字段
+        /// var newList = await DistinctByFieldsAsync(list, x => new { x.Key, x.Name }); // 多字段
+        /// var newList = await DistinctByFieldsAsync(list, x => Tuple.Create(x.Key, x.Name)); // 多字段（元组）
+        /// </remarks>
+        public async Task<List<T>> DistinctAsync<T, TKey>(List<T> list, Func<T, TKey> keySelector)
+        {
+            if (list == null) throw new ArgumentNullException(nameof(list), "集合不能为空");
+            if (keySelector == null) throw new ArgumentNullException(nameof(keySelector), "Key选择器不能为空");
+
+            return await Task.Run(() =>
+            {
+                var seen = new HashSet<TKey>();
+                var result = new List<T>();
+                foreach (var item in list)
+                {
+                    var key = keySelector(item);
+                    if (seen.Add(key))
+                    {
+                        result.Add(item);
+                    }
+                }
+                return result;
+            });
+        }
 
         /// <summary>
         /// 异步将List集合根据指定键选择器生成字典，便于快速查找
@@ -515,7 +562,7 @@ namespace YellowJHelp
         public async Task<Dictionary<TKey, TSource>> ToDictAsync<TSource, TKey>(
             List<TSource> list,
             Func<TSource, TKey> keySelector,
-            bool allowDuplicate = true)
+            bool allowDuplicate = false)
             where TKey : notnull
         {
             // 参数校验
@@ -565,7 +612,7 @@ namespace YellowJHelp
         public async Task<Dictionary<string, TSource>> ToDictAsync<TSource, TKeyItem>(
             List<TSource> list,
             Func<TSource, IEnumerable<TKeyItem>> keySelector,
-            bool allowDuplicate = true)
+            bool allowDuplicate = false)
         {
             // 参数校验
             if (list == null) throw new ArgumentNullException(nameof(list), "集合不能为空");
