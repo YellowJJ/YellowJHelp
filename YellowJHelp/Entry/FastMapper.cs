@@ -191,7 +191,24 @@ namespace YellowJHelp.Entry
             }
             return result;
         }
-
+        /// <summary>
+        /// 自动推断源类型的简化映射方法（仅需指定目标类型）
+        /// </summary>
+        /// <typeparam name="TTarget">目标类型</typeparam>
+        /// <param name="source">源对象</param>
+        /// <returns>目标对象</returns>
+        /// <remarks>
+        /// 仅建议在开发便利性优先、非极致性能场景下使用。
+        /// </remarks>
+        public static TTarget AdaptTo<TTarget>(this object source) where TTarget : class, new()
+        {
+            if (source == null) return null;
+            var sourceType = source.GetType();
+            var targetType = typeof(TTarget);
+            var method = typeof(FastMapper).GetMethod("Adapt", BindingFlags.Public | BindingFlags.Static)
+                .MakeGenericMethod(sourceType, targetType);
+            return (TTarget)method.Invoke(null, new object[] { source });
+        }
         #endregion
         #region 表达式树构建核心
         // 构建对象映射表达式（支持嵌套对象、集合、类型兼容、null安全）

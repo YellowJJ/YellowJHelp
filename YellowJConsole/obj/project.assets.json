@@ -1725,7 +1725,7 @@
           }
         }
       },
-      "YellowJHelp/3.7.3": {
+      "YellowJHelp/3.7.4": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.1",
         "dependencies": {
@@ -5634,7 +5634,7 @@
         "yellowjautoinjection.nuspec"
       ]
     },
-    "YellowJHelp/3.7.3": {
+    "YellowJHelp/3.7.4": {
       "type": "project",
       "path": "../YellowJHelp/YellowJHelp.csproj",
       "msbuildProject": "../YellowJHelp/YellowJHelp.csproj"
@@ -5644,7 +5644,7 @@
     "net9.0": [
       "System.Net.Http >= 4.3.4",
       "System.Text.RegularExpressions >= 4.3.1",
-      "YellowJHelp >= 3.7.3"
+      "YellowJHelp >= 3.7.4"
     ]
   },
   "packageFolders": {
