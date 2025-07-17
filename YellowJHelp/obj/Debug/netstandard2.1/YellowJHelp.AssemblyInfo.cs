@@ -25,7 +25,7 @@ using System.Reflection;
 		webapi调用
 		Redis使用")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("3.7.4.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("3.7.4+9c790d5a38b8f8f133d10f6d0d2373fbeb0ac458")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("3.7.4+1afc8dd451151cc8567cbdf38fcebeb228064855")]
 [assembly: System.Reflection.AssemblyProductAttribute("YellowJHelp")]
 [assembly: System.Reflection.AssemblyTitleAttribute("YellowJHelp")]
 [assembly: System.Reflection.AssemblyVersionAttribute("3.7.4.0")]
