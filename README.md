@@ -43,7 +43,7 @@
 
 ![输入图片说明](2.png)
 
-
+---
 ## YellowJHelp
 
 ### 通用开发工具库
@@ -79,6 +79,9 @@
 | IsString              | data, value                                                 | bool                          | 检查字符串是否包含指定内容(不区分大小写)               |
 | YAlloctionlist        | yAllocations, yAllocations1                                 | List<List<YAllocationInfo>>   | 资源分配核心算法，返回[剩余资源, 已分配明细, 分配结果] |
 | YAlloctionlistThred   | yAllocations, yAllocations1                                 | List<List<YAllocationInfo>>   | 多线程版分配算法，提升大数据量处理效率                 |
+| DistinctAsync<T, TKey>      | list: 待去重集合<br>keySelector: 唯一性字段选择器                                           | Task<List<T>>                         | 异步根据指定字段去重，生成全新且不扰动原集合的列表，适合大数据量场景 |
+| ToDictAsync<TSource, TKey>  | list: 待转换集合<br>keySelector: Key选择器<br>allowDuplicate: 是否允许重复Key（默认false）   | Task<Dictionary<TKey, TSource>>        | 异步将集合转换为字典，支持自定义Key和重复Key处理                     |
+| ToDictAsync<TSource, TKeyItem> | list: 待转换集合<br>keySelector: 集合Key选择器<br>allowDuplicate: 是否允许重复Key（默认false） | Task<Dictionary<string, TSource>>      | 异步将集合Key（如List<string>）序列化为字符串作为字典Key             |
 | **ID与对象**          |                                                              |                               |                                                        |
 | NextId                | workerId                                                    | long                          | 生成分布式雪花ID(基于WorkerID)                         |
 | Mapper                | -                                                           | FastMapper                    | 获取高性能对象映射器实例                               |
