@@ -37,6 +37,44 @@ namespace YellowJHelp.IServer
         /// <param name="IV_64">密钥长度8位</param>
         /// <returns></returns>
         Task<string> DecodeAsync(string data, string KEY_64, string IV_64);
+        /// <summary>
+        /// SHA256哈希加密（异步，返回64位小写十六进制字符串）
+        /// </summary>
+        /// <param name="text">要加密的字符串</param>
+        /// <returns>SHA256哈希值（64位小写十六进制字符串）</returns>
+        /// <remarks>
+        /// 1. 适用于数据签名、完整性校验等场景。
+        /// 2. 不可逆，仅用于校验和签名，不可解密。
+        /// 3. 异步实现，适合Web和高并发场景。
+        /// </remarks>
+        Task<string> YJSha256Async(string text);
+        /// <summary>
+        /// AES加密（异步，CBC模式，PKCS7填充，返回Base64字符串）
+        /// </summary>
+        /// <param name="plainText">明文</param>
+        /// <param name="key">密钥（16/24/32字节，建议32字节）</param>
+        /// <param name="iv">初始向量（16字节）</param>
+        /// <returns>加密后的Base64字符串</returns>
+        /// <remarks>
+        /// 1. 支持AES-128/192/256，key长度分别为16/24/32字节。
+        /// 2. IV必须为16字节，建议随机生成并安全保存。
+        /// 3. 适用于敏感数据加密传输、存储等场景。
+        /// 4. 异步实现，适合Web和高并发场景。
+        /// </remarks>
+        Task<string> YJAesEncryptAsync(string plainText, string key, string iv);
+        /// <summary>
+        /// AES解密（异步，CBC模式，PKCS7填充，输入Base64字符串）
+        /// </summary>
+        /// <param name="cipherText">密文（Base64字符串）</param>
+        /// <param name="key">密钥（16/24/32字节，建议32字节）</param>
+        /// <param name="iv">初始向量（16字节）</param>
+        /// <returns>解密后的明文</returns>
+        /// <remarks>
+        /// 1. 密钥和IV需与加密时一致。
+        /// 2. 解密失败返回空字符串。
+        /// 3. 异步实现，适合Web和高并发场景。
+        /// </remarks>
+        Task<string> YJAesDecryptAsync(string cipherText, string key, string iv);
         #endregion
 
         /// <summary>
@@ -79,7 +117,8 @@ namespace YellowJHelp.IServer
         /// </summary>
         /// <param name="text">参数</param>
         /// <param name="address">新建文件名（地址）</param>
-        Task YellowJLogAsync(string text, string address);
+        Task YellowJLogAsync(string text, string address, string logLevel = "Info",
+            string customFileName = null);
 
         #region --cookie--
         /// <summary>

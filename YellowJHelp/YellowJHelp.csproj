@@ -7,9 +7,10 @@
     <Nullable>enable</Nullable>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <Authors>YellowJ</Authors>
-    <Version>3.7.4</Version>
+    <Version>3.7.5</Version>
     <Description>
 		通用解决方案：
+                        3.7.5：新增SHA256哈希加密,AES加密,AES解密
                         3.7.4： 新增Mapster风格的替代方案
                         3.7：新增lis集合生成字典的方法，方便快速查询：ToDictAsync, 优化其它逻辑和新增集合去重逻辑
                         3.5：新增对象深拷贝，对象映射器，雪花id等功能，优化减少依赖，删除sqlsugar等功能

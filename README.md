@@ -8,6 +8,22 @@
 
 ---
 
+## YellowJHelp
+
+YellowJHelp 是一个面向 .NET 平台的通用开发工具库，主要用于提升企业级项目的开发效率和代码质量。它集成了常用的开发辅助功能，包括但不限于：
+
+- **加解密**：支持 MD5、DES、SHA256、AES 等多种算法，异步实现，适合高并发场景。
+- **日志记录**：支持异步、分级、分目录、文件流等方式，便于归档和分析。
+- **Session/Cookie 管理**：适配 ASP.NET Core，支持常用 Web 状态管理。
+- **集合与数据处理**：分配算法、去重、合并、差集、交集等，支持多线程和异步。
+- **高性能对象映射器（FastMapper）**：属性名自动匹配、类型兼容、集合/嵌套递归，零依赖，性能极高。
+- **分布式ID生成**：雪花ID算法，适合分布式系统唯一ID需求。
+- **缓存接口（YJHelpCache）**：支持泛型、过期策略、内存和分布式缓存。
+- **Kafka/Redis 支持**：消息队列与高性能缓存。
+- **异步优先**：大部分方法支持异步，适合高并发场景。
+
+---
+
 ## YellowJAutoInjection
 
 ### 依赖注入自动化
@@ -62,11 +78,14 @@
 | 方法名                | 参数说明                                                     | 返回值                        | 功能详细描述                                           |
 |-----------------------|-------------------------------------------------------------|-------------------------------|--------------------------------------------------------|
 | **加密模块**          |                                                              |                               |                                                        |
-| MD5EncryptAsync       | strText, IsLower                                            | Task<string>                  | 生成32位MD5哈希值，适用于密码存储/数据校验             |
+| MD5EncryptAsync       | strText, isLower                                            | Task<string>                  | 生成32位MD5哈希值，适用于密码存储/数据校验             |
 | EncodeAsync           | data, KEY_64, IV_64                                         | Task<string>                  | DES对称加密，用于敏感数据传输                          |
 | DecodeAsync           | data, KEY_64, IV_64                                         | Task<string>                  | DES解密，需与加密使用相同密钥                          |
+| YJSha256Async         | text                                                        | Task<string>                  | SHA256哈希加密，适用于签名、完整性校验                 |
+| YJAesEncryptAsync     | plainText, key, iv                                          | Task<string>                  | AES加密，支持128/192/256位，返回Base64字符串           |
+| YJAesDecryptAsync     | cipherText, key, iv                                         | Task<string>                  | AES解密，输入Base64密文，返回明文                      |
 | **日志与文件**        |                                                              |                               |                                                        |
-| YellowJLogAsync       | text, address                                               | Task                          | 按日期自动创建日志文件，UTF8编码存储                   |
+| YellowJLogAsync       | text, address, logLevel, customFileName                     | Task                          | 按日期/分级/分目录异步写日志，UTF8编码                 |
 | MidStrExAsync         | sourse, startstr, endstr                                    | Task<string>                  | 提取两个标识符之间的内容，适用于解析特定格式文本       |
 | **HTTP状态管理**      |                                                              |                               |                                                        |
 | SetCookies            | ctx, key, value, minutes                                    | void                          | 设置客户端Cookie，默认30分钟过期                       |
@@ -79,12 +98,11 @@
 | IsString              | data, value                                                 | bool                          | 检查字符串是否包含指定内容(不区分大小写)               |
 | YAlloctionlist        | yAllocations, yAllocations1                                 | List<List<YAllocationInfo>>   | 资源分配核心算法，返回[剩余资源, 已分配明细, 分配结果] |
 | YAlloctionlistThred   | yAllocations, yAllocations1                                 | List<List<YAllocationInfo>>   | 多线程版分配算法，提升大数据量处理效率                 |
-| DistinctAsync<T, TKey>      | list: 待去重集合<br>keySelector: 唯一性字段选择器                                           | Task<List<T>>                         | 异步根据指定字段去重，生成全新且不扰动原集合的列表，适合大数据量场景 |
-| ToDictAsync<TSource, TKey>  | list: 待转换集合<br>keySelector: Key选择器<br>allowDuplicate: 是否允许重复Key（默认false）   | Task<Dictionary<TKey, TSource>>        | 异步将集合转换为字典，支持自定义Key和重复Key处理                     |
-| ToDictAsync<TSource, TKeyItem> | list: 待转换集合<br>keySelector: 集合Key选择器<br>allowDuplicate: 是否允许重复Key（默认false） | Task<Dictionary<string, TSource>>      | 异步将集合Key（如List<string>）序列化为字符串作为字典Key             |
+| DistinctAsync<T, TKey>      | list, keySelector                                           | Task<List<T>>                         | 异步根据指定字段去重，生成全新且不扰动原集合的列表      |
+| ToDictAsync<TSource, TKey>  | list, keySelector, allowDuplicate                         | Task<Dictionary<TKey, TSource>>        | 异步将集合转换为字典，支持自定义Key和重复Key处理        |
+| ToDictAsync<TSource, TKeyItem> | list, keySelector, allowDuplicate                      | Task<Dictionary<string, TSource>>      | 异步将集合Key（如List<string>）序列化为字符串作为字典Key|
 | **ID与对象**          |                                                              |                               |                                                        |
 | NextId                | workerId                                                    | long                          | 生成分布式雪花ID(基于WorkerID)                         |
-| Mapper                | -                                                           | FastMapper                    | 获取高性能对象映射器实例                               |
 | IsDateInTargetMonth   | date, targetDate                                            | bool                          | 判断日期是否在目标年月内                               |
 | Copy<T>               | data                                                        | T?                            | 深度克隆对象(使用DeepCloner库)                         |
 | YJMerge<T>            | list1, list2                                                | List<T>                       | 合并两个集合并去重(JSON序列化比对)                     |
@@ -107,10 +125,13 @@
 
 | 方法名         | 参数说明         | 返回值         | 功能描述           |
 |----------------|-----------------|----------------|--------------------|
-| TryGetValue    | key             | bool           | 判断是否存在       |
-| Get            | key             | object         | 获取缓存           |
-| Set            | key, value      | void           | 写入缓存           |
+| TryGetValue    | key, out value  | bool           | 判断是否存在并返回字符串值 |
+| Get            | key             | object         | 获取缓存（支持泛型）|
+| Get<T>         | key             | T              | 泛型获取缓存对象   |
+| Set            | key, value, options | string      | 写入缓存（string） |
+| Set<T>         | key, value, options | void        | 泛型写入缓存       |
 | Remove         | key             | void           | 删除缓存           |
+
 
 ---
 
@@ -154,6 +175,7 @@
 ---
 
 ## 历史版本（摘自 NuGet 包说明）
+- **3.7.5**： 新增SHA256哈希加密,AES加密,AES解密
 - **3.7.4**： 新增Mapster风格的替代方案
 - **3.7**：新增lis集合生成字典的方法，方便快速查询：ToDictAsync, 优化其它逻辑和新增集合去重逻辑
 - **3.5**：新增对象深拷贝、对象映射器、雪花ID等功能，优化减少依赖，移除 sqlsugar

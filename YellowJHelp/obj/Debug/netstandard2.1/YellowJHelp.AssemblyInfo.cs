@@ -16,6 +16,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCopyrightAttribute("YellowJ")]
 [assembly: System.Reflection.AssemblyDescriptionAttribute(@"
 		通用解决方案：
+                        3.7.5：新增SHA256哈希加密,AES加密,AES解密
                         3.7.4： 新增Mapster风格的替代方案
                         3.7：新增lis集合生成字典的方法，方便快速查询：ToDictAsync, 优化其它逻辑和新增集合去重逻辑
                         3.5：新增对象深拷贝，对象映射器，雪花id等功能，优化减少依赖，删除sqlsugar等功能
@@ -24,11 +25,11 @@ using System.Reflection;
 		Kafka使用
 		webapi调用
 		Redis使用")]
-[assembly: System.Reflection.AssemblyFileVersionAttribute("3.7.4.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("3.7.4+1afc8dd451151cc8567cbdf38fcebeb228064855")]
+[assembly: System.Reflection.AssemblyFileVersionAttribute("3.7.5.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("3.7.5+3a3bdfa1f53f3aea538f4033d1c188bcb17ea226")]
 [assembly: System.Reflection.AssemblyProductAttribute("YellowJHelp")]
 [assembly: System.Reflection.AssemblyTitleAttribute("YellowJHelp")]
-[assembly: System.Reflection.AssemblyVersionAttribute("3.7.4.0")]
+[assembly: System.Reflection.AssemblyVersionAttribute("3.7.5.0")]
 [assembly: System.Reflection.AssemblyMetadataAttribute("RepositoryUrl", "https://gitee.com/xiaoyi1314/yellow-jhelp")]
 
 // 由 MSBuild WriteCodeFragment 类生成。
