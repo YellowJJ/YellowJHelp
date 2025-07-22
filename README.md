@@ -44,7 +44,13 @@ YellowJHelp 是一个面向 .NET 平台的通用开发工具库，主要用于�
 
 #### 快速上手
 
-案列：Net6
+1. **安装 NuGet 包**
+2. **在 Startup.cs 中调用 `YJDiInJect()`**
+3. **在服务类上添加 `[AutoInject]` 特性**
+
+![输入图片说明](3.png)
+
+案列：Net9
 
 `builder.Services.YJDiInJect();`
 

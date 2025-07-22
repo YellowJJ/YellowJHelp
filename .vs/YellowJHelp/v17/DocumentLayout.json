@@ -3,10 +3,6 @@
   "WorkspaceRootPath": "W:\\YellowJ\\YellowJHelp\\yellow-jhelp\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{50C3FDA1-2A53-4E3E-8C1C-0FB015B16E47}|YellowJHelp\\YellowJHelp.csproj|w:\\yellowj\\yellowjhelp\\yellow-jhelp\\yellowjhelp\\yellowjhelp.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
-      "RelativeMoniker": "D:0:0:{50C3FDA1-2A53-4E3E-8C1C-0FB015B16E47}|YellowJHelp\\YellowJHelp.csproj|solutionrelative:yellowjhelp\\yellowjhelp.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{50C3FDA1-2A53-4E3E-8C1C-0FB015B16E47}|YellowJHelp\\YellowJHelp.csproj|w:\\yellowj\\yellowjhelp\\yellow-jhelp\\readme.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
       "RelativeMoniker": "D:0:0:{50C3FDA1-2A53-4E3E-8C1C-0FB015B16E47}|YellowJHelp\\YellowJHelp.csproj|solutionrelative:readme.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
     },
@@ -82,11 +78,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 10,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 9,
               "Title": "YJHelp.cs",
               "DocumentMoniker": "W:\\YellowJ\\YellowJHelp\\yellow-jhelp\\YellowJHelp\\Server\\YJHelp.cs",
               "RelativeDocumentMoniker": "YellowJHelp\\Server\\YJHelp.cs",
@@ -100,7 +96,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 8,
               "Title": "IYJHelp.cs",
               "DocumentMoniker": "W:\\YellowJ\\YellowJHelp\\yellow-jhelp\\YellowJHelp\\IServer\\IYJHelp.cs",
               "RelativeDocumentMoniker": "YellowJHelp\\IServer\\IYJHelp.cs",
@@ -114,7 +110,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 7,
               "Title": "YJHelpCache.cs",
               "DocumentMoniker": "W:\\YellowJ\\YellowJHelp\\yellow-jhelp\\YellowJHelp\\Server\\YJHelpCache.cs",
               "RelativeDocumentMoniker": "YellowJHelp\\Server\\YJHelpCache.cs",
@@ -128,7 +124,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 6,
               "Title": "IYJHelpCache.cs",
               "DocumentMoniker": "W:\\YellowJ\\YellowJHelp\\yellow-jhelp\\YellowJHelp\\IServer\\IYJHelpCache.cs",
               "RelativeDocumentMoniker": "YellowJHelp\\IServer\\IYJHelpCache.cs",
@@ -142,7 +138,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "YJHelpT.cs",
               "DocumentMoniker": "W:\\YellowJ\\YellowJHelp\\yellow-jhelp\\YellowJHelp\\Server\\YJHelpT.cs",
               "RelativeDocumentMoniker": "YellowJHelp\\Server\\YJHelpT.cs",
@@ -155,7 +151,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 3,
               "Title": "YJHelpSql.cs",
               "DocumentMoniker": "W:\\YellowJ\\YellowJHelp\\yellow-jhelp\\YellowJHelp\\Server\\YJHelpSql.cs",
               "RelativeDocumentMoniker": "YellowJHelp\\Server\\YJHelpSql.cs",
@@ -168,7 +164,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 5,
               "Title": "YJHelpKafka.cs",
               "DocumentMoniker": "W:\\YellowJ\\YellowJHelp\\yellow-jhelp\\YellowJHelp\\Server\\YJHelpKafka.cs",
               "RelativeDocumentMoniker": "YellowJHelp\\Server\\YJHelpKafka.cs",
@@ -181,7 +177,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "README.md",
               "DocumentMoniker": "W:\\YellowJ\\YellowJHelp\\yellow-jhelp\\README.md",
               "RelativeDocumentMoniker": "README.md",
@@ -194,7 +190,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 11,
               "Title": "KeyValueInfo.cs",
               "DocumentMoniker": "W:\\YellowJ\\YellowJHelp\\yellow-jhelp\\YellowJAutoInjection\\Entry\\KeyValueInfo.cs",
               "RelativeDocumentMoniker": "YellowJAutoInjection\\Entry\\KeyValueInfo.cs",
@@ -206,8 +202,12 @@
               "EditorCaption": ""
             },
             {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 12,
               "Title": "YJInject.cs",
               "DocumentMoniker": "W:\\YellowJ\\YellowJHelp\\yellow-jhelp\\YellowJAutoInjection\\YJInject.cs",
               "RelativeDocumentMoniker": "YellowJAutoInjection\\YJInject.cs",
@@ -220,19 +220,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "YellowJHelp",
-              "DocumentMoniker": "W:\\YellowJ\\YellowJHelp\\yellow-jhelp\\YellowJHelp\\YellowJHelp.csproj",
-              "RelativeDocumentMoniker": "YellowJHelp\\YellowJHelp.csproj",
-              "ToolTip": "W:\\YellowJ\\YellowJHelp\\yellow-jhelp\\YellowJHelp\\YellowJHelp.csproj",
-              "RelativeToolTip": "YellowJHelp\\YellowJHelp.csproj",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-07-17T11:05:50.611Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 10,
               "Title": "AutoInjectAttribute.cs",
               "DocumentMoniker": "W:\\YellowJ\\YellowJHelp\\yellow-jhelp\\YellowJAutoInjection\\Entry\\AutoInjectAttribute.cs",
               "RelativeDocumentMoniker": "YellowJAutoInjection\\Entry\\AutoInjectAttribute.cs",
@@ -245,7 +233,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 13,
               "Title": "BaseHelp.cs",
               "DocumentMoniker": "W:\\YellowJ\\YellowJHelp\\yellow-jhelp\\YellowJAutoInjection\\Help\\BaseHelp.cs",
               "RelativeDocumentMoniker": "YellowJAutoInjection\\Help\\BaseHelp.cs",
@@ -257,7 +245,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 14,
               "Title": "AutoHelp.cs",
               "DocumentMoniker": "W:\\YellowJ\\YellowJHelp\\yellow-jhelp\\YellowJAutoInjection\\Help\\AutoHelp.cs",
               "RelativeDocumentMoniker": "YellowJAutoInjection\\Help\\AutoHelp.cs",
@@ -269,7 +257,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 15,
               "Title": "FastMapper.cs",
               "DocumentMoniker": "W:\\YellowJ\\YellowJHelp\\yellow-jhelp\\YellowJHelp\\Entry\\FastMapper.cs",
               "RelativeDocumentMoniker": "YellowJHelp\\Entry\\FastMapper.cs",
@@ -281,7 +269,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "YJHelpWebApi.cs",
               "DocumentMoniker": "W:\\YellowJ\\YellowJHelp\\yellow-jhelp\\YellowJHelp\\Server\\YJHelpWebApi.cs",
               "RelativeDocumentMoniker": "YellowJHelp\\Server\\YJHelpWebApi.cs",
@@ -294,7 +282,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 4,
               "Title": "YJHelpRedis.cs",
               "DocumentMoniker": "W:\\YellowJ\\YellowJHelp\\yellow-jhelp\\YellowJHelp\\Server\\YJHelpRedis.cs",
               "RelativeDocumentMoniker": "YellowJHelp\\Server\\YJHelpRedis.cs",
@@ -307,7 +295,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 16,
               "Title": "IYJHelpWebApi.cs",
               "DocumentMoniker": "W:\\YellowJ\\YellowJHelp\\yellow-jhelp\\YellowJHelp\\IServer\\IYJHelpWebApi.cs",
               "RelativeDocumentMoniker": "YellowJHelp\\IServer\\IYJHelpWebApi.cs",
