@@ -14,6 +14,22 @@ namespace YellowJHelp.IServer
         /// <param name="value">输出参数，存在时返回对应值</param>
         /// <returns>存在返回true，否则false</returns>
         bool TryGetValue(string key, out string value);
+
+        /// <summary>
+        /// 判断指定Key是否存在，并返回对应的泛型值
+        /// </summary>
+        /// <typeparam name="T">返回值类型</typeparam>
+        /// <param name="key">缓存Key</param>
+        /// <param name="value">输出参数，存在时返回对应值</param>
+        /// <returns>存在且类型匹配返回true，否则false</returns>
+        bool TryGetValue<T>(string key, out T value);
+
+        /// <summary>
+        /// 判断指定Key是否存在
+        /// </summary>
+        /// <param name="key">缓存Key</param>
+        /// <returns>存在返回true，否则false</returns>
+        bool TryGetValue(string key);
         /// <summary>
         /// 获取指定Key的缓存对象（支持任意类型）
         /// </summary>

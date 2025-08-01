@@ -7,7 +7,7 @@
     <Nullable>enable</Nullable>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <Authors>YellowJ</Authors>
-    <Version>3.7.5</Version>
+    <Version>3.7.6</Version>
     <Description>
 		通用解决方案：
                         3.7.5：新增SHA256哈希加密,AES加密,AES解密
@@ -25,7 +25,7 @@
     <PackageProjectUrl>https://gitee.com/xiaoyi1314/yellow-jhelp</PackageProjectUrl>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <RepositoryUrl>https://gitee.com/xiaoyi1314/yellow-jhelp</RepositoryUrl>
-    <PackageReleaseNotes></PackageReleaseNotes>
+    <PackageReleaseNotes>缓存接口判断新增多样化</PackageReleaseNotes>
     <PackageIcon>YellowJ图标.png</PackageIcon>
     <GenerateDocumentationFile>True</GenerateDocumentationFile>
   </PropertyGroup>

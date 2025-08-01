@@ -17,6 +17,33 @@ namespace YellowJHelp.Server
         {
             _cache = memoryCache;
         }
+        /// <summary>
+        /// 判断指定Key是否存在，并返回对应的泛型值
+        /// </summary>
+        /// <typeparam name="T">返回值类型</typeparam>
+        /// <param name="key">缓存Key</param>
+        /// <param name="value">输出参数，存在时返回对应值</param>
+        /// <returns>存在且类型匹配返回true，否则false</returns>
+        public bool TryGetValue<T>(string key, out T value)
+        {
+            if (_cache.TryGetValue(key, out object obj) && obj is T typedValue)
+            {
+                value = typedValue;
+                return true;
+            }
+            value = default;
+            return false;
+        }
+
+        /// <summary>
+        /// 判断指定Key是否存在
+        /// </summary>
+        /// <param name="key">缓存Key</param>
+        /// <returns>存在返回true，否则false</returns>
+        public bool TryGetValue(string key)
+        {
+            return _cache.TryGetValue(key, out _);
+        }
 
         /// <summary>
         /// 判断指定Key是否存在，并返回对应的字符串值
